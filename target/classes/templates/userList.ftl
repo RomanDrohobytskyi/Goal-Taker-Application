@@ -1,16 +1,20 @@
-<#import "parts/common.ftl" as c>
-
-<@c.page>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Spring Security Example </title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/buttons.css">
+    <script type="text/javascript" src="/static/javascript/js.js"></script>
+</head>
+<body>
     <div>
         List of Users.
         <table>
-            <thread>
                 <tr>
                     <th>Name</th>
                     <th>Role</th>
                     <th></th>
                 </tr>
-            </thread>
 
             <tbody>
         <#list users as user>
@@ -28,4 +32,5 @@
             </tbody>
         </table>
     </div>
-</@c.page>
+</body>
+</html>

@@ -24,6 +24,7 @@ public class Message {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User user;
+    private String filename;
 
     public String getAuthorName(){
         return user != null ? user.getUsername() : "<none>";

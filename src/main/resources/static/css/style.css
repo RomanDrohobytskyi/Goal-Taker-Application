@@ -1,0 +1,98 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.big-img-index-1, .big-img-index-2, .big-img-index-3, .big-img-projects-1, .big-img-projects-2, .big-img-projects-3, .big-img-login-1, .big-img-login-2, .big-img-login-3,.big-img-welcome-1 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Big background images(3) for index.jsp */
+.big-img-index-1 {
+    background-image: url("https://pp.userapi.com/c847221/v847221064/126611/7O_a9n533XI.jpg");
+    min-height: 80%;
+}
+
+.big-img-index-2 {
+    background-image: url("https://pp.userapi.com/c637317/v637317807/2460a/TLFfXV15QX0.jpg");
+    min-height: 400px;
+}
+
+.big-img-index-3 {
+    background-image: url("https://pp.userapi.com/c637122/v637122807/2cd71/fOOd2agzTSs.jpg");
+    min-height: 400px;
+}
+/*End of index.jsp*/
+
+/* Big background images(3) for projects.jsp */
+.big-img-projects-1 {
+    background-image: url("https://belimitless.com/wp-content/uploads/2017/08/blockchain.jpg");
+    min-height: 400px;
+}
+
+.big-img-projects-2 {
+    background-image: url("https://s3.amazonaws.com/influencive.com/wp-content/uploads/2018/09/15002124/blockchain2-e1537205739633.jpg");
+    min-height: 400px;
+}
+
+.big-img-projects-3 {
+    background-image: url("https://s3.amazonaws.com/influencive.com/wp-content/uploads/2018/09/15002124/blockchain2-e1537205739633.jpg");
+    min-height: 400px;
+}
+/*End of projects.jsp*/
+
+/* Big background images(3) for index.jsp */
+.big-img-login-1 {
+    background-image: url("https://belimitless.com/wp-content/uploads/2017/08/blockchain.jpg");
+    min-height: 400px;
+}
+
+.big-img-login-2 {
+    background-image: url("https://belimitless.com/wp-content/uploads/2017/08/blockchain.jpg");
+    min-height: 400px;
+}
+
+.big-img-login-3 {
+    background-image: url("https://belimitless.com/wp-content/uploads/2017/08/blockchain.jpg");
+    min-height: 400px;
+}
+
+.big-img-welcome-1 {
+    background-image: url("http://www.crazytravellers.com/wp-content/uploads/2017/04/Welcome.jpg");
+    min-height: 70%;
+}
+
+/*End of authentication.jsp*/
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+/* unvisited link */
+/*a:link {*/
+    /*color: darkblue;*/
+/*}*/
+/*!* visited link *!*/
+/*a:visited {*/
+    /*color: purple;*/
+/*}*/
+/* mouse over link */
+a:hover {
+    color: cornflowerblue;
+}
+/* selected link */
+a:active {
+    color: seagreen;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+    .big-img-index-1, .big-img-index-2, .big-img-index-3, .big-img-projects-1, .big-img-projects-2, .big-img-projects-3, .big-img-login-1, .big-img-login-2, .big-img-login-3, .big-img-welcome-1 {
+        background-attachment: scroll;
+        min-height: 400px;
+    }
+}

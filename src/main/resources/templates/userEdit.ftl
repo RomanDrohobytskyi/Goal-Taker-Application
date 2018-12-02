@@ -1,6 +1,12 @@
-<#import "parts/common.ftl" as c>
-
-<@c.page>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Spring Security Example </title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/buttons.css">
+    <script type="text/javascript" src="/static/javascript/js.js"></script>
+</head>
+<body>
     <div>
         User editor.
     </div>
@@ -19,4 +25,5 @@
         <input type="hidden" value="${_csrf.token}" name="_csrf">
         <button type="submit">Save</button>
     </form>
-</@c.page>
+</body>
+</html>
