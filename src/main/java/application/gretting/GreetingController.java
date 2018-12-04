@@ -26,13 +26,15 @@ public class GreetingController {
     @Value("${upload.path}")
     private String uploadPath;
 
+    //First page
     @GetMapping("/")
     public String greeting(Map<String, Object> model) {
         return "greeting";
     }
 
     @GetMapping("/main")
-    public String main(@RequestParam(required = false, defaultValue = "") String filter, Model model) {
+    public String main(@RequestParam(required = false, defaultValue = "")
+                                   String filter, Model model) {
         Iterable<Message> messages;
         if (filter != null && !filter.isEmpty()) {
             messages = messageRepo.findByTag(filter);

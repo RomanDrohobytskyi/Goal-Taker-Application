@@ -45,7 +45,6 @@
         <a href="#" class="w3-bar-item w3-button">SEARCH</a>
     </div>
 </div>
-<!--End of  NavBar -->
 
 <!-- LOGIN Parallax Image -->
 <div class="big-img-login-1 w3-display-container w3-opacity-min" id="home">
@@ -67,22 +66,11 @@
                 <input type="password" name="password" placeholder="password . . ."/>
                 <br>
                 <button type="submit" class="btn btn1 w3-button w3-padding-large">Sign In</button>
-                <#--<input type="submit" class="btn btn1" value="Sign In"/>-->
             </form>
-        <h5>To registered yet? Create easy new <a href="/registration">account</a>!</h5>
+        <h5>No registered yet? Create easy new <a href="/registration">account</a>!</h5>
     </div>
 </div>
-
-<#--<div>-->
-    <#--Login page-->
-<#--</div>-->
-<#--<form action="/login" method="post">-->
-    <#--<div><label> User Name : <input type="text" name="username"/> </label></div>-->
-    <#--<div><label> Password: <input type="password" name="password"/> </label></div>-->
-    <#--<input type="hidden" name="_csrf" value="${_csrf.token}" />-->
-    <#--<div><input type="submit" value="Sign In"/></div>-->
-<#--</form>-->
-<!-- Footer -->
+<#--Footer-->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
     <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
     <div class="w3-xlarge w3-section">
