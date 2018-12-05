@@ -1,18 +1,8 @@
-<#--<#import "parts/common.ftl" as c>-->
-<#--<#import "parts/login.ftl" as l>-->
-
-<#--<@c.page>-->
-<#--Login page-->
-<#--<@l.login "/login" />-->
-<#--<a href="/registration">Add new user</a>-->
-<#--</@c.page>-->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>L o g i n</title>
     <link rel="shortcut icon" type="image/png" href="https://cdn0.iconfinder.com/data/icons/basic-outline/64/icon-basic-set_12-camera-512.png">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/buttons.css">
@@ -30,7 +20,7 @@
         <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
             <i class="fa fa-bars"></i>
         </a>
-        <a href="greeting.ftl" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Home</a>
+        <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Home</a>
         <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>Up</a>
 
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
@@ -58,9 +48,12 @@
 
     <div class="w3-center w3-row">
         <h3 class="w3-center">Login</h3>
+        <p style="color: red">
+        ${message !}
+        </p>
             <form action="/login" method="post">
-                <p class="w3-center">Enter Username: </p>
-                <input type="text" name="username" placeholder="username . . ."/>
+                <p class="w3-center">Enter Email: </p>
+                <input type="email" name="username" placeholder="email . . ."/>
                 <p class="w3-center">Enter password: </p>
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
                 <input type="password" name="password" placeholder="password . . ."/>

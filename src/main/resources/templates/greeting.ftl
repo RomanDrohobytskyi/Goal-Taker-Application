@@ -26,7 +26,6 @@
         <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
         <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
         <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
-
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
         <i class="fa fa-search"></i>
         </a>

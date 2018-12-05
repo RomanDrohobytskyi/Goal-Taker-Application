@@ -27,9 +27,9 @@
         <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
         <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
 
-        <%--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">--%>
-        <%--<i class="fa fa-search"></i>--%>
-        <%--</a>--%>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+        <i class="fa fa-search"></i>
+        </a>
     </div>
 
     <!-- NavBar on small screens -->
@@ -39,7 +39,7 @@
         <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
         <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
 
-        <%--<a href="#" class="w3-bar-item w3-button">SEARCH</a>--%>
+        <a href="#" class="w3-bar-item w3-button">SEARCH</a>
     </div>
 </div>
 
@@ -54,7 +54,7 @@
 <div class="w3-content w3-container w3-padding-64" id="about">
     <h3 class="w3-center">ABOUT ME</h3>
     <p class="w3-center"><em>I love photography</em></p>
-    <p>First paragraf.</p>
+    <p>First article.</p>
     <div class="w3-row">
         <div class="w3-col m6 w3-center w3-padding-large">
             <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
@@ -63,7 +63,7 @@
 
         <!-- Hide this text on small devices -->
         <div class="w3-col m6 w3-hide-small w3-padding-large">
-            <p>Second paragraf.</p>
+            <p>Second article.</p>
         </div>
     </div>
     <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
@@ -211,7 +211,7 @@
         <a href = "https://www.facebook.com/roman.drohobytskyi" target="_blank" class = "fa fa-facebook-official w3-hover-opacity"></a>
         <a href = "https://www.instagram.com/roma_drohobytskiy/" target="_blank" class = "fa fa-instagram w3-hover-opacity"> </a>
         <a href = "https://github.com/RomanDrohobytskyi" target="_blank" class = "fa fa-git w3-hover-opacity"></a>
-        <a href = "https://www.linkedin.com/in/roman-drohobytskyi-4b8515163/" target="_blank"class = "fa fa-linkedin w3-hover-opacity"></a>
+        <a href = "https://www.linkedin.com/in/roman-drohobytskyi-4b8515163/" target="_blank" class = "fa fa-linkedin w3-hover-opacity"></a>
     </div>
     <p><i class="fa fa-user-o" aria-hidden="true"> Roman Drohobytskyi</i></p>
 </footer>
