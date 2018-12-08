@@ -30,7 +30,7 @@
         <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
             <i class="fa fa-bars"></i>
         </a>
-        <a href="greeting.ftl" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Home</a>
+        <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Home</a>
         <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>Up</a>
 
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
@@ -66,6 +66,12 @@
         <form action="/registration" method="post">
             <p class="w3-center">Email: </p>
             <input type="email" name="email" placeholder="email . . ."/>
+            <p style="color: red">
+            ${userExist!}
+            </p>
+            <p style="color: red">
+            ${emailIsEmpty!}
+            </p>
             <p class="w3-center">Create User Name: </p>
             <input type="text" name="username" placeholder="username . . ."/>
 
@@ -79,7 +85,9 @@
             <input type="password" name="password" placeholder="password . . ."/>
             <p class="w3-center">Confirm password: </p>
             <input type="password" name="passwordConfirm" placeholder="password . . ."/>
-
+            <p style="color: red">
+            ${passwordNotMach!}
+            </p>
             <br>
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
             <button type="submit" class="btn btn1 w3-button w3-padding-large">Create</button>

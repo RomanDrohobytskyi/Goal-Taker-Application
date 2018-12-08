@@ -149,7 +149,7 @@
         <div class="w3-col m3">
             <img src="https://pp.userapi.com/c637122/v637122807/2cd71/fOOd2agzTSs.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
         </div>
-        <a href="/main"> <button class="btn btn1" style="margin-top:64px">See more photos</button></a>
+        <a href="/main"> <button class="btn btn2" style="margin-top:64px">See more photos</button></a>
     </div>
 </div>
 

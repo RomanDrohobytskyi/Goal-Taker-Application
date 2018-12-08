@@ -49,7 +49,7 @@
     <div class="w3-center w3-row">
         <h3 class="w3-center">Login</h3>
         <p style="color: red">
-        ${message !}
+        ${message!}
         </p>
             <form action="/login" method="post">
                 <p class="w3-center">Enter Email: </p>

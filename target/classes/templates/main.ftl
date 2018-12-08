@@ -59,28 +59,82 @@
     </div>
 </div>
 
-<!-- REGISTRATION Container -->
-<div class="w3-content w3-container w3-padding-64" id="login">
+<!-- Add messages Container -->
+<div class="w3-content w3-container w3-padding-64" id="add-message">
 
     <div class="w3-center w3-row">
-        <h3 class="w3-center">Main</h3>
+        <h3 class="w3-center">Create message</h3>
 
         <div>
             <span>Click on a link to see <a href="/user">list of Users</a>!</span>
         </div>
+        <p>Create Your new account!</p>
 
-        <div>
-            <form method="post" enctype="multipart/form-data">
-                <input type="text" name="text" placeholder="Введите сообщение" />
-                <input type="text" name="tag" placeholder="Тэг" />
-                <input type="file" name="file">
-                <input type="hidden" name="_csrf" value="${_csrf.token}" />
-                <button type="submit">Добавить</button>
-            </form>
-        </div>
+        <form method="post" enctype="multipart/form-data">
+            <p class="w3-center">Enter message: </p>
+            <input type="text" name="text" placeholder="text . . ."/>
+            <p class="w3-center">Tag: </p>
+            <input type="text" name="tag" placeholder="tag  . . ."/>
+
+            <p class="w3-center">Choose file to add: </p>
+            <input type="file" name="file" placeholder="file . . ." />
+
+            <br>
+            <input type="hidden" name="_csrf" value="${_csrf.token}" />
+            <button type="submit" class="btn btn1 w3-button w3-padding-large">Add</button>
+        </form>
 
     </div>
 </div>
+
+<div class="big-img-login-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Main</span>
+    </div>
+</div>
+
+<!-- Messages Container -->
+<div class="w3-content w3-container w3-padding-64" id="messages">
+    <div class="w3-center w3-row">
+        <h3 class="w3-center">All messages</h3>
+
+        <form method="get" action="/main">
+            <p class="w3-center">Filter: </p>
+            <input type="text" name="filter" placeholder="filter . . ." value="${filter!}"/>
+            <br>
+            <input type="hidden" name="_csrf" value="${_csrf.token}" />
+            <button type="submit" class="btn btn1 w3-button w3-padding-large">Find</button>
+
+        </form>
+        <table id="messagesTable" align="center" width="100%">
+            <tr>
+                <th>ID</th>
+                <th>Message</th>
+                <th>Filter</th>
+                <th>Email</th>
+                <th>Img</th>
+            </tr>
+        <#list messages as message>
+            <tr>
+                <td><b>${message.id}</b></td>
+                <td><span>${message.text}</span></td>
+                <td><i>${message.tag}</i></td>
+                <td><strong>${message.getAuthorEmail()}</strong></td>
+                <td>
+                    <div >
+                    <#if message.filename??>
+                        <img src="/img/${message.filename}" style="width:130px;height:100px;">
+                    </#if>
+                    <#else >
+                        <strong>No messages!</strong>
+                    </div>
+                </td>
+            </tr>
+        </#list>
+        </table>
+    </div>
+</div>
+
 <#--Footer-->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
     <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
@@ -92,64 +146,5 @@
     </div>
     <p><i class="fa fa-user-o" aria-hidden="true"> Roman Drohobytskyi</i></p>
 </footer>
-</body>
-</html>
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sweater</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href="/static/css/buttons.css">
-    <script type="text/javascript" src="/static/javascript/js.js"></script>
-</head>
-<body>
-<div>
-    <form action="/logout" method="post">
-        <input type="hidden" name="_csrf" value="${_csrf.token}" />
-        <input type="submit" value="Sign Out"/>
-    </form>
-</div>
-<div>
-    <span> <a href="/user">User List!</a></span>
-</div>
-<div>
-    <form method="post" enctype="multipart/form-data">
-        <input type="text" name="text" placeholder="Введите сообщение" />
-        <input type="text" name="tag" placeholder="Тэг" />
-        <input type="file" name="file">
-        <input type="hidden" name="_csrf" value="${_csrf.token}" />
-        <button type="submit">Добавить</button>
-    </form>
-</div>
-<div>Список сообщений</div>
-<form method="get" action="/main">
-    <label>
-        <input type="text" name="filter" value="${filter!}">
-    </label>
-    <button type="submit">Найти</button>
-</form>
-    <#list messages as message>
-    <div>
-        <b>${message.id}</b>
-        <span>${message.text}</span>
-        <i>${message.tag}</i>
-        <strong>${message.getAuthorName()}</strong>
-        <div>
-            <#if message.filename??>
-                <img src="/img/${message.filename}">
-            </#if>
-        </div>
-    </div>
-    <#else >
-    <strong>No messages!</strong>
-    </#list>
 </body>
 </html>

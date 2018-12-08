@@ -29,4 +29,7 @@ public class Message {
     public String getAuthorName(){
         return user != null ? user.getUsername() : "<none>";
     }
+    public String getAuthorEmail(){
+        return user != null ? user.getEmail() : "<none>";
+    }
 }

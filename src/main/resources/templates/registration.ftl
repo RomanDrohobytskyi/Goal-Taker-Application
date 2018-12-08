@@ -66,6 +66,12 @@
         <form action="/registration" method="post">
             <p class="w3-center">Email: </p>
             <input type="email" name="email" placeholder="email . . ."/>
+            <p style="color: red">
+            ${userExist!}
+            </p>
+            <p style="color: red">
+            ${emailIsEmpty!}
+            </p>
             <p class="w3-center">Create User Name: </p>
             <input type="text" name="username" placeholder="username . . ."/>
 
@@ -79,7 +85,9 @@
             <input type="password" name="password" placeholder="password . . ."/>
             <p class="w3-center">Confirm password: </p>
             <input type="password" name="passwordConfirm" placeholder="password . . ."/>
-
+            <p style="color: red">
+            ${passwordNotMach!}
+            </p>
             <br>
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
             <button type="submit" class="btn btn1 w3-button w3-padding-large">Create</button>

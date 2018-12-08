@@ -20,7 +20,7 @@
         <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
             <i class="fa fa-bars"></i>
         </a>
-        <a href="greeting.ftl" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Home</a>
+        <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Home</a>
         <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>Up</a>
 
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
@@ -49,7 +49,7 @@
     <div class="w3-center w3-row">
         <h3 class="w3-center">Login</h3>
         <p style="color: red">
-        ${message !}
+        ${message!}
         </p>
             <form action="/login" method="post">
                 <p class="w3-center">Enter Email: </p>
