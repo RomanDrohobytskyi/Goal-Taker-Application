@@ -1,7 +1,8 @@
-package application.acces;
+package application.login;
 
 
 import application.service.UserService;
+import application.user.IUserRepository;
 import application.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -36,7 +37,7 @@ public class RegistrationController {
                     userService.setUserData(user);
                     userService.saveUser(user);
                     if (userService.sendActivationCode(user)){
-                        return "redirect:/acces";
+                        return "redirect:/login";
                     } else {
                         model.put("message", "We can`t send to You activation code, sorry!");
                         return "registration";

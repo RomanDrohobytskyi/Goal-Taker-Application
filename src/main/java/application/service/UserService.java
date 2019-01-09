@@ -25,40 +25,6 @@ public class UserService implements UserDetailsService{
         return iUserRepository.findUserByEmail(email);
     }
 
-    public boolean addUser(User user, String passwordConfirm){
-        //Find user by email from DB using IUserRepository
-        User userFromDb = iUserRepository.findUserByEmail(user.getEmail());
-
-        //If User not exist, return false.
-        if (userFromDb != null){
-            return false;
-        }
-
-        user.setActive(true);
-        user.setRoles(Collections.singleton(Role.USER));
-        user.setActivationCode(UUID.randomUUID().toString());
-        //user.setRoles(Collections.singleton(Role.ADMIN));
-
-        iUserRepository.save(user);
-        //If User has email and confirm his password get and send on his
-        // email activation code.
-        if (!org.springframework.util.StringUtils.isEmpty(user.getEmail())){
-                if (user.getPassword().equals(passwordConfirm)){
-                    String message = String.format(
-                            "Hello, %s!\n" + "Welcome to my page!\n" +
-                                    "To activate your Email please, click on a link below.\n" +
-                                    "http://localhost:8080/activate/%s",
-                            user.getFirstName() + " " + user.getLastName(),
-                            user.getActivationCode()
-                    );
-
-                    mailSender.send(user.getEmail(), "Activation code", message);
-                    return true;
-                }
-        }
-        return false;
-    }
-
     //Find user by email from DB using IUserRepository.
     //If User not exist, return false.
     public boolean isUserExist(User user){
@@ -68,7 +34,7 @@ public class UserService implements UserDetailsService{
         return true;
     }
 
-    //Check and return if User email is empty.
+    //Check and return User email is empty.
     public boolean isUserEmailEmpty(String email){
         return !org.springframework.util.StringUtils.isEmpty(email);
     }
@@ -99,6 +65,7 @@ public class UserService implements UserDetailsService{
         user.setActive(true);
         user.setRoles(Collections.singleton(Role.USER));
         user.setActivationCode(UUID.randomUUID().toString());
+//        user.setRoles(Collections.singleton(Role.ADMIN));
     }
 
     public void saveUser(User user){

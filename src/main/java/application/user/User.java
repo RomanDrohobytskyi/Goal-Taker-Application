@@ -8,8 +8,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Set;
 
@@ -22,6 +24,7 @@ public class User implements UserDetails{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Email
+    @NotNull
     private String email;
     @NotNull
     @Size(min = 1, max = 24)
@@ -36,13 +39,10 @@ public class User implements UserDetails{
     private String password;
     private String activationCode;
     private boolean active;
-
-
-
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
     @Enumerated(EnumType.STRING)
+    @NotNull
     private Set<Role> roles;
-
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
