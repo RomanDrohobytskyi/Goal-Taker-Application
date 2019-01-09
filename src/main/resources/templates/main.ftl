@@ -1,13 +1,3 @@
-<#--<#import "parts/common.ftl" as c>-->
-<#--<#import "parts/login.ftl" as l>-->
-
-<#--<@c.page>-->
-<#--Login page-->
-<#--<@l.login "/login" />-->
-<#--<a href="/registration">Add new user</a>-->
-<#--</@c.page>-->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,7 +43,7 @@
 </div>
 
 <!-- LOGIN Parallax Image -->
-<div class="big-img-login-1 w3-display-container w3-opacity-min" id="home">
+<div class="parallax big-img-login-1 w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
         <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Main</span>
     </div>
@@ -64,12 +54,9 @@
 
     <div class="w3-center w3-row">
         <h3 class="w3-center">Create message</h3>
-
         <div>
-            <span>Click on a link to see <a href="/user">list of Users</a>!</span>
+            <span>Click on a link to see <a href="/user" style="color:cornflowerblue"> list of Users</a>!</span>
         </div>
-        <p>Create Your new account!</p>
-
         <form method="post" enctype="multipart/form-data">
             <p class="w3-center">Enter message: </p>
             <input type="text" name="text" placeholder="text . . ."/>
@@ -86,10 +73,10 @@
 
     </div>
 </div>
-
-<div class="big-img-login-1 w3-display-container w3-opacity-min" id="home">
+<#--Second Parallax IMG-->
+<div class="parallax big-img-login-1 w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Main</span>
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Messages</span>
     </div>
 </div>
 
@@ -115,7 +102,7 @@
                 <th>Img</th>
             </tr>
         <#list messages as message>
-            <tr>
+            <tr style="height: 100px">
                 <td><b>${message.id}</b></td>
                 <td><span>${message.text}</span></td>
                 <td><i>${message.tag}</i></td>
@@ -126,7 +113,9 @@
                         <img src="/img/${message.filename}" style="width:130px;height:100px;">
                     </#if>
                     <#else >
-                        <strong>No messages!</strong>
+                        <p style="color: red">
+                            <strong>No messages!</strong>
+                        </p>
                     </div>
                 </td>
             </tr>

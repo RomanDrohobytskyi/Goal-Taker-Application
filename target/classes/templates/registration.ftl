@@ -1,13 +1,3 @@
-<#--<#import "parts/common.ftl" as c>-->
-<#--<#import "parts/login.ftl" as l>-->
-
-<#--<@c.page>-->
-<#--Login page-->
-<#--<@l.login "/login" />-->
-<#--<a href="/registration">Add new user</a>-->
-<#--</@c.page>-->
-
-
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
@@ -47,7 +37,7 @@
 </div>
 
 <!-- REGISTRATION Parallax Image -->
-<div class="big-img-login-1 w3-display-container w3-opacity-min" id="home">
+<div class="parallax big-img-login-1 w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
         <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Registration</span>
     </div>
@@ -60,7 +50,7 @@
         <h3 class="w3-center">Registration</h3>
         <p>Create Your new account!
             <p style="color: red">
-                ${message !}
+                ${message!}
             </p>
 
         <form action="/registration" method="post">
@@ -108,29 +98,3 @@
 </footer>
 </body>
 </html>
-
-
-
-
-
-
-<#--<!DOCTYPE html>-->
-<#--<html lang="en">-->
-<#--<head>-->
-    <#--<meta charset="UTF-8">-->
-    <#--<title>Sweater</title>-->
-    <#--<link rel="stylesheet" href="/static/css/style.css">-->
-    <#--<link rel="stylesheet" href="/static/css/buttons.css">-->
-    <#--<script type="text/javascript" src="/static/javascript/js.js"></script>-->
-<#--</head>-->
-<#--<body>-->
-<#--Add new user-->
-    <#--${message!}-->
-    <#--<form action="/registration" method="post">-->
-        <#--<div><label> User Name : <input type="text" name="username"/> </label></div>-->
-        <#--<div><label> Password: <input type="password" name="password"/> </label></div>-->
-        <#--<input type="hidden" name="_csrf" value="${_csrf.token}" />-->
-        <#--<div><input type="submit" value="Sign In"/></div>-->
-    <#--</form>-->
-<#--</body>-->
-<#--</html>-->

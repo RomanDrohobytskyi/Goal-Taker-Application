@@ -6,6 +6,7 @@
     <link rel="shortcut icon" type="image/png" href="https://cdn0.iconfinder.com/data/icons/basic-outline/64/icon-basic-set_12-camera-512.png">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/buttons.css">
+    <link rel="stylesheet" href="/static/css/images.css">
     <script type="text/javascript" src="/static/javascript/js.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,7 +44,7 @@
 </div>
 
 <!-- First Parallax Image with Text -->
-<div class="big-img-index-1 w3-display-container w3-opacity-min" id="home">
+<div class="parallax big-img-index-1 w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
         <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Roman Drohobytskyi</span>
     </div>
@@ -56,7 +57,7 @@
     <p>First article.</p>
     <div class="w3-row">
         <div class="w3-col m6 w3-center w3-padding-large">
-            <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
+            <p><b><i class="fa fa-user w3-margin-right"></i>Roman Drohobytskyi.</b></p><br>
             <img src="https://pp.userapi.com/c849432/v849432316/b6f85/N5R2bjbNqJE.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
         </div>
 
@@ -100,7 +101,7 @@
 </div>
 
 <!-- Second Parallax Image with Portfolio Text -->
-<div class="big-img-index-2 w3-display-container w3-opacity-min">
+<div class="parallax big-img-index-2 w3-display-container w3-opacity-min">
     <div class="w3-display-middle">
         <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
     </div>
@@ -109,6 +110,7 @@
 <!-- MY PROJECTS (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
 
+    <#--PROJECTS div-->
     <h3 class="w3-center">MY PROJECTS</h3>
     <p class="w3-center"><em>This`s my programing projects.<br> Click on the images to make them bigger</em></p><br>
 
@@ -129,9 +131,10 @@
         <div class="w3-col m3">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB_yCK06ouPnYKZg92oUPTBZtw80NTQ2K_VVisGQaM6BGCqrMg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Android project">
         </div>
-        <a href="/main"> <button class="btn btn1" style="margin-top:64px">See more projects</button></a>
+        <a href="/main"> <button class="btn btn2 w3-button w3-padding-large">See more projects</button></a>
     </div>
 
+    <#--PHOTOS div-->
     <div class="w3-row-padding w3-center w3-section">
         <h3 class="w3-center">MY PHOTOS</h3>
         <div class="w3-col m3">
@@ -149,7 +152,7 @@
         <div class="w3-col m3">
             <img src="https://pp.userapi.com/c637122/v637122807/2cd71/fOOd2agzTSs.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
         </div>
-        <a href="/main"> <button class="btn btn2" style="margin-top:64px">See more photos</button></a>
+        <a href="/main"> <button class="btn btn2 w3-button w3-padding-large" >See more photos</button></a>
     </div>
 </div>
 
@@ -163,7 +166,7 @@
 </div>
 
 <!-- Third Parallax Image with Portfolio Text -->
-<div class="big-img-index-3 w3-display-container w3-opacity-min">
+<div class="parallax big-img-index-3 w3-display-container w3-opacity-min">
     <div class="w3-display-middle">
         <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
     </div>
@@ -217,24 +220,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-<#--<!DOCTYPE html>-->
-<#--<html xmlns="http://www.w3.org/1999/xhtml">-->
-<#--<head>-->
-    <#--<title>Spring Security Example </title>-->
-    <#--<link rel="stylesheet" href="/static/css/style.css">-->
-    <#--<link rel="stylesheet" href="/static/css/buttons.css">-->
-    <#--<script type="text/javascript" src="/static/javascript/js.js"></script>-->
-<#--</head>-->
-<#--<body>-->
-<#--<div>Hello, user</div>-->
-<#--<a href="/main">Main page</a>-->
-<#--</body>-->
-<#--</html>-->
-
-

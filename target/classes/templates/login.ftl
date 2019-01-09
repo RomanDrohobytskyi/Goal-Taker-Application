@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="/static/css/buttons.css">
     <script type="text/javascript" src="/static/javascript/js.js"></script>
 
+    <#--<link rel="stylesheet" href="/static/css/login.css">-->
+    <#--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <#--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">-->
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -37,7 +41,7 @@
 </div>
 
 <!-- LOGIN Parallax Image -->
-<div class="big-img-login-1 w3-display-container w3-opacity-min" id="home">
+<div class="parallax big-img-login-1 w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
         <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Login</span>
     </div>
@@ -45,9 +49,7 @@
 
 <!-- LOGIN Container -->
 <div class="w3-content w3-container w3-padding-64" id="login">
-
     <div class="w3-center w3-row">
-        <h3 class="w3-center">Login</h3>
         <p style="color: red">
         ${message!}
         </p>
@@ -60,9 +62,17 @@
                 <br>
                 <button type="submit" class="btn btn1 w3-button w3-padding-large">Sign In</button>
             </form>
-        <h5>No registered yet? Create easy new <a href="/registration">account</a>!</h5>
+        <h5>No registered yet? Create easy new <a href="/registration"><b>account</b></a>!</h5>
     </div>
 </div>
+
+<!--Second LOGIN Parallax Image -->
+<div class="parallax big-img-login-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Login</span>
+    </div>
+</div>
+
 <#--Footer-->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
     <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
@@ -74,5 +84,6 @@
     </div>
     <p><i class="fa fa-user-o" aria-hidden="true"> Roman Drohobytskyi</i></p>
 </footer>
+
 </body>
 </html>

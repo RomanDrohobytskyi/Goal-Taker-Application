@@ -6,7 +6,7 @@ body, html {
 }
 
 /* Create a Parallax Effect */
-.big-img-index-1, .big-img-index-2, .big-img-index-3, .big-img-projects-1, .big-img-projects-2, .big-img-projects-3, .big-img-login-1, .big-img-login-2, .big-img-login-3,.big-img-welcome-1 {
+.parallax {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -49,7 +49,7 @@ body, html {
 
 /* Big background images(3) for index.jsp */
 .big-img-login-1 {
-    background-image: url("https://belimitless.com/wp-content/uploads/2017/08/blockchain.jpg");
+    background-image: url("https://blog.dieboldnixdorf.com/wp-content/uploads/2016/12/DN_DataSecurity_Blog.jpg");
     min-height: 400px;
 }
 
@@ -67,6 +67,12 @@ body, html {
     background-image: url("http://www.crazytravellers.com/wp-content/uploads/2017/04/Welcome.jpg");
     min-height: 70%;
 }
+
+.big-img-users-1 {
+    background-image: url("http://techstory.in/new/wp-content/uploads/2015/07/Internet-users-India.jpg");
+    min-height: 70%;
+}
+
 
 /*End of authentication.jsp*/
 

@@ -11,7 +11,9 @@
         User editor.
     </div>
     <form action="/user" method="post">
-        <input type="text" name="username" value="${user.username}">
+        <label>
+            <input type="text" name="username" value="${user.username}">
+        </label>
         <#list roles as role>
         <div>
             <label>
@@ -23,7 +25,7 @@
         </#list>
         <input type="hidden" value="${user.id}" name="userId">
         <input type="hidden" value="${_csrf.token}" name="_csrf">
-        <button type="submit">Save</button>
+        <button type="submit" >Save</button>
     </form>
 </body>
 </html>
