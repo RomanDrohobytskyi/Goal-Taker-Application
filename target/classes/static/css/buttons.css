@@ -44,12 +44,12 @@ body{
 .btn3:hover,.btn4:hover{
     color: #ABADAA;
 }
-.btn::before{
+.btn::before, .small-btn::before{
     content: "";
     position: absolute;
     left: 0;
     width: 100%;
-    height: 0%;
+    height: 0;
     background: #ABADAA;
     z-index: -1;
     transition: 0.8s;
@@ -69,5 +69,5 @@ body{
     height: 180%;
 }
 .btn3:hover::before,.btn4:hover::before{
-    height: 0%;
+    height: 0;
 }

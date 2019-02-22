@@ -44,7 +44,7 @@
 </div>
 
 <!-- REGISTRATION Container -->
-<div class="w3-content w3-container w3-padding-64" id="login">
+<div class="w3-content w3-container w3-padding-64" id="registration">
 
     <div class="w3-center w3-row">
         <h3 class="w3-center">Registration</h3>
@@ -81,6 +81,7 @@
             <br>
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
             <button type="submit" class="btn btn1 w3-button w3-padding-large">Create</button>
+            <h5>Already registered?<a href="/login"><b>Sing In!</b></a>!</h5>
         </form>
 
     </div>

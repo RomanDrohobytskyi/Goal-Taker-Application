@@ -43,7 +43,6 @@ public class RegistrationController {
                         return "registration";
                     }
                 }
-                //Errors for registration form!
                 else {
                     model.put("passwordNotMach", "Sorry, but Your passwords do not match, check it again!");
                     return "registration";
