@@ -54,7 +54,6 @@ body, html {
     min-height: 400px;
 }
 
-
 /* Parallax images for login.ftl*/
 .big-img-login-1 {
     background-image: url("https://blog.dieboldnixdorf.com/wp-content/uploads/2016/12/DN_DataSecurity_Blog.jpg");
@@ -70,7 +69,6 @@ body, html {
     background-image: url("https://belimitless.com/wp-content/uploads/2017/08/blockchain.jpg");
     min-height: 400px;
 }
-
 
 /* Parallax images WELCOME */
 .big-img-welcome-1 {
@@ -125,7 +123,7 @@ a:active {
 }
 
 /* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
+@media only screen and (max-device-width: 1100px) {
     .big-img-greeting-1, .big-img-greeting-2, .big-img-greeting-3, .big-img-projects-1, .big-img-projects-2,
     .big-img-projects-3, .big-img-login-1, .big-img-login-2, .big-img-login-3, .big-img-welcome-1 {
         background-attachment: scroll;

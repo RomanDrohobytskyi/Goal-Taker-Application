@@ -1,5 +1,6 @@
 package application.user;
 
+import application.entities.Aim;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -43,6 +44,8 @@ public class User implements UserDetails{
     @Enumerated(EnumType.STRING)
     @NotNull
     private Set<Role> roles;
+    @OneToMany
+    private Set<Aim> aims;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

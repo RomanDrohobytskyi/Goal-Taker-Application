@@ -26,3 +26,7 @@ function toggleFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
+function clear(id){
+    document.getElementById(id).value = '';
+}

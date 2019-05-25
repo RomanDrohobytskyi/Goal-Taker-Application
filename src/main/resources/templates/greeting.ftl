@@ -29,6 +29,7 @@
         <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
         <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
         <a href="/main" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> MESSAGES</a>
+        <a href="/main_aim" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> AIMS</a>
         <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
         <i class="fa fa-search"></i>
@@ -69,7 +70,7 @@
     </p>
     <div class="w3-row">
         <div class="w3-col m6 w3-center w3-padding-large">
-            <img src="https://pp.userapi.com/c849432/v849432316/b6f85/N5R2bjbNqJE.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+            <img src="https://pp.userapi.com/c849432/v849432316/b6f85/N5R2bjbNqJE.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this)" alt="Photo of Me" width="100%">
             <p><b><i class="fa fa-user w3-margin-right"></i>Roman Drohobytskyi</b></p><br>
 
         </div>
@@ -159,6 +160,8 @@
     <div class="w3-row-padding w3-center w3-section">
         <h3 class="w3-center">MY PHOTOS</h3>
 
+
+        <#--
         <div class="w3-center w3-row slider-show middle">
 
             <div class="slides">
@@ -194,6 +197,7 @@
 
             </div>
         </div>
+        -->
         <a href="/photos"> <button class="btn btn2 w3-button w3-padding-large" >See more photos</button></a>
     </div>
 </div>
@@ -239,7 +243,8 @@
                 </div>
                 <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
                 <button class="w3-right w3-section btn btn1" type="submit">
-                    <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    <i class="fa fa-paper-plane"></i>
+                        SEND MESSAGE
                 </button>
             </form>
         </div>

@@ -87,8 +87,13 @@
         <h3 class="w3-center">All messages</h3>
 
         <form method="get" action="/main">
-            <p class="w3-center">Filter: </p>
-            <input type="text" name="filter" placeholder="filter . . ." value="${filter!}"/>
+            <p class="w3-center">
+                Filter:
+            </p>
+            <input id="filter" type="text" name="filter" placeholder="filter . . ." value="${filter!}"  />
+
+
+            <p class="fa fa-times-circle" onclick="document.getElementById('filter').value = ''"> </p>
             <br>
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
             <button type="submit" class="btn btn1 w3-button w3-padding-large">Find</button>
@@ -110,13 +115,13 @@
                 <td><strong>${message.getAuthorEmail()}</strong></td>
                 <td>
                     <div >
-                    <#if message.filename??>
-                        <img src="/img/${message.filename}" style="width:130px;height:100px;">
-                    </#if>
-                    <#else >
-                        <p style="color: red">
-                            <strong>No messages!</strong>
-                        </p>
+                        <#if message.filename?has_content>
+                            <img src="/img/${message.filename}" style="width:130px;height:100px;">
+                        </#if>
+                        <#else >
+                            <p style="color: red">
+                                <strong>No messages!</strong>
+                            </p>
                     </div>
                 </td>
             </tr>
