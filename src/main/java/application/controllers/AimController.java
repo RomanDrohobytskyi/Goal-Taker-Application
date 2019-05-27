@@ -1,5 +1,7 @@
-package application.message;
+package application.controllers;
 
+import application.message.IMessageRepository;
+import application.message.Message;
 import application.user.User;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +9,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,8 +22,15 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Controller
-public class MessageController {
+public class AimController {
 
+    @GetMapping("/main_aim")
+    public String filter(@RequestParam(required = false, defaultValue = "")String filter, Model model){
+
+        return "main_aim";
+    }
+
+    /*
     @Autowired
     private IMessageRepository messageRepo;
     @Value("${upload.path}")
@@ -93,4 +101,5 @@ public class MessageController {
         }
         return Optional.empty();
     }
+    */
 }

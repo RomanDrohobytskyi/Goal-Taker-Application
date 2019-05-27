@@ -31,11 +31,17 @@ public class RegistrationController {
     public String addUser(User user, Map<String, Object> model,
                           @RequestParam String passwordConfirm) {
 
+<<<<<<< HEAD
         //If user not exist.
         if (userService.isUserExist(user.getEmail())){
             //If user email is not empty.
+=======
+        //If user not exist
+        if (userService.isUserExist(user)){
+            //If user email is not empty
+>>>>>>> 4421ffe9e6d2d0f718a777353acacdcaecf48c85
             if (userService.isUserEmailEmpty(user.getEmail())){
-                //If passwords match.
+                //If passwords match - save user and user data
                 if (userService.isPasswordsMatch(user.getPassword(), passwordConfirm)){
                     userService.setUserData(user);
                     userService.saveUser(user);

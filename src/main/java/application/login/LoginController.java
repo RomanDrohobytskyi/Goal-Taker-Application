@@ -20,6 +20,7 @@ public class LoginController {
         return "login";
     }
 
+<<<<<<< HEAD
     @PostMapping("/loginSentCode")
     public String sentCodeInformation(Map<String, Object> model){
         model.put("activated", "We sent a activation code on your email, check it out!");
@@ -31,9 +32,14 @@ public class LoginController {
                             @RequestParam String email) {
         if (userService.isUserExist(user.getEmail())) {
             model.put("validatorError", "No user with email: " + email);
+=======
+    @PostMapping("/login")
+    public String loginError(User user, Map<String, Object> model) {
+        if (userService.isUserExist(user)) {
+            model.put("validatorError", "No user with email: " + user.getEmail());
+>>>>>>> 4421ffe9e6d2d0f718a777353acacdcaecf48c85
         }else
             model.put("validatorError", "Wrong Email or Password!");
-
-        return "login?error";
+        return "login";
     }
 }
