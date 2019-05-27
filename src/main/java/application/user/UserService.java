@@ -1,8 +1,6 @@
-package application.service;
+package application.user;
 
-import application.user.IUserRepository;
-import application.user.Role;
-import application.user.User;
+import application.mail.MailSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -20,6 +18,7 @@ public class UserService implements UserDetailsService{
     @Autowired
     private MailSender mailSender;
 
+    //Load user from DB
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         return iUserRepository.findUserByEmail(email);
@@ -27,8 +26,8 @@ public class UserService implements UserDetailsService{
 
     //Find user by email from DB using IUserRepository.
     //If User not exist, return false.
-    public boolean isUserExist(User user){
-        if (iUserRepository.findUserByEmail(user.getEmail()) != null){
+    public boolean isUserExist(String email){
+        if (iUserRepository.findUserByEmail(email) != null){
             return false;
         }
         return true;
@@ -64,6 +63,7 @@ public class UserService implements UserDetailsService{
     public void setUserData(User user){
         user.setActive(true);
         user.setRoles(Collections.singleton(Role.USER));
+        // random generated code by UUID
         user.setActivationCode(UUID.randomUUID().toString());
 //        user.setRoles(Collections.singleton(Role.ADMIN));
     }
@@ -72,7 +72,11 @@ public class UserService implements UserDetailsService{
         iUserRepository.save(user);
     }
 
-    //Method to check is User activate his email by activation code or not.
+    public void deleteUser(User user){
+        iUserRepository.delete(user);
+    }
+
+    //Check is User activate his account by activation code or not.
     public boolean activateUser(String code) {
         User user = iUserRepository.findByActivationCode(code);
 

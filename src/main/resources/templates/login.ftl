@@ -53,15 +53,15 @@
         <p style="color: red">
         ${validatorError!}
         </p>
-            <form action="/login" method="post">
-                <p class="w3-center">Enter Email: </p>
-                <input type="email" name="username" placeholder="email . . ."/>
-                <p class="w3-center">Enter password: </p>
-                <input type="hidden" name="_csrf" value="${_csrf.token}" />
-                <input type="password" name="password" placeholder="password . . ."/>
-                <br>
-                <button type="submit" class="btn btn1 w3-button w3-padding-large">Sign In</button>
-            </form>
+        <form action="/login" method="post">
+            <p class="w3-center">Enter Email: </p>
+            <input type="email" name="username" placeholder="email . . ."/>
+            <p class="w3-center">Enter password: </p>
+            <input type="hidden" name="_csrf" value="${_csrf.token}" />
+            <input type="password" name="password" placeholder="password . . ."/>
+            <br>
+            <button type="submit" class="btn btn1 w3-button w3-padding-large">Sign In</button>
+        </form>
         <h5>No registered yet? Create easy new <a href="/registration"><b>account</b></a>!</h5>
     </div>
 </div>
