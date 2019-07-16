@@ -52,6 +52,37 @@
 
     <div class="w3-center w3-row slider-show middle">
 
+            <div class="slides">
+                <input type="radio" name="r" id="r1" checked>
+                <input type="radio" name="r" id="r2">
+                <input type="radio" name="r" id="r3">
+                <input type="radio" name="r" id="r4">
+                <input type="radio" name="r" id="r5">
+
+                <div class="slide s1">
+                    <img src="https://pp.userapi.com/c845417/v845417470/1854e9/iCB1Vo-s2AQ.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="https://pp.userapi.com/c847221/v847221064/126611/7O_a9n533XI.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="https://pp.userapi.com/c845417/v845417470/1854b0/Wo38FNMoI08.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="https://pp.userapi.com/c845417/v845417470/1854ba/_QV6tLFCm2Q.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="https://pp.userapi.com/c845417/v845417470/1854c4/BF8cyTXuF5w.jpg" alt="">
+                </div>
+
+                <div class="navigation">
+                    <label for="r1" class="bar"></label>
+                    <label for="r2" class="bar"></label>
+                    <label for="r3" class="bar"></label>
+                    <label for="r4" class="bar"></label>
+                    <label for="r5" class="bar"></label>
+                </div>
+            </div>
     </div>
 </div>
 

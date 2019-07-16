@@ -103,6 +103,17 @@ body, html {
     min-height: 70%;
 }
 
+/*Parallax photos for Aims */
+.big-img-smart {
+    background-image: url("https://cdn2.slidemodel.com/wp-content/uploads/6991-01-smart-goals-slide-design-1.jpg");
+    min-height: 70%;
+}
+
+.big-img-small-smart {
+    background-image: url("https://www.professionalacademy.com/media/images-news/smarter-objectives.jpg");
+    min-height: 70%;
+}
+
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 /* unvisited link */
@@ -123,9 +134,8 @@ a:active {
 }
 
 /* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1100px) {
-    .big-img-greeting-1, .big-img-greeting-2, .big-img-greeting-3, .big-img-projects-1, .big-img-projects-2,
-    .big-img-projects-3, .big-img-login-1, .big-img-login-2, .big-img-login-3, .big-img-welcome-1 {
+@media only screen and (max-device-width: 1600px) {
+    .big-img-index-1, .big-img-index-2, .big-img-index-3, .big-img-projects-1, .big-img-projects-2, .big-img-projects-3, .big-img-login-1, .big-img-login-2, .big-img-login-3, .big-img-welcome-1 {
         background-attachment: scroll;
         min-height: 400px;
     }

@@ -1,6 +1,6 @@
 package application.config;
 
-import application.user.UserService;
+import application.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -26,9 +26,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     .anyRequest().authenticated()
                 .and()
                     .formLogin()
-                    .loginPage("/login").failureUrl("/login?error").permitAll()
+                    .loginPage("/login")
+                    .permitAll()
                 .and()
-                    .logout().logoutUrl("/login").logoutSuccessUrl("/login")
+                    .logout()
                     .permitAll();
     }
     @Override

@@ -23,13 +23,12 @@
         <#--</a>-->
         <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Home</a>
         <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>Up</a>
+        <a href="/main_aim" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> AIMS</a>
         <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-out"></i>
             <form action="/logout" method="post">
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
             </form>
         </a>
-
-
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
             <i class="fa fa-search"></i>
         </a>
@@ -71,7 +70,6 @@
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
             <button type="submit" class="btn btn1 w3-button w3-padding-large">Add</button>
         </form>
-
     </div>
 </div>
 <#--Second Parallax IMG-->
