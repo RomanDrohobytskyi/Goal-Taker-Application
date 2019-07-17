@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/buttons.css">
     <link rel="stylesheet" href="/static/css/login.css">
+    <link rel="stylesheet" href="/static/css/text.css">
     <script type="text/javascript" src="/static/javascript/js.js"></script>
 
     <#--<link rel="stylesheet" href="/static/css/login.css">-->
@@ -51,38 +52,26 @@
 <!-- LOGIN Container -->
 <div class="w3-content w3-container w3-padding-64" id="login">
     <div class="w3-center w3-row">
-        <p style="color: red">
+        <p style="color: red" class="lucida-console">
         ${validatorError!}
         </p>
             <form action="/login" method="post">
-                <p class="w3-center">Enter Email: </p>
-                <input class="login-input" type="email" name="username" placeholder="email . . ."/>
-                <p class="w3-center">Enter password: </p>
+                <p class="w3-center lucida-console">Enter Email: </p>
+                <input class="login-input" type="email" name="username" placeholder="email"/>
+                <p class="w3-center lucida-console">Enter password: </p>
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
-                <input class="login-input" type="password" name="password" placeholder="password . . ."/>
+                <input class="login-input" type="password" name="password" placeholder="password"/>
                 <br>
                 <button type="submit" class="btn btn1 w3-button w3-padding-large">Sign In</button>
             </form>
-        <h5>No registered yet? Create easy new <a href="/registration"><b>account</b></a>!</h5>
+        <h5 class="lucida-console">No registered yet? Create easy new <a href="/registration"><b>account</b></a>!</h5>
     </div>
 </div>
 
-<!--Second LOGIN Parallax Image -->
-<div class="parallax big-img-login-1 w3-display-container w3-opacity-min" id="home">
 
-</div>
-
-<#--Footer-->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-    <div class="w3-xlarge w3-section">
-        <a href = "https://www.facebook.com/roman.drohobytskyi" target="_blank" class = "fa fa-facebook-official w3-hover-opacity"></a>
-        <a href = "https://www.instagram.com/roma_drohobytskiy/" target="_blank" class = "fa fa-instagram w3-hover-opacity"> </a>
-        <a href = "https://github.com/RomanDrohobytskyi" target="_blank" class = "fa fa-git w3-hover-opacity"></a>
-        <a href = "https://www.linkedin.com/in/roman-drohobytskyi-4b8515163/" target="_blank" class = "fa fa-linkedin w3-hover-opacity"></a>
-    </div>
-    <p><i class="fa fa-user-o" aria-hidden="true"> Roman Drohobytskyi</i></p>
-</footer>
+<#import "parts/footer.ftl" as footer>
+<@footer.footer>
+</@footer.footer>
 
 </body>
 </html>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/buttons.css">
     <link rel="stylesheet" href="/static/css/registration.css">
+    <link rel="stylesheet" href="/static/css/text.css">
     <script type="text/javascript" src="/static/javascript/js.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,7 +56,7 @@
             </p>
 
         <form action="/registration" method="post">
-            <p class="w3-center">Email: </p>
+            <p class="w3-center lucida-console">Email: </p>
             <input class="registration-input" type="email" name="email" placeholder="email"/>
             <p style="color: red">
             ${userExist!}
@@ -63,18 +64,18 @@
             <p style="color: red">
             ${emailIsEmpty!}
             </p>
-            <p class="w3-center">Create User Name: </p>
+            <p class="w3-center lucida-console">Create User Name: </p>
             <input class="registration-input" type="text" name="username" placeholder="username"/>
 
-            <p class="w3-center">First Name: </p>
+            <p class="w3-center lucida-console">First Name: </p>
             <input class="registration-input" type="text" name="firstName" placeholder="first name"/>
 
-            <p class="w3-center">Last Name: </p>
+            <p class="w3-center lucida-console">Last Name: </p>
             <input class="registration-input" type="text" name="lastName" placeholder="last name"/>
 
-            <p class="w3-center">Enter password: </p>
+            <p class="w3-center lucida-console">Enter password: </p>
             <input class="registration-input" type="password" name="password" placeholder="password"/>
-            <p class="w3-center">Confirm password: </p>
+            <p class="w3-center lucida-console">Confirm password: </p>
             <input class="registration-input" type="password" name="passwordConfirm" placeholder="confirm password"/>
             <p style="color: red">
             ${passwordNotMach!}
@@ -88,15 +89,9 @@
     </div>
 </div>
 <#--Footer-->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-    <div class="w3-xlarge w3-section">
-        <a href = "https://www.facebook.com/roman.drohobytskyi" target="_blank" class = "fa fa-facebook-official w3-hover-opacity"></a>
-        <a href = "https://www.instagram.com/roma_drohobytskiy/" target="_blank" class = "fa fa-instagram w3-hover-opacity"> </a>
-        <a href = "https://github.com/RomanDrohobytskyi" target="_blank" class = "fa fa-git w3-hover-opacity"></a>
-        <a href = "https://www.linkedin.com/in/roman-drohobytskyi-4b8515163/" target="_blank" class = "fa fa-linkedin w3-hover-opacity"></a>
-    </div>
-    <p><i class="fa fa-user-o" aria-hidden="true"> Roman Drohobytskyi</i></p>
-</footer>
+<#import "parts/footer.ftl" as footer>
+<@footer.footer>
+</@footer.footer>
+
 </body>
 </html>

@@ -23,7 +23,8 @@ public class AimController {
     public String addMessage(
             @AuthenticationPrincipal User user,
             @RequestParam String title,
-            @RequestParam String description, Map<String, Object> model) {
+            @RequestParam String description,
+            Map<String, Object> model) {
 
         /*
         Optional<Message> message = adaptMessage(text, tag, user);

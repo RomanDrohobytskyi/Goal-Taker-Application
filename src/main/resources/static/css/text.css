@@ -6,3 +6,16 @@
     font-family: "Courier New", Courier, monospace;
     font-size: 130%;
 }
+
+.lucida-console{
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 20px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: 400;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+}

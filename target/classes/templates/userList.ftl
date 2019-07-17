@@ -6,6 +6,7 @@
     <link rel="shortcut icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Group_font_awesome.svg/1024px-Group_font_awesome.svg.png">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/buttons.css">
+    <link rel="stylesheet" href="/static/css/text.css">
     <script type="text/javascript" src="/static/javascript/js.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,15 +53,16 @@
 <!-- User ListContainer -->
 <div class="w3-content w3-container w3-padding-64" id="add-message">
 
-    <h3 class="w3-center">USERS LIST</h3>
+    <h3 class="w3-center lucida-console" style="font-size: 40px;">Users</h3>
 
     <div class="w3-center w3-row">
         <table align="center" width="100%" style="margin-top:30px">
                 <tr>
-                    <th>Name</th>
+                    <th>Email</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
                     <th>Role</th>
-                    <th>Edit</th>
-                    <th></th>
+                    <th>Edit User</th>
                 </tr>
                 <tbody>
                 <#list users as user>
@@ -95,15 +97,9 @@
 </div>
 
 <#--Footer-->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-    <div class="w3-xlarge w3-section">
-        <a href = "https://www.facebook.com/roman.drohobytskyi" target="_blank" class = "fa fa-facebook-official w3-hover-opacity"></a>
-        <a href = "https://www.instagram.com/roma_drohobytskiy/" target="_blank" class = "fa fa-instagram w3-hover-opacity"> </a>
-        <a href = "https://github.com/RomanDrohobytskyi" target="_blank" class = "fa fa-git w3-hover-opacity"></a>
-        <a href = "https://www.linkedin.com/in/roman-drohobytskyi-4b8515163/" target="_blank" class = "fa fa-linkedin w3-hover-opacity"></a>
-    </div>
-    <p><i class="fa fa-user-o" aria-hidden="true"> Roman Drohobytskyi</i></p>
-</footer>
+<#import "parts/footer.ftl" as footer>
+<@footer.footer>
+</@footer.footer>
+
 </body>
 </html>
