@@ -6,6 +6,7 @@
     <link rel="shortcut icon" type="image/png" href="https://cdn0.iconfinder.com/data/icons/basic-outline/64/icon-basic-set_12-camera-512.png">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/buttons.css">
+    <link rel="stylesheet" href="/static/css/registration.css">
     <script type="text/javascript" src="/static/javascript/js.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,7 +56,7 @@
 
         <form action="/registration" method="post">
             <p class="w3-center">Email: </p>
-            <input type="email" name="email" placeholder="email . . ."/>
+            <input class="registration-input" type="email" name="email" placeholder="email"/>
             <p style="color: red">
             ${userExist!}
             </p>
@@ -63,18 +64,18 @@
             ${emailIsEmpty!}
             </p>
             <p class="w3-center">Create User Name: </p>
-            <input type="text" name="username" placeholder="username . . ."/>
+            <input class="registration-input" type="text" name="username" placeholder="username"/>
 
             <p class="w3-center">First Name: </p>
-            <input type="text" name="firstName" placeholder="first name . . ."/>
+            <input class="registration-input" type="text" name="firstName" placeholder="first name"/>
 
             <p class="w3-center">Last Name: </p>
-            <input type="text" name="lastName" placeholder="last name . . ."/>
+            <input class="registration-input" type="text" name="lastName" placeholder="last name"/>
 
             <p class="w3-center">Enter password: </p>
-            <input type="password" name="password" placeholder="password . . ."/>
+            <input class="registration-input" type="password" name="password" placeholder="password"/>
             <p class="w3-center">Confirm password: </p>
-            <input type="password" name="passwordConfirm" placeholder="password . . ."/>
+            <input class="registration-input" type="password" name="passwordConfirm" placeholder="confirm password"/>
             <p style="color: red">
             ${passwordNotMach!}
             </p>

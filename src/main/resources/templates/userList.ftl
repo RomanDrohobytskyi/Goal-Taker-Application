@@ -68,6 +68,12 @@
                         <td>
                             ${user.email}
                         </td>
+                        <td>
+                            ${user.firstName}
+                        </td>
+                        <td>
+                            ${user.lastName}
+                        </td>
                         <td><#list user.roles as role>
                             ${role}<#sep>,
                         </#list>

@@ -6,6 +6,7 @@
     <link rel="shortcut icon" type="image/png" href="https://cdn0.iconfinder.com/data/icons/basic-outline/64/icon-basic-set_12-camera-512.png">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/buttons.css">
+    <link rel="stylesheet" href="/static/css/login.css">
     <script type="text/javascript" src="/static/javascript/js.js"></script>
 
     <#--<link rel="stylesheet" href="/static/css/login.css">-->
@@ -55,10 +56,10 @@
         </p>
             <form action="/login" method="post">
                 <p class="w3-center">Enter Email: </p>
-                <input type="email" name="username" placeholder="email . . ."/>
+                <input class="login-input" type="email" name="username" placeholder="email . . ."/>
                 <p class="w3-center">Enter password: </p>
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
-                <input type="password" name="password" placeholder="password . . ."/>
+                <input class="login-input" type="password" name="password" placeholder="password . . ."/>
                 <br>
                 <button type="submit" class="btn btn1 w3-button w3-padding-large">Sign In</button>
             </form>
