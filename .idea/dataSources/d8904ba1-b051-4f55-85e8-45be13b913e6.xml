@@ -1108,121 +1108,190 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="279" parent="7" name="hibernate_sequence">
+    <table id="279" parent="7" name="aim">
       <Engine>MyISAM</Engine>
     </table>
-    <table id="280" parent="7" name="message">
+    <table id="280" parent="7" name="hibernate_sequence">
       <Engine>MyISAM</Engine>
     </table>
-    <table id="281" parent="7" name="user">
+    <table id="281" parent="7" name="message">
       <Engine>MyISAM</Engine>
     </table>
-    <table id="282" parent="7" name="user_roles">
+    <table id="282" parent="7" name="user">
       <Engine>MyISAM</Engine>
     </table>
-    <column id="283" parent="279" name="next_val">
-      <Position>1</Position>
-      <DataType>bigint(20)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="284" parent="280" name="id">
+    <table id="283" parent="7" name="user_aims">
+      <Engine>MyISAM</Engine>
+    </table>
+    <table id="284" parent="7" name="user_roles">
+      <Engine>MyISAM</Engine>
+    </table>
+    <column id="285" parent="279" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="280" name="filename">
+    <column id="286" parent="279" name="text">
       <Position>2</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>varchar(350)|0</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="280" name="tag">
+    <column id="287" parent="279" name="title">
       <Position>3</Position>
-      <DataType>varchar(20)|0</DataType>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="280" name="text">
+    <column id="288" parent="279" name="description">
       <Position>4</Position>
-      <DataType>varchar(64)|0</DataType>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="280" name="user_id">
+    <column id="289" parent="279" name="user_id">
       <Position>5</Position>
       <DataType>bigint(20)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="289" parent="280" name="FKb3y6etti1cfougkdr0qiiemgv">
+    <index id="290" parent="279" name="FKcww2p4n7dceqpw9vmendwgu5e">
       <ColNames>user_id</ColNames>
     </index>
-    <key id="290" parent="280" name="PRIMARY">
+    <key id="291" parent="279" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="291" parent="281" name="id">
+    <column id="292" parent="280" name="next_val">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="293" parent="281" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="281" name="activation_code">
+    <column id="294" parent="281" name="filename">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="281" name="active">
+    <column id="295" parent="281" name="tag">
       <Position>3</Position>
-      <DataType>bit(1)|0</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(20)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="281" name="email">
+    <column id="296" parent="281" name="text">
       <Position>4</Position>
-      <DataType>varchar(255)|0</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(64)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="281" name="first_name">
+    <column id="297" parent="281" name="user_id">
       <Position>5</Position>
-      <DataType>varchar(34)|0</DataType>
-      <NotNull>1</NotNull>
+      <DataType>bigint(20)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="281" name="last_name">
-      <Position>6</Position>
-      <DataType>varchar(42)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="297" parent="281" name="password">
-      <Position>7</Position>
-      <DataType>varchar(255)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="298" parent="281" name="username">
-      <Position>8</Position>
-      <DataType>varchar(24)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
+    <index id="298" parent="281" name="FKb3y6etti1cfougkdr0qiiemgv">
+      <ColNames>user_id</ColNames>
+    </index>
     <key id="299" parent="281" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="300" parent="282" name="user_id">
+    <column id="300" parent="282" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="282" name="roles">
+    <column id="301" parent="282" name="activation_code">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="302" parent="282" name="FK55itppkw3i07do3h7qoclqd4k">
+    <column id="302" parent="282" name="active">
+      <Position>3</Position>
+      <DataType>bit(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="303" parent="282" name="email">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="304" parent="282" name="first_name">
+      <Position>5</Position>
+      <DataType>varchar(34)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="305" parent="282" name="last_name">
+      <Position>6</Position>
+      <DataType>varchar(42)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="306" parent="282" name="password">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="307" parent="282" name="username">
+      <Position>8</Position>
+      <DataType>varchar(24)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="308" parent="282" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="309" parent="283" name="user_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="310" parent="283" name="aims_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="311" parent="283" name="UK_nm9y72x38rwp09ffth5bplvq1">
+      <ColNames>aims_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="312" parent="283" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id
+aims_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="313" parent="283" name="UK_nm9y72x38rwp09ffth5bplvq1">
+      <ColNames>aims_id</ColNames>
+      <UnderlyingIndexName>UK_nm9y72x38rwp09ffth5bplvq1</UnderlyingIndexName>
+    </key>
+    <column id="314" parent="284" name="user_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="315" parent="284" name="roles">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="316" parent="284" name="FK55itppkw3i07do3h7qoclqd4k">
       <ColNames>user_id</ColNames>
     </index>
   </database-model>

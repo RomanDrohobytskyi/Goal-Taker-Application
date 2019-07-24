@@ -53,7 +53,7 @@
 <!-- User ListContainer -->
 <div class="w3-content w3-container w3-padding-64" id="add-message">
 
-    <h3 class="w3-center lucida-console" style="font-size: 40px;">Users</h3>
+    <h3 class="w3-center lucida-console" style="font-size:40px;">Users</h3>
 
     <div class="w3-center w3-row">
         <table align="center" width="100%" style="margin-top:30px">
