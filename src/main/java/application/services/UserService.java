@@ -28,7 +28,7 @@ public class UserService implements UserDetailsService{
     //Find user by email from DB using IUserRepository.
     //If User not exist, return false.
     public boolean isUserExist(User user){
-        return iUserRepository.findUserByEmail(user.getEmail()) == null;
+        return iUserRepository.findUserByEmail(user.getEmail()) != null;
     }
 
     //Check and return User email is empty.

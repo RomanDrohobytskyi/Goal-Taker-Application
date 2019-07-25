@@ -71,7 +71,7 @@
     </p>
     <div class="w3-row">
         <div class="w3-col m6 w3-center w3-padding-large">
-            <img src="https://pp.userapi.com/c849432/v849432316/b6f85/N5R2bjbNqJE.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this)" alt="Photo of Me" width="100%">
+            <img id="myselfPhoto" src="https://pp.userapi.com/c849432/v849432316/b6f85/N5R2bjbNqJE.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this); setMaxHeightAndWight('myselfPhoto');" alt="Photo of Me" width="100%">
             <p><b><i class="fa fa-user w3-margin-right"></i>Roman Drohobytskyi</b></p><br>
 
         </div>

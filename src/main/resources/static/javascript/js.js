@@ -30,3 +30,9 @@ function toggleFunction() {
 function clear(id){
     document.getElementById(id).value = '';
 }
+
+function setMaxHeightAndWight(elementId){
+    document.getElementById(elementId).style.maxHeight = "100%";
+    document.getElementById(elementId).style.maxWidth = "100%";
+}
+
