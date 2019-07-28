@@ -87,4 +87,14 @@ public class MessageController {
         return "main";
     }
 
+/*    @PostMapping("/main")
+    public String deleteMessage(@AuthenticationPrincipal User user,
+                                @RequestParam Message message,
+                                Map<String, Object> model) {
+
+
+
+        return "main";
+    }*/
+
 }

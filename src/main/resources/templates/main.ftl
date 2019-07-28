@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/buttons.css">
     <script type="text/javascript" src="/static/javascript/js.js"></script>
+    <script type="text/javascript" src="/static/javascript/checkbox.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -84,6 +86,10 @@
     <div class="w3-center w3-row">
         <h3 class="w3-center">All messages</h3>
 
+        <div id="menu">
+            <i id="trash" class="fa fa-trash-o" aria-hidden="true"></i>
+        </div>
+
         <form method="get" action="/main">
             <p class="w3-center">
                 Filter:
@@ -104,6 +110,9 @@
                 <th>Filter</th>
                 <th>Email</th>
                 <th>Img</th>
+                <th>
+                    <input type="checkbox" title="Check All Messages" onclick="selectDeselectAll('#messageCheckbox')"/>
+                </th>
             </tr>
         <#list messages as message>
             <tr style="height: 100px">
@@ -115,11 +124,16 @@
                     <div >
                         <#if message.filename?has_content>
                             <img src="/img/${message.filename}" style="width:130px;height:100px;">
-                        </#if>
                         <#else >
                             <p style="color: red">
                                 <strong>No messages!</strong>
                             </p>
+                        </#if>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <input id="messageCheckbox" class="checkbox" type="checkbox" title="Check"/>
                     </div>
                 </td>
             </tr>

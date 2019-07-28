@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 import java.util.Collection;
 import java.util.Set;
 
-@Entity
+@Entity (name = "user")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -42,6 +42,7 @@ public class User implements UserDetails{
     @Enumerated(EnumType.STRING)
     @NotNull
     private Set<Role> roles;
+    //private Set<Message> message;
     @OneToMany
     private Set<Aim> aims;
 

@@ -52,10 +52,13 @@
 <!-- LOGIN Container -->
 <div class="w3-content w3-container w3-padding-64" id="login">
     <div class="w3-center w3-row">
-        <p style="color: red" class="lucida-console">
-        ${validatorError!}
-        </p>
-            <form action="/login" method="post">
+        <form method="get" action="/login">
+            <p style="color: red" class="lucida-console">
+            ${validatorError!}
+            </p>
+        </form>
+
+            <form method="post" action="/login">
                 <p class="w3-center lucida-console">Enter Email: </p>
                 <input class="login-input" type="email" name="username" placeholder="email"/>
                 <p class="w3-center lucida-console">Enter password: </p>

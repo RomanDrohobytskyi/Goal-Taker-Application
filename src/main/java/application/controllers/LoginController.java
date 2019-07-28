@@ -1,5 +1,6 @@
 package application.controllers;
 
+import application.logger.LoggerJ;
 import application.services.UserService;
 import application.entities.User;
 import org.apache.log4j.Logger;
@@ -19,18 +20,20 @@ public class LoginController {
 
     @GetMapping("/login")
     public String login() {
-        logger.info("@GetMapping /login: " + this.getClass().getSimpleName());
+        LoggerJ.logInfo(this.getClass(), "@GetMapping /login");
         return "login";
     }
 
     @PostMapping("/login")
     public String loginError(User user, Map<String, Object> model) {
+        LoggerJ.logInfo(this.getClass(), "@PostMapping /login");
         if (!userService.isUserExist(user)) {
             model.put("validatorError", "No user with email: " + user.getEmail());
-            logger.info("No user with email: " + user.getEmail() + "\n" + this.getClass().getSimpleName());
+            LoggerJ.logInfo(this.getClass(), "@PostMapping / No user with email: " + user.getEmail());
         }else
             model.put("validatorError", "Wrong Email or Password!");
-            logger.info("Wrong Email or Password!" + "\n" + this.getClass().getSimpleName());
+            LoggerJ.logInfo(this.getClass(), "@PostMapping / Wrong Email or Password!" );
+
         return "login";
     }
 }

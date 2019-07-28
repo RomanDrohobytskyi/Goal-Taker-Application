@@ -1,5 +1,6 @@
 package application.services;
 
+import application.entities.Message;
 import application.repositories.IUserRepository;
 import application.roles.Role;
 import application.entities.User;
@@ -79,6 +80,15 @@ public class UserService implements UserDetailsService{
         //If User activated his mail, set his activation code NULL.
         user.setActivationCode(null);
         iUserRepository.save(user);
+        return true;
+    }
+
+    public boolean isUserHasMessage(User user, Message searchMessage){
+
+  /*      for (Message message : user.getMessage()){
+
+        }*/
+
         return true;
     }
 
