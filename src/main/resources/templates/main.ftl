@@ -6,6 +6,7 @@
     <link rel="shortcut icon" type="image/png" href="https://cdn0.iconfinder.com/data/icons/basic-outline/64/icon-basic-set_12-camera-512.png">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/buttons.css">
+    <link rel="stylesheet" href="/static/css/text.css">
     <script type="text/javascript" src="/static/javascript/js.js"></script>
     <script type="text/javascript" src="/static/javascript/checkbox.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -16,6 +17,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<script>
+    function showSelectedCheckboxesCount() {
+        var $checkboxes = $('#messages td input[type="checkbox"]');
+
+        $checkboxes.change(function(){
+            var countCheckedCheckboxes = $checkboxes.filter(':checked').length;
+            $('#count-checked-checkboxes').text(countCheckedCheckboxes);
+
+            $('#edit-count-checked-checkboxes').val(countCheckedCheckboxes);
+        });
+    }
+</script>
 
 <!-- NavBar (sit on top) -->
 <div class="w3-top">
@@ -74,6 +87,7 @@
         </form>
     </div>
 </div>
+
 <#--Second Parallax IMG-->
 <div class="parallax big-img-login-1 w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
@@ -83,27 +97,41 @@
 
 <!-- Messages Container -->
 <div class="w3-content w3-container w3-padding-64" id="messages">
-    <div class="w3-center w3-row">
+    <div id="messages" class="w3-center w3-row">
         <h3 class="w3-center">All messages</h3>
 
         <div id="menu">
-            <i id="trash" class="fa fa-trash-o" aria-hidden="true"></i>
+            <div class="form-item form-type-textfield form-item-count-checked-checkboxes">
+                <#-- Label for selected checkboxes -->
+                <label for="edit-count-checked-checkboxes" class="default-margin">
+                    <span class="form-required" title="Selected messages">Selected messages</span>
+                </label>
+                <br>
+                <#-- Selected check box count -->
+                <input type="text" id="edit-count-checked-checkboxes" name="count-checked-checkboxes" value="0"
+                       maxlength="50" class="form-text" readonly/>
+                <#-- Trash fa-fa icon -->
+                <i id="trash" class="fa fa-trash-o" aria-hidden="true" title="Delete selected messages"></i>
+            </div>
+
         </div>
 
+        <#-- Filter for messages form -->
         <form method="get" action="/main">
             <p class="w3-center">
                 Filter:
             </p>
             <input id="filter" type="text" name="filter" placeholder="filter . . ." value="${filter!}"  />
-
-
             <p class="fa fa-times-circle" onclick="document.getElementById('filter').value = ''"> </p>
             <br>
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
             <button type="submit" class="btn btn1 w3-button w3-padding-large">Find</button>
 
         </form>
+
+        <#-- Table of a messages -->
         <table id="messagesTable" align="center" width="100%">
+            <#-- Table header -->
             <tr>
                 <th>ID</th>
                 <th>Message</th>
@@ -111,33 +139,34 @@
                 <th>Email</th>
                 <th>Img</th>
                 <th>
-                    <input type="checkbox" title="Check All Messages" onclick="selectDeselectAll('#messageCheckbox')"/>
+                    <input type="checkbox" title="Check All Messages" onclick="selectDeselectCheckbox('.messageCheckbox'); showSelectedCheckboxesCount();"/>
                 </th>
             </tr>
-        <#list messages as message>
-            <tr style="height: 100px">
-                <td><b>${message.id}</b></td>
-                <td><span>${message.text}</span></td>
-                <td><i>${message.tag}</i></td>
-                <td><strong>${message.getAuthorEmail()}</strong></td>
-                <td>
-                    <div >
-                        <#if message.filename?has_content>
-                            <img src="/img/${message.filename}" style="width:130px;height:100px;">
-                        <#else >
-                            <p style="color: red">
-                                <strong>No messages!</strong>
-                            </p>
-                        </#if>
-                    </div>
-                </td>
-                <td>
-                    <div>
-                        <input id="messageCheckbox" class="checkbox" type="checkbox" title="Check"/>
-                    </div>
-                </td>
-            </tr>
-        </#list>
+            <#-- All messages -->
+            <#list messages as message>
+                <tr style="height: 100px">
+                    <td><b>${message.id}</b></td>
+                    <td><span>${message.text}</span></td>
+                    <td><i>${message.tag}</i></td>
+                    <td><strong>${message.getAuthorEmail()}</strong></td>
+                    <td>
+                        <div >
+                            <#if message.filename?has_content>
+                                <img src="/img/${message.filename}" style="width:130px;height:100px;">
+                            <#else >
+                                <p style="color: red">
+                                    <strong>No messages!</strong>
+                                </p>
+                            </#if>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <input type="checkbox" name="messageCheckbox" class="messageCheckbox" title="Check" onclick="showSelectedCheckboxesCount();"/>
+                        </div>
+                    </td>
+                </tr>
+            </#list>
         </table>
     </div>
 </div>

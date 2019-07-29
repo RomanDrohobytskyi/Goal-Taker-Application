@@ -140,3 +140,7 @@ a:active {
         min-height: 400px;
     }
 }
+
+.default-margin{
+    margin: 10px;
+}
