@@ -53,21 +53,21 @@
 <div class="w3-content w3-container w3-padding-64" id="login">
     <div class="w3-center w3-row">
         <form method="get" action="/login">
-            <p style="color: red" class="lucida-console">
+            <p style="color: red">
             ${validatorError!}
             </p>
         </form>
 
             <form method="post" action="/login">
-                <p class="w3-center lucida-console">Enter Email: </p>
+                <p class="w3-center">Enter Email: </p>
                 <input class="login-input" type="email" name="username" placeholder="email"/>
-                <p class="w3-center lucida-console">Enter password: </p>
+                <p class="w3-center">Enter password: </p>
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
                 <input class="login-input" type="password" name="password" placeholder="password"/>
                 <br>
                 <button type="submit" class="btn btn1 w3-button w3-padding-large">Sign In</button>
             </form>
-        <h5 class="lucida-console">No registered yet? Create easy new <a href="/registration"><b>account</b></a>!</h5>
+        <h5>No registered yet? Create easy new <a href="/registration"><b>account</b></a>!</h5>
     </div>
 </div>
 

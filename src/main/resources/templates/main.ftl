@@ -15,19 +15,13 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <#import "parts/footer.ftl" as footer>
+
 </head>
 <body>
 <script>
-    function showSelectedCheckboxesCount() {
-        var $checkboxes = $('#messages td input[type="checkbox"]');
 
-        $checkboxes.change(function(){
-            var countCheckedCheckboxes = $checkboxes.filter(':checked').length;
-            $('#count-checked-checkboxes').text(countCheckedCheckboxes);
-
-            $('#edit-count-checked-checkboxes').val(countCheckedCheckboxes);
-        });
-    }
 </script>
 
 <!-- NavBar (sit on top) -->
@@ -70,7 +64,7 @@
     <div class="w3-center w3-row">
         <h3 class="w3-center">Create message</h3>
         <div>
-            <span>Click on a link to see <a href="/user" style="color:cornflowerblue"> list of Users</a>!</span>
+            <span>Click on a link to see <a href="/user" style="color:#002fed"> list of Users</a>!</span>
         </div>
         <form method="post" enctype="multipart/form-data">
             <p class="w3-center">Enter message: </p>
@@ -104,14 +98,21 @@
             <div class="form-item form-type-textfield form-item-count-checked-checkboxes">
                 <#-- Label for selected checkboxes -->
                 <label for="edit-count-checked-checkboxes" class="default-margin">
-                    <span class="form-required" title="Selected messages">Selected messages</span>
+                    <span class="form-required">Selected messages</span>
                 </label>
                 <br>
+                <form method="post" action="/mainDelete">
                 <#-- Selected check box count -->
-                <input type="text" id="edit-count-checked-checkboxes" name="count-checked-checkboxes" value="0"
-                       maxlength="50" class="form-text" readonly/>
-                <#-- Trash fa-fa icon -->
-                <i id="trash" class="fa fa-trash-o" aria-hidden="true" title="Delete selected messages"></i>
+                    <div class="count-checkboxes-wrapper">
+                        <#--Count only-->
+                        <span id="count-checked-checkboxes" title="Selected messages count">0</span>
+                    <#-- Trash fa-fa icon -->
+                        <i id="trash" class="fa fa-trash-o" aria-hidden="true" title="Delete selected messages"></i>
+                            <br>
+                        <input type="hidden" name="_csrf" value="${_csrf.token}" />
+                        <button type="submit" name="deleteMessage" class="btn btn1 w3-button w3-padding-large">Delete</button>
+                    </div>
+                </form>
             </div>
 
         </div>
@@ -139,7 +140,8 @@
                 <th>Email</th>
                 <th>Img</th>
                 <th>
-                    <input type="checkbox" title="Check All Messages" onclick="selectDeselectCheckbox('.messageCheckbox'); showSelectedCheckboxesCount();"/>
+                    <input type="checkbox" title="Check All Messages" onclick="selectDeselectCheckbox('.messageCheckbox');
+                        showSelectedCheckboxesCount('.messageCheckbox', '#count-checked-checkboxes');"/>
                 </th>
             </tr>
             <#-- All messages -->
@@ -162,7 +164,8 @@
                     </td>
                     <td>
                         <div>
-                            <input type="checkbox" name="messageCheckbox" class="messageCheckbox" title="Check" onclick="showSelectedCheckboxesCount();"/>
+                            <input id="${message.id}" type="checkbox" name="messageCheckbox" class="messageCheckbox"
+                                   title="Check" onclick="showSelectedCheckboxesCount('.messageCheckbox', '#count-checked-checkboxes');"/>
                         </div>
                     </td>
                 </tr>
@@ -172,7 +175,6 @@
 </div>
 
 <#--Footer-->
-<#import "parts/footer.ftl" as footer>
 <@footer.footer>
 </@footer.footer>
 

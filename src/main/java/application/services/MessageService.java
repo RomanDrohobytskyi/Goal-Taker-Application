@@ -20,4 +20,8 @@ public class MessageService {
         }
         return Optional.empty();
     }
+
+    public void print(){
+        System.out.println("Here we go!");
+    }
 }

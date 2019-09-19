@@ -1,10 +1,12 @@
 package application.services;
 
 import application.entities.Message;
+import application.logger.LoggerJ;
 import application.repositories.IUserRepository;
 import application.roles.Role;
 import application.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -13,9 +15,11 @@ import org.springframework.stereotype.Service;
 import java.util.Collections;
 import java.util.UUID;
 
+import static application.logger.LoggerJ.*;
+
 @Service
 public class UserService implements UserDetailsService{
-
+    
     @Autowired
     private IUserRepository iUserRepository;
     @Autowired
@@ -26,8 +30,11 @@ public class UserService implements UserDetailsService{
         return iUserRepository.findUserByEmail(email);
     }
 
-    //Find user by email from DB using IUserRepository.
-    //If User not exist, return false.
+    /**
+     * Method to check is User exist by Email
+     * @param user - user to check is exist
+     * @return boolean
+     */
     public boolean isUserExist(User user){
         return iUserRepository.findUserByEmail(user.getEmail()) != null;
     }
@@ -40,6 +47,16 @@ public class UserService implements UserDetailsService{
     //Return true if passwords match.
     public boolean isPasswordsMatch(String password, String confirmedPassword){
         return password.equals(confirmedPassword);
+    }
+
+    /**
+     * Method to check is user has searched message
+     * @param user - user which should has a searched message
+     * @param searchMessage - searched message
+     * @return true if has.
+     */
+    public boolean isUserHasMessage(User user, Message searchMessage){
+        return searchMessage.getUser().getId().equals( user.getId());
     }
 
     public boolean sendActivationCode(User user){
@@ -59,18 +76,34 @@ public class UserService implements UserDetailsService{
         return false;
     }
 
+    /**
+     * Setting Active, Role, Activation code for New User
+     * @param user - New User.
+     */
     public void setUserData(User user){
         user.setActive(true);
         user.setRoles(Collections.singleton(Role.USER));
         user.setActivationCode(UUID.randomUUID().toString());
-//        user.setRoles(Collections.singleton(Role.ADMIN));
+        //user.setRoles(Collections.singleton(Role.ADMIN));
     }
 
     public void saveUser(User user){
-        iUserRepository.save(user);
+        try {
+            iUserRepository.save(user);
+            logInfo(getClass(), "User " + user.getFirstName() + " " + user.getLastName()
+                    + " " + user.getEmail() + " has been successfully saved!");
+        } catch (Exception e) {
+            logError(getClass(), "");
+            e.printStackTrace();
+        }
     }
 
-    //Method to check is User activate his email by activation code or not.
+    /**
+     * Method to check if User has been activate his email by activation code
+     * or not.
+     * @param code - user activation code
+     * @return - true if has
+     */
     public boolean activateUser(String code) {
         User user = iUserRepository.findByActivationCode(code);
 
@@ -83,13 +116,6 @@ public class UserService implements UserDetailsService{
         return true;
     }
 
-    public boolean isUserHasMessage(User user, Message searchMessage){
 
-  /*      for (Message message : user.getMessage()){
-
-        }*/
-
-        return true;
-    }
 
 }

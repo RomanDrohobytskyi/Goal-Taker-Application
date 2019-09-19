@@ -1,6 +1,7 @@
 package application.controllers;
 
 
+import application.logger.LoggerJ;
 import application.services.UserService;
 import application.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,6 +65,7 @@ public class RegistrationController {
         boolean isActivated = userService.activateUser(code);
         if (isActivated){
             model.addAttribute("message", "User successfully activated.");
+            LoggerJ.logInfo(getClass(), "User successfully activated.");
         }else {
             model.addAttribute("message", "Activation code is not found!");
         }

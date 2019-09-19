@@ -1,6 +1,7 @@
 package application.controllers;
 
 import application.entities.Aim;
+import application.entities.Message;
 import application.entities.User;
 import application.repositories.IAimRepository;
 import application.services.AimService;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -25,19 +27,21 @@ public class AimController {
     private IAimRepository aimRepository;
 
     @GetMapping("/main_aim")
-    public String filter(@RequestParam(required = false, defaultValue = "")String filter, Model model){
-
+    public String allAims(Model model){
+        Iterable<Aim> aims = aimRepository.findAll();
+        model.addAttribute("all_aims", aims);
         return "main_aim";
     }
 
     @PostMapping("/main_aim")
-    public String addMessage(
+    public String addAim(
             @AuthenticationPrincipal User user,
             @RequestParam String title,
             @RequestParam String description,
+            @RequestParam String text,
             Map<String, Object> model) {
 
-        Optional<Aim> aimOptional = aimService.adaptAim(title, description, user);
+        Optional<Aim> aimOptional = aimService.adaptAim(title, description, text, user);
         if (aimOptional.isPresent()){
             try{
                 Aim aim = aimOptional.get();
@@ -48,40 +52,8 @@ public class AimController {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
         }
-        /*
-        Optional<Message> message = adaptMessage(text, tag, user);
-
-        if (message.isPresent()){
-            try {
-                if (file != null && !file.getOriginalFilename().isEmpty()){
-                    File uploadDir = new File(uploadPath);
-                    if (!uploadDir.exists()){
-                        uploadDir.mkdir();
-                    }
-                    String uuidFile = UUID.randomUUID().toString();
-                    String resultFileName = uuidFile + "." + file.getOriginalFilename();
-
-                    file.transferTo(new File(uploadPath + "/" + resultFileName));
-
-                    message.get().setFilename(resultFileName);
-                }
-
-                messageRepo.save(message.get());
-                Iterable<Message> messages = messageRepo.findAll();
-                model.put("messages", messages);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }else {
-            HashMap myMap = new HashMap() {{
-                put("", "");
-            }};
-
-            model.put("messages", myMap);
-        }
-        */
         return "main_aim";
     }
+
 }

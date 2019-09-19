@@ -1,6 +1,7 @@
 package application.entities;
 
 
+import application.enums.State;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -23,10 +24,13 @@ public class Message {
     @NotNull
     @Size(min = 1, max = 20)
     private String tag;
+    private String filename;
+    //TODO: to String
+    @NotNull
+    private State.MessageState messageState = State.MessageState.NEW;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User user;
-    private String filename;
 
     public String getAuthorName(){
         return user != null ? user.getUsername() : "<none>";

@@ -21,6 +21,9 @@ public class Aim {
     private String title;
     @NotNull
     private String description;
+    @NotNull
+    @Column(columnDefinition = "varchar(255) default ''")
+    private String text;
     @ManyToOne
     private User user;
 }

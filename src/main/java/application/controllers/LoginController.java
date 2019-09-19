@@ -1,9 +1,8 @@
 package application.controllers;
 
+import application.entities.User;
 import application.logger.LoggerJ;
 import application.services.UserService;
-import application.entities.User;
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,8 +14,6 @@ import java.util.Map;
 public class LoginController {
     @Autowired
     private UserService userService;
-    private Logger logger = Logger.getLogger(this.getClass());
-
 
     @GetMapping("/login")
     public String login() {

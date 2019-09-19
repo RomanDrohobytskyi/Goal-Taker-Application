@@ -16,12 +16,12 @@ import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/user")
-@PreAuthorize("hasAuthority('ADMIN')")
 public class UserController {
 
     @Autowired
     IUserRepository iUserRepository;
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping
     public String userList(Model model){
         model.addAttribute("users", iUserRepository.findAll());
@@ -32,6 +32,7 @@ public class UserController {
         "{user}" - id from url like - "http://localhost:8080/user/10"
         @PathVariable User user - getting user not only id.
      */
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("{user}")
     public String userEditForm(@PathVariable User user, Model model){
         model.addAttribute("user", user);
@@ -40,6 +41,7 @@ public class UserController {
     }
 
     @PostMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public String userEditedSave(
             @RequestParam String username,
             @RequestParam Map <String, String> form,

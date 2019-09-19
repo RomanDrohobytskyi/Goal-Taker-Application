@@ -21,12 +21,13 @@ public class AimService {
      * @param user - aim creator
      * @return optional of Aim
      */
-    public Optional<Aim> adaptAim(String title, String description, User user){
+    public Optional<Aim> adaptAim(String title, String description, String text, User user){
         if (Strings.isNotEmpty(title) && Strings.isNotEmpty(description) && user != null){
             if (userService.isUserExist(user)){
                 Aim aim = new Aim();
                 aim.setTitle(title);
                 aim.setDescription(description);
+                aim.setText(text);
                 aim.setUser(user);
                 return Optional.of(aim);
             }

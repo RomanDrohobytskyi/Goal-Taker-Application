@@ -3,7 +3,6 @@
     <title>W e l c o m e</title>
     <link rel="shortcut icon" type="image/png" href="https://cdn0.iconfinder.com/data/icons/basic-outline/64/icon-basic-set_12-camera-512.png">
 
-    <link rel="shortcut icon" type="image/png" href="https://cdn0.iconfinder.com/data/icons/basic-outline/64/icon-basic-set_12-camera-512.png">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/buttons.css">
     <link rel="stylesheet" href="/static/css/photos.css">
@@ -13,6 +12,10 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <#--Macros-->
+    <#import "parts/footer.ftl" as footer>
+    <#import "parts/image.ftl" as paralax>
 </head>
 <body>
 
@@ -41,11 +44,9 @@
 </div>
 
 <!-- First Parallax Image with Text -->
-<div class="gradient-black parallax w3-display-container w3-opacity-min" id="home">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MOUNTAINS</span>
-    </div>
-</div>
+<@paralax.paralax id="home" image="" title="See mountains photos" text="MOUNTAINS"
+cssClass="gradient-white parallax w3-display-container w3-opacity-min gradient-blue">
+</@paralax.paralax>
 
 <!-- MY PHOTOS (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
@@ -87,11 +88,9 @@
 </div>
 
 <!-- First Parallax Image with Text -->
-<div class="gradient-white parallax w3-display-container w3-opacity-min gradient-blue" id="home">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MOUNTAINS</span>
-    </div>
-</div>
+<@paralax.paralax id="secondParalax" image="" title="See mountains photos" text="MOUNTAINS"
+    cssClass="gradient-white parallax w3-display-container w3-opacity-min gradient-blue">
+</@paralax.paralax>
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
@@ -103,7 +102,6 @@
 </div>
 
 <!-- Footer -->
-<#import "parts/footer.ftl" as footer>
 <@footer.footer>
 </@footer.footer>
 

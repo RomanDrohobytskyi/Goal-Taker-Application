@@ -10,4 +10,4 @@
         </div>
         <p><i class="fa fa-user-o" aria-hidden="true"> Roman Drohobytskyi</i></p>
     </footer
-</#macro>>
+</#macro>

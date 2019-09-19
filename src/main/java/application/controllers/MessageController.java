@@ -1,10 +1,10 @@
 package application.controllers;
 
 import application.entities.Message;
+import application.enums.State;
 import application.repositories.IMessageRepository;
 import application.entities.User;
 import application.services.MessageService;
-import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -71,6 +71,8 @@ public class MessageController {
                     message.get().setFilename(resultFileName);
                 }
 
+                message.get().setMessageState(State.MessageState.NEW);
+
                 messageRepo.save(message.get());
                 Iterable<Message> messages = messageRepo.findAll();
                 model.put("messages", messages);
@@ -87,14 +89,16 @@ public class MessageController {
         return "main";
     }
 
-/*    @PostMapping("/main")
+    @PostMapping("/mainDelete")
     public String deleteMessage(@AuthenticationPrincipal User user,
-                                @RequestParam Message message,
                                 Map<String, Object> model) {
 
+        for (int i = 0; i < 100; i++) {
+            System.out.println("******************************");
+        }
 
 
-        return "main";
-    }*/
+        return "mainDelete";
+    }
 
 }
