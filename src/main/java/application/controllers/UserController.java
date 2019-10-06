@@ -28,9 +28,13 @@ public class UserController {
         return "userList";
     }
 
-    /*
-        "{user}" - id from url like - "http://localhost:8080/user/10"
-        @PathVariable User user - getting user not only id.
+    /**
+     * Getting form for edit user
+     * "{user}" - id from url like - "http://localhost:8080/user/10"
+     * @PathVariable User user - checked user.
+     * @param user
+     * @param model
+     * @return
      */
     @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("{user}")

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <#import "parts/footer.ftl" as footer>
+    <#import "parts/elements.ftl" as elements>
 
 </head>
 <body>
@@ -51,8 +52,8 @@
     </div>
 </div>
 
-<!-- LOGIN Parallax Image -->
-<div class="parallax big-img-login-1 w3-display-container w3-opacity-min" id="home">
+<!-- First Parallax Image -->
+<div class="parallax big-img-messaging w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
         <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Main</span>
     </div>
@@ -83,7 +84,7 @@
 </div>
 
 <#--Second Parallax IMG-->
-<div class="parallax big-img-login-1 w3-display-container w3-opacity-min" id="home">
+<div class="parallax big-img-messages w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
         <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Messages</span>
     </div>
@@ -102,15 +103,17 @@
                 </label>
                 <br>
                 <form method="post" action="/mainDelete">
-                <#-- Selected check box count -->
+                <#-- Selected checkboxes count -->
                     <div class="count-checkboxes-wrapper">
                         <#--Count only-->
                         <span id="count-checked-checkboxes" title="Selected messages count">0</span>
                     <#-- Trash fa-fa icon -->
                         <i id="trash" class="fa fa-trash-o" aria-hidden="true" title="Delete selected messages"></i>
-                            <br>
+                        <button id="trash" class="fa fa-trash-o" aria-hidden="true"  name="delete">Delete selected messages</button>
+                        <button type="submit" class="fa fa-trash-o"></button>
+                        <br>
                         <input type="hidden" name="_csrf" value="${_csrf.token}" />
-                        <button type="submit" name="deleteMessage" class="btn btn1 w3-button w3-padding-large">Delete</button>
+                       <#-- <button type="submit" name="deleteMessage" class="btn btn1 w3-button w3-padding-large">Delete</button>-->
                     </div>
                 </form>
             </div>
@@ -120,9 +123,11 @@
         <#-- Filter for messages form -->
         <form method="get" action="/main">
             <p class="w3-center">
-                Filter:
+                Find message byt filter
             </p>
-            <input id="filter" type="text" name="filter" placeholder="filter . . ." value="${filter!}"  />
+            <@elements.input id="filter" value="${filter!}" name="filter" type="text" placeholder="f i l t e r . . ."
+            onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i t l e . . .'"/>
+
             <p class="fa fa-times-circle" onclick="document.getElementById('filter').value = ''"> </p>
             <br>
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
@@ -140,7 +145,7 @@
                 <th>Email</th>
                 <th>Img</th>
                 <th>
-                    <input type="checkbox" title="Check All Messages" onclick="selectDeselectCheckbox('.messageCheckbox');
+                    <input id="selectAll_checkbox" type="checkbox" title="Check All Messages" onclick="selectDeselectCheckbox('.messageCheckbox');
                         showSelectedCheckboxesCount('.messageCheckbox', '#count-checked-checkboxes');"/>
                 </th>
             </tr>
@@ -156,15 +161,15 @@
                             <#if message.filename?has_content>
                                 <img src="/img/${message.filename}" style="width:130px;height:100px;">
                             <#else >
-                                <p style="color: red">
-                                    <strong>No messages!</strong>
+                                <p style="color: gray()">
+                                    <strong>No image</strong>
                                 </p>
                             </#if>
                         </div>
                     </td>
                     <td>
                         <div>
-                            <input id="${message.id}" type="checkbox" name="messageCheckbox" class="messageCheckbox"
+                            <input id="${message.id}" type="checkbox" name="selected${message.id}" class="messageCheckbox"
                                    title="Check" onclick="showSelectedCheckboxesCount('.messageCheckbox', '#count-checked-checkboxes');"/>
                         </div>
                     </td>

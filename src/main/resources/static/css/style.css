@@ -56,7 +56,7 @@ body, html {
 
 /* Parallax images for login.ftl*/
 .big-img-login-1 {
-    background-image: url("https://blog.dieboldnixdorf.com/wp-content/uploads/2016/12/DN_DataSecurity_Blog.jpg");
+    background-image: url("https://www.wmep.org/wp-content/uploads/2018/10/LOCKS2-Cyber-Security.png");
     min-height: 400px;
 }
 
@@ -67,7 +67,7 @@ body, html {
 
 .big-img-login-3 {
     background-image: url("https://belimitless.com/wp-content/uploads/2017/08/blockchain.jpg");
-    min-height: 400px;
+    min-height: 70%;
 }
 
 /* Parallax images WELCOME */
@@ -114,6 +114,16 @@ body, html {
     min-height: 70%;
 }
 
+.big-img-messaging {
+    background-image: url("http://expathotelier.com/wordpress/wp-content/uploads/2016/02/Instant-Messaging-Solutions-for-Programmers.jpg");
+    min-height: 70%;
+}
+
+.big-img-messages {
+    background-image: url("https://www.cannabismarketinginc.com/wp-content/uploads/2018/08/mobile-messaging.jpg");
+    min-height: 70%;
+}
+
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 /* unvisited link */
@@ -134,12 +144,12 @@ a:active {
 }
 
 /* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
+/*@media only screen and (max-device-width: 1600px) {
     .big-img-index-1, .big-img-index-2, .big-img-index-3, .big-img-projects-1, .big-img-projects-2, .big-img-projects-3, .big-img-login-1, .big-img-login-2, .big-img-login-3, .big-img-welcome-1 {
         background-attachment: scroll;
         min-height: 400px;
     }
-}
+}*/
 
 .default-margin{
     margin: 10px;

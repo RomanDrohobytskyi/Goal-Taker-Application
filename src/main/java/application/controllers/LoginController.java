@@ -21,7 +21,7 @@ public class LoginController {
         return "login";
     }
 
-    @PostMapping("/login")
+    @PostMapping("/loginError")
     public String loginError(User user, Map<String, Object> model) {
         LoggerJ.logInfo(this.getClass(), "@PostMapping /login");
         if (!userService.isUserExist(user)) {

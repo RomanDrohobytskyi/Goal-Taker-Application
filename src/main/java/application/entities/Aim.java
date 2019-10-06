@@ -3,10 +3,12 @@ package application.entities;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.Date;
 
 @Entity (name = "aim")
 @Getter
@@ -21,9 +23,20 @@ public class Aim {
     private String title;
     @NotNull
     private String description;
-    @NotNull
     @Column(columnDefinition = "varchar(255) default ''")
+    @NotNull
     private String text;
+    @Column(columnDefinition = "datetime default ''")
+    @NotNull
+    private Date creationDate;
+    @Column
+    private Date modificationDate;
+    @Column
+    private Date deletionDate;
+    @Column
+    private Date dateFrom;
+    @Column
+    private Date dateTo;
     @ManyToOne
     private User user;
 }

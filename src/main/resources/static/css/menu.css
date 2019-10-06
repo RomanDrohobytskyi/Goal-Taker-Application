@@ -1,4 +1,5 @@
 .middle{
+    margin-top: 30px;
     position: absolute;
 }
 
@@ -7,7 +8,7 @@
 }
 
 .sm-container i{
-    color: #f5f6fa;
+    /*color: #f5f6fa;*/
     padding: 20px;
     font-size: 20px;
     cursor: pointer;
@@ -27,14 +28,14 @@
     background: transparent;
     position: absolute;
     border-radius: 8px;
-    /*display: none;*/
+    display: none;
 }
 
 .sm-menu::before{
     content: "";
     width: 10px;
     height: 10px;
-    background: white;
+    /*background: white;*/
     position: absolute;
     top: -5px;
     left: 50%;

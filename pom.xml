@@ -30,11 +30,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
-        <!--Mustache-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-mustache</artifactId>-->
-        <!--</dependency>-->
         <!--JPA-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

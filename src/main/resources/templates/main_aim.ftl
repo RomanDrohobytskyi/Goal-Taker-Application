@@ -101,7 +101,6 @@
         <h3 class="w3-center">Create smart AIM</h3>
         <form action="" method="post" enctype="multipart/form-data">
 
-            <#--
             <@elements.input id="input" name="title" type="text" placeholder="t i t l e . . ."
                 onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i t l e . . .'"/>
 
@@ -112,13 +111,6 @@
             <p class="w3-center">T e x t </p>
              <@elements.input id="input" name="text" type="text" placeholder="t e x t . . ."
                 onfocus="this.placeholder = ''"  onblur="this.placeholder = 't e x t . . .'"/>
-            -->
-            <p class="w3-center">T i t l e </p>
-            <input type="text" name="title" placeholder="t i t l e . . ."/>
-            <p class="w3-center">d e s c r i p t i o n</p>
-            <input type="text" name="description" placeholder="d e s c r i p t i o n  . . ."/>
-            <p class="w3-center">T e x t </p>
-            <input type="text" name="text" placeholder="t e x t . . ."/>
             <br>
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
             <button type="submit" class="btn btn1 w3-button w3-padding-large">A d d</button>
@@ -130,7 +122,7 @@
 <#--All AIMs-->
 <div class="w3-content w3-container w3-padding-64" id="messages">
     <div id="messages" class="w3-center w3-row">
-        <h3 class="w3-center">All messages</h3>
+        <h3 class="w3-center">All aims</h3>
 
     <#-- Table of a messages -->
         <table id="messagesTable" align="center" width="100%">
@@ -145,7 +137,7 @@
         <#-- All Aims -->
             <#if all_aims??>
                 <#list all_aims as aim>
-                    <tr style="height: 100px">
+                    <tr style="text-align:center; height: 100px">
                         <td><b>${aim.id}</b></td>
                         <td><span>${aim.title}</span></td>
                         <td><i>${aim.text}</i></td>

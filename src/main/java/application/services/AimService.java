@@ -6,6 +6,7 @@ import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.Optional;
 
 @Service
@@ -28,6 +29,8 @@ public class AimService {
                 aim.setTitle(title);
                 aim.setDescription(description);
                 aim.setText(text);
+                aim.setCreationDate(new Date());
+
                 aim.setUser(user);
                 return Optional.of(aim);
             }

@@ -12,8 +12,11 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import static application.logger.LoggerJ.*;
 
@@ -57,6 +60,14 @@ public class UserService implements UserDetailsService{
      */
     public boolean isUserHasMessage(User user, Message searchMessage){
         return searchMessage.getUser().getId().equals( user.getId());
+    }
+
+    public boolean isUserHasAuthority(User user, String authority){
+        Set<Role> roles = user.getRoles();
+        for (Role role : roles) {
+            return role.getAuthority().equals(authority);
+        }
+        return false;
     }
 
     public boolean sendActivationCode(User user){

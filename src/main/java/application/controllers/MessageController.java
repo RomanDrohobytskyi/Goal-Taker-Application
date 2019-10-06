@@ -4,7 +4,9 @@ import application.entities.Message;
 import application.enums.State;
 import application.repositories.IMessageRepository;
 import application.entities.User;
+import application.services.FileService;
 import application.services.MessageService;
+import application.utils.MapUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -17,10 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 
 @Controller
 public class MessageController {
@@ -32,16 +31,52 @@ public class MessageController {
     @Value("${upload.path}")
     private String uploadPath;
 
+    private Iterable<Message> allMessages;
+    private Iterable<Message> actualMessages;
+    private Iterable<Message> filteredMessages;
+    private Iterable<Message> deletedMessages;
+
+    public Iterable<Message> getAllMessages() {
+        return allMessages;
+    }
+
+    public void setAllMessages(Iterable<Message> allMessages) {
+        this.allMessages = allMessages;
+    }
+
+    public Iterable<Message> getActualMessages() {
+        return actualMessages;
+    }
+
+    public void setActualMessages(Iterable<Message> actualMessages) {
+        this.actualMessages = actualMessages;
+    }
+
+    public Iterable<Message> getFilteredMessages() {
+        return filteredMessages;
+    }
+
+    public void setFilteredMessages(Iterable<Message> filteredMessages) {
+        this.filteredMessages = filteredMessages;
+    }
+
+    public Iterable<Message> getDeletedMessages() {
+        return deletedMessages;
+    }
+
+    public void setDeletedMessages(Iterable<Message> deletedMessages) {
+        this.deletedMessages = deletedMessages;
+    }
+
     @GetMapping("/main")
     public String filter(@RequestParam(required = false, defaultValue = "")
                                String filter, Model model) {
-        Iterable<Message> messages;
         if (filter != null && !filter.isEmpty()) {
-            messages = messageRepo.findByTag(filter);
+            filteredMessages = messageRepo.findByTag(filter);
         } else {
-            messages = messageRepo.findAll();
+            filteredMessages = messageRepo.findAll();
         }
-        model.addAttribute("messages", messages);
+        model.addAttribute("messages", filteredMessages);
         model.addAttribute("filter", filter);
 
         return "main";
@@ -57,33 +92,18 @@ public class MessageController {
         Optional<Message> message = messageService.adaptMessage(text, tag, user);
 
         if (message.isPresent()){
-            try {
-                if (file != null && !file.getOriginalFilename().isEmpty()){
-                    File uploadDir = new File(uploadPath);
-                    if (!uploadDir.exists()){
-                        uploadDir.mkdir();
-                    }
-                    String uuidFile = UUID.randomUUID().toString();
-                    String resultFileName = uuidFile + "." + file.getOriginalFilename();
 
-                    file.transferTo(new File(uploadPath + "/" + resultFileName));
+            FileService fileService = new FileService();
+            fileService.uploadFile(file);
+            message.get().setFilename(fileService.getCreatedFileName());
 
-                    message.get().setFilename(resultFileName);
-                }
+            message.get().setMessageState(State.MessageState.NEW);
 
-                message.get().setMessageState(State.MessageState.NEW);
-
-                messageRepo.save(message.get());
-                Iterable<Message> messages = messageRepo.findAll();
-                model.put("messages", messages);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            messageRepo.save(message.get());
+            Iterable<Message> messages = messageRepo.findAll();
+            model.put("messages", messages);
         }else {
-            HashMap myMap = new HashMap() {{
-                put("", "");
-            }};
-
+            HashMap myMap = MapUtils.oneElementHashMap("","");
             model.put("messages", myMap);
         }
         return "main";
@@ -93,12 +113,11 @@ public class MessageController {
     public String deleteMessage(@AuthenticationPrincipal User user,
                                 Map<String, Object> model) {
 
-        for (int i = 0; i < 100; i++) {
-            System.out.println("******************************");
-        }
 
+        Iterable<Message> messages = messageRepo.findAll();
+        model.put("messages", messages);
 
-        return "mainDelete";
+        return "main";
     }
 
 }

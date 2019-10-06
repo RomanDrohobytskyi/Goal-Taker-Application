@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <#import "parts/footer.ftl" as footer>
+    <#import "parts/elements.ftl" as elements>
+
 </head>
 <body>
 <!-- NavBar (sit on top) -->
@@ -52,27 +56,38 @@
 <!-- LOGIN Container -->
 <div class="w3-content w3-container w3-padding-64" id="login">
     <div class="w3-center w3-row">
-        <form method="get" action="/login">
+        <form method="get" action="/loginError">
             <p style="color: red">
             ${validatorError!}
             </p>
         </form>
 
-            <form method="post" action="/login">
-                <p class="w3-center">Enter Email: </p>
-                <input class="login-input" type="email" name="username" placeholder="email"/>
-                <p class="w3-center">Enter password: </p>
-                <input type="hidden" name="_csrf" value="${_csrf.token}" />
-                <input class="login-input" type="password" name="password" placeholder="password"/>
-                <br>
-                <button type="submit" class="btn btn1 w3-button w3-padding-large">Sign In</button>
-            </form>
+        <form method="post" action="/login">
+            <p class="w3-center">Enter Email: </p>
+
+            <@elements.input id="login" name="username" type="email" placeholder="e m a i l . . ."
+                onfocus="this.placeholder = ''"  onblur="this.placeholder = 'e m a  i l . . .'" class="login-input"/>
+
+            <p class="w3-center">Enter password: </p>
+
+            <input type="hidden" name="_csrf" value="${_csrf.token}" />
+
+            <@elements.input id="password" name="password" type="password" placeholder="p a s s w o r d . . ."
+                onfocus="this.placeholder = ''"  onblur="this.placeholder = 'p a s s w o r d . . .'" class="login-input"/>
+
+            <br>
+
+            <button type="submit" class="btn btn1 w3-button w3-padding-large">Sign In</button>
+        </form>
         <h5>No registered yet? Create easy new <a href="/registration"><b>account</b></a>!</h5>
     </div>
 </div>
 
+<!-- LOGIN Parallax Image -->
+<div class="parallax big-img-login-1 w3-display-container w3-opacity-min">
 
-<#import "parts/footer.ftl" as footer>
+</div>
+
 <@footer.footer>
 </@footer.footer>
 

@@ -29,15 +29,14 @@
 
         <div class="middle w3-bar-item">
             <div class="sm-container">
-                <i class="show-btn fa fa-user  w3-button"></i>
+                <i class="show-btn fa fa-bars  w3-button"></i>
                 <div class="sm-menu">
                     <a href="/main" ><i class="fa fa-envelope"></i> MESSAGES</a>
-                    <a href="/main_aim" ><i class="fa fa-envelope"></i> AIMS</a>
-                    <a href="/user" ><i class="fa fa-envelope"></i> USERS</a>
+                    <a href="/main_aim" ><i class="fa fa-dot-circle-o"></i> AIMS</a>
+                    <a href="/user" ><i class="fa fa-user-circle"></i> USERS</a>
                 </div>
             </div>
         </div>
-
 
         <script>
             $(".show-btn").click(function(){
@@ -57,7 +56,7 @@
         </div >-->
 
         <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
-        <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>Up</a>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>Up</a>
         <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
         <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
         <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
@@ -73,8 +72,8 @@
         <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
         <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
         <a href="/main" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> MESSAGES</a>
-        <a href="/main_aim" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> AIMS</a>
-        <a href="/user" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> USERS</a>
+        <a href="/main_aim" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-dot-circle-o"></i> AIMS</a>
+        <a href="/user" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user-circle"></i> USERS</a>
         <a href="/login" class="w3-bar-item w3-button w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
 
         <a href="#" class="w3-bar-item w3-button">SEARCH</a>
@@ -255,7 +254,7 @@
         <div class="w3-col m8 w3-panel">
             <div class="w3-large w3-margin-bottom">
                 <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Lublin/PL, Lviv/UA<br>
-                <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +570343789<br>
+                <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +5703434343<br>
                 <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: roman.drohobytskyi@mail.com<br>
             </div>
             <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
