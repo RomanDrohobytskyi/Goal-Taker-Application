@@ -9,7 +9,8 @@ public class State {
         READ ("Message has been read"),
         ARCHIVED ("Message has been archived"),
         DELETED ("Message has been deleted"),
-        RECOVERED ("Message has been recovered");
+        RECOVERED ("Message has been recovered"),
+        EDITED ("Message has been edited");
 
         private String state;
 

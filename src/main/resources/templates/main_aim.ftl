@@ -18,6 +18,13 @@
 
 </head>
 <body>
+<style>
+/*    textarea {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }*/
+</style>
 
 <!-- NavBar (sit on top) -->
 <div class="w3-top">
@@ -51,7 +58,7 @@
 <!-- First Parallax Image with Text -->
 <div class="parallax big-img-smart w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">YOUR AIMS</span>
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">WHAT IS AIM</span>
     </div>
 </div>
 
@@ -109,8 +116,11 @@
                 onfocus="this.placeholder = ''"  onblur="this.placeholder = 'd e s c r i p t i o n  . . .'"/>
 
             <p class="w3-center">T e x t </p>
-             <@elements.input id="input" name="text" type="text" placeholder="t e x t . . ."
-                onfocus="this.placeholder = ''"  onblur="this.placeholder = 't e x t . . .'"/>
+
+            <textarea rows="4" cols="50" id="input" name="text" placeholder="t e x t  . . .">
+            </textarea>
+            <#-- <@elements.input id="input" name="text" type="text" placeholder="t e x t . . ."
+                onfocus="this.placeholder = ''"  onblur="this.placeholder = 't e x t . . .'"/>-->
             <br>
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
             <button type="submit" class="btn btn1 w3-button w3-padding-large">A d d</button>
@@ -119,13 +129,21 @@
 
 </div>
 
+<#--Third paralax IMG-->
+<div class="parallax big-img-smart w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">YOUR AIMS</span>
+    </div>
+</div>
+
 <#--All AIMs-->
 <div class="w3-content w3-container w3-padding-64" id="messages">
     <div id="messages" class="w3-center w3-row">
         <h3 class="w3-center">All aims</h3>
 
-    <#-- Table of a messages -->
-        <table id="messagesTable" align="center" width="100%">
+
+        <#-- Table of a messages -->
+        <table id="messagesTable" align="center" width="100%" style="table-layout: fixed;">
         <#-- Table header -->
             <tr>
                 <th>ID</th>
@@ -140,12 +158,12 @@
                     <tr style="text-align:center; height: 100px">
                         <td><b>${aim.id}</b></td>
                         <td><span>${aim.title}</span></td>
-                        <td><i>${aim.text}</i></td>
+                        <td style="word-wrap: break-word"><i>${aim.text}</i></td>
                         <td>${aim.user.email}</td>
                     </tr>
                 </#list>
             <#else>
-                 <h4 class="w3-center">No aims </h4>
+                 <h4 class="w3-center">No aims yet</h4>
             </#if>
         </table>
     </div>

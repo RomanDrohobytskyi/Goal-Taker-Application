@@ -3,7 +3,6 @@ package application.entities;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -26,7 +25,7 @@ public class Aim {
     @Column(columnDefinition = "varchar(255) default ''")
     @NotNull
     private String text;
-    @Column(columnDefinition = "datetime default ''")
+    @Column(columnDefinition = "datetime default ''") //GETDATE()
     @NotNull
     private Date creationDate;
     @Column
