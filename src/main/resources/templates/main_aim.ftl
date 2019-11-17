@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/static/css/photos.css">
     <link rel="stylesheet" href="/static/css/text.css">
     <script type="text/javascript" src="/static/javascript/js.js"></script>
+    <script type="text/javascript" src="/static/javascript/validators.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -106,24 +107,28 @@
 
     <div class="w3-center w3-row">
         <h3 class="w3-center">Create smart AIM</h3>
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="/main_aim/add" method="get" enctype="multipart/form-data">
 
-            <@elements.input id="input" name="title" type="text" placeholder="t i t l e . . ."
+            <@elements.input id="aim_title" name="title" type="text" placeholder="t i t l e . . ."
                 onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i t l e . . .'"/>
 
             <p class="w3-center">d e s c r i p t i o n</p>
-            <@elements.input id="input" name="description" type="text" placeholder="d e s c r i p t i o n  . . ."
+            <@elements.input id="aim_description" name="description" type="text" placeholder="d e s c r i p t i o n  . . ."
                 onfocus="this.placeholder = ''"  onblur="this.placeholder = 'd e s c r i p t i o n  . . .'"/>
 
             <p class="w3-center">T e x t </p>
 
-            <textarea rows="4" cols="50" id="input" name="text" placeholder="t e x t  . . .">
+            <textarea  id="aim_text" name="text" placeholder="t e x t  . . ." rows="2" cols="21">
             </textarea>
             <#-- <@elements.input id="input" name="text" type="text" placeholder="t e x t . . ."
                 onfocus="this.placeholder = ''"  onblur="this.placeholder = 't e x t . . .'"/>-->
             <br>
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
-            <button type="submit" class="btn btn1 w3-button w3-padding-large">A d d</button>
+
+            <button type="submit" class="btn btn1 w3-button w3-padding-large"
+                    onclick="return validateLength('Title', 'aim_title', 3, 32)">
+                A d d
+            </button>
         </form>
     </div>
 
@@ -138,32 +143,56 @@
 
 <#--All AIMs-->
 <div class="w3-content w3-container w3-padding-64" id="messages">
-    <div id="messages" class="w3-center w3-row">
+    <div id="aims" class="w3-center w3-row">
         <h3 class="w3-center">All aims</h3>
 
 
         <#-- Table of a messages -->
-        <table id="messagesTable" align="center" width="100%" style="table-layout: fixed;">
+        <table id="aimsTable" align="center" width="100%" style="/*table-layout: fixed;*/">
         <#-- Table header -->
             <tr>
                 <th>ID</th>
                 <th>Title</th>
                 <th>Text</th>
+                <th>Description</th>
                 <th>User email</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
 
         <#-- All Aims -->
-            <#if all_aims??>
+            <#if all_aims?has_content>
                 <#list all_aims as aim>
-                    <tr style="text-align:center; height: 100px">
-                        <td><b>${aim.id}</b></td>
-                        <td><span>${aim.title}</span></td>
-                        <td style="word-wrap: break-word"><i>${aim.text}</i></td>
-                        <td>${aim.user.email}</td>
-                    </tr>
+                    <#if aim.aimState!= "DELETED">
+                        <tr id="aim_${aim.id}" style="text-align:center; height: 100px">
+                            <td><b>
+                                <a href="/aim_details/${aim.id}" style="text-decoration:none">
+                                    ${aim.id}
+                                </a>
+                            </b></td>
+                            <td><span>${aim.title}</span></td>
+                            <td style="word-wrap: break-word"><i>${aim.text}</i></td>
+                            <td style="word-wrap: break-word"><i>${aim.description}</i></td>
+                            <td>${aim.user.email}</td>
+                            <td>
+                                <div>
+                                    <a href="/editAim/${aim.id}" ><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div>
+                                    <a href="/main_aim/delete/${aim.id}">
+                                        <i class="fa fa-trash-o" aria-hidden="true" title="Delete aim"></i>
+                                    </a>
+                                    <input type="hidden" value="${aim}" name="aim">
+                                </div>
+                            </td>
+                        </tr>
+                    </#if>
                 </#list>
             <#else>
-                 <h4 class="w3-center">No aims yet</h4>
+                 <h4 class="w3-center" style="font-weight: bold;">No aims yet</h4>
             </#if>
         </table>
     </div>

@@ -25,9 +25,7 @@
 <body>
 
 <!-- NavBar (sit on top) -->
-<@menu.navBar >
-
-</@menu.navBar>
+<@menu.navBar />
 
 <!-- First Parallax Image with Text -->
 <@paralax.paralax id="home" image="" title="Page Creator" text="Roman Drohobytskyi"

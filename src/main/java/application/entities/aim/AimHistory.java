@@ -1,5 +1,6 @@
-package application.entities;
+package application.entities.aim;
 
+import application.entities.user.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

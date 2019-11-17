@@ -1,7 +1,7 @@
 package application.controllers;
 
-import application.entities.Message;
-import application.entities.User;
+import application.entities.message.Message;
+import application.entities.user.User;
 import application.enums.State;
 import application.repositories.IMessageRepository;
 import application.services.FileService;
@@ -78,7 +78,7 @@ public class MessageController {
             @PathVariable Message message,
             Map<String, Object> model) {
 
-        messageService.deleteMessage(message);
+        message = messageService.deleteMessage(message);
 
         Iterable<Message> messages = messageRepo.findAll();
         model.put("messages", messages);

@@ -1,6 +1,6 @@
 package application.controllers;
 
-import application.entities.Message;
+import application.entities.message.Message;
 import application.enums.State;
 import application.repositories.IMessageRepository;
 import application.services.FileService;
@@ -44,24 +44,9 @@ public class EditMessageController {
         return "redirect:/main#message_" + message.getId();
     }
 
-
     @GetMapping("/cancel")
     public String cancel(){
         return  "redirect:/main#messagesTable";
     }
-
-/*    @GetMapping("delete")
-    @PreAuthorize("hasAuthority('USER')")
-    public String getDeleteForm(@PathVariable Message message, Model model){
-
-        message.setText("deleted");
-        message.setTag("deleted");
-        message.setMessageState(State.MessageState.DELETED.toString());
-
-        messageRepository.save(message);
-
-        model.addAttribute("message", message);
-        return "redirect:/greeting";
-    }*/
 
 }

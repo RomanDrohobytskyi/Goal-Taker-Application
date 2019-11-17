@@ -2,7 +2,7 @@ package application.controllers;
 
 import application.repositories.IUserRepository;
 import application.roles.Role;
-import application.entities.User;
+import application.entities.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;

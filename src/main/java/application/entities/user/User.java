@@ -1,22 +1,26 @@
-package application.entities;
+package application.entities.user;
 
+import application.entities.aim.Aim;
+import application.entities.message.Message;
 import application.roles.Role;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.Collection;
 import java.util.Set;
 
-@Entity(name = "user_history")
+@Entity (name = "user")
 @Getter
 @Setter
 @NoArgsConstructor
-public class UserHistory {
-
+public class User implements UserDetails{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -40,7 +44,35 @@ public class UserHistory {
     @Enumerated(EnumType.STRING)
     @NotNull
     private Set<Role> roles;
-    @OneToMany
+    @OneToMany(mappedBy = "id", fetch = FetchType.EAGER)
+    private Set<Message> message;
+    @OneToMany(fetch = FetchType.EAGER)
     private Set<Aim> aims;
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return getRoles();
+    }
+
+
+    /*TODO: methods to do */
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return isActive();
+    }
 }

@@ -67,7 +67,7 @@
         <div>
             <span>Click on a link to see <a href="/user" style="color:#002fed"> list of Users</a>!</span>
         </div>
-        <form method="post" enctype="multipart/form-data">
+        <form action="/main" method="get" enctype="multipart/form-data">
             <p class="w3-center">Enter message: </p>
             <input type="text" name="text" placeholder="text . . ."/>
             <p class="w3-center">Tag: </p>
@@ -154,8 +154,8 @@
                 <#if message.messageState != "DELETED">
                      <tr id="message_${message.id}" style="height: 100px">
                          <td><b>${message.id}</b></td>
-                         <td style="word-wrap: break-word"><span>${message.text}</span></td>
-                         <td style="word-wrap: break-word"><i>${message.tag}</i></td>
+                         <td style="word-break:break-all;"><span>${message.text}</span></td>
+                         <td style="word-break:break-all;"><i>${message.tag}</i></td>
                          <td><strong>${message.getAuthorEmail()}</strong></td>
                          <td>
                              <div >

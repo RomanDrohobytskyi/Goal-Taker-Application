@@ -23,4 +23,37 @@ public class State {
         }
 
     }
+
+    public enum AimState{
+        NEW ("New aim"),
+        ARCHIVED ("Aim has been archived"),
+        DELETED ("Aim has been deleted"),
+        EDITED ("Aim has been edited");
+
+        private String state;
+
+        AimState(String state){
+            this.state = state;
+        }
+
+        public String getState(){
+            return state;
+        }
+    }
+
+    public enum DateState{
+        NEW ("New date"),
+        DELETED ("Date has been deleted"),
+        EDITED ("Date has been edited");
+
+        private String state;
+
+        DateState(String state){
+            this.state = state;
+        }
+
+        public String getState(){
+            return state;
+        }
+    }
 }

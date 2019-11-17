@@ -1,7 +1,7 @@
 package application.services;
 
-import application.entities.Message;
-import application.entities.User;
+import application.entities.message.Message;
+import application.entities.user.User;
 import application.enums.State;
 import application.repositories.IMessageRepository;
 import org.apache.logging.log4j.util.Strings;
@@ -55,7 +55,6 @@ public class MessageService {
     public void setDeletedMessages(Iterable<Message> deletedMessages) {
         this.deletedMessages = deletedMessages;
     }
-
 
     public Optional<Message> adaptMessage(String text, String tag, User user){
         if(Strings.isNotEmpty(text) && Strings.isNotEmpty(tag) && user != null){

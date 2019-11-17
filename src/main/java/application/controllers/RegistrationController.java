@@ -3,7 +3,7 @@ package application.controllers;
 
 import application.logger.LoggerJ;
 import application.services.UserService;
-import application.entities.User;
+import application.entities.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

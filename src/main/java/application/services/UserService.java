@@ -1,22 +1,18 @@
 package application.services;
 
-import application.entities.Message;
-import application.logger.LoggerJ;
+import application.entities.message.Message;
 import application.repositories.IUserRepository;
 import application.roles.Role;
-import application.entities.User;
+import application.entities.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Set;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 import static application.logger.LoggerJ.*;
 

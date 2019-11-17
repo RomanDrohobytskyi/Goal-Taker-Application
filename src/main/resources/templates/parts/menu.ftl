@@ -57,6 +57,7 @@
                 <div class="sm-menu">
                     <a href="/main" ><i class="fa fa-envelope"></i> MESSAGES</a>
                     <a href="/main_aim" ><i class="fa fa-dot-circle-o"></i> AIMS</a>
+                    <a href="/aims" ><i class="fa fa-dot-circle-o"></i> ALL AIMS</a>
                     <a href="/user" ><i class="fa fa-user-circle"></i> USERS</a>
                 </div>
             </div>

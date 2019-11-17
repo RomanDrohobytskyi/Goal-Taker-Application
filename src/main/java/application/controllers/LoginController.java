@@ -1,6 +1,6 @@
 package application.controllers;
 
-import application.entities.User;
+import application.entities.user.User;
 import application.logger.LoggerJ;
 import application.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

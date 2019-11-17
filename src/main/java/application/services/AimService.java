@@ -1,7 +1,9 @@
 package application.services;
 
-import application.entities.Aim;
-import application.entities.User;
+import application.entities.aim.Aim;
+import application.entities.user.User;
+import application.enums.State;
+import application.repositories.IAimRepository;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +16,8 @@ public class AimService {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private IAimRepository aimRepository;
 
     /**
      * This method create new Aim based on parameters.
@@ -38,4 +42,15 @@ public class AimService {
         return Optional.empty();
     }
 
+    /**
+     * Method to setup deleted aim data and then save
+     * @param aim - aim to delete
+     * @return - saved/updated Aim
+     */
+    public Aim deleteAim(Aim aim) {
+        aim.setModificationDate(new Date());
+        aim.setAimState(State.AimState.DELETED.toString());
+
+        return aimRepository.save(aim);
+    }
 }
