@@ -41,7 +41,7 @@ public class AimController {
         Iterable<Aim> userAims = loggedInUser.getAims();
         
         Iterable<Aim> aims = aimRepository.findAll();
-        model.addAttribute("all_aims", aims);
+        model.addAttribute("all_aims", userAims);
         return "main_aim";
     }
 
@@ -61,8 +61,8 @@ public class AimController {
 
                 Iterable<Aim> userAims = user.getAims();
 
-                Iterable<Aim> aims = aimRepository.findAll();
-                model.put("aims", aims);
+                //Iterable<Aim> aims = aimRepository.findAll();
+                model.put("aims", userAims);
             } catch (Exception e) {
                 logError(getClass(), "Could not save aim.");
                 e.printStackTrace();
@@ -80,11 +80,12 @@ public class AimController {
             @PathVariable Aim aim,
             Map<String, Object> model) {
 
-
         aimService.deleteAim(aim);
+        User loggedInUser = userManager.getLoggedInUser();
+        Iterable<Aim> userAims = loggedInUser.getAims();
 
-        Iterable<Aim> aims = aimRepository.findAll();
-        model.put("aims", aims);
+        model.put("aims", userAims);
+
         return "redirect:/main_aim#aimsTable";
     }
 

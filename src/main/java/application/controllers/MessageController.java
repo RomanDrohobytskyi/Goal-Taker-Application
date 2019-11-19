@@ -3,6 +3,7 @@ package application.controllers;
 import application.entities.message.Message;
 import application.entities.user.User;
 import application.enums.State;
+import application.managers.UserManager;
 import application.repositories.IMessageRepository;
 import application.services.FileService;
 import application.services.MessageService;
@@ -31,15 +32,16 @@ public class MessageController {
     private MessageService messageService;
     @Value("${upload.path}")
     private String uploadPath;
-
+    private UserManager userManager = new UserManager();
 
     @GetMapping("/main")
     public String filter(@RequestParam(required = false, defaultValue = "")
                                String filter, Model model) {
+        User loggedInUser = userManager.getLoggedInUser();
         if (filter != null && !filter.isEmpty()) {
-            messageService.setFilteredMessages(messageRepo.findByTag(filter));
+            messageService.setFilteredMessages(messageRepo.findByTagAndAndUser(filter, loggedInUser));
         } else {
-            messageService.setFilteredMessages(messageRepo.findAll());
+            messageService.setFilteredMessages(loggedInUser.getMessage());
         }
         model.addAttribute("messages", messageService.getFilteredMessages());
         model.addAttribute("filter", filter);
@@ -64,8 +66,11 @@ public class MessageController {
             message.get().setMessageState(State.MessageState.NEW.toString());
 
             messageRepo.save(message.get());
-            Iterable<Message> messages = messageRepo.findAll();
-            model.put("messages", messages);
+
+            User loggedInUser = userManager.getLoggedInUser();
+            Iterable<Message> userMessages = loggedInUser.getMessage();
+
+            model.put("messages", userMessages);
         }else {
             HashMap myMap = MapUtils.oneElementHashMap("","");
             model.put("messages", myMap);
@@ -80,8 +85,10 @@ public class MessageController {
 
         message = messageService.deleteMessage(message);
 
-        Iterable<Message> messages = messageRepo.findAll();
-        model.put("messages", messages);
+        User loggedInUser = userManager.getLoggedInUser();
+        Iterable<Message> userMessages = loggedInUser.getMessage();
+
+        model.put("messages", userMessages);
         return "redirect:/main#messagesTable";
     }
 

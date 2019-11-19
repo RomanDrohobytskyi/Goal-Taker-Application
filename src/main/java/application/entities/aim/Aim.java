@@ -1,5 +1,6 @@
 package application.entities.aim;
 
+import application.entities.time.data.Time;
 import application.entities.user.User;
 import application.enums.State;
 import lombok.Getter;
@@ -10,6 +11,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.List;
 
 @Entity(name = "aim")
 @Getter
@@ -42,4 +44,7 @@ public class Aim {
     private Date dateTo;
     @ManyToOne
     private User user;
+    @OneToMany(targetEntity=Time.class, fetch=FetchType.EAGER)
+    @Column(name = "logged_time")
+    private List<Time> loggedTime;
 }

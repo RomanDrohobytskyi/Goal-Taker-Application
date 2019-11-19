@@ -1,5 +1,6 @@
 package application.entities.aim;
 
+import application.entities.time.data.Time;
 import application.entities.user.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,6 +11,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.List;
 
 @Entity(name = "aim_history")
 @Getter
@@ -41,5 +43,8 @@ public class AimHistory {
     private Date dateTo;
     @ManyToOne
     private User user;
+    @OneToMany(targetEntity=Time.class, fetch=FetchType.EAGER)
+    @Column(name = "logged_time")
+    private List<Time> loggedTime;
 
 }

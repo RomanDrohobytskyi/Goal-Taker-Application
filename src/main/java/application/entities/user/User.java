@@ -44,16 +44,15 @@ public class User implements UserDetails{
     @Enumerated(EnumType.STRING)
     @NotNull
     private Set<Role> roles;
-    @OneToMany(mappedBy = "id", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
     private Set<Message> message;
-    @OneToMany(fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
     private Set<Aim> aims;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return getRoles();
     }
-
 
     /*TODO: methods to do */
     @Override
