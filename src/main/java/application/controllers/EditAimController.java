@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/editAim")
+@PreAuthorize("hasAuthority('USER')")
 public class EditAimController {
 
     @Autowired
     private IAimRepository aimRepository;
 
     @GetMapping("{aim}")
-    @PreAuthorize("hasAuthority('USER')")
     public String getEditForm(@PathVariable Aim aim, Model model) {
         model.addAttribute("aim", aim);
         return "editAim";

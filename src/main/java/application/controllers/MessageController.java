@@ -41,10 +41,10 @@ public class MessageController {
         if (filter != null && !filter.isEmpty()) {
             messageService.setFilteredMessages(messageRepo.findByTagAndAndUser(filter, loggedInUser));
         } else {
-            messageService.setFilteredMessages(loggedInUser.getMessage());
+            messageService.setFilteredMessages(messageRepo.findByUser(loggedInUser));
         }
         model.addAttribute("messages", messageService.getFilteredMessages());
-        model.addAttribute("filter", filter);
+        model.addAttribute("filter", filter != null ? filter : "");
 
         return "main";
     }
@@ -68,7 +68,7 @@ public class MessageController {
             messageRepo.save(message.get());
 
             User loggedInUser = userManager.getLoggedInUser();
-            Iterable<Message> userMessages = loggedInUser.getMessage();
+            Iterable<Message> userMessages = messageRepo.findByUser(loggedInUser);
 
             model.put("messages", userMessages);
         }else {
@@ -83,12 +83,12 @@ public class MessageController {
             @PathVariable Message message,
             Map<String, Object> model) {
 
-        message = messageService.deleteMessage(message);
+        messageService.deleteMessage(message);
 
         User loggedInUser = userManager.getLoggedInUser();
-        Iterable<Message> userMessages = loggedInUser.getMessage();
-
+        Iterable<Message> userMessages = messageRepo.findByUser(loggedInUser);
         model.put("messages", userMessages);
+
         return "redirect:/main#messagesTable";
     }
 

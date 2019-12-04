@@ -64,9 +64,6 @@
 
     <div class="w3-center w3-row">
         <h3 class="w3-center">Create message</h3>
-        <div>
-            <span>Click on a link to see <a href="/user" style="color:#002fed"> list of Users</a>!</span>
-        </div>
         <form action="/main" method="get" enctype="multipart/form-data">
             <p class="w3-center">Enter message: </p>
             <input type="text" name="text" placeholder="text . . ."/>
@@ -154,6 +151,7 @@
                 <#if message.messageState != "DELETED">
                      <tr id="message_${message.id}" style="height: 100px">
                          <td><b>${message.id}</b></td>
+                         <td><b>${message.messageState}</b></td>
                          <td style="word-break:break-all;"><span>${message.text}</span></td>
                          <td style="word-break:break-all;"><i>${message.tag}</i></td>
                          <td><strong>${message.getAuthorEmail()}</strong></td>

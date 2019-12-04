@@ -24,6 +24,11 @@
 
 </head>
 <body>
+
+<style>
+    .fa{margin-right: 1px; margin-left: 5px;}
+</style>
+
 <!-- NavBar (sit on top) -->
 <div class="w3-top">
     <div class="w3-bar" id="myNavBar">
@@ -79,7 +84,14 @@
 
             <button type="submit" class="btn btn1 w3-button w3-padding-large">Sign In</button>
         </form>
-        <h5>No registered yet? Create easy new <a href="/registration"><b>account</b></a>!</h5>
+        <h5>No registered yet? Create easy new
+            <a href="/registration" style="text-decoration: none;">
+                <b>account</b>
+                <i class="fa fa-user-plus">
+                </i>
+            </a>
+            !
+        </h5>
     </div>
 </div>
 

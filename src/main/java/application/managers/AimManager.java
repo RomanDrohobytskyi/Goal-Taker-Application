@@ -29,8 +29,7 @@ public class AimManager{
     public List<Aim> getDayPrice(){
         EntityManager session = entityManagerFactory.createEntityManager();
         try {
-            List<Aim> aims = new ArrayList<>();
-            aims = (List<Aim>)session.createNativeQuery("Select AIM FROM StockPrice")
+            List<Aim> aims = (List<Aim>)session.createNativeQuery("Select AIM FROM StockPrice")
                     .getSingleResult();
 
             return aims;

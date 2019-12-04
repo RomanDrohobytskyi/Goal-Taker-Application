@@ -16,8 +16,42 @@
 
     <#import "parts/footer.ftl" as footer>
     <#import "parts/elements.ftl" as elements>
+    <#import "parts/charst.ftl" as charts>
+    <#import "parts/details.ftl" as details>
+    <#import "parts/popups.ftl" as popups>
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Year', 'Sales', 'Expenses'],
+                ['2004',  1000,      400],
+                ['2005',  1170,      460],
+                ['2006',  660,       1120],
+                ['2007',  1030,      540]
+            ]);
+
+            var options = {
+                title: 'Company Performance',
+                curveType: 'function',
+                legend: { position: 'bottom' }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+        }
+    </script>
 </head>
 <body>
+
+<style>
+    .fa{margin-right: 5px;}
+</style>
 
 <!-- NavBar (sit on top) -->
 <div class="w3-top">
@@ -25,8 +59,8 @@
         <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
             <i class="fa fa-bars"></i>
         </a>
-        <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Home</a>
-        <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>Up</a>
+        <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
+        <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>UP</a>
         <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-in"></i>
             <form action="/logout" method="post">
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
@@ -40,8 +74,8 @@
 
     <!-- NavBar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-        <a href="greeting.ftl" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
-        <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">Up</a>
+        <a href="greeting.ftl" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
+        <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">UP</a>
         <a href="#" class="w3-bar-item w3-button">SEARCH</a>
     </div>
 </div>
@@ -53,36 +87,61 @@
     </div>
 </div>
 
-<!-- Message edit div -->
-<div class="w3-content w3-container w3-padding-64" id="edit-aim">
+<div class="w3-content w3-container w3-padding-64" id="details">
 
-    <h3 class="w3-center">E D I T</h3>
+    <h3 class="w3-center w3-black" style="background-color: #616161!important;">${aim.title!''}</h3>
+    <p class="w3-center article"><em>${aim.description!''}</em></p>
 
-    <div class="w3-center w3-row">
+    <#--Aim main details-->
+    <div class="w3-row" id="main-details" style="padding: 12px 24px!important">
+        <div class="w3-col m6 w3-center w3-padding-large">
+            <@details.userDetails user=aim.user/>
+        </div>
+        <div class="w3-col m6 w3-hide-small w3-center">
+            <@details.aimDetails aim=aim/>
+        </div>
+    </div>
 
-        <form action="/editAim" method="post" style="margin: 30px 10px 10px">
+    <div class="w3-center">
+        <h3 class="w3-center" style="color: #777!important;">Logged time</h3>
+    </div>
 
-            <label>
-                <input id="aim_title${aim.id}" type="text" name="title" value="${aim.title}" style="margin: 20px;">
-                <input id="aim_text${aim.id}" type="text" name="text" value="${aim.text}" style="margin: 20px;">
-                <input id="aim_description${aim.id}" type="text" name="description" value="${aim.description}"
-                       style="margin: 20px;">
-            </label>
+    <div class="w3-row">
+        <#--Left side of dib-->
+        <div class="w3-col m6 w3-center w3-padding-large">
+            <@charts.largeBarChart loggedTime=lastWeekLoggedTime/>
+            <@popups.details></@popups.details>
+            <#--<div id="curve_chart" style="width: 900px; height: 500px"></div>-->
+            <#-- <@charts.barChart aim=aim/>-->
+            <#-- <img id="myselfPhoto" src="https://pp.userapi.com/c849432/v849432316/b6f85/N5R2bjbNqJE.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this); setMaxHeightAndWight('myselfPhoto');" alt="Photo of Me" width="100%">
+             <p><b><i class="fa fa-user w3-margin-right"></i>Roman Drohobytskyi</b></p><br>-->
+        </div>
 
-            <input type="hidden" value="${aim.id}" name="aimId">
-            <input type="hidden" value="${_csrf.token}" name="_csrf">
-            <br>
-            <button type="submit" onclick="return validateLength('aim_title${aim.id}', 3, 32)"
-                    class="small-btn btn2 w3-button w3-padding-large">
-                Save
-            </button>
+        <!-- Hide this text on small devices -->
+        <div class="w3-col m6 w3-hide-small w3-center">
+            <form action="/aim_details/saveDetails" method="get" enctype="multipart/form-data">
+                <p class="w3-center article">Log worked time on aim: <em>${aim.title}</em></p>
 
-            <form action="/editAim/cancel" method="post" style="margin: 30px 10px 10px">
-                <button type="submit" class="small-btn btn2 w3-button w3-padding-large">
-                    Cancel
-                </button>
+                <p>Time: </p>
+                <@elements.input id="time" name="time" type="number" placeholder="t i m e . . ."
+                onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i m e . . .'" step="0.5"
+                min="0.5" max="24"/>
+
+                <p>Description: </p>
+                  <@elements.input id="description" name="description" type="text" placeholder="d e s c . . ."
+                  onfocus="this.placeholder = ''"  onblur="this.placeholder = 'd e s c . . .'"/>
+
+                <p>Date: </p>
+                 <@elements.input id="date" name="date" type="date" placeholder="d a t e . . ."
+                 onfocus="this.placeholder = ''"  onblur="this.placeholder = 'd a t e . . .'"/>
+                <br>
+
+                <input type="hidden" value="${aim.id}" name="aimId">
+                <input type="hidden" name="_csrf" value="${_csrf.token}" />
+
+                <button type="submit" class="btn btn1 w3-button w3-padding-large">L o g</button>
             </form>
-        </form>
+        </div>
     </div>
 </div>
 

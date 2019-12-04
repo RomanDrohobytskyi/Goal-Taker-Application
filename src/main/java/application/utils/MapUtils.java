@@ -1,7 +1,8 @@
 package application.utils;
 
 import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * This is Map Utils class.<br>
@@ -17,8 +18,14 @@ public class MapUtils {
      * @return one element HashMap
      */
     public static <T> HashMap<T,T>  oneElementHashMap (T key, T value){
-        HashMap<T,T> oneElementMap = new  HashMap<T,T>();
+        HashMap<T,T> oneElementMap = new HashMap<T,T>();
         oneElementMap.put(key, value);
+        return oneElementMap;
+    }
+
+    public static <T> Set<T> oneElementHashMap (T value){
+        Set<T> oneElementMap = new HashSet<T>();
+        oneElementMap.add(value);
         return oneElementMap;
     }
 

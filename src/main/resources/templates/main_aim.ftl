@@ -25,18 +25,22 @@
         margin-left: auto;
         margin-right: auto;
     }*/
+    .fa{
+        margin-right: 5px;
+    }
 </style>
 
 <!-- NavBar (sit on top) -->
-<div class="w3-top">
+<div class="w3-top" id="home">
     <div class="w3-bar" id="myNavBar">
         <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
             <i class="fa fa-bars"></i>
         </a>
         <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
-        <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>Up</a>
-        <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-        <a href="/main" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> MESSAGES</a>
+        <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>UP</a>
+        <a href="#definition" class="w3-bar-item w3-button"><i class="fa fa-graduation-cap"></i>DEFINITION</a>
+        <a href="#create" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-plus"></i>CREATE</a>
+        <a href="#aims" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i>AIMS</a>
         <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-out"></i>
             <form action="/logout" method="post">
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
@@ -49,7 +53,8 @@
 
     <!-- NavBar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+        <a href="#definition" class="w3-bar-item w3-button" onclick="toggleFunction()">DEFINITION</a>
+        <a href="#create" class="w3-bar-item w3-button" onclick="toggleFunction()">CREATE</a>
         <a href="main.ftl" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> MESSAGES</a>
         <a href="/login" class="w3-bar-item w3-button w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
         <a href="#" class="w3-bar-item w3-button">SEARCH</a>
@@ -57,14 +62,14 @@
 </div>
 
 <!-- First Parallax Image with Text -->
-<div class="parallax big-img-smart w3-display-container w3-opacity-min" id="home">
+<div class="parallax big-img-smart w3-display-container w3-opacity-min" id="first">
     <div class="w3-display-middle" style="white-space:nowrap;">
         <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">WHAT IS AIM</span>
     </div>
 </div>
 
 <!-- Definition of AIM container-->
-<div class="w3-content w3-container w3-padding-64" id="about">
+<div class="w3-content w3-container w3-padding-64" id="definition">
     <h3 class="w3-center w3-black ">S.M.A.R.T</h3>
     <p class="w3-center article"><em>It`s easier than You think</em></p>
     <p class="article-text">
@@ -89,14 +94,14 @@
 </div>
 
 <!-- Second Parallax Image with Portfolio Text -->
-<div class="parallax big-img-smart w3-display-container w3-opacity-min" id="home">
+<div class="parallax big-img-smart w3-display-container w3-opacity-min" id="second">
     <div class="w3-display-middle" style="white-space:nowrap;">
         <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">JUST CREATE</span>
     </div>
 </div>
 
 <!-- Create AIM container-->
-<div class="w3-content w3-container w3-padding-64" id="about">
+<div class="w3-content w3-container w3-padding-64" id="create">
     <h3 class="w3-center w3-black ">Create Your A I M</h3>
     <p class="w3-center article">
         <em>It`s easier than You think</em>
@@ -135,7 +140,7 @@
 </div>
 
 <#--Third paralax IMG-->
-<div class="parallax big-img-smart w3-display-container w3-opacity-min" id="home">
+<div class="parallax big-img-smart w3-display-container w3-opacity-min" id="third">
     <div class="w3-display-middle" style="white-space:nowrap;">
         <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">YOUR AIMS</span>
     </div>
@@ -146,9 +151,10 @@
     <div id="aims" class="w3-center w3-row">
         <h3 class="w3-center">All aims</h3>
 
+        <i class="fa fa-hand-pointer-o" aria-hidden="true"><em style="margin-left: 5px;">Click on aim id to check details</em></i>
 
         <#-- Table of a messages -->
-        <table id="aimsTable" align="center" width="100%" style="/*table-layout: fixed;*/">
+        <table id="aimsTable" align="center" width="100%" style="padding: 10px;/*table-layout: fixed;*/">
         <#-- Table header -->
             <tr>
                 <th>ID</th>
@@ -166,7 +172,7 @@
                     <#if aim.aimState!= "DELETED">
                         <tr id="aim_${aim.id}" style="text-align:center; height: 100px">
                             <td><b>
-                                <a href="/aim_details/${aim.id}" style="text-decoration:none">
+                                <a href="/aim_details/${aim.id}" style="text-decoration:none" title="Go to details: ${aim.title}">
                                     ${aim.id}
                                 </a>
                             </b></td>
@@ -198,6 +204,9 @@
     </div>
 </div>
 
+<#--Fourth paralax IMG-->
+<div class="parallax big-img-smart w3-display-container w3-opacity-min" id="fourth">
+</div>
 
 <!-- Footer -->
 <@footer.footer>

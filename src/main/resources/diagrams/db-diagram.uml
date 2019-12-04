@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>d8904ba1-b051-4f55-85e8-45be13b913e6</OriginalElement>
+  <nodes>
+    <node x="298.0" y="0.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.aim_history</node>
+    <node x="282.0" y="948.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user_history_roles</node>
+    <node x="0.0" y="0.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.aim</node>
+    <node x="302.0" y="406.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.message</node>
+    <node x="596.0" y="0.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user</node>
+    <node x="296.0" y="704.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user_aims</node>
+    <node x="844.0" y="948.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.hibernate_sequence</node>
+    <node x="563.0" y="948.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user_history_aims</node>
+    <node x="820.0" y="704.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.aim_history_logged_time</node>
+    <node x="0.0" y="948.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.aim_logged_time</node>
+    <node x="0.0" y="406.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user_history</node>
+    <node x="558.0" y="704.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user_roles</node>
+    <node x="598.0" y="406.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.time</node>
+    <node x="0.0" y="704.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.message_history</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="493.122079631458" y="338.69606230119587" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Key columns</Category>
+  </Categories>
+</Diagram>
+

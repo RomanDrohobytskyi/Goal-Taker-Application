@@ -38,9 +38,8 @@ public class AimController {
     @GetMapping("/main_aim")
     public String allAims(Model model){
         User loggedInUser = userManager.getLoggedInUser();
-        Iterable<Aim> userAims = loggedInUser.getAims();
-        
-        Iterable<Aim> aims = aimRepository.findAll();
+        Iterable<Aim> userAims = aimRepository.findByUser(loggedInUser);
+
         model.addAttribute("all_aims", userAims);
         return "main_aim";
     }
@@ -58,10 +57,7 @@ public class AimController {
             try{
                 Aim aim = aimOptional.get();
                 aimRepository.save(aim);
-
                 Iterable<Aim> userAims = user.getAims();
-
-                //Iterable<Aim> aims = aimRepository.findAll();
                 model.put("aims", userAims);
             } catch (Exception e) {
                 logError(getClass(), "Could not save aim.");
@@ -82,7 +78,7 @@ public class AimController {
 
         aimService.deleteAim(aim);
         User loggedInUser = userManager.getLoggedInUser();
-        Iterable<Aim> userAims = loggedInUser.getAims();
+        Iterable<Aim> userAims = aimRepository.findByUser(loggedInUser);
 
         model.put("aims", userAims);
 

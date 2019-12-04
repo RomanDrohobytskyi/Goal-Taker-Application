@@ -31,7 +31,7 @@ public class Aim {
     private String text;
     @NotNull
     private String aimState = State.AimState.NEW.toString();
-    @Column(columnDefinition = "datetime default ''") //GETDATE()
+    @Column(columnDefinition = "datetime default GETDATE()") //GETDATE()
     @NotNull
     private Date creationDate;
     @Column
@@ -44,7 +44,8 @@ public class Aim {
     private Date dateTo;
     @ManyToOne
     private User user;
-    @OneToMany(targetEntity=Time.class, fetch=FetchType.EAGER)
+    @OneToMany(mappedBy = "aim", targetEntity=Time.class, fetch=FetchType.LAZY)
     @Column(name = "logged_time")
     private List<Time> loggedTime;
+
 }
