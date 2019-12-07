@@ -41,9 +41,16 @@
 -->
 <#macro slideMenu >
 
+<style>
+    a{
+        text-decoration: none;
+    }
+</style>
+<a class="show-btn w3-bar-item w3-button" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+    <i class="fa fa-bars"></i>
+</a>
         <div class="middle w3-bar-item">
             <div class="sm-container">
-                <i class="show-btn fa fa-bars  w3-button"></i>
                 <div class="sm-menu">
                     <a href="/main" ><i class="fa fa-envelope"></i>MESSAGES</a>
                     <a href="/main_aim" ><i class="fa fa-dot-circle-o"></i>AIMS</a>

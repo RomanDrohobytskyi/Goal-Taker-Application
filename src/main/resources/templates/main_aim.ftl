@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/menu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <#import "parts/menu.ftl" as menu>
     <#import "parts/footer.ftl" as footer>
     <#import "parts/elements.ftl" as elements>
 
@@ -58,38 +61,6 @@
         <a href="main.ftl" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> MESSAGES</a>
         <a href="/login" class="w3-bar-item w3-button w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
         <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-    </div>
-</div>
-
-<!-- First Parallax Image with Text -->
-<div class="parallax big-img-smart w3-display-container w3-opacity-min" id="first">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">WHAT IS AIM</span>
-    </div>
-</div>
-
-<!-- Definition of AIM container-->
-<div class="w3-content w3-container w3-padding-64" id="definition">
-    <h3 class="w3-center w3-black ">S.M.A.R.T</h3>
-    <p class="w3-center article"><em>It`s easier than You think</em></p>
-    <p class="article-text">
-        What is Lorem Ipsum?
-    </p>
-    <div class="w3-row">
-        <div class="w3-col m6 w3-center w3-padding-large">
-            <img src="https://www.professionalacademy.com/media/images-news/smarter-objectives.jpg" class="big-img-small-smart w3-round w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this)" alt="Photo of Me" width="100%">
-                <p>
-                    <b>S.M.A.R.T</b>
-                </p>
-            <br>
-        </div>
-
-        <!-- Hide this text on small devices -->
-        <div class="w3-col m6 w3-hide-small w3-padding-large">
-            <p class="article-text">
-                Why do we use it?
-            </p>
-        </div>
     </div>
 </div>
 

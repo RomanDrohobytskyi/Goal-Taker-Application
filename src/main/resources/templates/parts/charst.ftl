@@ -21,6 +21,7 @@
         .bar:focus text {
             fill: #777;
         }
+
     </style>
 
     <#if aim?has_content && aim.loggedTime?has_content>
@@ -40,15 +41,48 @@
 </#macro>
 
 <#macro largeBarChart loggedTime>
+    <style>
+        .time:hover{
+            color: #000 !important;
+        }
+    </style>
+
     <#if loggedTime?has_content>
         <#list loggedTime as loggedTime>
             <#assign timeInProcent=(loggedTime.time * 4.1)>
             ${loggedTime.description}<#sep>, ${loggedTime.date}
             <div class="w3-light-grey">
                 <div class="w3-container w3-padding-small w3-dark-grey w3-center"
-                     style="width:${timeInProcent}%">${loggedTime.time}h
+                     style="width:${timeInProcent}%">
+                    <a id="myBtn" style="text-decoration: none;" class="time" title="More details">
+                        ${loggedTime.time}h
+                    </a>
                 </div>
             </div>
         </#list>
+    <#else >
+        No time logged yet!
     </#if>
 </#macro>
+
+<#--
+<#macro oneElementDetails loggedTime>
+     <style>
+         .time:hover{
+             color: #000 !important;
+         }
+     </style>
+
+    <#if loggedTime?has_content>
+        <#assign timeInProcent=(loggedTime.time * 4.1)>
+        ${loggedTime.description}, ${loggedTime.date}
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center"
+                 style="width:${timeInProcent}%">
+                <a id="myBtn" style="text-decoration: none;" class="time" title="More details">
+                    ${loggedTime.time}h
+                </a>
+            </div>
+        </div>
+    </#if>
+</#macro>-->

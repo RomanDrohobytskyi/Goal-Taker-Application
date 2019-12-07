@@ -21,14 +21,17 @@ public class Aim {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column
     @NotNull
     @Size(min = 3, max = 32)
     private String title;
+    @Column
     @NotNull
     private String description;
     @Column(columnDefinition = "varchar(255) default ''")
     @NotNull
     private String text;
+    @Column
     @NotNull
     private String aimState = State.AimState.NEW.toString();
     @Column(columnDefinition = "datetime default GETDATE()") //GETDATE()

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>D e t a i l s</title>
+    <title>A n a l i z e r</title>
     <link rel="shortcut icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Group_font_awesome.svg/1024px-Group_font_awesome.svg.png">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/buttons.css">
@@ -23,35 +23,9 @@
     <#import "parts/details.ftl" as details>
     <#import "parts/popups.ftl" as popups>
     <#import "parts/menu.ftl" as menu>
-
-
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Year', 'Sales', 'Expenses'],
-                ['2004',  1000,      400],
-                ['2005',  1170,      460],
-                ['2006',  660,       1120],
-                ['2007',  1030,      540]
-            ]);
-
-            var options = {
-                title: 'Company Performance',
-                curveType: 'function',
-                legend: { position: 'bottom' }
-            };
-
-            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-            chart.draw(data, options);
-        }
-    </script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript"></script>
 </head>
-<body>
 
 <style>
     .fa{margin-right: 5px;}
@@ -100,13 +74,13 @@
     <h3 class="w3-center w3-black" style="background-color: #616161!important;">${aim.title!''}</h3>
     <p class="w3-center article"><em>${aim.description!''}</em></p>
 
-    <#--Aim main details-->
+<#--Aim main details-->
     <div class="w3-row" id="main-details" style="padding: 12px 24px!important">
         <div class="w3-col m6 w3-center w3-padding-large">
-            <@details.userDetails user=aim.user/>
+            awd
         </div>
         <div class="w3-col m6 w3-hide-small w3-center">
-            <@details.aimDetails aim=aim/>
+            dd
         </div>
     </div>
 
@@ -115,41 +89,56 @@
     </div>
 
     <div class="w3-row">
-        <#--Left side of dib-->
+    <#--Left side of dib-->
         <div class="w3-col m6 w3-center w3-padding-large">
-            <@charts.largeBarChart loggedTime=lastWeekLoggedTime/>
-            <@popups.details></@popups.details>
-            <#--<div id="curve_chart" style="width: 900px; height: 500px"></div>-->
-            <#-- <@charts.barChart aim=aim/>-->
-            <#-- <img id="myselfPhoto" src="https://pp.userapi.com/c849432/v849432316/b6f85/N5R2bjbNqJE.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this); setMaxHeightAndWight('myselfPhoto');" alt="Photo of Me" width="100%">
-             <p><b><i class="fa fa-user w3-margin-right"></i>Roman Drohobytskyi</b></p><br>-->
-            <br>
-            <button type="button" class="btn btn1 w3-button w3-padding-large"><a href="/analyzer/${aim.id}">Analyzer</a></button>
+            <@charts.largeBarChart loggedTime=aim.loggedTime/>
         </div>
 
-        <!-- Hide this text on small devices -->
+
+            <#--All AIMs-->
         <div class="w3-col m6 w3-hide-small w3-center">
-            <form action="/aim_details/saveDetails" method="get" enctype="multipart/form-data">
-                <p class="w3-center article">Log worked time on aim: <em>${aim.title}</em></p>
+                <div class="w3-content w3-container w3-padding-64">
+                    <div class="w3-center w3-row">
+                        <h3 class="w3-center">Logged time</h3>
 
-                <p>Time: </p>
-                <@elements.input id="time" name="time" type="number" placeholder="t i m e . . ."
-                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i m e . . .'" step="0.5"
-                    min="0.5" max="24"/>
-
-                <p>Description: </p>
-                  <@elements.input id="description" name="description" type="text" placeholder="d e s c . . ."
-                     onfocus="this.placeholder = ''"  onblur="this.placeholder = 'd e s c . . .'"/>
-
-                <p>Date: </p>
-                 <@elements.input id="date" name="date" type="date" placeholder="d a t e . . ."
-                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 'd a t e . . .'"/>
-                <br>
-
-                <input type="hidden" value="${aim.id}" name="aimId">
-                <input type="hidden" name="_csrf" value="${_csrf.token}" />
-
-                <button type="submit" class="btn btn1 w3-button w3-padding-large">L o g</button>
+                    <#-- Table of a aim and logged time -->
+                        <table id="timeTable" align="center" width="100%"
+                               style="padding: 10px;">
+                        <#-- Table header -->
+                            <tr>
+                                <th>ID</th>
+                                <th>Description</th>
+                                <th>Creation date</th>
+                                <th>Time</th>
+                                <th>Delete</th>
+                            </tr>
+                            <#if logged_time?has_content>
+                                <#list logged_time as time>
+                                    <#if time.state!= "DELETED">
+                                        <tr id="time_${time.id}" style="text-align:center; height: 100px">
+                                            <td>
+                                                <b>${time.id}</b>
+                                            </td>
+                                            <td style="word-wrap: break-word"><i>${time.description}</i></td>
+                                            <td><i>${time.creationDate}</i></td>
+                                            <td><i>${time.time}h.</i></td>
+                                            <td>
+                                                <a href="/analyzer/${aim.id}/delete/${time.id}">
+                                                    <i class="fa fa-trash-o" aria-hidden="true" title="Delete logged time"></i>
+                                                </a>
+                                                <input type="hidden" value="${time}" name="time">
+                                                <input type="hidden" value="${aim}" name="aim">
+                                            </td>
+                                        </tr>
+                                    </#if>
+                                </#list>
+                            <#else>
+                                 <h4 class="w3-center" style="font-weight: bold;">No logged time for aim ${aim.title!'No title'} yet</h4>
+                            </#if>
+                        </table>
+                    </div>
+                </div>
+        </div>
             </form>
         </div>
     </div>

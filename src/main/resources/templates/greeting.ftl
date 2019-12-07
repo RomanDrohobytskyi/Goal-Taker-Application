@@ -135,40 +135,7 @@
     <div class="w3-row-padding w3-center w3-section">
         <h3 class="w3-center">MY PHOTOS</h3>
 
-        <div class="w3-center w3-row slider-show middle">
 
-            <div class="slides">
-                <input type="radio" name="r" id="r1" checked>
-                <input type="radio" name="r" id="r2">
-                <input type="radio" name="r" id="r3">
-                <input type="radio" name="r" id="r4">
-                <input type="radio" name="r" id="r5">
-
-                <div class="slide s1">
-                    <img src="https://pp.userapi.com/c847221/v847221064/126611/7O_a9n533XI.jpg" alt="" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
-                </div>
-                <div class="slide">
-                    <img src="https://pp.userapi.com/c637317/v637317807/2460a/TLFfXV15QX0.jpg" alt="" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
-                </div>
-                <div class="slide">
-                    <img src="https://pp.userapi.com/c637122/v637122807/2cd71/fOOd2agzTSs.jpg" alt="" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
-                </div>
-                <div class="slide">
-                    <img src="https://pp.userapi.com/c637122/v637122807/2cd71/fOOd2agzTSs.jpg" alt="" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
-                </div>
-                <div class="slide">
-                    <img src="https://pp.userapi.com/c637122/v637122807/2cd71/fOOd2agzTSs.jpg" alt="" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
-                </div>
-
-                <div class="navigation">
-                    <label for="r1" class="bar"></label>
-                    <label for="r2" class="bar"></label>
-                    <label for="r3" class="bar"></label>
-                    <label for="r4" class="bar"></label>
-                    <label for="r5" class="bar"></label>
-                </div>
-            </div>
-        </div>
 
         <a href="/photos"> <button class="btn btn2 w3-button w3-padding-large" >See more photos</button></a>
     </div>

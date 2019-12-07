@@ -85,10 +85,9 @@
         }
     </style>
 
-
     <!-- Trigger/Open The Modal -->
-    <button class="btn btn2 w3-button w3-padding-large" id="myBtn">Time details</button>
-
+   <#-- <button class="btn btn2 w3-button w3-padding-large" id="myBtn">Time details</button>
+-->
     <!-- The Modal -->
     <div id="myModal" class="modal">
 
@@ -96,7 +95,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close">&times;</span>
-                <h2>Modal Header</h2>
+                <h2>${aim.title}</h2>
             </div>
             <div class="modal-body">
                 <p>Some text in the Modal Body</p>

@@ -83,4 +83,11 @@ public class TimeService {
         });
         return time;
     }
+
+    public Time deleteTime(Time time) {
+        time.setModificationDate(new Date());
+        time.setState(State.DateState.DELETED.toString());
+        iTimeRepository.save(time);
+        return time;
+    }
 }
