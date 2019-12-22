@@ -47,7 +47,7 @@ public class Aim {
     private Date dateTo;
     @ManyToOne
     private User user;
-    @OneToMany(mappedBy = "aim", targetEntity=Time.class, fetch=FetchType.LAZY)
+    @OneToMany(mappedBy = "aim", targetEntity=Time.class, fetch=FetchType.EAGER)
     @Column(name = "logged_time")
     private List<Time> loggedTime;
 

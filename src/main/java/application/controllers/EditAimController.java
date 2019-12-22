@@ -1,6 +1,7 @@
 package application.controllers;
 
 import application.entities.aim.Aim;
+import application.enums.State;
 import application.repositories.IAimRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -32,6 +33,7 @@ public class EditAimController {
         aim.setText(text);
         aim.setDescription(description);
         aim.setTitle(title);
+        aim.setAimState(State.AimState.EDITED.toString());
 
         aimRepository.save(aim);
         return "redirect:/main_aim#aim_" + aim.getId();

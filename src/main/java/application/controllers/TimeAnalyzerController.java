@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -25,12 +26,15 @@ public class TimeAnalyzerController {
     @Autowired
     private IAimRepository aimRepository;
     private UserManager userManager = new UserManager();
+    private List<Time> lastSevenDaysTime;
 
     @GetMapping
     @RequestMapping("/{aim}")
     public String getEditForm(@PathVariable Aim aim, Model model) {
+        lastSevenDaysTime = timeService.getLastWeekTime(aim.getId());
         model.addAttribute("aim", aim);
         model.addAttribute("logged_time", aim.getLoggedTime());
+        model.addAttribute("lastSevenDaysTime", lastSevenDaysTime);
         return "time_analyzer";
     }
 
@@ -47,5 +51,8 @@ public class TimeAnalyzerController {
 
         return "redirect:/analyzer/" + aim.getId()+ "#timeTable";
     }
+
+
+
 
 }

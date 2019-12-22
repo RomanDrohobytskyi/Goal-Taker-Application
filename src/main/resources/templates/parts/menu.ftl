@@ -18,6 +18,7 @@
             <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i>PORTFOLIO</a>
             <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i>CONTACT</a>
             <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
+            <a href="/profile" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-user"></i></a>
             <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
                 <i class="fa fa-search"></i>
             </a>
@@ -52,9 +53,10 @@
         <div class="middle w3-bar-item">
             <div class="sm-container">
                 <div class="sm-menu">
-                    <a href="/main" ><i class="fa fa-envelope"></i>MESSAGES</a>
+                    <a href="/main" ><i class="fa fa-envelope"></i>NOTES</a>
                     <a href="/main_aim" ><i class="fa fa-dot-circle-o"></i>AIMS</a>
                     <a href="/aims" ><i class="fa fa-circle-o"></i>ALL AIMS</a>
+                    <a href="/userAnalyzer/activity" ><i class="fa fa-circle-o"></i>USER ANALYZER</a>
                     <a href="/photos" ><i class="fa fa-picture-o"></i>PHOTOS</a>
                     <a href="/projects" ><i class="fa fa-archive"></i>PROJECTS</a>
                     <a href="/user" ><i class="fa fa-user-circle"></i>USERS</a>

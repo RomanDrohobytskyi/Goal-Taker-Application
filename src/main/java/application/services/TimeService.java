@@ -2,7 +2,9 @@ package application.services;
 
 import application.entities.aim.Aim;
 import application.entities.time.data.Time;
+import application.entities.user.User;
 import application.enums.State;
+import application.repositories.IAimRepository;
 import application.repositories.ITimeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +18,8 @@ public class TimeService {
 
     @Autowired
     private ITimeRepository iTimeRepository;
+    @Autowired
+    private IAimRepository aimRepository;
 
     public Time adaptTime(Double loggedTime, Date date, String description, State.DateState state, Aim aim){
         Time time = new Time();
@@ -73,8 +77,6 @@ public class TimeService {
 
 
     public List<Time> sortTimeByDateDescending(List<Time> time){
-
-        //users.sort(Comparator.comparing(User::getCreatedOn).reversed());
         Collections.sort(time, new Comparator<Time>() {
             @Override
             public int compare(Time t1, Time t2) {
@@ -89,5 +91,20 @@ public class TimeService {
         time.setState(State.DateState.DELETED.toString());
         iTimeRepository.save(time);
         return time;
+    }
+
+    public Time getMostActiveTime(User user){
+        Set<Aim> aims  = user.getAims();
+        List<Time> allLoggedTimes = getAllLoggedTimeForUserAims(new ArrayList<>(aims));
+        Time time = allLoggedTimes.stream().max(Comparator.comparing(Time::getTime)).get();
+        return time;
+    }
+
+    public List<Time> getAllLoggedTimeForUserAims(List<Aim> userAims){
+        List<Time> allAimsLoggedTime = new ArrayList<>();
+        for (Aim aim : userAims){
+            allAimsLoggedTime.addAll(aim.getLoggedTime());
+        }
+        return allAimsLoggedTime;
     }
 }

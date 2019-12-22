@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>M a i n</title>
+    <title>N o t e s</title>
     <link rel="shortcut icon" type="image/png" href="https://cdn0.iconfinder.com/data/icons/basic-outline/64/icon-basic-set_12-camera-512.png">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/buttons.css">
@@ -58,7 +58,7 @@
 <!-- First Parallax Image -->
 <div class="parallax big-img-messaging w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Main</span>
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Notes</span>
     </div>
 </div>
 
@@ -66,9 +66,9 @@
 <div class="w3-content w3-container w3-padding-64" id="add-message">
 
     <div class="w3-center w3-row">
-        <h3 class="w3-center">Create message</h3>
+        <h3 class="w3-center">Create note</h3>
         <form action="/main" method="get" enctype="multipart/form-data">
-            <p class="w3-center">Enter message: </p>
+            <p class="w3-center">Enter note title: </p>
             <input type="text" name="text" placeholder="text . . ."/>
             <p class="w3-center">Tag: </p>
             <input type="text" name="tag" placeholder="tag  . . ."/>
@@ -86,14 +86,14 @@
 <#--Second Parallax IMG-->
 <div class="parallax big-img-messages w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Messages</span>
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Notes</span>
     </div>
 </div>
 
 <!-- Messages Container -->
 <div class="w3-content w3-container w3-padding-64" id="messages">
     <div id="messages" class="w3-center w3-row">
-        <h3 class="w3-center">All messages</h3>
+        <h3 class="w3-center">All notes</h3>
 
         <div id="menu">
             <div class="form-item form-type-textfield form-item-count-checked-checkboxes">
@@ -106,9 +106,9 @@
                 <#-- Selected checkboxes count -->
                     <div class="count-checkboxes-wrapper">
                     <#--Count only-->
-                        <span id="count-checked-checkboxes" title="Selected messages count">0</span>
+                        <span id="count-checked-checkboxes" title="Selected notes count">0</span>
                     <#-- Trash fa-fa icon -->
-                        <i id="trash" class="fa fa-trash-o" aria-hidden="true" title="Delete selected messages"></i>
+                        <i id="trash" class="fa fa-trash-o" aria-hidden="true" title="Delete selected notes"></i>
                         <br>
                         <input type="hidden" name="_csrf" value="${_csrf.token}" />
                     <#-- <button type="submit" name="deleteMessage" class="btn btn1 w3-button w3-padding-large">Delete</button>-->
@@ -121,7 +121,7 @@
     <#-- Filter for messages form -->
         <form method="get" action="/main">
             <p class="w3-center">
-                Find message byt filter
+                Find note by filter
             </p>
             <@elements.input id="filter" value="${filter!}" name="filter" type="text" placeholder="f i l t e r . . ."
             onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i t l e . . .'"/>
@@ -138,7 +138,7 @@
         <#-- Table header -->
             <tr>
                 <th>ID</th>
-                <th>Message</th>
+                <th>State</th>
                 <th>Filter</th>
                 <th>Email</th>
                 <th>Img</th>
@@ -183,7 +183,7 @@
                          <td>
                              <div>
                                  <a href="/main/delete/${message.id}">
-                                     <i class="fa fa-trash-o" aria-hidden="true" title="Delete message"></i>
+                                     <i class="fa fa-trash-o" aria-hidden="true" title="Delete note"></i>
                                  </a>
                                  <input type="hidden" value="${message}" name="message">
                              </div>

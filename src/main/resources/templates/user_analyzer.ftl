@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>A n a l i z e r</title>
+    <title>A c t i v i t y</title>
     <link rel="shortcut icon" type="image/png"
           href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Group_font_awesome.svg/1024px-Group_font_awesome.svg.png">
     <link rel="stylesheet" href="/static/css/style.css">
@@ -29,35 +29,8 @@
 </head>
 <body>
 
-<!-- NavBar (sit on top) -->
-<div class="w3-top">
-    <div class="w3-bar" id="myNavBar">
-        <@menu.slideMenu/>
-
-        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
-           onclick="toggleFunction()" title="Toggle Navigation Menu">
-            <i class="fa fa-bars"></i>
-        </a>
-        <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
-        <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>UP</a>
-        <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-in"></i>
-            <form action="/logout" method="post">
-                <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-            </form>
-        </a>
-
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-            <i class="fa fa-search"></i>
-        </a>
-    </div>
-
-    <!-- NavBar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-        <a href="greeting.ftl" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
-        <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">UP</a>
-        <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-    </div>
-</div>
+<!-- NavBar<!-- NavBar (sit on top) -->
+<@menu.navBar/>
 
 <!-- First Parallax Image -->
 <div class="parallax big-img-users-1 w3-display-container w3-opacity-min" id="home">
@@ -69,8 +42,8 @@
 <#--Firts analizer container-->
 <div class="w3-content w3-container w3-padding-64" id="details">
 
-    <h3 class="w3-center w3-black" style="background-color: #616161!important;">${aim.title!''}</h3>
-    <p class="w3-center article"><em>${aim.description!''}</em></p>
+    <h3 class="w3-center w3-black" style="background-color: #616161!important;">amdklawd</h3>
+    <p class="w3-center article"><em>!!!!!!!!!!!!!!!!!!!!!!!!!!!!</em></p>
 
 <#--Aim main details-->
     <div class="w3-row" id="main-details" style="padding: 12px 24px!important">
@@ -83,34 +56,12 @@
     </div>
 
     <div class="w3-row">
-        <#--All logged time-->
+    <#--All logged time-->
         <div class="w3-center">
             <h3 class="w3-center">Logged time</h3>
-            <#-- Table of a aim and logged time -->
+        <#-- Table of a aim and logged time -->
             <p class="w3-center article"><em>Only not deleted time</em></p>
-            <@details.loggedTimeDetail logged_time=logged_time aim=aim/>
         </div>
-
-        <#--Logged time simple chart-->
-        <div class="w3-col m6 w3-center w3-padding-large">
-             <@charts.pieChart/>
-        </div>
-
-        <div class="w3-col m6 w3-center w3-padding-large">
-             <@charts.lineChart/>
-        </div>
-
-        <div class="w3-col m6 w3-center w3-padding-large">
-             <@charts.splineAreaChart/>
-        </div>
-
-        <div class="w3-col m6 w3-center w3-padding-large">
-             <@charts.columnChart/>
-        </div>
-
-
-        <@charts.all aim lastSevenDaysTime/>
-
 
     </div>
 </div>

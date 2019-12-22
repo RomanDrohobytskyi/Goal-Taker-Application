@@ -208,11 +208,11 @@
                             type: "pie",
                             showInLegend: true,
                             dataPoints: [
-                               <#-- <#if lastSevenDaysTime?has_content>
-                                    <#list lastSevenDaysTime as time>
-                                    {y: ${time.time?string}, legendText: "${time.description}" indexLabel: '${time.getConvertedDate(time).toString()}'},
-                                    </#list>
-                                </#if>-->
+                            <#-- <#if lastSevenDaysTime?has_content>
+                                 <#list lastSevenDaysTime as time>
+                                 {y: ${time.time?string}, legendText: "${time.description}" indexLabel: '${time.getConvertedDate(time).toString()}'},
+                                 </#list>
+                             </#if>-->
                                 {y: 4181563, legendText: "PS 3", indexLabel: "PlayStation 3"},
                                 {y: 2175498, legendText: "Wii", indexLabel: "Wii"},
                                 {y: 3125844, legendText: "360", indexLabel: "Xbox 360"},
@@ -254,30 +254,30 @@
                                      <#assign year = time.getConvertedDate(time).year>
                                     {label: '${time.getConvertedDate(time).toString()}', y: ${time.time?string}},
                                  </#list>
-                               /* {x: new Date(2012, 00, 1), y: 450},
-                                {x: new Date(2012, 01, 1), y: 414},
-                                {
-                                    x: new Date(2012, 02, 1),
-                                    y: 520,
-                                    indexLabel: "highest",
-                                    markerColor: "red",
-                                    markerType: "triangle"
-                                },
-                                {x: new Date(2012, 03, 1), y: 460},
-                                {x: new Date(2012, 04, 1), y: 450},
-                                {x: new Date(2012, 05, 1), y: 500},
-                                {x: new Date(2012, 06, 1), y: 480},
-                                {x: new Date(2012, 07, 1), y: 480},
-                                {
-                                    x: new Date(2012, 08, 1),
-                                    y: 410,
-                                    indexLabel: "lowest",
-                                    markerColor: "DarkSlateGrey",
-                                    markerType: "cross"
-                                },
-                                {x: new Date(2012, 09, 1), y: 500},
-                                {x: new Date(2012, 10, 1), y: 480},
-                                {x: new Date(2012, 11, 1), y: 510}*/
+                                /* {x: new Date(2012, 00, 1), y: 450},
+                                 {x: new Date(2012, 01, 1), y: 414},
+                                 {
+                                     x: new Date(2012, 02, 1),
+                                     y: 520,
+                                     indexLabel: "highest",
+                                     markerColor: "red",
+                                     markerType: "triangle"
+                                 },
+                                 {x: new Date(2012, 03, 1), y: 460},
+                                 {x: new Date(2012, 04, 1), y: 450},
+                                 {x: new Date(2012, 05, 1), y: 500},
+                                 {x: new Date(2012, 06, 1), y: 480},
+                                 {x: new Date(2012, 07, 1), y: 480},
+                                 {
+                                     x: new Date(2012, 08, 1),
+                                     y: 410,
+                                     indexLabel: "lowest",
+                                     markerColor: "DarkSlateGrey",
+                                     markerType: "cross"
+                                 },
+                                 {x: new Date(2012, 09, 1), y: 500},
+                                 {x: new Date(2012, 10, 1), y: 480},
+                                 {x: new Date(2012, 11, 1), y: 510}*/
                             ]
                         }
                     ]

@@ -1,6 +1,7 @@
 package application.repositories;
 
 import application.entities.aim.Aim;
+import application.entities.time.data.Time;
 import application.entities.user.User;
 import org.springframework.data.repository.CrudRepository;
 

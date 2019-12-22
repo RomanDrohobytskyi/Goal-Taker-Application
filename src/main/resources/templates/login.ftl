@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>L o g i n</title>
-    <link rel="shortcut icon" type="image/png" href="https://cdn0.iconfinder.com/data/icons/basic-outline/64/icon-basic-set_12-camera-512.png">
+    <link rel="shortcut icon" type="image/png" href="http://cdn.onlinewebfonts.com/svg/img_299586.png">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/buttons.css">
     <link rel="stylesheet" href="/static/css/login.css">
@@ -47,7 +47,6 @@
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
         <a href="greeting.ftl" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
         <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">Up</a>
-        <a href="#" class="w3-bar-item w3-button">SEARCH</a>
     </div>
 </div>
 
