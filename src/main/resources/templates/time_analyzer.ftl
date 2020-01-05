@@ -88,11 +88,11 @@
             <h3 class="w3-center">Logged time</h3>
             <#-- Table of a aim and logged time -->
             <p class="w3-center article"><em>Only not deleted time</em></p>
-            <@details.loggedTimeDetail logged_time=logged_time aim=aim/>
+            <@details.loggedTimeDetail logged_time=loggedTime aim=aim/>
         </div>
 
         <#--Logged time simple chart-->
-        <div class="w3-col m6 w3-center w3-padding-large">
+       <#-- <div class="w3-col m6 w3-center w3-padding-large">
              <@charts.pieChart/>
         </div>
 
@@ -110,7 +110,7 @@
 
 
         <@charts.all aim lastSevenDaysTime/>
-
+-->
 
     </div>
 </div>
@@ -122,6 +122,37 @@
         <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Aim</span>
     </div>
 </div>
+
+
+<#--Firts analizer container-->
+<div class="w3-content w3-container w3-padding-64" id="details">
+
+    <h3 class="w3-center w3-black" style="background-color: #616161!important;">${aim.title!''}</h3>
+    <p class="w3-center article"><em>${aim.description!''}</em></p>
+
+    <div class="w3-row">
+    <#--Logged time simple chart-->
+        <div class="w3-col m6 w3-center w3-padding-large">
+             <@charts.pieChart/>
+        </div>
+
+        <div class="w3-col m6 w3-center w3-padding-large">
+             <@charts.lineChart/>
+        </div>
+
+        <div class="w3-col m6 w3-center w3-padding-large">
+             <@charts.splineAreaChart/>
+        </div>
+
+        <div class="w3-col m6 w3-center w3-padding-large">
+             <@charts.columnChart/>
+        </div>
+
+        <@charts.all loggedTime lastSevenDaysTime/>
+
+    </div>
+</div>
+
 
 <#--Second char div-->
 <div class="w3-content w3-container w3-padding-64" id="details">

@@ -63,10 +63,39 @@
         <form action="/editAim" method="post" style="margin: 30px 10px 10px">
 
             <label>
+                <i class="w3-center">t i t l e</i>
+                <br>
                 <input id="aim_title${aim.id}" type="text" name="title" value="${aim.title}" style="margin: 20px;">
+                <br>
+                <i class="w3-center">t e x t</i>
+                <br>
                 <input id="aim_text${aim.id}" type="text" name="text" value="${aim.text}" style="margin: 20px;">
+                <br>
+                <i class="w3-center">d e s c r i p t i o n</i>
+                <br>
                 <input id="aim_description${aim.id}" type="text" name="description" value="${aim.description}"
                        style="margin: 20px;">
+            </label>
+            <br>
+
+            <label>
+                <i class="w3-center">specify</i>
+                <br>
+                <input id="aim_s_${aim.id}" type="text" name="specific" value="${aim.specify}" style="margin: 20px;"><br>
+                <i class="w3-center">measurable</i>
+                <br>
+                <input id="aim_m_${aim.id}" type="text" name="measurable" value="${aim.measurable}" style="margin: 20px;"><br>
+                <i class="w3-center">attainable</i>
+                <br>
+                <input id="aim_a_${aim.id}" type="text" name="attainable" value="${aim.attainable}"
+                       style="margin: 20px;"><br>
+                <i class="w3-center">relevant</i>
+                <br>
+                <input id="aim_r_${aim.id}" type="text" name="relevant" value="${aim.relevant}" style="margin: 20px;"><br>
+                <i class="w3-center">timeBased</i>
+                <br>
+                <input id="aim_t_${aim.id}" type="date" name="timeBased" value="${aim.timeBased}" style="margin: 20px;">
+
             </label>
 
             <input type="hidden" value="${aim.id}" name="aimId">

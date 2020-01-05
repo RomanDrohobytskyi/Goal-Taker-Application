@@ -1,6 +1,7 @@
 package application.entities.user;
 
 import application.entities.aim.Aim;
+import application.entities.aim.TenThousandHoursAim;
 import application.entities.message.Message;
 import application.roles.Role;
 import lombok.Getter;
@@ -48,6 +49,8 @@ public class User implements UserDetails{
     private Set<Message> message;
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
     private Set<Aim> aims;
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+    private Set<TenThousandHoursAim> tenThousandHoursAims;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

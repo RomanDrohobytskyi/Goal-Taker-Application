@@ -17,13 +17,17 @@ public class MenuTabs {
     }
 
     public List<MenuElement> defaultMenu(){
-        List<MenuElement> menuElements = new ArrayList<MenuElement>();
+        List<MenuElement> menuElements = new ArrayList<>();
 
-        MenuElement main = new MenuElement("/main", "fa fa-envelope", "MESSAGES", "All messages");
-        MenuElement mainAim = new MenuElement("/main_aim", "fa fa-envelope", "MESSAGES", "All messages");
+        menuElements.add(new MenuElement("/", "w3-bar-item w3-button","fa fa-envelope", "HOME", "Home page"));
+        menuElements.add(new MenuElement("#", "w3-bar-item w3-button","fa fa-chevron-up", "UP", "Up to the top"));
+        menuElements.add(new MenuElement("#about", "w3-bar-item w3-button w3-hide-small","fa fa-user", "ABOUT", "About me"));
+        menuElements.add(new MenuElement("#portfolio", "w3-bar-item w3-button w3-hide-small","fa fa-th", "PORTFOLIO", "My portfolio"));
+        menuElements.add(new MenuElement("#contact", "w3-bar-item w3-button w3-hide-small","fa fa-envelope", "CONTACT", "Contact me"));
+        menuElements.add(new MenuElement("/login", "w3-bar-item w3-button w3-hide-small w3-right w3-hover-red","fa fa-sign-in", "", "Login"));
+        menuElements.add(new MenuElement("/profile", "w3-bar-item w3-button w3-hide-small w3-right w3-hover-red","fa fa-user", "", "Profile"));
+        menuElements.add(new MenuElement("#", "w3-bar-item w3-button w3-hide-small w3-right w3-hover-red","fa fa-search", "", "Search"));
 
-        menuElements.add(main);
-        menuElements.add(mainAim);
         return menuElements;
     }
 }

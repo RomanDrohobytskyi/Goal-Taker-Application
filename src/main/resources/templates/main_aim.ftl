@@ -22,12 +22,8 @@
 
 </head>
 <body>
+
 <style>
-/*    textarea {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }*/
     .fa{
         margin-right: 5px;
     }
@@ -41,7 +37,6 @@
         </a>
         <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
         <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>UP</a>
-        <a href="#definition" class="w3-bar-item w3-button"><i class="fa fa-graduation-cap"></i>DEFINITION</a>
         <a href="#create" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-plus"></i>CREATE</a>
         <a href="#aims" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i>AIMS</a>
         <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-out"></i>
@@ -56,7 +51,6 @@
 
     <!-- NavBar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-        <a href="#definition" class="w3-bar-item w3-button" onclick="toggleFunction()">DEFINITION</a>
         <a href="#create" class="w3-bar-item w3-button" onclick="toggleFunction()">CREATE</a>
         <a href="main.ftl" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> MESSAGES</a>
         <a href="/login" class="w3-bar-item w3-button w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
@@ -85,26 +79,48 @@
         <h3 class="w3-center">Create smart AIM</h3>
         <form action="/main_aim/add" method="get" enctype="multipart/form-data">
 
-            <@elements.input id="aim_title" name="title" type="text" placeholder="t i t l e . . ."
-                onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i t l e . . .'"/>
+            <div class="w3-center">
 
-            <p class="w3-center">d e s c r i p t i o n</p>
-            <@elements.input id="aim_description" name="description" type="text" placeholder="d e s c r i p t i o n  . . ."
-                onfocus="this.placeholder = ''"  onblur="this.placeholder = 'd e s c r i p t i o n  . . .'"/>
+                <div style=" margin-right: 10px;">
+                    <@elements.input id="aim_title" name="title" type="text" placeholder="t i t l e . . ."
+                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i t l e . . .'"/>
+                    <br><br>
+                    <#--<p class="w3-center">d e s c r i p t i o n</p>-->
+                    <@elements.input id="aim_description" name="description" type="text" placeholder="d e s c r i p t i o n  . . ."
+                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 'd e s c r i p t i o n  . . .'"/>
+                    <br><br>
+                    <textarea id="aim_text" name="text" placeholder="t e x t  . . ." rows="2" cols="21"
+                              style="text-align: center; width: 250px;"></textarea>
+                    <br><br>
+                </div>
 
-            <p class="w3-center">T e x t </p>
+                <div style="">
+                    <@elements.input id="specific" name="specific" type="text" placeholder="s p e c i f i c"
+                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 's p e c i f i c'"/>
+                    <br><br>
+                    <@elements.input id="measurable" name="measurable" type="text" placeholder="m e a s u r a b l e"
+                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 'm e a s u r a b l e'"/>
+                    <br><br>
+                    <@elements.input id="attainable" name="attainable" type="text" placeholder="a t t a i n a b l e"
+                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 'a t t a i n a b l e'"/>
+                    <br><br>
+                    <@elements.input id="relevant" name="relevant" type="text" placeholder="r e l e v a n t"
+                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 'r e l e v a n t'"/>
+                    <br><br>
+                    <@elements.input id="timeBased" name="timeBased" type="date" placeholder="t i m e b a s e d"
+                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i m e b a s e d'"/>
+                </div>
 
-            <textarea  id="aim_text" name="text" placeholder="t e x t  . . ." rows="2" cols="21">
-            </textarea>
-            <#-- <@elements.input id="input" name="text" type="text" placeholder="t e x t . . ."
-                onfocus="this.placeholder = ''"  onblur="this.placeholder = 't e x t . . .'"/>-->
-            <br>
-            <input type="hidden" name="_csrf" value="${_csrf.token}" />
+                <div class="w3-center" style="float:bottom">
+                    <input type="hidden" name="_csrf" value="${_csrf.token}" />
 
-            <button type="submit" class="btn btn1 w3-button w3-padding-large"
-                    onclick="return validateLength('Title', 'aim_title', 3, 32)">
-                A d d
-            </button>
+                    <button type="submit" class="btn btn1 w3-button w3-padding-large"
+                            onclick="return validateLength('Title', 'aim_title', 3, 32)">
+                        A d d
+                    </button>
+                </div>
+            </div>
+
         </form>
     </div>
 
@@ -118,21 +134,25 @@
 </div>
 
 <#--All AIMs-->
-<div class="w3-content w3-container w3-padding-64" id="messages">
-    <div id="aims" class="w3-center w3-row">
+<div class="w3-content w3-container w3-padding-64" id="aims">
+    <div class="w3-center w3-row">
         <h3 class="w3-center">All aims</h3>
 
         <i class="fa fa-hand-pointer-o" aria-hidden="true"><em style="margin-left: 5px;">Click on aim id to check details</em></i>
 
-        <#-- Table of a messages -->
+        <#-- Table of a aims -->
         <table id="aimsTable" align="center" width="100%" style="padding: 10px;/*table-layout: fixed;*/">
         <#-- Table header -->
             <tr>
                 <th>ID</th>
                 <th>Title</th>
-                <th>Text</th>
                 <th>Description</th>
-                <th>User email</th>
+                <th>Text</th>
+                <th>S</th>
+                <th>M</th>
+                <th>A</th>
+                <th>R</th>
+                <th>T</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
@@ -148,9 +168,23 @@
                                 </a>
                             </b></td>
                             <td><span>${aim.title}</span></td>
-                            <td style="word-wrap: break-word"><i>${aim.text}</i></td>
                             <td style="word-wrap: break-word"><i>${aim.description}</i></td>
-                            <td>${aim.user.email}</td>
+                            <td style="word-wrap: break-word"><i>${aim.text}</i></td>
+                            <td style="word-wrap: break-word">
+                                <i>${aim.specify!''}</i>
+                            </td>
+                            <td style="word-wrap: break-word">
+                                <i>${aim.measurable!''}</i>
+                            </td>
+                            <td style="word-wrap: break-word">
+                                <i>${aim.attainable!''}</i>
+                            </td>
+                            <td style="word-wrap: break-word">
+                                <i>${aim.relevant!''}</i>
+                            </td>
+                            <td style="word-wrap: break-word">
+                            <i>${aim.timeBased!''}</i>
+                            </td>
                             <td>
                                 <div>
                                     <a href="/editAim/${aim.id}" ><i class="fa fa-pencil" aria-hidden="true"></i></a>

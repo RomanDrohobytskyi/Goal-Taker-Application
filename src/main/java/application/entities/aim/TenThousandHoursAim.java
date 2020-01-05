@@ -6,6 +6,7 @@ import application.enums.State;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -13,11 +14,11 @@ import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.List;
 
-@Entity(name = "aim")
+@Entity(name = "ten_thousand_hours_aim")
 @Getter
 @Setter
 @NoArgsConstructor
-public class Aim {
+public class TenThousandHoursAim {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -31,37 +32,19 @@ public class Aim {
     @Column(columnDefinition = "varchar(255) default ''")
     @NotNull
     private String text;
-    @Column(columnDefinition = "varchar(255) default ''")
-    @NotNull
-    private String specify;
-    @Column(columnDefinition = "varchar(255) default ''")
-    @NotNull
-    private String measurable;
-    @Column(columnDefinition = "varchar(255) default ''")
-    @NotNull
-    private String attainable;
-    @Column(columnDefinition = "varchar(255) default ''")
-    @NotNull
-    private String relevant;
-    @Column
-    private Date timeBased;
     @Column
     @NotNull
     private String aimState = State.AimState.NEW.toString();
-    @Column//(columnDefinition = "datetime default GETDATE()") //GETDATE()
     @NotNull
+    @CreationTimestamp
     private Date creationDate;
     @Column
     private Date modificationDate;
     @Column
     private Date deletionDate;
-    @Column
-    private Date dateFrom;
-    @Column
-    private Date dateTo;
     @ManyToOne
     private User user;
-    @OneToMany(mappedBy = "aim", targetEntity=Time.class, fetch=FetchType.EAGER)
+    @OneToMany(mappedBy = "aim", targetEntity = Time.class, fetch = FetchType.EAGER)
     @Column(name = "logged_time")
     private List<Time> loggedTime;
 

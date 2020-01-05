@@ -4,10 +4,11 @@ public class MenuElement {
 
     private String url;
     private String cssClass;
+    private String hrefCssClass;
     private String name;
     private String description;
 
-    public MenuElement(String url, String cssClass, String name, String description) {
+    public MenuElement(String url, String hrefCssClass, String cssClass, String name, String description) {
         this.url = url;
         this.cssClass = cssClass;
         this.name = name;
@@ -24,6 +25,14 @@ public class MenuElement {
 
     public String getCssClass() {
         return cssClass;
+    }
+
+    public String getHrefCssClass() {
+        return hrefCssClass;
+    }
+
+    public void setHrefCssClass(String hrefCssClass) {
+        this.hrefCssClass = hrefCssClass;
     }
 
     public void setCssClass(String cssClass) {

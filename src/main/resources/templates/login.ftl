@@ -67,21 +67,22 @@
         </form>
 
         <form method="post" action="/login">
-            <p class="w3-center">Enter Email: </p>
+            <p class="w3-center">Email: </p>
 
             <@elements.input id="login" name="username" type="email" placeholder="e m a i l . . ."
                 onfocus="this.placeholder = ''"  onblur="this.placeholder = 'e m a  i l . . .'" class="login-input"/>
-
-            <p class="w3-center">Enter password: </p>
-
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
+
+            <p class="w3-center">Password: </p>
 
             <@elements.input id="password" name="password" type="password" placeholder="p a s s w o r d . . ."
                 onfocus="this.placeholder = ''"  onblur="this.placeholder = 'p a s s w o r d . . .'" class="login-input"/>
+            <input type="hidden" name="_csrf" value="${_csrf.token}" />
 
             <br>
 
             <button type="submit" class="btn btn1 w3-button w3-padding-large">Sign In</button>
+            <input type="hidden" name="_csrf" value="${_csrf.token}" />
         </form>
         <h5>No registered yet? Create easy new
             <a href="/registration" style="text-decoration: none;">

@@ -106,11 +106,32 @@ body, html {
 /*Parallax photos for Aims */
 .big-img-smart {
     background-image: url("https://cdn2.slidemodel.com/wp-content/uploads/6991-01-smart-goals-slide-design-1.jpg");
-    min-height: 70%;
+    min-height: 50%;
+}
+
+/*Parallax photos for Aims */
+.big-img-aims {
+    background-image: url("https://uvac.ac.uk/wp-content/uploads/2017/11/shutterstock_407599291-1520x1000.jpg");
+    min-height: 80%;
+}
+
+/*Parallax photos for Aims */
+.big-img-10k-hours {
+    background-image: url("https://static1.squarespace.com/static/5c2059ca55b02c69e4852c02/5c23f8a36d2a73a585969e14/5d9e535315c91f38d9a2b90c/1570657321644/10000-hours.png?format=500w");
+    min-height: 50%;
 }
 
 .big-img-small-smart {
     background-image: url("https://www.professionalacademy.com/media/images-news/smarter-objectives.jpg");
+    min-height: 70%;
+}
+.big-img-goals-plans {
+    background-image: url("https://assets.infusionsoft.com/image/upload/b_rgb:FFFFFF,c_limit,dpr_1,f_auto,h_600,q_95,w_730/v1573508504/2020_Goals_evoemx.jpg");
+    min-height: 50%;
+}
+
+.big-img-small-smart-2 {
+    background-image: url("https://www.thebalancesmb.com/thmb/5B7wGRFmXySMaXXh9ZhOhw11v2w=/950x0/smart-goal-examples-2951827_final-5b6887cc46e0fb0050aa0bc9.png");
     min-height: 70%;
 }
 
@@ -122,6 +143,10 @@ body, html {
 .big-img-messages {
     background-image: url("https://www.cannabismarketinginc.com/wp-content/uploads/2018/08/mobile-messaging.jpg");
     min-height: 70%;
+}
+.big-img-messages-small {
+    background-image: url("https://www.cannabismarketinginc.com/wp-content/uploads/2018/08/mobile-messaging.jpg");
+    min-height: 50%;
 }
 
 .w3-wide {letter-spacing: 10px;}

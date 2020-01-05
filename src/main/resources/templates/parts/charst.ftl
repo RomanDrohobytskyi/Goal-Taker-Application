@@ -1,7 +1,7 @@
 <#macro barChart aim>
     <style>
         .bar {
-            fill: #777; /* changes the background */
+            fill: #777;
             height: 21px;
             transition: fill .3s ease;
             cursor: pointer;
@@ -152,7 +152,7 @@
     </#if>
 </#macro>-->
 
-<#macro all aim lastSevenDaysTime>
+<#macro all loggedTime lastSevenDaysTime>
 
 <script type="text/javascript">
     window.onload = function () {
@@ -166,11 +166,12 @@
                         interval: 10,
                     },
                     data: [
+
                         {
                             type: "splineArea",
                             color: "rgba(255,12,32,.3)",
                             dataPoints: [
-                                 <#list aim.loggedTime as time>
+                                 <#list loggedTime as time>
                                      <#assign day = time.getConvertedDate(time).day>
                                      <#assign month = time.getConvertedDate(time).month>
                                      <#assign year = time.getConvertedDate(time).year>
@@ -226,9 +227,17 @@
                 });
         chart.render();
 
+    <#--<#assign mostProductive = loggedTime[0]!>
+    <#assign lessProductive = loggedTime[0]!>
 
-
-
+    <#list loggedTime as time>
+        <#if mostProductive.time gt time.time>
+           /* <#assign lessProductive = time>*/
+        </#if>
+        <#if mostProductive.time < time.time >
+            <#assign mostProductive = time>
+        </#if>
+    </#list>-->
 
         var chart = new CanvasJS.Chart("chartContainer3",
                 {
@@ -248,11 +257,26 @@
                         {
                             type: "line",
                             dataPoints: [
-                                 <#list aim.loggedTime as time>
+                                 <#list loggedTime as time>
                                      <#assign day = time.getConvertedDate(time).day>
                                      <#assign month = time.getConvertedDate(time).month>
                                      <#assign year = time.getConvertedDate(time).year>
-                                    {label: '${time.getConvertedDate(time).toString()}', y: ${time.time?string}},
+
+                                     <#if time.state != "DELETED">
+                                         <#if mostProductive.id = time.id>
+                                              {label: '${time.getConvertedDate(time).toString()}', y: ${time.time?string},
+                                                  indexLabel: "highest", markerColor: "red",
+                                                  markerType: "triangle"},
+                                         <#elseif lessProductive.id = time.id>
+                                              {label: '${time.getConvertedDate(time).toString()}', y: ${time.time?string},
+                                                 indexLabel: "lowest",
+                                                 markerColor: "DarkSlateGrey",
+                                                 markerType: "cross"},
+                                         <#else>
+                                             {label: '${time.getConvertedDate(time).toString()}', y: ${time.time?string}},
+                                         </#if>
+                                     </#if>
+
                                  </#list>
                                /* {x: new Date(2012, 00, 1), y: 450},
                                 {x: new Date(2012, 01, 1), y: 414},
@@ -302,7 +326,7 @@
                             showInLegend: true,
                             legendText: "Country wise population",
                             dataPoints: [
-                                 <#list aim.loggedTime as time>
+                                 <#list loggedTime as time>
                                     {label: '${time.getConvertedDate(time).toString()}', y: ${time.time?string}},
                                  </#list>
                             ]

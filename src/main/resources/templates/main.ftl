@@ -196,6 +196,9 @@
     </div>
 </div>
 
+<div class="parallax big-img-messages-small w3-display-container w3-opacity-min" id="home">
+</div>
+
 <#--Footer-->
 <@footer.footer>
 </@footer.footer>

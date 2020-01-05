@@ -25,6 +25,11 @@
 <body>
 
 <!-- NavBar (sit on top) -->
+<#--
+<@menu.customMenu elements = menuElements/>
+-->
+
+<!-- NavBar (sit on top) -->
 <@menu.navBar />
 
 <!-- First Parallax Image with Text -->
@@ -114,19 +119,27 @@
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
     <div class="w3-row-padding w3-center">
         <div class="w3-col m3">
-            <img src="http://198.211.104.161/wp-content/uploads/2014/01/Hibernate-logo.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Hibernate project.">
+            <img src="http://198.211.104.161/wp-content/uploads/2014/01/Hibernate-logo.png" style="width:100%"
+                 onclick="onClick(this)" class="w3-hover-opacity" alt="Hibernate project" title = "Hibernate project">
         </div>
 
         <div class="w3-col m3">
-            <img src="https://www.openhab.org/logos/jdbc.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="JDBC project">
+            <#--<a href="/projects#jdbc">-->
+            <img src="https://www.openhab.org/logos/jdbc.png" style="width:100%" onclick="onClick(this)"
+                 class="w3-hover-opacity" alt="JDBC project" title = "JDBC project">
+            <#--</a>-->
         </div>
 
         <div class="w3-col m3">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB_yCK06ouPnYKZg92oUPTBZtw80NTQ2K_VVisGQaM6BGCqrMg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="University project">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB_yCK06ouPnYKZg92oUPTBZtw80NTQ2K_VVisGQaM6BGCqrMg"
+                 style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                 alt="University project" title = "University project">
         </div>
 
         <div class="w3-col m3">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB_yCK06ouPnYKZg92oUPTBZtw80NTQ2K_VVisGQaM6BGCqrMg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Android project">
+            <img src="https://icons-for-free.com/iconfiles/png/512/android+logo+mobile+mobile+phone+icon-1320196075444927847.png"
+                 style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                 alt="Android project" title="Android project">
         </div>
         <a href="/projects"> <button class="btn btn1 w3-button w3-padding-large">See more projects</button></a>
     </div>
@@ -168,22 +181,26 @@
                 <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +5703434343Z<br>
                 <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: roman.drohobytskyi@mail.com<br>
             </div>
-            <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-            <form action="/action_page.php" target="_blank">
+            <p>Leave me a note:</p>
+            <form action="/send/note">
                 <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
                     <div class="w3-half">
-                        <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                        <input class="w3-input w3-border" type="text" placeholder="Name" required name="userName">
                     </div>
                     <div class="w3-half">
-                        <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                        <input class="w3-input w3-border" type="text" placeholder="Email" required name="userEmail">
                     </div>
                 </div>
-                <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                <input class="w3-input w3-border" type="text" placeholder="Message" required name="message">
+
+          <#--  <button type="submit" class="btn btn2 w3-button w3-padding-large" >SEND</button>
+            <a href="/send/note"> <button class="btn btn2 w3-button w3-padding-large" >SEND</button></a>-->
+            </form>
+            <#--
                 <button class="w3-right w3-section btn btn1" type="submit">
                     <i class="fa fa-paper-plane"></i>
                         SEND MESSAGE
-                </button>
-            </form>
+                </button>-->
         </div>
     </div>
 </div>

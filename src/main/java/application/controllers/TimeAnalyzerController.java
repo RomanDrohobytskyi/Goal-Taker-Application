@@ -32,8 +32,12 @@ public class TimeAnalyzerController {
     @RequestMapping("/{aim}")
     public String getEditForm(@PathVariable Aim aim, Model model) {
         lastSevenDaysTime = timeService.getLastWeekTime(aim.getId());
+        List<Time> loggedTime = timeService.getLoggedTimeForAim(aim.getId());
         model.addAttribute("aim", aim);
-        model.addAttribute("logged_time", aim.getLoggedTime());
+        model.addAttribute("loggedTime", loggedTime);
+        model.addAttribute("lessProductive", timeService.getLessActiveTime(loggedTime));
+        model.addAttribute("mostProductive", timeService.getMostActiveTime(loggedTime));
+        //aim.getLoggedTime());
         model.addAttribute("lastSevenDaysTime", lastSevenDaysTime);
         return "time_analyzer";
     }

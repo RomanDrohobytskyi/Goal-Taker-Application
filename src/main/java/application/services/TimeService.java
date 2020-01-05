@@ -2,7 +2,6 @@ package application.services;
 
 import application.entities.aim.Aim;
 import application.entities.time.data.Time;
-import application.entities.user.User;
 import application.enums.State;
 import application.repositories.IAimRepository;
 import application.repositories.ITimeRepository;
@@ -93,11 +92,20 @@ public class TimeService {
         return time;
     }
 
-    public Time getMostActiveTime(User user){
+/*    public Time getMostActiveTime(User user){
         Set<Aim> aims  = user.getAims();
         List<Time> allLoggedTimes = getAllLoggedTimeForUserAims(new ArrayList<>(aims));
         Time time = allLoggedTimes.stream().max(Comparator.comparing(Time::getTime)).get();
         return time;
+    }*/
+
+    public Time getMostActiveTime(List<Time> times){
+        Optional<Time> time = times.stream().max(Comparator.comparing(Time::getTime));
+        return time.get();
+    }
+    public Time getLessActiveTime(List<Time> times){
+        Optional<Time> time = times.stream().min(Comparator.comparing(Time::getTime));
+        return time.get();
     }
 
     public List<Time> getAllLoggedTimeForUserAims(List<Aim> userAims){

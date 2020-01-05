@@ -2,10 +2,8 @@ package application.controllers;
 
 import application.entities.aim.Aim;
 import application.entities.user.User;
-import application.managers.AimManager;
 import application.managers.UserManager;
 import application.repositories.IAimRepository;
-import application.repositories.IUserRepository;
 import application.services.AimService;
 import application.utils.MapUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,12 +14,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
 import static application.logger.LoggerJ.logError;
 
+/**
+ * Smart aim Controller
+ */
 @Controller
 public class AimController {
 
@@ -29,11 +32,8 @@ public class AimController {
     private AimService aimService;
     @Autowired
     private IAimRepository aimRepository;
-    @Autowired
-    private IUserRepository userRepository;
 
     private UserManager userManager = new UserManager();
-    private AimManager aimManager = new AimManager();
 
     @GetMapping("/main_aim")
     public String allAims(Model model){
@@ -50,25 +50,34 @@ public class AimController {
             @RequestParam String title,
             @RequestParam String description,
             @RequestParam String text,
+            @RequestParam String specific,
+            @RequestParam String measurable,
+            @RequestParam String attainable,
+            @RequestParam String relevant,
+            @RequestParam String timeBased,
             Map<String, Object> model) {
 
-        Optional<Aim> aimOptional = aimService.adaptAim(title, description, text, user);
-        if (aimOptional.isPresent()){
-            try{
+        Date convertedDate;
+        Optional<Aim> aimOptional;
+
+        try{
+            convertedDate = new SimpleDateFormat("yyyy-MM-dd").parse(timeBased);
+            aimOptional = aimService.adaptAim(title, description, text, specific, measurable, attainable, relevant, convertedDate, user);
+            if (aimOptional.isPresent()){
                 Aim aim = aimOptional.get();
                 aimRepository.save(aim);
                 Iterable<Aim> userAims = user.getAims();
                 model.put("aims", userAims);
-            } catch (Exception e) {
-                logError(getClass(), "Could not save aim.");
-                e.printStackTrace();
             }
+            else {
+                HashMap myMap = MapUtils.oneElementHashMap("", "");
+                model.put("aims", myMap);
+            }
+        } catch (Exception e){
+            logError(getClass(), "Could not save aim.");
+            e.printStackTrace();
         }
-        else {
-            HashMap myMap = MapUtils.oneElementHashMap("","");
-            model.put("messages", myMap);
-        }
-            return "redirect:/main_aim#aimsTable";
+        return "redirect:/main_aim#aimsTable";
     }
 
     @GetMapping("/main_aim/delete/{aim}")
