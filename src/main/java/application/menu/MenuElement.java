@@ -10,6 +10,7 @@ public class MenuElement {
 
     public MenuElement(String url, String hrefCssClass, String cssClass, String name, String description) {
         this.url = url;
+        this.hrefCssClass = hrefCssClass;
         this.cssClass = cssClass;
         this.name = name;
         this.description = description;

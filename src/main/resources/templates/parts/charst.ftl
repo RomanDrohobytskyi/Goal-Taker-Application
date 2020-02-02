@@ -40,32 +40,6 @@
     </#if>
 </#macro>
 
-<#macro largeBarChart loggedTime>
-    <style>
-        .time:hover{
-            color: #000 !important;
-        }
-    </style>
-
-    <#if loggedTime?has_content>
-        <#list loggedTime as loggedTime>
-            <#assign timeInProcent=(loggedTime.time * 4.1)>
-            ${loggedTime.description}<#sep>, ${loggedTime.date}
-            <div class="w3-light-grey">
-                <div class="w3-container w3-padding-small w3-dark-grey w3-center"
-                     style="width:${timeInProcent}%">
-                    <a id="myBtn" style="text-decoration: none;" class="time" title="More details">
-                        ${loggedTime.time}h
-                    </a>
-                </div>
-            </div>
-        </#list>
-    <#else>
-        No time logged yet!
-    </#if>
-</#macro>
-
-
 <#macro columnChart time>
      <script type="text/javascript">
          window.onload = function () {
@@ -130,29 +104,34 @@
             <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
 </#macro>
 
-<#--
-<#macro oneElementDetails loggedTime>
-     <style>
-         .time:hover{
-             color: #000 !important;
-         }
-     </style>
+
+<#macro largeBarChart loggedTime>
+    <style>
+        .time:hover{
+            color: #000 !important;
+        }
+    </style>
 
     <#if loggedTime?has_content>
-        <#assign timeInProcent=(loggedTime.time * 4.1)>
-        ${loggedTime.description}, ${loggedTime.date}
-        <div class="w3-light-grey">
-            <div class="w3-container w3-padding-small w3-dark-grey w3-center"
-                 style="width:${timeInProcent}%">
-                <a id="myBtn" style="text-decoration: none;" class="time" title="More details">
-                    ${loggedTime.time}h
-                </a>
+        <#list loggedTime as loggedTime>
+            <#assign timeInProcent=(loggedTime.time * (4.16666666667))>
+            ${loggedTime.description}<#sep>, ${loggedTime.date}
+            <div class="w3-light-grey">
+                <div class="w3-container w3-padding-small w3-dark-grey w3-center"
+                     style="width:${timeInProcent}%">
+                    <a id="myBtn" style="text-decoration: none;" class="time" title="More details">
+                        ${loggedTime.time}h
+                    </a>
+                </div>
             </div>
-        </div>
+        </#list>
+    <#else>
+        No time logged yet!
     </#if>
-</#macro>-->
+</#macro>
 
-<#macro all loggedTime lastSevenDaysTime>
+
+<#macro all loggedTime lastSevenDaysTime mostProductive lessProductive>
 
 <script type="text/javascript">
     window.onload = function () {
@@ -163,7 +142,7 @@
                         text: "Spline Area Chart"
                     },
                     axisX: {
-                        interval: 10,
+                        interval: 10
                     },
                     data: [
 
@@ -177,21 +156,6 @@
                                      <#assign year = time.getConvertedDate(time).year>
                                     {label: '${time.getConvertedDate(time).toString()}', y: ${time.time?string}},
                                  </#list>
-                                {x: new Date(1992, 0), y: 2506000},
-                                {x: new Date(1993, 0), y: 2798000},
-                                {x: new Date(1994, 0), y: 3386000},
-                                {x: new Date(1995, 0), y: 6944000},
-                                {x: new Date(1996, 0), y: 6026000},
-                                {x: new Date(1997, 0), y: 2394000},
-                                {x: new Date(1998, 0), y: 1872000},
-                                {x: new Date(1999, 0), y: 2140000},
-                                {x: new Date(2000, 0), y: 7289000},
-                                {x: new Date(2001, 0), y: 4830000},
-                                {x: new Date(2002, 0), y: 2009000},
-                                {x: new Date(2003, 0), y: 2840000},
-                                {x: new Date(2004, 0), y: 2396000},
-                                {x: new Date(2005, 0), y: 1613000},
-                                {x: new Date(2006, 0), y: 2821000}
                             ]
                         }
                     ]
@@ -202,42 +166,28 @@
                 {
                     animationEnabled: true,
                     title: {
-                        text: "Pie Chart"
+                        text: "Last 7 days"
                     },
                     data: [
                         {
                             type: "pie",
                             showInLegend: true,
                             dataPoints: [
-                               <#-- <#if lastSevenDaysTime?has_content>
+                                <#if lastSevenDaysTime?has_content>
                                     <#list lastSevenDaysTime as time>
-                                    {y: ${time.time?string}, legendText: "${time.description}" indexLabel: '${time.getConvertedDate(time).toString()}'},
+                                    {
+                                        y: ${time.time?string},
+                                        legendText: '${time.description + '/' + time.time + 'h'}',
+                                        indexLabel: '${time.getConvertedDate(time).toString()}'
+                                    },
                                     </#list>
-                                </#if>-->
-                                {y: 4181563, legendText: "PS 3", indexLabel: "PlayStation 3"},
-                                {y: 2175498, legendText: "Wii", indexLabel: "Wii"},
-                                {y: 3125844, legendText: "360", indexLabel: "Xbox 360"},
-                                {y: 1176121, legendText: "DS", indexLabel: "Nintendo DS"},
-                                {y: 1727161, legendText: "PSP", indexLabel: "PSP"},
-                                {y: 4303364, legendText: "3DS", indexLabel: "Nintendo 3DS"},
-                                {y: 1717786, legendText: "Vita", indexLabel: "PS Vita"}
+                                </#if>
                             ]
                         }
                     ]
                 });
         chart.render();
 
-    <#--<#assign mostProductive = loggedTime[0]!>
-    <#assign lessProductive = loggedTime[0]!>
-
-    <#list loggedTime as time>
-        <#if mostProductive.time gt time.time>
-           /* <#assign lessProductive = time>*/
-        </#if>
-        <#if mostProductive.time < time.time >
-            <#assign mostProductive = time>
-        </#if>
-    </#list>-->
 
         var chart = new CanvasJS.Chart("chartContainer3",
                 {
@@ -245,14 +195,6 @@
                     title: {
                         text: "Line Chart"
                     },
-                    /*axisX: {
-                        valueFormatString: "MMM",
-                        interval: 1,
-                        intervalType: "month"
-                    },
-                    axisY: {
-                        includeZero: false
-                    },*/
                     data: [
                         {
                             type: "line",
@@ -264,44 +206,28 @@
 
                                      <#if time.state != "DELETED">
                                          <#if mostProductive.id = time.id>
-                                              {label: '${time.getConvertedDate(time).toString()}', y: ${time.time?string},
+                                              {
+                                                  label: '${time.getConvertedDate(time).toString()}',
+                                                  y: ${time.time?string},
                                                   indexLabel: "highest", markerColor: "red",
-                                                  markerType: "triangle"},
+                                                  markerType: "triangle"
+                                              },
                                          <#elseif lessProductive.id = time.id>
-                                              {label: '${time.getConvertedDate(time).toString()}', y: ${time.time?string},
+                                              {
+                                                  label: '${time.getConvertedDate(time).toString()}',
+                                                  y: ${time.time?string},
                                                  indexLabel: "lowest",
                                                  markerColor: "DarkSlateGrey",
-                                                 markerType: "cross"},
+                                                 markerType: "cross"
+                                              },
                                          <#else>
-                                             {label: '${time.getConvertedDate(time).toString()}', y: ${time.time?string}},
+                                             {
+                                                 label: '${time.getConvertedDate(time).toString()}',
+                                                 y: ${time.time?string}
+                                             },
                                          </#if>
                                      </#if>
-
                                  </#list>
-                               /* {x: new Date(2012, 00, 1), y: 450},
-                                {x: new Date(2012, 01, 1), y: 414},
-                                {
-                                    x: new Date(2012, 02, 1),
-                                    y: 520,
-                                    indexLabel: "highest",
-                                    markerColor: "red",
-                                    markerType: "triangle"
-                                },
-                                {x: new Date(2012, 03, 1), y: 460},
-                                {x: new Date(2012, 04, 1), y: 450},
-                                {x: new Date(2012, 05, 1), y: 500},
-                                {x: new Date(2012, 06, 1), y: 480},
-                                {x: new Date(2012, 07, 1), y: 480},
-                                {
-                                    x: new Date(2012, 08, 1),
-                                    y: 410,
-                                    indexLabel: "lowest",
-                                    markerColor: "DarkSlateGrey",
-                                    markerType: "cross"
-                                },
-                                {x: new Date(2012, 09, 1), y: 500},
-                                {x: new Date(2012, 10, 1), y: 480},
-                                {x: new Date(2012, 11, 1), y: 510}*/
                             ]
                         }
                     ]
@@ -315,7 +241,7 @@
                         text: "Column Chart"
                     },
                     axisX: {
-                        interval: 5,
+                        interval: 5
                     },
                     data: [
                         {
@@ -327,10 +253,13 @@
                             legendText: "Country wise population",
                             dataPoints: [
                                  <#list loggedTime as time>
-                                    {label: '${time.getConvertedDate(time).toString()}', y: ${time.time?string}},
+                                    {
+                                        label: '${time.getConvertedDate(time).toString()}',
+                                        y: ${time.time?string}
+                                    },
                                  </#list>
                             ]
-                        },
+                        }
                     ]
                 });
         chart.render();

@@ -76,7 +76,7 @@
     </p>
 
     <div class="w3-center w3-row">
-        <h3 class="w3-center">Create smart AIM</h3>
+        <h3 class="w3-center">Create 10 000 hours AIM</h3>
         <form action="/ten_thousand_hours_aim/add" method="get" enctype="multipart/form-data">
 
             <div class="w3-center">
@@ -131,7 +131,6 @@
                 <th>Title</th>
                 <th>Description</th>
                 <th>Text</th>
-            <#--<th>User email</th>-->
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
@@ -151,13 +150,13 @@
                             <td style="word-wrap: break-word"><i>${aim.text}</i></td>
                             <td>
                                 <div>
-                                    <a href="/editAim/${aim.id}" ><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <a href="/editTenKHoursAim/${aim.id}" ><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                 </div>
                             </td>
 
                             <td>
                                 <div>
-                                    <a href="/main_aim/delete/${aim.id}">
+                                    <a href="/ten_thousand_hours_aim/delete/${aim.id}">
                                         <i class="fa fa-trash-o" aria-hidden="true" title="Delete aim"></i>
                                     </a>
                                     <input type="hidden" value="${aim}" name="aim">

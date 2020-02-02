@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -65,5 +66,13 @@ public class AimService {
         aim.setAimState(State.AimState.DELETED.toString());
 
         return aimRepository.save(aim);
+    }
+
+    public void delete(List<Aim> aims) {
+        for (Aim aim : aims){
+            if (!aim.getAimState().equals(State.AimState.DELETED.toString())) {
+                deleteAim(aim);
+            }
+        }
     }
 }

@@ -119,12 +119,8 @@
         <div class="w3-col m6 w3-center w3-padding-large">
             <@charts.largeBarChart loggedTime=lastWeekLoggedTime/>
             <@popups.details></@popups.details>
-            <#--<div id="curve_chart" style="width: 900px; height: 500px"></div>-->
-            <#-- <@charts.barChart aim=aim/>-->
-            <#-- <img id="myselfPhoto" src="https://pp.userapi.com/c849432/v849432316/b6f85/N5R2bjbNqJE.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this); setMaxHeightAndWight('myselfPhoto');" alt="Photo of Me" width="100%">
-             <p><b><i class="fa fa-user w3-margin-right"></i>Roman Drohobytskyi</b></p><br>-->
             <br>
-            <button type="button" class="btn btn1 w3-button w3-padding-large"><a href="/analyzer/${aim.id}">Analyzer</a></button>
+            <a href="/analyzer/${aim.id}"> <button class="btn btn1 w3-button w3-padding-large">Analyzer</button></a>
         </div>
 
         <!-- Hide this text on small devices -->

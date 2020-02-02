@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface IAimRepository extends CrudRepository<Aim, Long> {
     List<Aim> findByUser(User user);
+
 }

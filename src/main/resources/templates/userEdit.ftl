@@ -63,10 +63,21 @@
     <div class="w3-center w3-row">
 
         <form action="/user" method="post" style="margin: 30px 10px 10px">
+            <p class="w3-center">User name: </p>
             <label>
                 <input type="text" name="username" value="${user.username}">
             </label>
+            <p class="w3-center">First name: </p>
+            <label>
+                <input type="text" name="firstName" value="${user.firstName}">
+            </label>
+            <p class="w3-center">Last name: </p>
+            <label>
+                <input type="text" name="lastName" value="${user.lastName}">
+            </label>
+
             <#list roles as role>
+            <br>
             <div>
                 <label>
                     <input type="checkbox" name="${role}"
@@ -75,7 +86,8 @@
                 </label>
             </div>
             </#list>
-                <input type="hidden" value="${user.id}" name="userId">
+            <br>
+            <input type="hidden" value="${user.id}" name="userId">
             <input type="hidden" value="${_csrf.token}" name="_csrf">
             <button type="submit" class="small-btn btn2 w3-button w3-padding-large">Save</button>
         </form>

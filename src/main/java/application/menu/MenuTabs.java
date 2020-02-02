@@ -19,7 +19,7 @@ public class MenuTabs {
     public List<MenuElement> defaultMenu(){
         List<MenuElement> menuElements = new ArrayList<>();
 
-        menuElements.add(new MenuElement("/", "w3-bar-item w3-button","fa fa-envelope", "HOME", "Home page"));
+        menuElements.add(new MenuElement("/", "w3-bar-item w3-button","fa fa-home", "HOME", "Home page"));
         menuElements.add(new MenuElement("#", "w3-bar-item w3-button","fa fa-chevron-up", "UP", "Up to the top"));
         menuElements.add(new MenuElement("#about", "w3-bar-item w3-button w3-hide-small","fa fa-user", "ABOUT", "About me"));
         menuElements.add(new MenuElement("#portfolio", "w3-bar-item w3-button w3-hide-small","fa fa-th", "PORTFOLIO", "My portfolio"));

@@ -21,6 +21,12 @@
     <#import "parts/elements.ftl" as elements>
 </head>
 <body>
+
+<style>
+    .not-active{
+        text-decoration: line-through;
+    }
+</style>
     <!-- NavBar (sit on top) -->
     <div class="w3-top">
         <div class="w3-bar" id="myNavBar">
@@ -67,28 +73,78 @@
                         <th>Email</th>
                         <th>First Name</th>
                         <th>Last Name</th>
+                        <th>User Name</th>
                         <th>Role</th>
                         <th>Edit User</th>
                     </tr>
                     <tbody>
                     <#list users as user>
                         <tr style="height: 120px">
-                            <td>
-                                ${user.email}
-                            </td>
-                            <td>
-                                ${user.firstName}
-                            </td>
-                            <td>
-                                ${user.lastName}
-                            </td>
-                            <td><#list user.roles as role>
-                                ${role}<#sep>,
-                            </#list>
-                            </td>
-                            <td>
-                                <a href="/user/${user.id}"> <button class="small-btn btn2 w3-button w3-padding-large">Edit</button></a>
-                            </td>
+                            <#if !user.isActive()>
+                                <td>
+                                     <span class="not-active" title="Not active!">
+                                         ${user.email}
+                                     </span>
+                                 </td>
+                                <td>
+                                    <span class="not-active" title="Not active!">
+                                        ${user.firstName}
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="not-active" title="Not active!">
+                                        ${user.lastName}
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="not-active" title="Not active!">
+                                        ${user.username}
+                                    </span>
+                                </td>
+                                <td><#list user.roles as role>
+                                    ${role}<#sep>,
+                                </#list>
+                                </td>
+                                <td>
+                                    <div>
+                                        <a href="/user/delete/${user.id}" style="pointer-events: none;">
+                                            <i class="fa fa-trash-o" aria-hidden="true" title="Delete user ${user.username}"></i>
+                                        </a>
+                                        <input type="hidden" value="${user}" name="user">
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="/user/${user.id}"> <button class="small-btn btn2 w3-button w3-padding-large">Edit</button></a>
+                                </td>
+                            <#else>
+                                <td>
+                                    ${user.email}
+                                </td>
+                                <td>
+                                    ${user.firstName}
+                                </td>
+                                <td>
+                                    ${user.lastName}
+                                </td>
+                                <td>
+                                    ${user.username}
+                                </td>
+                                <td><#list user.roles as role>
+                                    ${role}<#sep>,
+                                </#list>
+                                </td>
+                                <td>
+                                    <div>
+                                        <a href="/user/delete/${user.id}">
+                                            <i class="fa fa-trash-o" aria-hidden="true" title="Delete user ${user.username}"></i>
+                                        </a>
+                                        <input type="hidden" value="${user}" name="user">
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="/user/${user.id}"> <button class="small-btn btn2 w3-button w3-padding-large">Edit</button></a>
+                                </td>
+                            </#if>
                         </tr>
                     </#list>
                     </tbody>

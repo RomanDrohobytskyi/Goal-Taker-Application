@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface ITenThousandHoursAimRepository extends CrudRepository<TenThousandHoursAim, Long> {
     List<TenThousandHoursAim> findByUser(User user);
+
 }

@@ -25,12 +25,7 @@
 <body>
 
 <!-- NavBar (sit on top) -->
-<#--
-<@menu.customMenu elements = menuElements/>
--->
-
-<!-- NavBar (sit on top) -->
-<@menu.navBar />
+<@menu.customMenu elements=menuElements/>
 
 <!-- First Parallax Image with Text -->
 <@paralax.paralax id="home" image="" title="Page Creator" text="Roman Drohobytskyi"
@@ -50,6 +45,7 @@
         Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum
     </p>
+
     <div class="w3-row">
         <div class="w3-col m6 w3-center w3-padding-large">
             <img id="myselfPhoto" src="https://pp.userapi.com/c849432/v849432316/b6f85/N5R2bjbNqJE.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this); setMaxHeightAndWight('myselfPhoto');" alt="Photo of Me" width="100%">

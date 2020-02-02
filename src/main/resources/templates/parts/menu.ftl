@@ -66,7 +66,8 @@
         a{text-decoration: none;}
     </style>
 
-    <a class="show-btn w3-bar-item w3-button" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+    <a class="show-btn w3-bar-item w3-button" style="height: 38px;" href="javascript:void(0);"
+       onclick="toggleFunction()" title="Toggle Navigation Menu">
         <i class="fa fa-bars"></i>
     </a>
     <div class="middle w3-bar-item">

@@ -187,14 +187,18 @@
                             </td>
                             <td>
                                 <div>
-                                    <a href="/editAim/${aim.id}" ><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <a href="/editAim/${aim.id}" >
+                                        <i class="fa fa-pencil" aria-hidden="true" title="Edit aim ${aim.title}"></i>
+                                    </a>
                                 </div>
                             </td>
 
                             <td>
                                 <div>
                                     <a href="/main_aim/delete/${aim.id}">
-                                        <i class="fa fa-trash-o" aria-hidden="true" title="Delete aim"></i>
+                                        <i class="fa fa-trash-o" aria-hidden="true" title="Delete aim ${aim.title}">
+
+                                        </i>
                                     </a>
                                     <input type="hidden" value="${aim}" name="aim">
                                 </div>

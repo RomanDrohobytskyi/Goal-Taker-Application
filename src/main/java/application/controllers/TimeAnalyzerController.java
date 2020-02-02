@@ -26,12 +26,11 @@ public class TimeAnalyzerController {
     @Autowired
     private IAimRepository aimRepository;
     private UserManager userManager = new UserManager();
-    private List<Time> lastSevenDaysTime;
 
     @GetMapping
     @RequestMapping("/{aim}")
     public String getEditForm(@PathVariable Aim aim, Model model) {
-        lastSevenDaysTime = timeService.getLastWeekTime(aim.getId());
+        List<Time> lastSevenDaysTime = timeService.getLastWeekTime(aim.getId());
         List<Time> loggedTime = timeService.getLoggedTimeForAim(aim.getId());
         model.addAttribute("aim", aim);
         model.addAttribute("loggedTime", loggedTime);

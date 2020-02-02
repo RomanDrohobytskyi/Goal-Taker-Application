@@ -90,31 +90,8 @@
             <p class="w3-center article"><em>Only not deleted time</em></p>
             <@details.loggedTimeDetail logged_time=loggedTime aim=aim/>
         </div>
-
-        <#--Logged time simple chart-->
-       <#-- <div class="w3-col m6 w3-center w3-padding-large">
-             <@charts.pieChart/>
-        </div>
-
-        <div class="w3-col m6 w3-center w3-padding-large">
-             <@charts.lineChart/>
-        </div>
-
-        <div class="w3-col m6 w3-center w3-padding-large">
-             <@charts.splineAreaChart/>
-        </div>
-
-        <div class="w3-col m6 w3-center w3-padding-large">
-             <@charts.columnChart/>
-        </div>
-
-
-        <@charts.all aim lastSevenDaysTime/>
--->
-
     </div>
 </div>
-
 
 <!-- First Parallax Image -->
 <div class="parallax big-img-users-1 w3-display-container w3-opacity-min" id="home">
@@ -122,7 +99,6 @@
         <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Aim</span>
     </div>
 </div>
-
 
 <#--Firts analizer container-->
 <div class="w3-content w3-container w3-padding-64" id="details">
@@ -148,13 +124,12 @@
              <@charts.columnChart/>
         </div>
 
-        <@charts.all loggedTime lastSevenDaysTime/>
+        <@charts.all loggedTime lastSevenDaysTime mostProductive lessProductive/>
 
     </div>
 </div>
 
-
-<#--Second char div-->
+<#--Second char div-->s
 <div class="w3-content w3-container w3-padding-64" id="details">
     <div class="w3-col m6 w3-hide-small w3-center">
         <div class="w3-center w3-row">

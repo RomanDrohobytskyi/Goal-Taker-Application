@@ -123,6 +123,12 @@ public class UserService implements UserDetailsService{
         return true;
     }
 
-
+    public User delete(User user){
+        if (user != null){
+            user.setActive(false);
+            iUserRepository.save(user);
+        }
+        return user;
+    }
 
 }
