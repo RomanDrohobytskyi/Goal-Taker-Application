@@ -1,3 +1,4 @@
+/*
 package application.entities.message;
 
 import application.entities.user.User;
@@ -33,3 +34,4 @@ public class MessageHistory {
     private User user;
 
 }
+*/

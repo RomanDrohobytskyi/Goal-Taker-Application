@@ -69,7 +69,7 @@ public class MessageService {
     }
 
     public Message deleteMessage(Message message){
-        message.setMessageState(State.MessageState.DELETED.toString());
+        message.setState(State.MessageState.DELETED.toString());
 
         return messageRepository.save(message);
     }
@@ -80,10 +80,15 @@ public class MessageService {
      */
     public void delete(List<Message> messages){
         for (Message message : messages){
-            if (!message.getMessageState().equals("DELETED")){
+            if (!message.getState().equals("DELETED")){
                 deleteMessage(message);
             }
         }
+    }
+
+    public Message achieve(Message message){
+        message.setState(State.AimState.ACHIEVED.toString());
+        return messageRepository.save(message);
     }
 
 }

@@ -19,6 +19,7 @@
     <#import "parts/menu.ftl" as menu>
     <#import "parts/footer.ftl" as footer>
     <#import "parts/elements.ftl" as elements>
+    <#import "parts/aims.ftl" as aims>
 
 </head>
 <body>
@@ -133,83 +134,11 @@
     </div>
 </div>
 
-<#--All AIMs-->
+<#--All S.M.A.R.T AIMS table-->
 <div class="w3-content w3-container w3-padding-64" id="aims">
     <div class="w3-center w3-row">
         <h3 class="w3-center">All aims</h3>
-
-        <i class="fa fa-hand-pointer-o" aria-hidden="true"><em style="margin-left: 5px;">Click on aim id to check details</em></i>
-
-        <#-- Table of a aims -->
-        <table id="aimsTable" align="center" width="100%" style="padding: 10px;/*table-layout: fixed;*/">
-        <#-- Table header -->
-            <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Text</th>
-                <th>S</th>
-                <th>M</th>
-                <th>A</th>
-                <th>R</th>
-                <th>T</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-
-        <#-- All Aims -->
-            <#if all_aims?has_content>
-                <#list all_aims as aim>
-                    <#if aim.aimState!= "DELETED">
-                        <tr id="aim_${aim.id}" style="text-align:center; height: 100px">
-                            <td><b>
-                                <a href="/aim_details/${aim.id}" style="text-decoration:none" title="Go to details: ${aim.title}">
-                                    ${aim.id}
-                                </a>
-                            </b></td>
-                            <td><span>${aim.title}</span></td>
-                            <td style="word-wrap: break-word"><i>${aim.description}</i></td>
-                            <td style="word-wrap: break-word"><i>${aim.text}</i></td>
-                            <td style="word-wrap: break-word">
-                                <i>${aim.specify!''}</i>
-                            </td>
-                            <td style="word-wrap: break-word">
-                                <i>${aim.measurable!''}</i>
-                            </td>
-                            <td style="word-wrap: break-word">
-                                <i>${aim.attainable!''}</i>
-                            </td>
-                            <td style="word-wrap: break-word">
-                                <i>${aim.relevant!''}</i>
-                            </td>
-                            <td style="word-wrap: break-word">
-                            <i>${aim.timeBased!''}</i>
-                            </td>
-                            <td>
-                                <div>
-                                    <a href="/editAim/${aim.id}" >
-                                        <i class="fa fa-pencil" aria-hidden="true" title="Edit aim ${aim.title}"></i>
-                                    </a>
-                                </div>
-                            </td>
-
-                            <td>
-                                <div>
-                                    <a href="/main_aim/delete/${aim.id}">
-                                        <i class="fa fa-trash-o" aria-hidden="true" title="Delete aim ${aim.title}">
-
-                                        </i>
-                                    </a>
-                                    <input type="hidden" value="${aim}" name="aim">
-                                </div>
-                            </td>
-                        </tr>
-                    </#if>
-                </#list>
-            <#else>
-                 <h4 class="w3-center" style="font-weight: bold;">No aims yet</h4>
-            </#if>
-        </table>
+        <@aims.smartTable aims = all_aims/>
     </div>
 </div>
 

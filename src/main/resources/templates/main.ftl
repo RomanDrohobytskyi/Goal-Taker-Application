@@ -21,6 +21,7 @@
     <#import "parts/menu.ftl" as menu>
     <#import "parts/footer.ftl" as footer>
     <#import "parts/elements.ftl" as elements>
+    <#import "parts/aims.ftl" as aims>
 
 </head>
 <body>
@@ -66,8 +67,11 @@
 <div class="w3-content w3-container w3-padding-64" id="add-message">
 
     <div class="w3-center w3-row">
+
         <h3 class="w3-center">Create note</h3>
-        <form action="/main" method="get" enctype="multipart/form-data">
+
+        <form action="/main/add" method="post" enctype="multipart/form-data">
+
             <p class="w3-center">Enter note title: </p>
             <input type="text" name="text" placeholder="text . . ."/>
             <p class="w3-center">Tag: </p>
@@ -79,6 +83,7 @@
             <br>
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
             <button type="submit" class="btn btn1 w3-button w3-padding-large">Add</button>
+
         </form>
     </div>
 </div>
@@ -102,7 +107,7 @@
                     <span class="form-required">Selected messages</span>
                 </label>
                 <br>
-                <form method="post" action="/mainDelete">
+                <form method="post" action="/main/delete">
                 <#-- Selected checkboxes count -->
                     <div class="count-checkboxes-wrapper">
                     <#--Count only-->
@@ -133,66 +138,8 @@
             <br>
         </form>
 
-    <#-- Table of a messages table-layout: fixed; -->
-        <table id="messagesTable" align="center" width="100%" style="">
-        <#-- Table header -->
-            <tr>
-                <th>ID</th>
-                <th>State</th>
-                <th>Filter</th>
-                <th>Email</th>
-                <th>Img</th>
-                <th>Edit</th>
-                <th>
-                    <input id="selectAll_checkbox" type="checkbox" title="Check All Messages" onclick="selectDeselectCheckbox('.messageCheckbox');
-                        showSelectedCheckboxesCount('.messageCheckbox', '#count-checked-checkboxes');"/>
-                </th>
-                <th>Delete</th>
-            </tr>
-        <#-- All messages -->
-            <#list messages as message>
-                <#if message.messageState != "DELETED">
-                     <tr id="message_${message.id}" style="height: 100px">
-                         <td><b>${message.id}</b></td>
-                         <td><b>${message.messageState}</b></td>
-                         <td style="word-break:break-all;"><span>${message.text}</span></td>
-                         <td style="word-break:break-all;"><i>${message.tag}</i></td>
-                         <td><strong>${message.getAuthorEmail()}</strong></td>
-                         <td>
-                             <div >
-                                <#if message.filename?has_content>
-                                    <img src="/img/${message.filename}" style="width:130px;height:100px;">
-                                <#else >
-                                    <p style="color: gray()">
-                                        <strong>No image</strong>
-                                    </p>
-                                </#if>
-                             </div>
-                         </td>
-                         <td>
-                             <div>
-                                 <a href="/editMessage/${message.id}" ><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                             </div>
-                         </td>
-                         <td>
-                             <div>
-                                 <input id="${message.id}" type="checkbox" name="selected${message.id}" class="messageCheckbox"
-                                    title="Check" onclick="showSelectedCheckboxesCount('.messageCheckbox', '#count-checked-checkboxes');"/>
-                             </div>
-                         </td>
-                         <td>
-                             <div>
-                                 <a href="/main/delete/${message.id}">
-                                     <i class="fa fa-trash-o" aria-hidden="true" title="Delete note"></i>
-                                 </a>
-                                 <input type="hidden" value="${message}" name="message">
-                             </div>
-                         </td>
-                     </tr>
-                </#if>
+        <@aims.notes messages/>
 
-            </#list>
-        </table>
     </div>
 </div>
 

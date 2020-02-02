@@ -55,4 +55,11 @@ public class TenThousandHoursAimService {
         }
     }
 
+    public TenThousandHoursAim achieve(TenThousandHoursAim aim){
+        aim.setAimState(State.AimState.ACHIEVED.toString());
+        aim.setModificationDate(new Date());
+        aim.setAchievedDate(new Date());
+
+        return aimRepository.save(aim);
+    }
 }

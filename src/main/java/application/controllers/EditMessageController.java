@@ -38,7 +38,7 @@ public class EditMessageController {
         message.setText(text);
         message.setTag(tag);
         message.setFilename(fileService.getCreatedFileName());
-        message.setMessageState(State.MessageState.EDITED.toString());
+        message.setState(State.MessageState.EDITED.toString());
 
         messageRepository.save(message);
         return "redirect:/main#message_" + message.getId();

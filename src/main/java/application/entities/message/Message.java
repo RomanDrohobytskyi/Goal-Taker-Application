@@ -27,7 +27,7 @@ public class Message {
     private String tag;
     private String filename;
     @NotNull
-    private String messageState = State.MessageState.NEW.toString();
+    private String state = State.MessageState.NEW.toString();
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User user;

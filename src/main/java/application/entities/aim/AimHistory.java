@@ -1,3 +1,4 @@
+/*
 package application.entities.aim;
 
 import application.entities.time.data.Time;
@@ -48,3 +49,4 @@ public class AimHistory {
     private List<Time> loggedTime;
 
 }
+*/

@@ -38,34 +38,37 @@ public class MessageController {
     public String filter(@RequestParam(required = false, defaultValue = "")
                                String filter, Model model) {
         User loggedInUser = userManager.getLoggedInUser();
+        Iterable<Message> messages;
         if (filter != null && !filter.isEmpty()) {
-            messageService.setFilteredMessages(messageRepo.findByTagAndAndUser(filter, loggedInUser));
+            messages = messageRepo.findByTagAndAndUser(filter, loggedInUser);
         } else {
-            messageService.setFilteredMessages(messageRepo.findByUser(loggedInUser));
+            messages = messageRepo.findByUser(loggedInUser);
         }
-        model.addAttribute("messages", messageService.getFilteredMessages());
+
+        model.addAttribute("messages", messages);
         model.addAttribute("filter", filter != null ? filter : "");
 
         return "main";
     }
 
-    @PostMapping("/main")
+    @PostMapping("/main/add")
     public String addMessage(
             @AuthenticationPrincipal User user,
             @RequestParam String text,
             @RequestParam String tag, Map<String, Object> model,
-            @RequestParam("file") MultipartFile file) {
+            @RequestParam(name = "file", required = false, defaultValue = "") MultipartFile file) {
 
-        Optional<Message> message = messageService.adaptMessage(text, tag, user);
+        Optional<Message> optionalMessage = messageService.adaptMessage(text, tag, user);
 
-        if (message.isPresent()){
+        if (optionalMessage.isPresent()){
 
+            Message message = optionalMessage.get();
             FileService fileService = new FileService();
             fileService.uploadFile(file);
-            message.get().setFilename(fileService.getCreatedFileName());
-            message.get().setMessageState(State.MessageState.NEW.toString());
+            message.setFilename(fileService.getCreatedFileName());
+            message.setState(State.MessageState.NEW.toString());
 
-            messageRepo.save(message.get());
+            messageRepo.save(message);
 
             User loggedInUser = userManager.getLoggedInUser();
             Iterable<Message> userMessages = messageRepo.findByUser(loggedInUser);
@@ -75,7 +78,7 @@ public class MessageController {
             HashMap myMap = MapUtils.oneElementHashMap("","");
             model.put("messages", myMap);
         }
-        return "main";
+        return "redirect:/main#messagesTable";
     }
 
     @GetMapping("/main/delete/{message}")
@@ -89,6 +92,12 @@ public class MessageController {
         Iterable<Message> userMessages = messageRepo.findByUser(loggedInUser);
         model.put("messages", userMessages);
 
+        return "redirect:/main#messagesTable";
+    }
+
+    @GetMapping("/main/achieve/{message}")
+    public String achieve(@PathVariable Message message){
+        messageService.achieve(message);
         return "redirect:/main#messagesTable";
     }
 

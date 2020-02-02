@@ -42,6 +42,8 @@ public class TenThousandHoursAim {
     private Date modificationDate;
     @Column
     private Date deletionDate;
+    @Column(name = "achieved_date")
+    private Date achievedDate;
     @ManyToOne
     private User user;
     @OneToMany(mappedBy = "aim", targetEntity = Time.class, fetch = FetchType.EAGER)

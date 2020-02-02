@@ -81,7 +81,7 @@ public class AimController {
     }
 
     @GetMapping("/main_aim/delete/{aim}")
-    public String deleteMessage(
+    public String delete(
             @PathVariable Aim aim,
             Map<String, Object> model) {
 
@@ -90,6 +90,13 @@ public class AimController {
         Iterable<Aim> userAims = aimRepository.findByUser(loggedInUser);
 
         model.put("aims", userAims);
+
+        return "redirect:/main_aim#aimsTable";
+    }
+
+    @GetMapping("/main_aim/achieve/{aim}")
+    public String achieve(@PathVariable Aim aim, Map<String, Object> model){
+        aimService.achieve(aim);
 
         return "redirect:/main_aim#aimsTable";
     }

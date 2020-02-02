@@ -8,31 +8,25 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/utils/MapUtils.class" />
       <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/utils/StringUtils.class" />
       <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/roma_.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/roma_.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/AimController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/AimController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/EditMessageController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/EditMessageController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/MessageController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/MessageController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/TenThousandHoursAimController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/TenThousandHoursAimController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/TimeAnalyzerController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/TimeAnalyzerController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/UserController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/aim/Aim.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/aim/Aim.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/aim/AimHistory.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/aim/AimHistory.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/aim/TenThousandHoursAim.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/aim/TenThousandHoursAim.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/message/Message.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/message/Message.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/message/MessageHistory.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/message/MessageHistory.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/user/UserHistory.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/user/UserHistory.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/enums/State.java" afterPath="$PROJECT_DIR$/src/main/java/application/enums/State.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/menu/MenuElement.java" afterPath="$PROJECT_DIR$/src/main/java/application/menu/MenuElement.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java" afterPath="$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/repositories/IAimRepository.java" afterPath="$PROJECT_DIR$/src/main/java/application/repositories/IAimRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/repositories/IMessageRepository.java" afterPath="$PROJECT_DIR$/src/main/java/application/repositories/IMessageRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/repositories/ITenThousandHoursAimRepository.java" afterPath="$PROJECT_DIR$/src/main/java/application/repositories/ITenThousandHoursAimRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/repositories/IUserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/application/repositories/IUserRepository.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/services/AimService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/AimService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/services/MessageService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/MessageService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/services/TenThousandHoursAimService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/TenThousandHoursAimService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/services/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/UserService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/aim_details.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/aim_details.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.ftl" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.ftl" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main_aim.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/main_aim.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/charst.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/charst.ftl" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/menu.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/menu.ftl" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ten_thousand_hours_aim.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/ten_thousand_hours_aim.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/time_analyzer.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/time_analyzer.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userEdit.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/userEdit.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userList.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/userList.ftl" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/Application.class" afterPath="$PROJECT_DIR$/target/classes/application/Application.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/config/WebSecurityConfig.class" afterPath="$PROJECT_DIR$/target/classes/application/config/WebSecurityConfig.class" />
@@ -126,101 +120,140 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/UserController.java">
+      <file leaf-file-name="aims.ftl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/aims.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="87" column="15" lean-forward="false" selection-start-line="87" selection-start-column="15" selection-end-line="87" selection-end-column="15" />
+            <state relative-caret-position="353">
+              <caret line="186" column="36" lean-forward="true" selection-start-line="186" selection-start-column="36" selection-end-line="186" selection-end-column="36" />
+              <folding>
+                <element signature="e#1056#1094#0#HTML" expanded="true" />
+                <element signature="e#1275#1291#0#HTML" expanded="true" />
+                <element signature="e#1345#1384#0#HTML" expanded="true" />
+                <element signature="e#1444#1483#0#HTML" expanded="true" />
+                <element signature="e#1536#1575#0#HTML" expanded="true" />
+                <element signature="e#1608#1624#0#HTML" expanded="true" />
+                <element signature="e#1688#1704#0#HTML" expanded="true" />
+                <element signature="e#1771#1787#0#HTML" expanded="true" />
+                <element signature="e#1854#1870#0#HTML" expanded="true" />
+                <element signature="e#1935#1951#0#HTML" expanded="true" />
+                <element signature="e#2948#2964#0#HTML" expanded="true" />
+                <element signature="e#3213#3229#0#HTML" expanded="true" />
+                <element signature="e#3962#4008#0#HTML" expanded="true" />
+                <element signature="e#4645#4695#0#HTML" expanded="true" />
+                <element signature="e#4999#5015#0#HTML" expanded="true" />
+                <element signature="e#5069#5098#0#HTML" expanded="true" />
+                <element signature="e#5102#5118#0#HTML" expanded="true" />
+                <element signature="e#5208#5224#0#HTML" expanded="true" />
+                <element signature="e#5420#5436#0#HTML" expanded="true" />
+                <element signature="e#5771#5787#0#HTML" expanded="true" />
+                <element signature="e#6222#6238#0#HTML" expanded="true" />
+                <element signature="e#6501#6517#0#HTML" expanded="true" />
+                <element signature="e#8073#8094#0#HTML" expanded="true" />
+                <element signature="e#8124#8140#0#HTML" expanded="true" />
+                <element signature="e#8192#8208#0#HTML" expanded="true" />
+                <element signature="e#8260#8289#0#HTML" expanded="true" />
+                <element signature="e#8296#8312#0#HTML" expanded="true" />
+                <element signature="e#8366#8395#0#HTML" expanded="true" />
+                <element signature="e#8399#8415#0#HTML" expanded="true" />
+                <element signature="e#8473#8489#0#HTML" expanded="true" />
+                <element signature="e#8721#8754#0#HTML" expanded="true" />
+                <element signature="e#8828#8849#0#HTML" expanded="true" />
+                <element signature="e#8895#8911#0#HTML" expanded="true" />
+                <element signature="e#10256#10272#0#HTML" expanded="true" />
+                <element signature="e#10516#10532#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_aim.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main_aim.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="140" column="43" lean-forward="true" selection-start-line="140" selection-start-column="43" selection-end-line="140" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="State.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/enums/State.java">
+      <file leaf-file-name="main.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+            <state relative-caret-position="234">
+              <caret line="72" column="45" lean-forward="false" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/user/User.java">
+      <file leaf-file-name="MessageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/MessageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="45" column="12" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+            <state relative-caret-position="308">
+              <caret line="99" column="40" lean-forward="false" selection-start-line="99" selection-start-column="40" selection-end-line="99" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Role.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/roles/Role.java">
+      <file leaf-file-name="MessageService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/services/MessageService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-              <folding />
+            <state relative-caret-position="392">
+              <caret line="88" column="26" lean-forward="false" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="26" />
+              <folding>
+                <element signature="e#1372#1373#0" expanded="true" />
+                <element signature="e#1428#1429#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IMessageRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/repositories/IMessageRepository.java">
+      <file leaf-file-name="charst.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/charst.ftl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="107" column="28" lean-forward="false" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userList.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userList.ftl">
+      <file leaf-file-name="AimHistory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/aim/AimHistory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2394">
-              <caret line="114" column="37" lean-forward="false" selection-start-line="114" selection-start-column="37" selection-end-line="114" selection-end-column="37" />
+            <state relative-caret-position="63">
+              <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
+      <file leaf-file-name="TenThousandHoursAim.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/aim/TenThousandHoursAim.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1449">
-              <caret line="69" column="12" lean-forward="false" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="44" />
+            <state relative-caret-position="387">
+              <caret line="45" column="20" lean-forward="false" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userEdit.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userEdit.ftl">
+      <file leaf-file-name="MessageHistory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/message/MessageHistory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1932">
-              <caret line="92" column="15" lean-forward="false" selection-start-line="92" selection-start-column="15" selection-end-line="92" selection-end-column="15" />
+            <state relative-caret-position="273">
+              <caret line="22" column="12" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ITenThousandHoursAimRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/repositories/ITenThousandHoursAimRepository.java">
+      <file leaf-file-name="UserHistory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/user/UserHistory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IUserRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/repositories/IUserRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="10" column="43" lean-forward="false" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+            <state relative-caret-position="512">
+              <caret line="38" column="34" lean-forward="true" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -240,16 +273,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Find message byt filter</find>
-      <find>Find</find>
-      <find>\&lt;\@charts\.all aim\/\&gt;\n            \n        \&lt;\@charts\.first\&gt;\&lt;\/\@charts\.first\&gt;\n\n    \&lt;\/div\&gt;</find>
-      <find>aimco</find>
       <find>what</find>
       <find>userName</find>
       <find>Achieve your dream</find>
       <find>Dream</find>
       <find>big-img-greeting-1</find>
-      <find>add</find>
       <find>PHOTOS</find>
       <find>login</find>
       <find>messages</find>
@@ -270,6 +298,11 @@
       <find>edit</find>
       <find>delete</find>
       <find>email</find>
+      <find>thr</find>
+      <find>redirect</find>
+      <find>add</find>
+      <find>multipart</find>
+      <find>sta</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -289,15 +322,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/application/managers/AimManager.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/userActivityCharts.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/user_analyzer.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/application/controllers/UserAnalyzer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/controllers/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/controllers/GreetingController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/main.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/application/controllers/EditAimController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/editAim.ftl" />
@@ -308,38 +334,45 @@
         <option value="$PROJECT_DIR$/src/main/java/application/repositories/ITenThousandHoursAim.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/entities/user/User.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/aims.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/application/entities/aim/TenThousandHoursAim.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/details.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/application/entities/aim/Aim.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/controllers/TimeAnalyzerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/services/TimeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/repositories/IAimRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/controllers/AimController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/time_analyzer.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/application/menu/MenuElement.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/greeting.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/aim_details.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/charst.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/main_aim.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/application/repositories/ITenThousandHoursAimRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/controllers/TenThousandHoursAimController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/ten_thousand_hours_aim.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/editTenKHoursAim.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/application/controllers/EditTenKAimController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/javascript/validators.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/menu.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/application/controllers/MessageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/services/MessageService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/services/AimService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/services/TenThousandHoursAimService.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/services/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/controllers/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/repositories/IUserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/userList.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/userEdit.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/application/enums/State.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/repositories/IMessageRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/enums/State.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/entities/aim/Aim.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/AimController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/services/AimService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/services/TenThousandHoursAimService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/entities/aim/TenThousandHoursAim.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ten_thousand_hours_aim.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/menu.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/TenThousandHoursAimController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/application/entities/message/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/entities/aim/AimHistory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/entities/message/MessageHistory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/entities/user/UserHistory.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/main_aim.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/main.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/application/services/MessageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/MessageController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/aims.ftl" />
       </list>
     </option>
   </component>
@@ -368,7 +401,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="725" />
+    <option name="y" value="340" />
     <option name="width" value="697" />
     <option name="height" value="775" />
   </component>
@@ -470,7 +504,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="entities" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="aim" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringWebApplication" type="b2602c69:ProjectViewProjectNode" />
@@ -479,7 +513,28 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringWebApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringWebApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringWebApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringWebApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringWebApplication" type="b2602c69:ProjectViewProjectNode" />
@@ -858,7 +913,7 @@
       <workItem from="1579545497164" duration="2100000" />
       <workItem from="1580051958524" duration="5637000" />
       <workItem from="1580549883451" duration="8587000" />
-      <workItem from="1580636064055" duration="262000" />
+      <workItem from="1580636064055" duration="14026000" />
     </task>
     <task id="LOCAL-00001" summary="Log4J added, little changes in templates">
       <created>1564081469808</created>
@@ -951,11 +1006,18 @@
       <option name="project" value="LOCAL" />
       <updated>1578237221148</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="New features, updates">
+      <created>1580636479935</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1580636479935</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="544763000" />
+    <option name="totallyTimeSpent" value="558527000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -971,41 +1033,41 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279396" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.371875" sideWeight="0.5063966" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25566342" sideWeight="0.50537056" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53505933" sideWeight="0.4936034" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22986037" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1707841" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35598704" sideWeight="0.49462944" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279396" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32362458" sideWeight="0.4978678" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26537216" sideWeight="0.4936034" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24382384" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279396" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29341963" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="SQL Generator" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32362458" sideWeight="0.4978678" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279396" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1028,7 +1090,8 @@
     <MESSAGE value="Time analyzer" />
     <MESSAGE value="Canvas charts added" />
     <MESSAGE value="10k hours, new features, canvas" />
-    <option name="LAST_COMMIT_MESSAGE" value="10k hours, new features, canvas" />
+    <MESSAGE value="New features, updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="New features, updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1061,7 +1124,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="128" />
+      <option name="time" value="131" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1075,68 +1138,11 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/config/MvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/connection/DataBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/config/MailConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="38" column="36" lean-forward="false" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_canvasjs.com_assets_script_canvasjs.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2247">
-          <caret line="115" column="472" lean-forward="false" selection-start-line="115" selection-start-column="472" selection-end-line="115" selection-end-column="472" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="71" column="81" lean-forward="false" selection-start-line="71" selection-start-column="81" selection-end-line="71" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/time_analyzer.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="771">
           <caret line="131" column="23" lean-forward="false" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1144,13 +1150,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="119" column="21" lean-forward="false" selection-start-line="119" selection-start-column="21" selection-end-line="119" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/charst.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="107" column="28" lean-forward="false" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1161,25 +1161,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/GreetingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/photos.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1190,20 +1176,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/aim/TenThousandHoursAim.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/EditTenKAimController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="491">
           <caret line="41" column="30" lean-forward="false" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1212,6 +1190,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-126">
           <caret line="73" column="40" lean-forward="false" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1219,13 +1198,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="67" column="38" lean-forward="true" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/TenThousandHoursAimController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1234,20 +1206,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ten_thousand_hours_aim.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="100" column="50" lean-forward="true" selection-start-line="100" selection-start-column="50" selection-end-line="100" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/menu.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="65" column="23" lean-forward="false" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1255,57 +1214,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1085">
           <caret line="150" column="26" lean-forward="false" selection-start-line="150" selection-start-column="26" selection-end-line="150" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main_aim.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="203" column="38" lean-forward="true" selection-start-line="196" selection-start-column="31" selection-end-line="203" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/MessageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/MessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="82" column="12" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding>
-            <element signature="e#1372#1373#0" expanded="true" />
-            <element signature="e#1428#1429#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/AimService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="72" column="75" lean-forward="false" selection-start-line="72" selection-start-column="75" selection-end-line="72" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/aim/Aim.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="49" column="19" lean-forward="false" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/TenThousandHoursAimService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="52" column="31" lean-forward="false" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1320,6 +1229,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1331,25 +1241,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/user/UserHistory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.3.RELEASE/spring-security-core-5.0.3.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetails.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/AimController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
-          <caret line="38" column="39" lean-forward="false" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1365,6 +1260,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1415,26 +1311,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userList.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2394">
-          <caret line="114" column="37" lean-forward="false" selection-start-line="114" selection-start-column="37" selection-end-line="114" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/roles/Role.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/user/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="45" column="12" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1447,6 +1327,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/enums/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="31" column="37" lean-forward="false" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/repositories/IMessageRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1455,11 +1343,244 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/enums/State.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userList.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        <state relative-caret-position="373">
+          <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/AimService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="78" column="20" lean-forward="false" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/TenThousandHoursAimService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="57" column="37" lean-forward="true" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/AimController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1638">
+          <caret line="98" column="22" lean-forward="true" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/GreetingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="49" column="55" lean-forward="false" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/menu.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="76" column="45" lean-forward="false" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="558" column="22" lean-forward="false" selection-start-line="558" selection-start-column="22" selection-end-line="558" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ten_thousand_hours_aim.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="80" column="42" lean-forward="false" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/TenThousandHoursAimController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="38" column="16" lean-forward="false" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/user/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="45" column="12" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/aim/Aim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="62" column="30" lean-forward="true" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/message/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/aim/AimHistory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/aim/TenThousandHoursAim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="45" column="20" lean-forward="false" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/user/UserHistory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="38" column="34" lean-forward="true" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/message/MessageHistory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="22" column="12" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main_aim.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="140" column="43" lean-forward="true" selection-start-line="140" selection-start-column="43" selection-end-line="140" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="72" column="45" lean-forward="false" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/charst.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="107" column="28" lean-forward="false" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/MessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="88" column="26" lean-forward="false" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="26" />
+          <folding>
+            <element signature="e#1372#1373#0" expanded="true" />
+            <element signature="e#1428#1429#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/MessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="99" column="40" lean-forward="false" selection-start-line="99" selection-start-column="40" selection-end-line="99" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/aims.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="186" column="36" lean-forward="true" selection-start-line="186" selection-start-column="36" selection-end-line="186" selection-end-column="36" />
+          <folding>
+            <element signature="e#1056#1094#0#HTML" expanded="true" />
+            <element signature="e#1275#1291#0#HTML" expanded="true" />
+            <element signature="e#1345#1384#0#HTML" expanded="true" />
+            <element signature="e#1444#1483#0#HTML" expanded="true" />
+            <element signature="e#1536#1575#0#HTML" expanded="true" />
+            <element signature="e#1608#1624#0#HTML" expanded="true" />
+            <element signature="e#1688#1704#0#HTML" expanded="true" />
+            <element signature="e#1771#1787#0#HTML" expanded="true" />
+            <element signature="e#1854#1870#0#HTML" expanded="true" />
+            <element signature="e#1935#1951#0#HTML" expanded="true" />
+            <element signature="e#2948#2964#0#HTML" expanded="true" />
+            <element signature="e#3213#3229#0#HTML" expanded="true" />
+            <element signature="e#3962#4008#0#HTML" expanded="true" />
+            <element signature="e#4645#4695#0#HTML" expanded="true" />
+            <element signature="e#4999#5015#0#HTML" expanded="true" />
+            <element signature="e#5069#5098#0#HTML" expanded="true" />
+            <element signature="e#5102#5118#0#HTML" expanded="true" />
+            <element signature="e#5208#5224#0#HTML" expanded="true" />
+            <element signature="e#5420#5436#0#HTML" expanded="true" />
+            <element signature="e#5771#5787#0#HTML" expanded="true" />
+            <element signature="e#6222#6238#0#HTML" expanded="true" />
+            <element signature="e#6501#6517#0#HTML" expanded="true" />
+            <element signature="e#8073#8094#0#HTML" expanded="true" />
+            <element signature="e#8124#8140#0#HTML" expanded="true" />
+            <element signature="e#8192#8208#0#HTML" expanded="true" />
+            <element signature="e#8260#8289#0#HTML" expanded="true" />
+            <element signature="e#8296#8312#0#HTML" expanded="true" />
+            <element signature="e#8366#8395#0#HTML" expanded="true" />
+            <element signature="e#8399#8415#0#HTML" expanded="true" />
+            <element signature="e#8473#8489#0#HTML" expanded="true" />
+            <element signature="e#8721#8754#0#HTML" expanded="true" />
+            <element signature="e#8828#8849#0#HTML" expanded="true" />
+            <element signature="e#8895#8911#0#HTML" expanded="true" />
+            <element signature="e#10256#10272#0#HTML" expanded="true" />
+            <element signature="e#10516#10532#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

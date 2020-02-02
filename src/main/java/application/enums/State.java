@@ -10,7 +10,7 @@ public class State {
         ARCHIVED ("Message has been archived"),
         DELETED ("Message has been deleted"),
         RECOVERED ("Message has been recovered"),
-        ACHIVED ("Message has been achived"),
+        ACHIEVED ("Message has been achieved"),
         EDITED ("Message has been edited");
 
         private String state;
@@ -29,7 +29,7 @@ public class State {
         NEW ("New aim"),
         ARCHIVED ("Aim has been archived"),
         DELETED ("Aim has been deleted"),
-        ACHIEVED ("Aim has been achived"),
+        ACHIEVED ("Aim has been achieved"),
         EDITED ("Aim has been edited");
 
         private String state;

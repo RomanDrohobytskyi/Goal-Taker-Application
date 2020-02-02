@@ -59,6 +59,8 @@ public class Aim {
     private Date dateFrom;
     @Column
     private Date dateTo;
+    @Column(name = "achieved_date")
+    private Date achievedDate;
     @ManyToOne
     private User user;
     @OneToMany(mappedBy = "aim", targetEntity=Time.class, fetch=FetchType.EAGER)

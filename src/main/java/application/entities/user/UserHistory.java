@@ -1,3 +1,4 @@
+/*
 package application.entities.user;
 
 import application.entities.aim.Aim;
@@ -45,3 +46,4 @@ public class UserHistory {
     private Set<Aim> aims;
 
 }
+*/

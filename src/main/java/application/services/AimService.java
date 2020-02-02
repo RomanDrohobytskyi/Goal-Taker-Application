@@ -75,4 +75,12 @@ public class AimService {
             }
         }
     }
+
+    public Aim achieve(Aim aim){
+        aim.setAimState(State.AimState.ACHIEVED.toString());
+        aim.setModificationDate(new Date());
+        aim.setAchievedDate(new Date());
+
+        return aimRepository.save(aim);
+    }
 }

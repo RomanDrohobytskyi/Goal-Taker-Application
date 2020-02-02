@@ -19,6 +19,7 @@
     <#import "parts/menu.ftl" as menu>
     <#import "parts/footer.ftl" as footer>
     <#import "parts/elements.ftl" as elements>
+    <#import "parts/aims.ftl" as aims>
 
 </head>
 <body>
@@ -121,54 +122,8 @@
     <div id="aims" class="w3-center w3-row">
         <h3 class="w3-center">All aims</h3>
 
-        <i class="fa fa-hand-pointer-o" aria-hidden="true"><em style="margin-left: 5px;">Click on aim id to check details</em></i>
+        <@aims.tenThousandAim all_aims/>
 
-    <#-- Table of a messages -->
-        <table id="aimsTable" align="center" width="100%" style="padding: 10px;/*table-layout: fixed;*/">
-        <#-- Table header -->
-            <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Text</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-
-        <#-- All Aims -->
-            <#if all_aims?has_content>
-                <#list all_aims as aim>
-                    <#if aim.aimState!= "DELETED">
-                        <tr id="aim_${aim.id}" style="text-align:center; height: 100px">
-                            <td><b>
-                                <a href="/aim_details/${aim.id}" style="text-decoration:none" title="Go to details: ${aim.title}">
-                                    ${aim.id}
-                                </a>
-                            </b></td>
-                            <td><span>${aim.title}</span></td>
-                            <td style="word-wrap: break-word"><i>${aim.description}</i></td>
-                            <td style="word-wrap: break-word"><i>${aim.text}</i></td>
-                            <td>
-                                <div>
-                                    <a href="/editTenKHoursAim/${aim.id}" ><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                </div>
-                            </td>
-
-                            <td>
-                                <div>
-                                    <a href="/ten_thousand_hours_aim/delete/${aim.id}">
-                                        <i class="fa fa-trash-o" aria-hidden="true" title="Delete aim"></i>
-                                    </a>
-                                    <input type="hidden" value="${aim}" name="aim">
-                                </div>
-                            </td>
-                        </tr>
-                    </#if>
-                </#list>
-            <#else>
-                 <h4 class="w3-center" style="font-weight: bold;">No aims yet</h4>
-            </#if>
-        </table>
     </div>
 </div>
 

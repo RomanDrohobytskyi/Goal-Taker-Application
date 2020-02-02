@@ -73,7 +73,7 @@
     <div class="middle w3-bar-item">
         <div class="sm-container">
             <div class="sm-menu">
-                <a href="/main" ><i class="fa fa-envelope"></i>NOTES</a>
+                <a href="/main" ><i class="fa fa-book"></i>NOTES</a>
                 <a href="/main_aim" ><i class="fa fa-dot-circle-o"></i>AIMS</a>
                 <a href="/aims" ><i class="fa fa-circle-o"></i>ALL AIMS</a>
                 <a href="/userAnalyzer/activity" ><i class="fa fa-circle-o"></i>USER ANALYZER</a>

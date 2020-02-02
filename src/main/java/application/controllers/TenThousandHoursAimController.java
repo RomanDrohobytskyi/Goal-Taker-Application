@@ -24,7 +24,8 @@ public class TenThousandHoursAimController {
     @Autowired
     private ITenThousandHoursAimRepository aimRepository;
     private UserManager userManager = new UserManager();
-    private TenThousandHoursAimService aimService = new TenThousandHoursAimService();
+    @Autowired
+    private TenThousandHoursAimService aimService;
 
     @GetMapping("/ten_thousand_hours_aim")
     public String allAims(Model model){
@@ -67,6 +68,13 @@ public class TenThousandHoursAimController {
         Iterable<TenThousandHoursAim> userAims = aimRepository.findByUser(loggedInUser);
 
         model.put("aims", userAims);
+
+        return "redirect:/ten_thousand_hours_aim#aimsTable";
+    }
+
+    @GetMapping("/ten_thousand_hours_aim/achieve/{aim}")
+    public String achieve(@PathVariable TenThousandHoursAim aim, Map<String, Object> model){
+        aimService.achieve(aim);
 
         return "redirect:/ten_thousand_hours_aim#aimsTable";
     }
