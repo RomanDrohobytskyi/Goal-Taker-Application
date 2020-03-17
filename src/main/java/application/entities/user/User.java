@@ -39,6 +39,7 @@ public class User implements UserDetails{
     private String lastName;
     @NotNull
     private String password;
+    private String avatar;
     private String activationCode;
     private boolean active;
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)

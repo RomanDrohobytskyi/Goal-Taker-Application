@@ -24,32 +24,6 @@
     <#import "parts/popups.ftl" as popups>
     <#import "parts/menu.ftl" as menu>
 
-
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Year', 'Sales', 'Expenses'],
-                ['2004',  1000,      400],
-                ['2005',  1170,      460],
-                ['2006',  660,       1120],
-                ['2007',  1030,      540]
-            ]);
-
-            var options = {
-                title: 'Company Performance',
-                curveType: 'function',
-                legend: { position: 'bottom' }
-            };
-
-            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-            chart.draw(data, options);
-        }
-    </script>
 </head>
 <body>
 
@@ -97,7 +71,13 @@
 
 <div class="w3-content w3-container w3-padding-64" id="details">
 
-    <h3 class="w3-center w3-black" style="background-color: #616161!important;">${aim.title!''}</h3>
+    <#if aim.aimState == "ACHIEVED">
+        <h3 class="w3-center w3-black" style="background-color: #616161!important;">${aim.title!''}
+            <i class="fa fa-check" style="color: #2E9267;" title="Achieved!"></i>
+        </h3>
+    <#else>
+        <h3 class="w3-center w3-black" style="background-color: #616161!important;">${aim.title!''}</h3>
+    </#if>
     <p class="w3-center article"><em>${aim.description!''}</em></p>
 
     <#--Aim main details-->

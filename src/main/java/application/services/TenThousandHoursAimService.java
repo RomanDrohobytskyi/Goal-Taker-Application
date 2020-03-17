@@ -23,7 +23,6 @@ public class TenThousandHoursAimService {
     public Optional<TenThousandHoursAim> adaptAim(String title, String description, String text, User user) {
 
         if (Strings.isNotEmpty(title) && Strings.isNotEmpty(description) && user != null){
-//            if (userService.isUserExist(user)){
             TenThousandHoursAim aim = new TenThousandHoursAim();
 
             aim.setTitle(title);
@@ -33,7 +32,6 @@ public class TenThousandHoursAimService {
 
             aim.setUser(user);
             return Optional.of(aim);
-//            }
         }
         return Optional.empty();
 
@@ -62,4 +60,5 @@ public class TenThousandHoursAimService {
 
         return aimRepository.save(aim);
     }
+
 }

@@ -10,7 +10,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import java.util.*;
-import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.toList;
 
 @Service
 public class TimeService {
@@ -38,13 +39,11 @@ public class TimeService {
      */
     public List<Time> getLastWeekTime(Long aimId) {
         List<Time> aimTime = getLoggedTimeForAim(aimId);
-        List<Time> lastWeekendTime =aimTime;
+        List<Time> lastWeekendTime = aimTime;
+
         if (!CollectionUtils.isEmpty(aimTime) && aimTime.size() >= 7){
             lastWeekendTime = getTimeForDateRange(aimTime, 7L, false);
-        } else if (!CollectionUtils.isEmpty(aimTime)){
-            lastWeekendTime = sortTimeByDateDescending(aimTime);
         }
-
         return lastWeekendTime;
     }
 
@@ -54,35 +53,15 @@ public class TimeService {
 
     public List<Time> getTimeForDateRange(List<Time> time, Long dayRange, boolean asc){
         if (asc){
-            List<Time> sorted = sortTimeByDateAscending(time).stream().limit(dayRange).collect(Collectors.toList());
-            return sorted;
+            return time.stream()
+                    .sorted(Comparator.comparing(Time::getDate))
+                    .limit(dayRange)
+                    .collect(toList());
         }
-        else {
-            List<Time> sorted = sortTimeByDateDescending(time).stream().limit(dayRange).collect(Collectors.toList());
-            return sorted;
-        }
-    }
-
-    public List<Time> sortTimeByDateAscending(List<Time> time){
-
-       Collections.sort(time, new Comparator<Time>() {
-            @Override
-            public int compare(Time t1, Time t2) {
-                return t1.getDate().compareTo(t2.getDate());
-            }
-        });
-        return time;
-    }
-
-
-    public List<Time> sortTimeByDateDescending(List<Time> time){
-        Collections.sort(time, new Comparator<Time>() {
-            @Override
-            public int compare(Time t1, Time t2) {
-                return t2.getDate().compareTo(t1.getDate());
-            }
-        });
-        return time;
+        else return time.stream()
+                .sorted(Comparator.comparing(Time::getDate).reversed())
+                .limit(dayRange)
+                .collect(toList());
     }
 
     public Time deleteTime(Time time) {

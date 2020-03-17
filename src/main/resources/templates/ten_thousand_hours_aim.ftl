@@ -20,120 +20,110 @@
     <#import "parts/footer.ftl" as footer>
     <#import "parts/elements.ftl" as elements>
     <#import "parts/aims.ftl" as aims>
+    <#import "parts/charst.ftl" as charts>
 
 </head>
 <body>
 
-<style>
-    .fa{
-        margin-right: 5px;
-    }
-</style>
+    <style>
+        .fa{
+            margin-right: 5px;
+        }
+    </style>
 
-<!-- NavBar (sit on top) -->
-<div class="w3-top" id="home">
-    <div class="w3-bar" id="myNavBar">
-        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-            <i class="fa fa-bars"></i>
-        </a>
-        <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
-        <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>UP</a>
-        <a href="#create" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-plus"></i>CREATE</a>
-        <a href="#aims" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i>AIMS</a>
-        <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-out"></i>
-            <form action="/logout" method="post">
-                <input type="hidden" name="_csrf" value="${_csrf.token}" />
-            </form>
-        </a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-            <i class="fa fa-search"></i>
-        </a>
-    </div>
-
-    <!-- NavBar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-        <a href="#create" class="w3-bar-item w3-button" onclick="toggleFunction()">CREATE</a>
-        <a href="main.ftl" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> MESSAGES</a>
-        <a href="/login" class="w3-bar-item w3-button w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
-        <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-    </div>
-</div>
-
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="parallax big-img-smart w3-display-container w3-opacity-min" id="second">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">JUST CREATE</span>
-    </div>
-</div>
-
-<!-- Create AIM container-->
-<div class="w3-content w3-container w3-padding-64" id="create">
-    <h3 class="w3-center w3-black ">Create Your A I M</h3>
-    <p class="w3-center article">
-        <em>It`s easier than You think</em>
-    </p>
-    <p class="article-text">
-        What is Lorem Ipsum?
-    </p>
-
-    <div class="w3-center w3-row">
-        <h3 class="w3-center">Create 10 000 hours AIM</h3>
-        <form action="/ten_thousand_hours_aim/add" method="get" enctype="multipart/form-data">
-
-            <div class="w3-center">
-
-                <div style=" margin-right: 10px;">
-                    <@elements.input id="aim_title" name="title" type="text" placeholder="t i t l e . . ."
-                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i t l e . . .'"/>
-                    <br><br>
-                <#--<p class="w3-center">d e s c r i p t i o n</p>-->
-                    <@elements.input id="aim_description" name="description" type="text" placeholder="d e s c r i p t i o n  . . ."
-                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 'd e s c r i p t i o n  . . .'"/>
-                    <br><br>
-                    <textarea id="aim_text" name="text" placeholder="t e x t  . . ." rows="2" cols="21"
-                              style="text-align: center; width: 250px;"></textarea>
-                    <br><br>
-                </div>
-
-                <div class="w3-center" style="float:bottom">
+    <!-- NavBar (sit on top) -->
+    <div class="w3-top" id="home">
+        <div class="w3-bar" id="myNavBar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
+            <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>UP</a>
+            <a href="#create" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-plus"></i>CREATE</a>
+            <a href="#aims" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i>AIMS</a>
+            <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-out"></i>
+                <form action="/logout" method="post">
                     <input type="hidden" name="_csrf" value="${_csrf.token}" />
+                </form>
+            </a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
 
-                    <button type="submit" class="btn btn1 w3-button w3-padding-large"
-                            onclick="return validateLength('Title', 'aim_title', 3, 32)">
-                        A d d
-                    </button>
+        <!-- NavBar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="#create" class="w3-bar-item w3-button" onclick="toggleFunction()">CREATE</a>
+            <a href="main.ftl" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> MESSAGES</a>
+            <a href="/login" class="w3-bar-item w3-button w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
+            <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+        </div>
+    </div>
+
+    <div class="parallax big-img-old_clock w3-display-container w3-opacity-min" id="second">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">JUST CREATE</span>
+        </div>
+    </div>
+
+    <!-- Create AIM container-->
+    <div class="w3-content w3-container w3-padding-64" id="create">
+        <h3 class="w3-center w3-black ">Create Your A I M</h3>
+        <p class="w3-center article">
+            <em>It`s easier than You think</em>
+        </p>
+        <p class="article-text">
+            What is Lorem Ipsum?
+        </p>
+
+        <div class="w3-center w3-row">
+            <h3 class="w3-center">Create 10 000 hours AIM</h3>
+            <form action="/ten_thousand_hours_aim/add" method="get" enctype="multipart/form-data">
+
+                <div class="w3-center">
+
+                    <div>
+                        <@elements.input id="aim_title" name="title" type="text" placeholder="t i t l e . . ."
+                        onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i t l e . . .'"/>
+                        <br><br>
+                    <#--<p class="w3-center">d e s c r i p t i o n</p>-->
+                        <@elements.input id="aim_description" name="description" type="text" placeholder="d e s c r i p t i o n  . . ."
+                        onfocus="this.placeholder = ''"  onblur="this.placeholder = 'd e s c r i p t i o n  . . .'"/>
+                        <br><br>
+                        <textarea id="aim_text" name="text" placeholder="t e x t  . . ." rows="2" cols="21"
+                                  style="text-align: center; width: 250px;"></textarea>
+                        <br>
+
+                        <input type="hidden" name="_csrf" value="${_csrf.token}" />
+
+                        <button type="submit" class="btn btn1 w3-button w3-padding-large"
+                                onclick="return validateLength('Title', 'aim_title', 3, 32)">
+                            A d d
+                        </button>
+                    </div>
                 </div>
-            </div>
-
-        </form>
+            </form>
+        </div>
     </div>
 
-</div>
-
-<#--Third paralax IMG-->
-<div class="parallax big-img-smart w3-display-container w3-opacity-min" id="third">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">YOUR AIMS</span>
+    <div class="parallax big-img-old_clock w3-display-container w3-opacity-min" id="third">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">AIMS</span>
+        </div>
     </div>
-</div>
 
-<#--All AIMs-->
-<div class="w3-content w3-container w3-padding-64" id="messages">
-    <div id="aims" class="w3-center w3-row">
-        <h3 class="w3-center">All aims</h3>
-
-        <@aims.tenThousandAim all_aims/>
-
+    <#--Aims-->
+    <div class="w3-content w3-container w3-padding-64" id="messages">
+        <div id="aims" class="w3-center w3-row">
+            <h3 class="w3-center">All aims</h3>
+            <@aims.tenThousandAim all_aims/>
+        </div>
     </div>
-</div>
 
-<#--Fourth paralax IMG-->
-<div class="parallax big-img-smart w3-display-container w3-opacity-min" id="fourth">
-</div>
+    <div class="parallax big-img-old_clock w3-display-container w3-opacity-min" id="fourth">
+    </div>
 
-<!-- Footer -->
-<@footer.footer>
-</@footer.footer>
+    <@footer.footer/>
 
 </body>
 </html>

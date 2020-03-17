@@ -40,112 +40,118 @@ body, html {
 
 /* Parallax images for greeting.ftl*/
 .big-img-greeting-1 {
-    background-image: url("https://pp.userapi.com/c847221/v847221064/126611/7O_a9n533XI.jpg");
+    background-image: url("/static/images/webWithRainDrops.jpg");
     min-height: 80%;
 }
 
 .big-img-greeting-2 {
-    background-image: url("https://pp.userapi.com/c637317/v637317807/2460a/TLFfXV15QX0.jpg");
+    background-image: url("/static/images/autumnLeaf.jpg");
     min-height: 400px;
 }
 
 .big-img-greeting-3 {
-    background-image: url("https://pp.userapi.com/c637122/v637122807/2cd71/fOOd2agzTSs.jpg");
+    background-image: url("/static/images/snow.jpg");
     min-height: 400px;
 }
 
 /* Parallax images for login.ftl*/
 .big-img-login-1 {
-    background-image: url("https://www.wmep.org/wp-content/uploads/2018/10/LOCKS2-Cyber-Security.png");
+    background-image: url("/static/images/cyberLock.png");
     min-height: 400px;
 }
 
 .big-img-login-2 {
-    background-image: url("https://belimitless.com/wp-content/uploads/2017/08/blockchain.jpg");
+    background-image: url("/static/images/cyberEarth.jpg");
     min-height: 400px;
 }
 
 .big-img-login-3 {
-    background-image: url("https://belimitless.com/wp-content/uploads/2017/08/blockchain.jpg");
+    background-image: url("/static/images/cyberEarth.jpg");
     min-height: 70%;
 }
 
 /* Parallax images WELCOME */
 .big-img-welcome-1 {
-    background-image: url("http://www.crazytravellers.com/wp-content/uploads/2017/04/Welcome.jpg");
+    background-image: url("/static/images/welcome.jpg");
     min-height: 70%;
 }
 
 /* Parallax images USERS */
 .big-img-users-1 {
-    background-image: url("http://techstory.in/new/wp-content/uploads/2015/07/Internet-users-India.jpg");
+    background-image: url("/static/images/linkedUsers.jpg");
     min-height: 70%;
 }
 
 /*Big parallax photos for /projects*/
 .big-img-projects-1 {
-    background-image: url("http://198.211.104.161/wp-content/uploads/2014/01/Hibernate-logo.png");
+    background-image: url("/static/images/hibernateLogo.png");
     min-height: 70%;
 }
 
 .big-img-projects-2 {
-    background-image: url("https://www.openhab.org/logos/jdbc.png");
+    background-image: url("/static/images/jdbcLogo.png");
     min-height: 70%;
 }
 
 .big-img-projects-3 {
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB_yCK06ouPnYKZg92oUPTBZtw80NTQ2K_VVisGQaM6BGCqrMg");
+    background-image: url("/static/images/javaLogo.png");
     min-height: 70%;
 }
 
 .big-img-projects-4 {
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB_yCK06ouPnYKZg92oUPTBZtw80NTQ2K_VVisGQaM6BGCqrMg");
+    background-image: url("/static/images/javaLogo.png");
     min-height: 70%;
 }
 
 /*Parallax photos for Aims */
 .big-img-smart {
-    background-image: url("https://cdn2.slidemodel.com/wp-content/uploads/6991-01-smart-goals-slide-design-1.jpg");
-    min-height: 50%;
+    background-image: url("/static/images/smartGoals.jpg");
+    min-height: 70%;
+}
+
+/*Parallax photos for Aims */
+.big-img-ten-k-hours {
+    background-image: url("/static/images/tenKHourspng.png");
+    min-height: 70%;
+}
+
+.big-img-old_clock {
+    background-image: url("/static/images/oldClock.jpg");
+    min-height: 70%;
 }
 
 /*Parallax photos for Aims */
 .big-img-aims {
-    background-image: url("https://uvac.ac.uk/wp-content/uploads/2017/11/shutterstock_407599291-1520x1000.jpg");
+    background-image: url("/static/images/cartoonWorld.jpg");
     min-height: 80%;
 }
 
 /*Parallax photos for Aims */
 .big-img-10k-hours {
-    background-image: url("https://static1.squarespace.com/static/5c2059ca55b02c69e4852c02/5c23f8a36d2a73a585969e14/5d9e535315c91f38d9a2b90c/1570657321644/10000-hours.png?format=500w");
+    background-image: url("/static/images/tenKHours.png");
     min-height: 50%;
 }
 
 .big-img-small-smart {
-    background-image: url("https://www.professionalacademy.com/media/images-news/smarter-objectives.jpg");
+    background-image: url("/static/images/smarterDesc.jpg");
     min-height: 70%;
 }
 .big-img-goals-plans {
-    background-image: url("https://assets.infusionsoft.com/image/upload/b_rgb:FFFFFF,c_limit,dpr_1,f_auto,h_600,q_95,w_730/v1573508504/2020_Goals_evoemx.jpg");
+    background-image: url("/static/images/2020Goals.jpg");
     min-height: 50%;
 }
 
 .big-img-small-smart-2 {
-    background-image: url("https://www.thebalancesmb.com/thmb/5B7wGRFmXySMaXXh9ZhOhw11v2w=/950x0/smart-goal-examples-2951827_final-5b6887cc46e0fb0050aa0bc9.png");
-    min-height: 70%;
-}
-
-.big-img-messaging {
-    background-image: url("http://expathotelier.com/wordpress/wp-content/uploads/2016/02/Instant-Messaging-Solutions-for-Programmers.jpg");
+    background-image: url("/static/images/smartWithImages.png");
     min-height: 70%;
 }
 
 .big-img-messages {
-    background-image: url("https://www.cannabismarketinginc.com/wp-content/uploads/2018/08/mobile-messaging.jpg");
+    background-image: url("/static/images/mobileMessaging.jpg");
     min-height: 70%;
 }
 .big-img-messages-small {
-    background-image: url("https://www.cannabismarketinginc.com/wp-content/uploads/2018/08/mobile-messaging.jpg");
+    background-image: url("/static/images/mobileMessaging.jpg");
     min-height: 50%;
 }
 

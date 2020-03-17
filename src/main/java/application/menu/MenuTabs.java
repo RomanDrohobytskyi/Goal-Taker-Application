@@ -1,5 +1,8 @@
 package application.menu;
 
+import application.managers.UserManager;
+import application.roles.Role;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,5 +32,21 @@ public class MenuTabs {
         menuElements.add(new MenuElement("#", "w3-bar-item w3-button w3-hide-small w3-right w3-hover-red","fa fa-search", "", "Search"));
 
         return menuElements;
+    }
+
+    public List<MenuElement> smartGoalsMainMenu(){
+        List<MenuElement> menuElements = new ArrayList<>();
+
+        menuElements.add(new MenuElement("/", "w3-bar-item w3-button","fa fa-home", "HOME", "Home page"));
+        menuElements.add(new MenuElement("#", "w3-bar-item w3-button","fa fa-chevron-up", "UP", "Up to the top"));
+        menuElements.add(new MenuElement("/login", "w3-bar-item w3-button w3-hide-small w3-right w3-hover-red","fa fa-sign-in", "", "Login"));
+        menuElements.add(new MenuElement("/profile", "w3-bar-item w3-button w3-hide-small w3-right w3-hover-red","fa fa-user", "", "Profile"));
+        menuElements.add(new MenuElement("#", "w3-bar-item w3-button w3-hide-small w3-right w3-hover-red","fa fa-search", "", "Search"));
+
+        return menuElements;
+    }
+
+    public boolean getIsUserAdmin(){
+        return new UserManager().getLoggedInUser().getRoles().contains(Role.ADMIN);
     }
 }

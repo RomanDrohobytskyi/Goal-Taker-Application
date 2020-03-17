@@ -115,11 +115,11 @@
     <#if loggedTime?has_content>
         <#list loggedTime as loggedTime>
             <#assign timeInProcent=(loggedTime.time * (4.16666666667))>
-            ${loggedTime.description}<#sep>, ${loggedTime.date}
+            ${loggedTime.description}, ${loggedTime.date}
             <div class="w3-light-grey">
                 <div class="w3-container w3-padding-small w3-dark-grey w3-center"
                      style="width:${timeInProcent}%">
-                    <a id="myBtn" style="text-decoration: none;" class="time" title="More details">
+                    <a style="text-decoration: none;" class="time" title="More details">
                         ${loggedTime.time}h
                     </a>
                 </div>

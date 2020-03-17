@@ -67,15 +67,15 @@
         </div>
     </div>
     <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
-    <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
+    <p class="w3-wide"><i class="fa fa-camera"></i>Programming</p>
     <div class="w3-light-grey">
         <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
     </div>
-    <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+    <p class="w3-wide"><i class="fa fa-laptop"></i>Photography</p>
     <div class="w3-light-grey">
-        <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+        <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">80%</div>
     </div>
-    <p class="w3-wide"><i class="fa fa-photo"></i>PhotoShop</p>
+    <p class="w3-wide"><i class="fa fa-photo"></i>Film making</p>
     <div class="w3-light-grey">
         <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
     </div>
@@ -143,9 +143,6 @@
     <#--PHOTOS div-->
     <div class="w3-row-padding w3-center w3-section">
         <h3 class="w3-center">MY PHOTOS</h3>
-
-
-
         <a href="/photos"> <button class="btn btn2 w3-button w3-padding-large" >See more photos</button></a>
     </div>
 </div>

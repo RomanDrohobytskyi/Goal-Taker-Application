@@ -3,6 +3,10 @@
         .fa{margin-right: 5px;}
     </style>
 
+    <#--
+        background: white;
+    color: black;
+    -->
     <!-- NavBar (sit on top) -->
     <div class="w3-top">
         <div class="w3-bar" id="myNavBar">
@@ -15,11 +19,9 @@
             </#list>
         </div>
     </div>
-
 </#macro>
 
 <#macro navBar withSlideMenu=true>
-
     <style>
         .fa{margin-right: 5px;}
     </style>
@@ -54,14 +56,12 @@
             <a href="#" class="w3-bar-item w3-button">SEARCH</a>
         </div>
     </div>
-
 </#macro>
 
 <#--
     TODO: List of url, fa-fa-icon, text
 -->
 <#macro slideMenu >
-
     <style>
         a{text-decoration: none;}
     </style>
@@ -72,10 +72,11 @@
     </a>
     <div class="middle w3-bar-item">
         <div class="sm-container">
-            <div class="sm-menu">
-                <a href="/main" ><i class="fa fa-book"></i>NOTES</a>
-                <a href="/main_aim" ><i class="fa fa-dot-circle-o"></i>AIMS</a>
+            <div class="sm-menu" style="position:fixed;">
                 <a href="/aims" ><i class="fa fa-circle-o"></i>ALL AIMS</a>
+                <a href="/main_aim" ><i class="fa fa-dot-circle-o"></i>S.M.A.R.T</a>
+                <a href="/ten_thousand_hours_aim" ><i class="fa fa-dot-circle-o"></i>10k H</a>
+                <a href="/main" ><i class="fa fa-book"></i>NOTES</a>
                 <a href="/userAnalyzer/activity" ><i class="fa fa-circle-o"></i>USER ANALYZER</a>
                 <a href="/photos" ><i class="fa fa-picture-o"></i>PHOTOS</a>
                 <a href="/projects" ><i class="fa fa-archive"></i>PROJECTS</a>
@@ -86,8 +87,7 @@
 
     <script>
         $(".show-btn").click(function(){
-            $(".sm-menu").fadeToggle("fast");
+            $(".sm-menu").fadeToggle("slow");
         });
     </script>
-
 </#macro>

@@ -8,6 +8,7 @@ import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -82,5 +83,29 @@ public class AimService {
         aim.setAchievedDate(new Date());
 
         return aimRepository.save(aim);
+    }
+
+    /**
+     * Update edited Aim data
+     */
+    public Aim editSmartAim(String title, String text, String description, String specific,
+                            String measurable, String attainable, String relevant,String timeBased,Aim aim){
+        try {
+            aim.setText(text);
+            aim.setDescription(description);
+            aim.setTitle(title);
+            aim.setAimState(State.AimState.EDITED.toString());
+            aim.setSpecify(specific);
+            aim.setMeasurable(measurable);
+            aim.setAttainable(attainable);
+            aim.setRelevant(relevant);
+            aim.setTimeBased(new SimpleDateFormat("yyyy-MM-dd").parse(timeBased));
+            aim.setModificationDate(new Date());
+            aim.setAimState(State.AimState.EDITED.toString());
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return aim;
     }
 }

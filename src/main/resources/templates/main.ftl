@@ -57,7 +57,7 @@
 </div>
 
 <!-- First Parallax Image -->
-<div class="parallax big-img-messaging w3-display-container w3-opacity-min" id="home">
+<div class="parallax big-img-messages w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
         <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Notes</span>
     </div>
@@ -73,9 +73,12 @@
         <form action="/main/add" method="post" enctype="multipart/form-data">
 
             <p class="w3-center">Enter note title: </p>
-            <input type="text" name="text" placeholder="text . . ."/>
+            <@elements.input id="title" name="text" type="text" placeholder="t e x t . . ."
+            onfocus="this.placeholder = ''"  onblur="this.placeholder = 't e x t . . .'"/>
+
             <p class="w3-center">Tag: </p>
-            <input type="text" name="tag" placeholder="tag  . . ."/>
+             <@elements.input id="tag" name="tag" type="text" placeholder="t a g . . ."
+             onfocus="this.placeholder = ''"  onblur="this.placeholder = 't a g . . .'"/>
 
             <p class="w3-center">Choose file to add: </p>
             <input type="file" name="file" placeholder="file . . ." />
@@ -138,6 +141,7 @@
             <br>
         </form>
 
+        <#--Notes table-->
         <@aims.notes messages/>
 
     </div>

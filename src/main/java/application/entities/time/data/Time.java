@@ -1,8 +1,8 @@
 package application.entities.time.data;
 
-import application.controllers.ConvertedDate;
 import application.entities.aim.Aim;
 import application.enums.State;
+import application.utils.ConvertedDate;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
