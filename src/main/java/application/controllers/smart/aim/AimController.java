@@ -87,7 +87,6 @@ public class AimController {
         aimService.deleteAim(aim);
         User loggedInUser = userManager.getLoggedInUser();
         Iterable<Aim> userAims = aimRepository.findByUser(loggedInUser);
-
         model.put("aims", userAims);
 
         return "redirect:/main_aim#aimsTable";
@@ -96,7 +95,6 @@ public class AimController {
     @GetMapping("/main_aim/achieve/{aim}")
     public String achieve(@PathVariable Aim aim, Map<String, Object> model){
         aimService.achieve(aim);
-
         return "redirect:/main_aim#aimsTable";
     }
 

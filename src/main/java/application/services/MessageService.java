@@ -7,6 +7,7 @@ import application.repositories.IMessageRepository;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Optional;
@@ -91,4 +92,16 @@ public class MessageService {
         return messageRepository.save(message);
     }
 
+    public Message adaptEditedMessage(Message message, String text, String tag, MultipartFile file) {
+        FileService fileService = new FileService();
+        fileService.uploadFile(file);
+        message.setText(text);
+        message.setTag(tag);
+        message.setFilename(fileService.getCreatedFileName());
+        message.setState(State.MessageState.EDITED.toString());
+        message.setFilename(fileService.getCreatedFileName());
+
+        messageRepository.save(message);
+        return  message;
+    }
 }

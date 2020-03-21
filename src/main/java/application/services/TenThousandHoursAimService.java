@@ -16,25 +16,20 @@ import java.util.Optional;
 public class TenThousandHoursAimService {
 
     @Autowired
-    private UserService userService;
-    @Autowired
     private ITenThousandHoursAimRepository aimRepository;
 
     public Optional<TenThousandHoursAim> adaptAim(String title, String description, String text, User user) {
 
         if (Strings.isNotEmpty(title) && Strings.isNotEmpty(description) && user != null){
             TenThousandHoursAim aim = new TenThousandHoursAim();
-
             aim.setTitle(title);
             aim.setDescription(description);
             aim.setText(text);
             aim.setCreationDate(new Date());
-
             aim.setUser(user);
             return Optional.of(aim);
         }
         return Optional.empty();
-
     }
 
     public TenThousandHoursAim deleteAim(TenThousandHoursAim aim) {
@@ -57,8 +52,16 @@ public class TenThousandHoursAimService {
         aim.setAimState(State.AimState.ACHIEVED.toString());
         aim.setModificationDate(new Date());
         aim.setAchievedDate(new Date());
-
         return aimRepository.save(aim);
     }
 
+    public TenThousandHoursAim adaptEditedAim(TenThousandHoursAim aim, String title, String text, String description) {
+        aim.setTitle(title);
+        aim.setDescription(description);
+        aim.setText(text);
+        aim.setModificationDate(new Date());
+        aim.setAimState(State.AimState.EDITED.toString());
+        aimRepository.save(aim);
+        return aim;
+    }
 }

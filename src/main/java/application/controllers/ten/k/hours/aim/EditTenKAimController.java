@@ -1,15 +1,12 @@
 package application.controllers.ten.k.hours.aim;
 
 import application.entities.aim.TenThousandHoursAim;
-import application.enums.State;
-import application.repositories.ITenThousandHoursAimRepository;
+import application.services.TenThousandHoursAimService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Date;
 
 @Controller
 @RequestMapping("/editTenKHoursAim")
@@ -17,7 +14,7 @@ import java.util.Date;
 public class EditTenKAimController {
 
     @Autowired
-    private ITenThousandHoursAimRepository aimRepository;
+    private TenThousandHoursAimService aimService;
 
     @GetMapping("{aim}")
     public String getEditForm(@PathVariable TenThousandHoursAim aim, Model model) {
@@ -31,20 +28,12 @@ public class EditTenKAimController {
             @RequestParam String text,
             @RequestParam String description,
             @RequestParam("aimId") TenThousandHoursAim aim) {
-
         try {
-            aim.setTitle(title);
-            aim.setDescription(description);
-            aim.setText(text);
-            aim.setModificationDate(new Date());
-            aim.setAimState(State.AimState.EDITED.toString());
-
-            aimRepository.save(aim);
+            aimService.adaptEditedAim(aim, title, text, description);
         } catch (Exception e){
             e.printStackTrace();
         }
-
-        return "redirect:/ten_thousand_hours_aim#aim_" + aim.getId();
+        return "redirect:/ten_thousand_hours_aim";
     }
 
     @GetMapping("/cancel")

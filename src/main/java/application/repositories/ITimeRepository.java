@@ -8,6 +8,5 @@ import java.util.List;
 
 @Repository
 public interface ITimeRepository extends CrudRepository<Time, Long>{
-
     List<Time> findByAim_Id(Long aimId);
 }

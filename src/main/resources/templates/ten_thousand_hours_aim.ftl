@@ -25,40 +25,7 @@
 </head>
 <body>
 
-    <style>
-        .fa{
-            margin-right: 5px;
-        }
-    </style>
-
-    <!-- NavBar (sit on top) -->
-    <div class="w3-top" id="home">
-        <div class="w3-bar" id="myNavBar">
-            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-                <i class="fa fa-bars"></i>
-            </a>
-            <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
-            <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>UP</a>
-            <a href="#create" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-plus"></i>CREATE</a>
-            <a href="#aims" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i>AIMS</a>
-            <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-out"></i>
-                <form action="/logout" method="post">
-                    <input type="hidden" name="_csrf" value="${_csrf.token}" />
-                </form>
-            </a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-                <i class="fa fa-search"></i>
-            </a>
-        </div>
-
-        <!-- NavBar on small screens -->
-        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-            <a href="#create" class="w3-bar-item w3-button" onclick="toggleFunction()">CREATE</a>
-            <a href="main.ftl" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> MESSAGES</a>
-            <a href="/login" class="w3-bar-item w3-button w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
-            <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-        </div>
-    </div>
+    <@menu.navBar true/>
 
     <div class="parallax big-img-old_clock w3-display-container w3-opacity-min" id="second">
         <div class="w3-display-middle" style="white-space:nowrap;">
@@ -81,21 +48,18 @@
             <form action="/ten_thousand_hours_aim/add" method="get" enctype="multipart/form-data">
 
                 <div class="w3-center">
-
                     <div>
                         <@elements.input id="aim_title" name="title" type="text" placeholder="t i t l e . . ."
-                        onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i t l e . . .'"/>
+                            onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i t l e . . .'"/>
                         <br><br>
-                    <#--<p class="w3-center">d e s c r i p t i o n</p>-->
-                        <@elements.input id="aim_description" name="description" type="text" placeholder="d e s c r i p t i o n  . . ."
-                        onfocus="this.placeholder = ''"  onblur="this.placeholder = 'd e s c r i p t i o n  . . .'"/>
+                        <@elements.input id="aim_description" name="description" type="text"
+                            placeholder="d e s c r i p t i o n  . . ." onfocus="this.placeholder = ''"
+                        onblur="this.placeholder = 'd e s c r i p t i o n  . . .'"/>
                         <br><br>
                         <textarea id="aim_text" name="text" placeholder="t e x t  . . ." rows="2" cols="21"
-                                  style="text-align: center; width: 250px;"></textarea>
+                              style="text-align: center; width: 250px;"></textarea>
                         <br>
-
                         <input type="hidden" name="_csrf" value="${_csrf.token}" />
-
                         <button type="submit" class="btn btn1 w3-button w3-padding-large"
                                 onclick="return validateLength('Title', 'aim_title', 3, 32)">
                             A d d
@@ -113,15 +77,14 @@
     </div>
 
     <#--Aims-->
-    <div class="w3-content w3-container w3-padding-64" id="messages">
+    <div class="w3-content w3-container w3-padding-64" id="aims_table">
         <div id="aims" class="w3-center w3-row">
             <h3 class="w3-center">All aims</h3>
             <@aims.tenThousandAim all_aims/>
         </div>
     </div>
 
-    <div class="parallax big-img-old_clock w3-display-container w3-opacity-min" id="fourth">
-    </div>
+    <div class="parallax big-img-old_clock w3-display-container w3-opacity-min" id="fourth"></div>
 
     <@footer.footer/>
 

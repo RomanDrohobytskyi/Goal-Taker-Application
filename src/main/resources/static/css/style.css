@@ -82,6 +82,12 @@ body, html {
     min-height: 70%;
 }
 
+/* Parallax images USERS */
+.small-img-users-1 {
+    background-image: url("/static/images/linkedUsers.jpg");
+    min-height: 30%;
+}
+
 /*Big parallax photos for /projects*/
 .big-img-projects-1 {
     background-image: url("/static/images/hibernateLogo.png");

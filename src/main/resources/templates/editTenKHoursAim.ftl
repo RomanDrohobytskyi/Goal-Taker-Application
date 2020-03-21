@@ -32,10 +32,6 @@
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
             </form>
         </a>
-
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-            <i class="fa fa-search"></i>
-        </a>
     </div>
 
     <!-- NavBar on small screens -->

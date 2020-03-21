@@ -23,7 +23,6 @@
     <#import "parts/details.ftl" as details>
     <#import "parts/popups.ftl" as popups>
     <#import "parts/menu.ftl" as menu>
-
 </head>
 <body>
 
@@ -31,36 +30,7 @@
     .fa{margin-right: 5px;}
 </style>
 
-<!-- NavBar (sit on top) -->
-<div class="w3-top">
-    <div class="w3-bar" id="myNavBar">
-        <@menu.slideMenu>
-
-        </@menu.slideMenu>
-
-        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-            <i class="fa fa-bars"></i>
-        </a>
-        <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
-        <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>UP</a>
-        <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-in"></i>
-            <form action="/logout" method="post">
-                <input type="hidden" name="_csrf" value="${_csrf.token}" />
-            </form>
-        </a>
-
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-            <i class="fa fa-search"></i>
-        </a>
-    </div>
-
-    <!-- NavBar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-        <a href="greeting.ftl" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
-        <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">UP</a>
-        <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-    </div>
-</div>
+<@menu.navBar true/>
 
 <!-- First Parallax Image -->
 <div class="parallax big-img-users-1 w3-display-container w3-opacity-min" id="home">
@@ -72,13 +42,13 @@
 <div class="w3-content w3-container w3-padding-64" id="details">
 
     <#if aim.aimState == "ACHIEVED">
-        <h3 class="w3-center w3-black" style="background-color: #616161!important;">${aim.title!''}
+        <h3 class="w3-center w3-black" style="background-color: #616161!important;">${aim.title!}
             <i class="fa fa-check" style="color: #2E9267;" title="Achieved!"></i>
         </h3>
     <#else>
-        <h3 class="w3-center w3-black" style="background-color: #616161!important;">${aim.title!''}</h3>
+        <h3 class="w3-center w3-black" style="background-color: #616161!important;">${aim.title!}</h3>
     </#if>
-    <p class="w3-center article"><em>${aim.description!''}</em></p>
+    <p class="w3-center article"><em>${aim.description!}</em></p>
 
     <#--Aim main details-->
     <div class="w3-row" id="main-details" style="padding: 12px 24px!important">
@@ -138,8 +108,7 @@
 </div>
 
 <#--Footer-->
-<@footer.footer>
-</@footer.footer>
+<@footer.footer/>
 
 </body>
 </html>

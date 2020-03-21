@@ -41,9 +41,6 @@
             <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i>CONTACT</a>
             <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
             <a href="/profile" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-user"></i></a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-                <i class="fa fa-search"></i>
-            </a>
         </div>
 
         <!-- NavBar on small screens -->
@@ -53,7 +50,6 @@
             <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
             <a href="/login" class="w3-bar-item w3-button w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
 
-            <a href="#" class="w3-bar-item w3-button">SEARCH</a>
         </div>
     </div>
 </#macro>

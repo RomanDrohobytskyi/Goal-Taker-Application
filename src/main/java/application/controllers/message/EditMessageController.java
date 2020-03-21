@@ -1,9 +1,7 @@
 package application.controllers.message;
 
 import application.entities.message.Message;
-import application.enums.State;
-import application.repositories.IMessageRepository;
-import application.services.FileService;
+import application.services.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -16,7 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class EditMessageController {
 
     @Autowired
-    private IMessageRepository messageRepository;
+    private MessageService messageService;
 
     @GetMapping("{message}")
     @PreAuthorize("hasAuthority('USER')")
@@ -31,16 +29,7 @@ public class EditMessageController {
             @RequestParam String tag,
             @RequestParam("file") MultipartFile file,
             @RequestParam("messageId") Message message) {
-
-        FileService fileService = new FileService();
-        fileService.uploadFile(file);
-
-        message.setText(text);
-        message.setTag(tag);
-        message.setFilename(fileService.getCreatedFileName());
-        message.setState(State.MessageState.EDITED.toString());
-
-        messageRepository.save(message);
+        messageService.adaptEditedMessage(message, text, tag, file);
         return "redirect:/main#message_" + message.getId();
     }
 

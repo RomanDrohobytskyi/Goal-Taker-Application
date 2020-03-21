@@ -100,7 +100,7 @@
                     </#if>
                     <tr id="aim_${aim.id}" style="text-align:center; height: 100px; ${style}">
                         <td><b>
-                            <a href="/aim_details/${aim.id}" style="text-decoration:none" title="Go to details: ${aim.title}">
+                            <a href="/tenKHoursAimDetails/${aim.id}" style="text-decoration:none" title="Go to details: ${aim.title}">
                                 ${aim.id}
                             </a>
                         </b></td>

@@ -21,7 +21,6 @@
         .bar:focus text {
             fill: #777;
         }
-
     </style>
 
     <#if aim?has_content && aim.loggedTime?has_content>
@@ -116,7 +115,7 @@
         <#list loggedTime as loggedTime>
             <#assign timeInProcent=(loggedTime.time * (4.16666666667))>
             ${loggedTime.description}, ${loggedTime.date}
-            <div class="w3-light-grey">
+            <div class="w3-light-grey" title="Creation date: ${loggedTime.creationDate}">
                 <div class="w3-container w3-padding-small w3-dark-grey w3-center"
                      style="width:${timeInProcent}%">
                     <a style="text-decoration: none;" class="time" title="More details">

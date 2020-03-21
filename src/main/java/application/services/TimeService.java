@@ -4,11 +4,15 @@ import application.entities.aim.Aim;
 import application.entities.time.data.Time;
 import application.enums.State;
 import application.repositories.IAimRepository;
+import application.repositories.ITenThousandHoursAimRepository;
 import application.repositories.ITimeRepository;
+import application.utils.ListUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 import static java.util.stream.Collectors.toList;
@@ -20,6 +24,10 @@ public class TimeService {
     private ITimeRepository iTimeRepository;
     @Autowired
     private IAimRepository aimRepository;
+    @Autowired
+    private ITenThousandHoursAimRepository tenThousandHoursAimRepository;
+    @Autowired
+    private ITimeRepository timeRepository;
 
     public Time adaptTime(Double loggedTime, Date date, String description, State.DateState state, Aim aim){
         Time time = new Time();
@@ -32,11 +40,6 @@ public class TimeService {
         return time;
     }
 
-    /**
-     * Getting sorted logged-in Aim time for last 7 days
-     * @param aimId - Aim id
-     * @return - sorted aims for last 7 days
-     */
     public List<Time> getLastWeekTime(Long aimId) {
         List<Time> aimTime = getLoggedTimeForAim(aimId);
         List<Time> lastWeekendTime = aimTime;
@@ -71,13 +74,6 @@ public class TimeService {
         return time;
     }
 
-/*    public Time getMostActiveTime(User user){
-        Set<Aim> aims  = user.getAims();
-        List<Time> allLoggedTimes = getAllLoggedTimeForUserAims(new ArrayList<>(aims));
-        Time time = allLoggedTimes.stream().max(Comparator.comparing(Time::getTime)).get();
-        return time;
-    }*/
-
     public Time getMostActiveTime(List<Time> times){
         Optional<Time> time = times.stream().max(Comparator.comparing(Time::getTime));
         return time.get();
@@ -94,4 +90,20 @@ public class TimeService {
         }
         return allAimsLoggedTime;
     }
+
+    public Optional<Time> saveTimeForAim(Number time, String description, String date, Aim aim) {
+        Optional<Time> newTime = Optional.empty();
+        try {
+            Date convertedDate = new SimpleDateFormat("yyyy-MM-dd").parse(date);
+            newTime = Optional.of(adaptTime(time.doubleValue(), convertedDate, description, State.DateState.NEW, aim));
+            newTime.get().setCreationDate(new Date());
+            timeRepository.save(newTime.get());
+            aim.setLoggedTime(ListUtils.oneElementArrayList(newTime.get()));
+            aimRepository.save(aim);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return newTime;
+    }
+
 }

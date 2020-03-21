@@ -25,16 +25,10 @@
 
 </head>
 <body>
-<script>
-
-</script>
 
 <!-- NavBar (sit on top) -->
 <div class="w3-top">
     <div class="w3-bar" id="myNavBar">
-    <#--<a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">-->
-    <#--<i class="fa fa-bars"></i>-->
-    <#--</a>-->
         <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Home</a>
         <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>Up</a>
         <a href="/main_aim" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> AIMS</a>
@@ -43,16 +37,12 @@
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
             </form>
         </a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-            <i class="fa fa-search"></i>
-        </a>
     </div>
 
     <!-- NavBar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
         <a href="greeting.ftl" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
         <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">Up</a>
-        <a href="#" class="w3-bar-item w3-button">SEARCH</a>
     </div>
 </div>
 

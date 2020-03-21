@@ -23,14 +23,6 @@ public class AimService {
 
     /**
      * This method create new Aim based on parameters.
-     * @param title - aim title
-     * @param description - aim description
-     * @param specific
-     * @param measurable
-     * @param attainable
-     * @param relevant
-     * @param timeBased
-     * @param user - aim creator
      * @return optional of Aim
      */
     public Optional<Aim> adaptAim(String title, String description, String text, String specific, String measurable,

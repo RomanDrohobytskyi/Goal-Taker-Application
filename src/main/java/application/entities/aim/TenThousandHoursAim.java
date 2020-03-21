@@ -1,5 +1,6 @@
 package application.entities.aim;
 
+import application.entities.time.data.TenThousandHoursAimTime;
 import application.entities.time.data.Time;
 import application.entities.user.User;
 import application.enums.State;
@@ -48,6 +49,6 @@ public class TenThousandHoursAim {
     private User user;
     @OneToMany(mappedBy = "aim", targetEntity = Time.class, fetch = FetchType.EAGER)
     @Column(name = "logged_time")
-    private List<Time> loggedTime;
+    private List<TenThousandHoursAimTime> loggedTime;
 
 }

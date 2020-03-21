@@ -1,7 +1,7 @@
 package application.controllers.ten.k.hours.aim;
 
 import application.entities.aim.TenThousandHoursAim;
-import application.entities.time.data.Time;
+import application.entities.time.data.TenThousandHoursAimTime;
 import application.entities.user.User;
 import application.managers.UserManager;
 import application.repositories.ITenThousandHoursAimRepository;
@@ -88,7 +88,7 @@ public class TenThousandHoursAimController {
                 aims.stream()
                         .collect(Collectors.toMap(Function.identity(),
                                 aim -> aim.getLoggedTime().stream()
-                                .mapToDouble(Time::getTime)
+                                .mapToDouble(TenThousandHoursAimTime::getTime)
                                         .sum()));
     }
 
