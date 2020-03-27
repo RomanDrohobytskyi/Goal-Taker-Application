@@ -70,7 +70,7 @@
                 <@charts.largeBarChart loggedTime=lastWeekLoggedTime/>
                 <@popups.details></@popups.details>
                 <br>
-                <a href="/tenKHoursAimAnalyzer/${aim.id}">
+                <a href="/tenKAimTimeAnalyzer/${aim.id}">
                     <button class="btn btn1 w3-button w3-padding-large">Analyzer</button>
                 </a>
             </div>

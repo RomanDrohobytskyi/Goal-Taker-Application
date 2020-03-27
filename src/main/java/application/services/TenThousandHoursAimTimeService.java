@@ -12,12 +12,10 @@ import org.springframework.util.CollectionUtils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 import static java.util.stream.Collectors.toList;
+import static java.util.stream.Collectors.toMap;
 
 @Service
 public class TenThousandHoursAimTimeService {
@@ -93,6 +91,17 @@ public class TenThousandHoursAimTimeService {
             e.printStackTrace();
         }
         return newTime;
+    }
+
+    public Map<Long, Double> getAimLoggedTimeSum(List<TenThousandHoursAim> aims){
+        return aims
+            .stream()
+                .collect(toMap(TenThousandHoursAim::getId,
+                    aim -> aim.getLoggedTime()
+                        .stream()
+                        .mapToDouble(TenThousandHoursAimTime::getTime)
+                        .sum())
+                );
     }
 
 }

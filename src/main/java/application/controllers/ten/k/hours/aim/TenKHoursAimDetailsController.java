@@ -1,10 +1,7 @@
 package application.controllers.ten.k.hours.aim;
 
 import application.entities.aim.TenThousandHoursAim;
-import application.entities.time.data.TenThousandHoursAimTime;
-import application.entities.user.User;
-import application.managers.UserManager;
-import application.repositories.ITenThousandHoursAimRepository;
+import application.services.TenThousandHoursAimService;
 import application.services.TenThousandHoursAimTimeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -14,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -22,16 +18,14 @@ import java.util.Map;
 public class TenKHoursAimDetailsController {
 
     @Autowired
-    private ITenThousandHoursAimRepository aimRepository;
+    private TenThousandHoursAimService aimService;
     @Autowired
     private TenThousandHoursAimTimeService timeService;
-    private UserManager userManager = new UserManager();
 
     @GetMapping("tenKHoursAimDetails/{aim}")
     public String aimDetails(@PathVariable TenThousandHoursAim aim, Model model){
-        List<TenThousandHoursAimTime> lastWeekLoggedTime = timeService.getLastWeekTime(aim.getId());
         model.addAttribute("aim", aim);
-        model.addAttribute("lastWeekLoggedTime", lastWeekLoggedTime);
+        model.addAttribute("lastWeekLoggedTime",  timeService.getLastWeekTime(aim.getId()));
         return "tenKHoursAimDetails";
     }
 
@@ -44,9 +38,7 @@ public class TenKHoursAimDetailsController {
             Map<String, Object> model) {
 
         timeService.saveTimeForTenKHoursAim(time, description, date, aim);
-        User loggedInUser = userManager.getLoggedInUser();
-        Iterable<TenThousandHoursAim> userAims = aimRepository.findByUser(loggedInUser);
-        model.put("aims", userAims);
+        model.put("aims", aimService.getAllLoggedUserAims());
         return "redirect:/tenKHoursAimDetails/" + aim.getId() + "#details";
     }
 

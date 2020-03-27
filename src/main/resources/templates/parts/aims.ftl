@@ -1,79 +1,3 @@
-<#macro smartTable aims>
-
-    <i class="fa fa-hand-pointer-o" aria-hidden="true"><em style="margin-left: 5px;">Click on aim id to check details</em></i>
-    <#-- Table of a aims -->
-    <table id="aimsTable" align="center" width="100%" style="padding: 10px;/*table-layout: fixed;*/">
-        <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Text</th>
-            <th>Smart</th>
-            <th>Edit</th>
-            <th>Delete</th>
-            <th>Achieve</th>
-        </tr>
-
-    <#-- All Aims -->
-        <#if aims?has_content>
-            <#list aims as aim>
-                <#if aim.aimState != "DELETED">
-                    <#assign style = ""/>
-                    <#if aim.aimState == "ACHIEVED">
-                        <#assign style = "text-decoration: line-through; color:#2E9267;"/>
-                    </#if>
-                    <tr id="aim_${aim.id}" style="text-align:center; height: 100px">
-                        <td><b>
-                            <a href="/aim_details/${aim.id}" style="text-decoration:none; ${style}" title="Go to details: ${aim.title}">
-                                ${aim.id}
-                            </a>
-                        </b></td>
-                        <td><span style="${style}">${aim.title}</span></td>
-                        <td style="word-wrap: break-word; ${style}"><i>${aim.description}</i></td>
-                        <td style="word-wrap: break-word; ${style}"><i>${aim.text}</i></td>
-                        <td style="word-wrap: break-word; ${style}">
-                            <i style="${style}" title="S">${aim.specify!''}</i>
-                            <i style="${style}" title="M">${aim.measurable!''}</i>
-                            <i style="${style}" title="A">${aim.attainable!''}</i>
-                            <i style="${style}" title="R">${aim.relevant!''}</i>
-                            <i style="${style}" title="T">${aim.timeBased!''}</i>
-                        </td>
-                        <td>
-                            <div>
-                                <a href="/editAim/${aim.id}" >
-                                    <i class="fa fa-pencil" aria-hidden="true" title="Edit aim ${aim.title}"></i>
-                                </a>
-                            </div>
-                        </td>
-
-                        <td>
-                            <div>
-                                <a href="/main_aim/delete/${aim.id}">
-                                    <i class="fa fa-trash-o" aria-hidden="true" title="Delete aim ${aim.title}"></i>
-                                </a>
-                                <input type="hidden" value="${aim}" name="aim">
-                            </div>
-                        <td>
-                            <div>
-                                <#if aim.aimState == "ACHIEVED">
-                                    <i class="fa fa-check" style="${style}" aria-hidden="true" title="Aim '${aim.title}' - already achieved"></i>
-                                <#else>
-                                    <a href="/main_aim/achieve/${aim.id}">
-                                        <i class="fa fa-check" style="${style}" aria-hidden="true" title="Achieve aim '${aim.title}'"></i>
-                                    </a>
-                                </#if>
-                                <input type="hidden" value="${aim}" name="aim">
-                            </div>
-                        </td>
-                    </tr>
-                </#if>
-            </#list>
-        <#else>
-             <h4 class="w3-center" style="font-weight: bold;">No aims yet</h4>
-        </#if>
-    </table>
-</#macro>
-
 <#macro tenThousandAim aims>
     <i class="fa fa-hand-pointer-o" aria-hidden="true"><em style="margin-left: 5px;">Click on aim id to check details</em></i>
 
@@ -136,22 +60,22 @@
                             </div>
                         </td>
                     </tr>
-                    <#if timeSum?has_content && timeSum[aim]?has_content>
+                   <#-- <#if timeSum?has_content && timeSum.get(aim.id)?has_content>
                         <tr>
                             <td>
                                 <div class="w3-col m6 w3-center w3-padding-large">
                                     <div class="w3-light-grey">
                                         <div class="w3-container w3-padding-small w3-dark-grey w3-center"
-                                             style="width:${timeSum.get(aim)}%">
+                                             style="width:${timeSum.get(aim.id)}%">
                                             <a style="text-decoration: none;" class="time" title="More details">
-                                                ${timeSum.get(aim)}h
+                                                ${timeSum.get(aim.id)}h
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                             </td>
                         </tr>
-                    </#if>
+                    </#if>-->
                 </#if>
             </#list>
         <#else>
@@ -174,8 +98,9 @@
                 <th>Img</th>
                 <th>Edit</th>
                 <th>
-                    <input id="selectAll_checkbox" type="checkbox" title="Check All Messages" onclick="selectDeselectCheckbox('.messageCheckbox');
-                        showSelectedCheckboxesCount('.messageCheckbox', '#count-checked-checkboxes');"/>
+                    <input id="selectAll_checkbox" type="checkbox" title="Check All Messages"
+                       onclick="selectDeselectCheckbox('.messageCheckbox');
+                       showSelectedCheckboxesCount('.messageCheckbox', '#count-checked-checkboxes');"/>
                 </th>
                 <th>Delete</th>
                 <th>Achieve</th>

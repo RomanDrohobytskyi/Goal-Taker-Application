@@ -108,8 +108,21 @@
     <div class="w3-content w3-container w3-padding-64" id="details">
         <div class="w3-col m6 w3-hide-small w3-center">
             <div class="w3-center w3-row">
-                <div id="chartContainer2"></div>
-
+                <#if mostProductive?has_content>
+                    <p style="w3-center">Biggest logged time: </p>
+                    <br>
+                    Description: ${mostProductive.description}
+                    <br>
+                    Aim: ${mostProductive.aim.title}
+                    <br>
+                    Time: ${mostProductive.time!}h
+                    <br>
+                    Date: ${mostProductive.date}
+                    <br>
+                    Creation date: ${mostProductive.creationDate}
+                    <br>
+                    State: ${mostProductive.state}
+                </#if>
             </div>
         </div>
     </div>

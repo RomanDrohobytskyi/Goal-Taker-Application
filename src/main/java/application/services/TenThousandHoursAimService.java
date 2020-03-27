@@ -3,6 +3,7 @@ package application.services;
 import application.entities.aim.TenThousandHoursAim;
 import application.entities.user.User;
 import application.enums.State;
+import application.managers.UserManager;
 import application.repositories.ITenThousandHoursAimRepository;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ public class TenThousandHoursAimService {
 
     @Autowired
     private ITenThousandHoursAimRepository aimRepository;
+    private UserManager userManager = new UserManager();
 
     public Optional<TenThousandHoursAim> adaptAim(String title, String description, String text, User user) {
 
@@ -63,5 +65,16 @@ public class TenThousandHoursAimService {
         aim.setAimState(State.AimState.EDITED.toString());
         aimRepository.save(aim);
         return aim;
+    }
+
+    public List<TenThousandHoursAim> getAllLoggedUserAims(){
+        User loggedInUser = userManager.getLoggedInUser();
+        return aimRepository.findByUser(loggedInUser);
+    }
+
+    public Optional<TenThousandHoursAim> createAim(String title, String description, String text, User user){
+        Optional<TenThousandHoursAim> aimOptional = adaptAim(title, description, text, user);
+        aimOptional.ifPresent(tenThousandHoursAim -> aimRepository.save(tenThousandHoursAim));
+        return aimOptional;
     }
 }

@@ -20,135 +20,66 @@
     <#import "parts/footer.ftl" as footer>
     <#import "parts/elements.ftl" as elements>
     <#import "parts/aims.ftl" as aims>
+    <#import "parts/smartAimMarcos.ftl" as smartMacros>
 
 </head>
 <body>
 
-<style>
-    .fa{
-        margin-right: 5px;
-    }
-</style>
+    <style>
+        .fa{
+            margin-right: 5px;
+        }
+    </style>
 
-<!-- NavBar (sit on top) -->
-<div class="w3-top" id="home">
-    <div class="w3-bar" id="myNavBar">
-        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-            <i class="fa fa-bars"></i>
-        </a>
-        <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
-        <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>UP</a>
-        <a href="#create" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-plus"></i>CREATE</a>
-        <a href="#aims" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i>AIMS</a>
-        <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-out"></i>
-            <form action="/logout" method="post">
-                <input type="hidden" name="_csrf" value="${_csrf.token}" />
+    <@menu.navBar true/>
+
+    <div class="parallax big-img-smart w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">JUST CREATE</span>
+        </div>
+    </div>
+
+    <!-- Create AIM container-->
+    <div class="w3-content w3-container w3-padding-64" id="create">
+        <h3 class="w3-center w3-black ">Create Your A I M</h3>
+        <p class="w3-center article">
+            <em>It`s easier than You think</em>
+        </p>
+        <p class="article-text">
+            What is Lorem Ipsum?
+        </p>
+
+        <div class="w3-center w3-row">
+            <h3 class="w3-center">Create smart AIM</h3>
+            <form action="/main_aim/add" method="get" enctype="multipart/form-data">
+                <div class="w3-center">
+                    <@smartMacros.addSmartAim/>
+                </div>
             </form>
-        </a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-            <i class="fa fa-search"></i>
-        </a>
+        </div>
+
     </div>
 
-    <!-- NavBar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-        <a href="#create" class="w3-bar-item w3-button" onclick="toggleFunction()">CREATE</a>
-        <a href="main.ftl" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> MESSAGES</a>
-        <a href="/login" class="w3-bar-item w3-button w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
-        <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-    </div>
-</div>
-
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="parallax big-img-smart w3-display-container w3-opacity-min" id="second">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">JUST CREATE</span>
-    </div>
-</div>
-
-<!-- Create AIM container-->
-<div class="w3-content w3-container w3-padding-64" id="create">
-    <h3 class="w3-center w3-black ">Create Your A I M</h3>
-    <p class="w3-center article">
-        <em>It`s easier than You think</em>
-    </p>
-    <p class="article-text">
-        What is Lorem Ipsum?
-    </p>
-
-    <div class="w3-center w3-row">
-        <h3 class="w3-center">Create smart AIM</h3>
-        <form action="/main_aim/add" method="get" enctype="multipart/form-data">
-
-            <div class="w3-center">
-
-                <div style=" margin-right: 10px;">
-                    <@elements.input id="aim_title" name="title" type="text" placeholder="t i t l e . . ."
-                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i t l e . . .'"/>
-                    <br><br>
-                    <#--<p class="w3-center">d e s c r i p t i o n</p>-->
-                    <@elements.input id="aim_description" name="description" type="text" placeholder="d e s c r i p t i o n  . . ."
-                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 'd e s c r i p t i o n  . . .'"/>
-                    <br><br>
-                    <textarea id="aim_text" name="text" placeholder="t e x t  . . ." rows="2" cols="21"
-                              style="text-align: center; width: 250px;"></textarea>
-                    <br><br>
-                </div>
-
-                <div style="">
-                    <@elements.input id="specific" name="specific" type="text" placeholder="s p e c i f i c"
-                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 's p e c i f i c'"/>
-                    <br><br>
-                    <@elements.input id="measurable" name="measurable" type="text" placeholder="m e a s u r a b l e"
-                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 'm e a s u r a b l e'"/>
-                    <br><br>
-                    <@elements.input id="attainable" name="attainable" type="text" placeholder="a t t a i n a b l e"
-                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 'a t t a i n a b l e'"/>
-                    <br><br>
-                    <@elements.input id="relevant" name="relevant" type="text" placeholder="r e l e v a n t"
-                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 'r e l e v a n t'"/>
-                    <br><br>
-                    <@elements.input id="timeBased" name="timeBased" type="date" placeholder="t i m e b a s e d"
-                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i m e b a s e d'"/>
-                </div>
-
-                <div class="w3-center" style="float:bottom">
-                    <input type="hidden" name="_csrf" value="${_csrf.token}" />
-
-                    <button type="submit" class="btn btn1 w3-button w3-padding-large"
-                            onclick="return validateLength('Title', 'aim_title', 3, 32)">
-                        A d d
-                    </button>
-                </div>
-            </div>
-
-        </form>
+    <div class="parallax big-img-smart w3-display-container w3-opacity-min" id="third">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">YOUR AIMS</span>
+        </div>
     </div>
 
-</div>
-
-<#--Third paralax IMG-->
-<div class="parallax big-img-smart w3-display-container w3-opacity-min" id="third">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">YOUR AIMS</span>
+    <#--All S.M.A.R.T AIMS table-->
+    <div class="w3-content w3-container w3-padding-64" id="aims">
+        <div class="w3-center w3-row">
+            <h3 class="w3-center">All aims</h3>
+            <@smartMacros.smartTable aims=all_aims/>
+        </div>
     </div>
-</div>
 
-<#--All S.M.A.R.T AIMS table-->
-<div class="w3-content w3-container w3-padding-64" id="aims">
-    <div class="w3-center w3-row">
-        <h3 class="w3-center">All aims</h3>
-        <@aims.smartTable aims = all_aims/>
+    <div class="parallax big-img-smart w3-display-container w3-opacity-min" id="fourth">
     </div>
-</div>
 
-<#--Fourth paralax IMG-->
-<div class="parallax big-img-smart w3-display-container w3-opacity-min" id="fourth">
-</div>
-
-<!-- Footer -->
-<@footer.footer>
-</@footer.footer>
+    <!-- Footer -->
+    <@footer.footer>
+    </@footer.footer>
 
 </body>
 </html>

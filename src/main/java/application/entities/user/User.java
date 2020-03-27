@@ -53,12 +53,15 @@ public class User implements UserDetails{
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
     private Set<TenThousandHoursAim> tenThousandHoursAims;
 
+    public boolean isAdmin(){
+        return getRoles().contains(Role.ADMIN);
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return getRoles();
     }
 
-    /*TODO: methods to do */
     @Override
     public boolean isAccountNonExpired() {
         return true;
