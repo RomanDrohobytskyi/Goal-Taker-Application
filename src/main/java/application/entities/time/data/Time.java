@@ -13,7 +13,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
 
-@Entity(name = "time")
+@Entity(name = "smart_aim_time")
 @Getter
 @Setter
 @NoArgsConstructor

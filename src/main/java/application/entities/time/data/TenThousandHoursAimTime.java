@@ -39,7 +39,7 @@ public class TenThousandHoursAimTime {
     @ManyToOne
     private TenThousandHoursAim aim;
 
-    public ConvertedDate getConvertedDate(Time time){
+    public ConvertedDate getConvertedDate(TenThousandHoursAimTime time){
         ConvertedDate convertedDate = new ConvertedDate();
         Date date = time.getCreationDate();
         LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();

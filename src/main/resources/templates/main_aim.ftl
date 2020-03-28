@@ -25,12 +25,6 @@
 </head>
 <body>
 
-    <style>
-        .fa{
-            margin-right: 5px;
-        }
-    </style>
-
     <@menu.navBar true/>
 
     <div class="parallax big-img-smart w3-display-container w3-opacity-min" id="home">

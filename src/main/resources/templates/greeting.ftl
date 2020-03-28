@@ -17,17 +17,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <#--Macros-->
     <#import "parts/footer.ftl" as footer>
     <#import "parts/image.ftl" as paralax>
     <#import "parts/menu.ftl" as menu>
 </head>
 <body>
 
-<!-- NavBar (sit on top) -->
-<@menu.customMenu elements=menuElements/>
+<@menu.customMenu menuElements slideMenuElements true />
 
-<!-- First Parallax Image with Text -->
 <@paralax.paralax id="home" image="" title="Page Creator" text="Roman Drohobytskyi"
     cssClass="parallax big-img-greeting-1 w3-display-container w3-opacity-min">
 </@paralax.paralax>
@@ -48,12 +45,15 @@
 
     <div class="w3-row">
         <div class="w3-col m6 w3-center w3-padding-large">
-            <img id="myselfPhoto" src="https://pp.userapi.com/c849432/v849432316/b6f85/N5R2bjbNqJE.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this); setMaxHeightAndWight('myselfPhoto');" alt="Photo of Me" width="100%">
-            <p><b><i class="fa fa-user w3-margin-right"></i>Roman Drohobytskyi</b></p><br>
-
+            <img id="myselfPhoto" src="https://pp.userapi.com/c849432/v849432316/b6f85/N5R2bjbNqJE.jpg"
+                 class="w3-round w3-image w3-opacity w3-hover-opacity-off"
+                 onclick="onClick(this); setMaxHeightAndWight('myselfPhoto');" alt="Photo of Me" width="100%">
+            <p><b>
+                <i class="fa fa-user w3-margin-right"></i>
+                Roman Drohobytskyi
+            </b></p><br>
         </div>
 
-        <!-- Hide this text on small devices -->
         <div class="w3-col m6 w3-hide-small w3-padding-large">
             <p class="article-text">
                 Why do we use it?

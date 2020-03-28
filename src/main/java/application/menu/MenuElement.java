@@ -16,6 +16,13 @@ public class MenuElement {
         this.description = description;
     }
 
+    public MenuElement(String url, String cssClass, String name, String description) {
+        this.url = url;
+        this.cssClass = cssClass;
+        this.name = name;
+        this.description = description;
+    }
+
     public String getUrl() {
         return url;
     }
