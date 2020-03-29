@@ -3,10 +3,12 @@ package application.services;
 import application.entities.message.Message;
 import application.entities.user.User;
 import application.enums.State;
+import application.managers.UserManager;
 import application.repositories.IMessageRepository;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
@@ -17,46 +19,7 @@ public class MessageService {
 
     @Autowired
     private IMessageRepository messageRepository;
-
-    private Iterable<Message> allMessages;
-    private Iterable<Message> actualMessages;
-    private Iterable<Message> filteredMessages;
-    private Iterable<Message> deletedMessages;
-
-    public Iterable<Message> getAllMessages() {
-        if(this.allMessages == null){
-            allMessages = messageRepository.findAll();
-        }
-        return allMessages;
-    }
-
-    public void setAllMessages(Iterable<Message> allMessages) {
-        this.allMessages = allMessages;
-    }
-
-    public Iterable<Message> getActualMessages() {
-        return actualMessages;
-    }
-
-    public void setActualMessages(Iterable<Message> actualMessages) {
-        this.actualMessages = actualMessages;
-    }
-
-    public Iterable<Message> getFilteredMessages() {
-        return filteredMessages;
-    }
-
-    public void setFilteredMessages(Iterable<Message> filteredMessages) {
-        this.filteredMessages = filteredMessages;
-    }
-
-    public Iterable<Message> getDeletedMessages() {
-        return deletedMessages;
-    }
-
-    public void setDeletedMessages(Iterable<Message> deletedMessages) {
-        this.deletedMessages = deletedMessages;
-    }
+    private UserManager userManager = new UserManager();
 
     public Optional<Message> adaptMessage(String text, String tag, User user){
         if(Strings.isNotEmpty(text) && Strings.isNotEmpty(tag) && user != null){
@@ -69,22 +32,16 @@ public class MessageService {
         return Optional.empty();
     }
 
+    public void delete(List<Message> messages){
+        for (Message message : messages){
+            deleteMessage(message);
+        }
+    }
+
     public Message deleteMessage(Message message){
         message.setState(State.MessageState.DELETED.toString());
 
         return messageRepository.save(message);
-    }
-
-    /**
-     * Delete List of messages
-     * @param messages
-     */
-    public void delete(List<Message> messages){
-        for (Message message : messages){
-            if (!message.getState().equals("DELETED")){
-                deleteMessage(message);
-            }
-        }
     }
 
     public Message achieve(Message message){
@@ -103,5 +60,14 @@ public class MessageService {
 
         messageRepository.save(message);
         return  message;
+    }
+
+    public List<Message> filterMessages(String filter) {
+        User loggedInUser = userManager.getLoggedInUser();
+        if (StringUtils.isEmpty(filter)) {
+            return messageRepository.findByUser(loggedInUser);
+        } else {
+            return messageRepository.findByTagAndAndUser(filter, loggedInUser);
+        }
     }
 }

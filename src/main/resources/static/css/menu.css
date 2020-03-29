@@ -9,7 +9,7 @@
 
 .sm-container i{
     /*color: #f5f6fa;*/
-    padding: 20px;
+    padding: 10px;
     font-size: 20px;
     cursor: pointer;
     transition: 0.4s;
@@ -21,7 +21,7 @@
 
 .sm-container a:hover{
     text-decoration: none;
-    color: white;
+    color: #777;
 }
 
 .sm-menu{
@@ -42,37 +42,5 @@
     transform: translateX(-50%) rotate(45deg);
 }
 
-
-
-
-
-
-/*.dropdown-menu{
-    display: none;
-    position: absolute;
-    margin: 11px;
-}
-
-.dropdown-menu a{
-    color: #ABADAA;
-    padding: 5px 5px;
-    text-decoration: none;
-    display: block;
-    transition: 0.4s;
-}
-
-.dropdown-menu a:hover{
-    background-color: transparent;
-    color: black;
-    transform: scale(1.2);
-}
-
-.right-menu:hover .dropdown-menu{
-    display: block;
-}
-
-.right-menu:hover .menu-button{
-    background-color: #ABADAA;;
-}*/
 
 

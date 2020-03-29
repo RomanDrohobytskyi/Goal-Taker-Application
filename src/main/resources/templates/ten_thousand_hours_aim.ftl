@@ -25,7 +25,7 @@
 </head>
 <body>
 
-    <@menu.navBar true/>
+    <@menu.customMenu menuElements slideMenuElements/>
 
     <div class="parallax big-img-old_clock w3-display-container w3-opacity-min" id="second">
         <div class="w3-display-middle" style="white-space:nowrap;">

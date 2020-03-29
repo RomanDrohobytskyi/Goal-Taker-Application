@@ -29,7 +29,7 @@
 </head>
 <body>
 
-    <@menu.navBar/>
+    <@menu.customMenu menuElements slideMenuElements/>
 
     <div class="parallax big-img-users-1 w3-display-container w3-opacity-min" id="home">
         <div class="w3-display-middle" style="white-space:nowrap;">

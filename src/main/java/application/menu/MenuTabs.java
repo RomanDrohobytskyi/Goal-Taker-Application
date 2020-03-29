@@ -9,16 +9,6 @@ import java.util.List;
 
 public class MenuTabs {
 
-    private List<MenuElement> menuElements = null;
-
-    public List<MenuElement> getMenuElements() {
-        return menuElements;
-    }
-
-    public void setMenuElements(List<MenuElement> menuElements) {
-        this.menuElements = menuElements;
-    }
-
     public List<MenuElement> defaultMenu(){
         return getDefaultMenuItems();
     }
@@ -41,28 +31,26 @@ public class MenuTabs {
 
     public  List<MenuElement> getDefaultSlideMenuItems(){
         List<MenuElement> menuElements = new ArrayList<>();
-        menuElements.add(new MenuElement("/aims", "fa fa-circle-o", "ALL AIMS", ">ALL AIMS"));
-        menuElements.add(new MenuElement("/main_aim", "fa fa-dot-circle-o", "S.M.A.R.T", "SMART"));
-        menuElements.add(new MenuElement("/ten_thousand_hours_aim", "fa fa-dot-circle-o", "10k H", "10k H"));
-        menuElements.add(new MenuElement("/main", "fa fa-book", "NOTES", "NOTES"));
-        menuElements.add(new MenuElement("/userAnalyzer/activity", "fa fa-circle-o", "USER ANALYZER", "USER ANALYZER"));
-        menuElements.add(new MenuElement("/photos", "fa fa-picture-o", "PHOTOS", "PHOTOS"));
-        menuElements.add(new MenuElement("/projects", "fa fa-archive", "PROJECTS", "PROJECTS"));
+        menuElements.add(new MenuElement("/aims", "w3-bar-item w3-button", "fa fa-circle-o", "ALL AIMS", ">ALL AIMS"));
+        menuElements.add(new MenuElement("/main_aim", "w3-bar-item w3-button", "fa fa-dot-circle-o", "S.M.A.R.T", "SMART"));
+        menuElements.add(new MenuElement("/ten_thousand_hours_aim", "w3-bar-item w3-button", "fa fa-dot-circle-o", "10k H", "10k H"));
+        menuElements.add(new MenuElement("/main", "w3-bar-item w3-button", "fa fa-book", "NOTES", "NOTES"));
+        menuElements.add(new MenuElement("/userAnalyzer/activity", "w3-bar-item w3-button", "fa fa-circle-o", "USER ANALYZER", "USER ANALYZER"));
+        menuElements.add(new MenuElement("/photos", "w3-bar-item w3-button", "fa fa-picture-o", "PHOTOS", "PHOTOS"));
+        menuElements.add(new MenuElement("/projects", "w3-bar-item w3-button", "fa fa-archive", "PROJECTS", "PROJECTS"));
         if (isLoggedUserAdmin()){
-            menuElements.add(new MenuElement("/user", "fa fa-user-circle", "USERS", "USERS"));
+            menuElements.add(new MenuElement("/user", "w3-bar-item w3-button", "fa fa-user-circle", "USERS", "USERS"));
         }
         return menuElements;
     }
 
     public List<MenuElement> smartGoalsMainMenu(){
         List<MenuElement> menuElements = new ArrayList<>();
-
         menuElements.add(new MenuElement("/", "w3-bar-item w3-button","fa fa-home", "HOME", "Home page"));
         menuElements.add(new MenuElement("#", "w3-bar-item w3-button","fa fa-chevron-up", "UP", "Up to the top"));
         menuElements.add(new MenuElement("/login", "w3-bar-item w3-button w3-hide-small w3-right w3-hover-red","fa fa-sign-in", "", "Login"));
         menuElements.add(new MenuElement("/profile", "w3-bar-item w3-button w3-hide-small w3-right w3-hover-red","fa fa-user", "", "Profile"));
         menuElements.add(new MenuElement("#", "w3-bar-item w3-button w3-hide-small w3-right w3-hover-red","fa fa-search", "", "Search"));
-
         return menuElements;
     }
 

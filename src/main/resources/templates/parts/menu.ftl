@@ -1,45 +1,43 @@
-<#macro customMenu elements slideMenuElements withSlideMenu=true >
-    <script type="text/javascript">
-
-           <#--  TODO: white bar for slide menu on show slide menu  -->
-
-       /*
-       https://api.jquery.com/toggleclass/
-       https://stackoverflow.com/questions/26078518/toggle-style-tag-of-div-on-click-in-jquery
-       https://www.w3schools.com/jquery/html_toggleclass.asp
-
-       $(document).ready(function() {
-            $(".red , .green").click(function(){
-                $(this).toggleClass('red green');
-            });
-        });*/
-    </script>
-
+<#macro customMenu elements slideMenuElements>
     <style>
         .fa{margin-right: 5px;}
-
-        .w3-bar{
-            height: 100px;
-        }
-
     </style>
 
-    <#--
-        background: white;
-    color: black;
-    -->
-    <!-- NavBar (sit on top) -->
     <div class="w3-top">
         <div class="w3-bar" id="myNavBar">
-            <#if withSlideMenu>
-                <@customSlideMenu slideMenuElements/>
-            </#if>
+            <@customSlideMenu slideMenuElements/>
 
             <#list elements as element>
                 <a href="${element.url!''}" class="${element.hrefCssClass!''}"><i class="${element.cssClass!''}"></i>${element.name!''}</a>
             </#list>
         </div>
     </div>
+</#macro>
+
+<#macro customSlideMenu slideMenuElements>
+    <style>
+        a{text-decoration: none;}
+    </style>
+
+    <a class="show-btn w3-bar-item w3-button" style="height: 38px;" href="javascript:void(0);"
+       onclick="slideMenuToggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+    </a>
+    <div id="slideMenu" class="middle w3-bar-item">
+        <div class="sm-container">
+            <div class="sm-menu" style="position:fixed;">
+                <#list slideMenuElements as element>
+                    <a href="${element.url!''}" class="${element.hrefCssClass!''}"><i class="${element.cssClass!''}"></i>${element.name!''}</a>
+                </#list>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(".show-btn").click(function(){
+            $(".sm-menu").fadeToggle("slow");
+        });
+    </script>
 </#macro>
 
 <#macro navBar withSlideMenu=true>
@@ -75,9 +73,6 @@
     </div>
 </#macro>
 
-<#--
-    TODO: List of url, fa-fa-icon, text
--->
 <#macro slideMenu>
     <style>
         a{text-decoration: none;}
@@ -109,28 +104,24 @@
     </script>
 </#macro>
 
-<#macro customSlideMenu slideMenuElements>
+<#macro loginMenu>
     <style>
-        a{text-decoration: none;}
+        .fa{margin-right: 5px;}
     </style>
 
-    <a class="show-btn w3-bar-item w3-button" style="height: 38px;" href="javascript:void(0);"
-       onclick="slideMenuToggleFunction()" title="Toggle Navigation Menu">
-        <i class="fa fa-bars"></i>
-    </a>
-    <div id="slideMenu" class="middle w3-bar-item">
-        <div class="sm-container">
-            <div class="sm-menu" style="position:fixed;">
-                <#list slideMenuElements as element>
-                    <a href="${element.url!''}"><i class="${element.cssClass!''}"></i>${element.name!''}</a>
-                </#list>
-            </div>
+    <!-- NavBar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavBar">
+            <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>UP</a>
+            <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
+        </div>
+
+        <!-- NavBar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="/" class="w3-bar-item w3-button w3-right w3-hover-red"><i class="fa fa-home"></i></a>
+            <a href="/login" class="w3-bar-item w3-button w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
+
         </div>
     </div>
-
-    <script>
-        $(".show-btn").click(function(){
-            $(".sm-menu").fadeToggle("slow");
-        });
-    </script>
 </#macro>

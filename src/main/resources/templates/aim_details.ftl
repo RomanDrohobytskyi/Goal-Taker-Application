@@ -30,7 +30,7 @@
         .fa{margin-right: 5px;}
     </style>
 
-    <@menu.navBar true/>
+    <@menu.customMenu menuElements slideMenuElements/>
 
     <!-- First Parallax Image -->
     <div class="parallax big-img-users-1 w3-display-container w3-opacity-min" id="home">

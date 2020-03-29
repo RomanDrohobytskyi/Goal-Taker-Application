@@ -1,6 +1,7 @@
 package application.controllers.user;
 
 import application.managers.UserManager;
+import application.menu.MenuTabs;
 import application.services.TimeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -24,7 +25,8 @@ public class UserAnalyzer {
 
         //User loggedInUser = userManager.getLoggedInUser();
         //Time time = timeService.getMostActiveTime(loggedInUser);
-
+        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
+        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
         return "user_analyzer";
     }
 }

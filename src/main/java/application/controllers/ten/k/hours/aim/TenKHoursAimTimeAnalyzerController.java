@@ -2,6 +2,7 @@ package application.controllers.ten.k.hours.aim;
 
 import application.entities.aim.TenThousandHoursAim;
 import application.entities.time.data.TenThousandHoursAimTime;
+import application.menu.MenuTabs;
 import application.repositories.ITenThousandHoursAimRepository;
 import application.services.TenThousandHoursAimTimeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +36,8 @@ public class TenKHoursAimTimeAnalyzerController {
         model.addAttribute("lessProductive", timeService.getLessActiveTime(loggedTime));
         model.addAttribute("mostProductive", timeService.getMostActiveTime(loggedTime));
         model.addAttribute("lastSevenDaysTime", lastSevenDaysTime);
+        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
+        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
         return "time_analyzer";
     }
 

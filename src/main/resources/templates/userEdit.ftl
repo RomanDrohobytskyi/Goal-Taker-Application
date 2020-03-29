@@ -20,89 +20,64 @@
     <#import "parts/elements.ftl" as elements>
 </head>
 <body>
-<!-- NavBar (sit on top) -->
-<div class="w3-top">
-    <div class="w3-bar" id="myNavBar">
-        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-            <i class="fa fa-bars"></i>
-        </a>
-        <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Home</a>
-        <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>Up</a>
-        <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-in"></i>
-            <form action="/logout" method="post">
-                <input type="hidden" name="_csrf" value="${_csrf.token}" />
-            </form>
-        </a>
 
+    <@menu.customMenu menuElements slideMenuElements/>
 
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-            <i class="fa fa-search"></i>
-        </a>
+    <!-- First Parallax Image -->
+    <div class="parallax big-img-users-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">List of Users</span>
+        </div>
     </div>
 
-    <!-- NavBar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-        <a href="greeting.ftl" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
-        <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">Up</a>
-        <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-    </div>
-</div>
+    <!-- User Editor -->
+    <div class="w3-content w3-container w3-padding-64" id="add-message">
 
-<!-- First Parallax Image -->
-<div class="parallax big-img-users-1 w3-display-container w3-opacity-min" id="home">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">List of Users</span>
-    </div>
-</div>
+        <h3 class="w3-center">EDITOR</h3>
 
-<!-- User Editor -->
-<div class="w3-content w3-container w3-padding-64" id="add-message">
+        <div class="w3-center w3-row">
 
-    <h3 class="w3-center">EDITOR</h3>
-
-    <div class="w3-center w3-row">
-
-        <form action="/user" method="post" style="margin: 30px 10px 10px">
-            <p class="w3-center">User name: </p>
-            <label>
-                <input type="text" name="username" value="${user.username}">
-            </label>
-            <p class="w3-center">First name: </p>
-            <label>
-                <input type="text" name="firstName" value="${user.firstName}">
-            </label>
-            <p class="w3-center">Last name: </p>
-            <label>
-                <input type="text" name="lastName" value="${user.lastName}">
-            </label>
-
-            <#list roles as role>
-            <br>
-            <div>
+            <form action="/user" method="post" style="margin: 30px 10px 10px">
+                <p class="w3-center">User name: </p>
                 <label>
-                    <input type="checkbox" name="${role}"
-                        ${user.roles?seq_contains(role)?string("checked", "")}>
-                    ${role}
+                    <input type="text" name="username" value="${user.username}">
                 </label>
-            </div>
-            </#list>
-            <br>
-            <input type="hidden" value="${user.id}" name="userId">
-            <input type="hidden" value="${_csrf.token}" name="_csrf">
-            <button type="submit" class="small-btn btn2 w3-button w3-padding-large">Save</button>
-        </form>
-    </div>
-</div>
+                <p class="w3-center">First name: </p>
+                <label>
+                    <input type="text" name="firstName" value="${user.firstName}">
+                </label>
+                <p class="w3-center">Last name: </p>
+                <label>
+                    <input type="text" name="lastName" value="${user.lastName}">
+                </label>
 
-<#--Second Paralax IMG-->
-<div class="parallax big-img-users-1 w3-display-container w3-opacity-min" id="home">
-    <div class="w3-display-middle" style="white-space:nowrap;">
+                <#list roles as role>
+                <br>
+                <div>
+                    <label>
+                        <input type="checkbox" name="${role}"
+                            ${user.roles?seq_contains(role)?string("checked", "")}>
+                        ${role}
+                    </label>
+                </div>
+                </#list>
+                <br>
+                <input type="hidden" value="${user.id}" name="userId">
+                <input type="hidden" value="${_csrf.token}" name="_csrf">
+                <button type="submit" class="small-btn btn2 w3-button w3-padding-large">Save</button>
+            </form>
+        </div>
     </div>
-</div>
 
-<#--Footer-->
-<@footer.footer>
-</@footer.footer>
+    <#--Second Paralax IMG-->
+    <div class="parallax big-img-users-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+        </div>
+    </div>
+
+    <#--Footer-->
+    <@footer.footer>
+    </@footer.footer>
 
 </body>
 </html>

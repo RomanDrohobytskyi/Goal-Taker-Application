@@ -4,6 +4,7 @@ import application.entities.aim.Aim;
 import application.entities.aim.TenThousandHoursAim;
 import application.entities.message.Message;
 import application.entities.user.User;
+import application.menu.MenuTabs;
 import application.repositories.IAimRepository;
 import application.repositories.IMessageRepository;
 import application.repositories.ITenThousandHoursAimRepository;
@@ -50,6 +51,8 @@ public class UserController {
     @GetMapping
     public String userList(Model model){
         model.addAttribute("users", iUserRepository.findAll());
+        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
+        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
         return "userList";
     }
 
@@ -66,6 +69,8 @@ public class UserController {
     public String userEditForm(@PathVariable User user, Model model){
         model.addAttribute("user", user);
         model.addAttribute("roles", Role.values());
+        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
+        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
         return "userEdit";
     }
 

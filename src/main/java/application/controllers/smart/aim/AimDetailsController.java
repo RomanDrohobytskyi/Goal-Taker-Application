@@ -4,6 +4,7 @@ import application.entities.aim.Aim;
 import application.entities.time.data.Time;
 import application.entities.user.User;
 import application.managers.UserManager;
+import application.menu.MenuTabs;
 import application.repositories.IAimRepository;
 import application.services.TimeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,8 @@ public class AimDetailsController {
         List<Time> lastWeekLoggedTime = timeService.getLastWeekTime(aim.getId());
         model.addAttribute("aim", aim);
         model.addAttribute("lastWeekLoggedTime", lastWeekLoggedTime);
+        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
+        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
         return "aim_details";
     }
 

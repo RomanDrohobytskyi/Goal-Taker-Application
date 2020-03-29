@@ -1,6 +1,7 @@
 package application.controllers.smart.aim;
 
 import application.entities.aim.Aim;
+import application.menu.MenuTabs;
 import application.repositories.IAimRepository;
 import application.services.AimService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,8 @@ public class EditAimController {
     @GetMapping("{aim}")
     public String getEditForm(@PathVariable Aim aim, Model model) {
         model.addAttribute("aim", aim);
+        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
+        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
         return "editAim";
     }
 

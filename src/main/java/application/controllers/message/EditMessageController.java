@@ -1,6 +1,7 @@
 package application.controllers.message;
 
 import application.entities.message.Message;
+import application.menu.MenuTabs;
 import application.services.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -20,6 +21,8 @@ public class EditMessageController {
     @PreAuthorize("hasAuthority('USER')")
     public String getEditForm(@PathVariable Message message, Model model){
         model.addAttribute("message", message);
+        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
+        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
         return "editMessage";
     }
 

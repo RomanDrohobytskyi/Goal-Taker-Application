@@ -3,6 +3,7 @@ package application.controllers.smart.aim;
 import application.entities.aim.Aim;
 import application.entities.user.User;
 import application.managers.UserManager;
+import application.menu.MenuTabs;
 import application.repositories.IAimRepository;
 import application.services.AimService;
 import application.utils.MapUtils;
@@ -40,6 +41,8 @@ public class AimController {
         Iterable<Aim> userAims = aimRepository.findByUser(loggedInUser);
 
         model.addAttribute("all_aims", userAims);
+        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
+        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
         return "main_aim";
     }
 

@@ -1,6 +1,7 @@
 package application.controllers.ten.k.hours.aim;
 
 import application.entities.aim.TenThousandHoursAim;
+import application.menu.MenuTabs;
 import application.services.TenThousandHoursAimService;
 import application.services.TenThousandHoursAimTimeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,8 @@ public class TenKHoursAimDetailsController {
     public String aimDetails(@PathVariable TenThousandHoursAim aim, Model model){
         model.addAttribute("aim", aim);
         model.addAttribute("lastWeekLoggedTime",  timeService.getLastWeekTime(aim.getId()));
+        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
+        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
         return "tenKHoursAimDetails";
     }
 

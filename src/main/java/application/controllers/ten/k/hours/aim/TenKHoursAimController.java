@@ -2,6 +2,7 @@ package application.controllers.ten.k.hours.aim;
 
 import application.entities.aim.TenThousandHoursAim;
 import application.entities.user.User;
+import application.menu.MenuTabs;
 import application.services.TenThousandHoursAimService;
 import application.services.TenThousandHoursAimTimeService;
 import application.utils.MapUtils;
@@ -28,6 +29,8 @@ public class TenKHoursAimController {
     public String allAims(Model model){
         model.addAttribute("all_aims", aimService.getAllLoggedUserAims());
         model.addAttribute("timeSum", aimTimeService.getAimLoggedTimeSum((aimService.getAllLoggedUserAims())));
+        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
+        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
         return "ten_thousand_hours_aim";
     }
 

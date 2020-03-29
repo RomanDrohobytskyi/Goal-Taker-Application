@@ -22,58 +22,37 @@
     <#import "parts/elements.ftl" as elements>
 </head>
 <body>
-<!-- NavBar (sit on top) -->
-<div class="w3-top">
-    <div class="w3-bar" id="myNavBar">
-        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-            <i class="fa fa-bars"></i>
-        </a>
-        <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Home</a>
-        <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>Up</a>
 
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-            <i class="fa fa-search"></i>
-        </a>
+    <@menu.customMenu menuElements slideMenuElements/>
+
+    <!-- LOGIN Parallax Image -->
+    <div class="parallax big-img-login-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Login</span>
+        </div>
     </div>
 
-    <!-- NavBar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-        <a href="greeting.ftl" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
-        <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">Up</a>
-        <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+    <!-- LOGIN Container -->
+    <div class="w3-content w3-container w3-padding-64" id="login">
+        <div class="w3-center w3-row">
+            <form method="get" action="/login">
+                <p style="color: red">
+                ${validatorError!}
+                </p>
+            </form>
+
+            <form method="post" action="/login">
+                <p class="w3-center">Enter Email: </p>
+                <input class="login-input" type="email" name="username" placeholder="${email!''}"/>
+                <p class="w3-center">Enter password: </p>
+                <input type="hidden" name="_csrf" value="${_csrf.token}" />
+                <input class="login-input" type="password" name="password" placeholder="password"/>
+                <br>
+                <button type="submit" class="btn btn1 w3-button w3-padding-large">Save</button>
+            </form>
+        </div>
     </div>
-</div>
 
-<!-- LOGIN Parallax Image -->
-<div class="parallax big-img-login-1 w3-display-container w3-opacity-min" id="home">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Login</span>
-    </div>
-</div>
-
-<!-- LOGIN Container -->
-<div class="w3-content w3-container w3-padding-64" id="login">
-    <div class="w3-center w3-row">
-        <form method="get" action="/login">
-            <p style="color: red">
-            ${validatorError!}
-            </p>
-        </form>
-
-        <form method="post" action="/login">
-            <p class="w3-center">Enter Email: </p>
-            <input class="login-input" type="email" name="username" placeholder="${email!''}"/>
-            <p class="w3-center">Enter password: </p>
-            <input type="hidden" name="_csrf" value="${_csrf.token}" />
-            <input class="login-input" type="password" name="password" placeholder="password"/>
-            <br>
-            <button type="submit" class="btn btn1 w3-button w3-padding-large">Save</button>
-        </form>
-    </div>
-</div>
-
-<@footer.footer>
-</@footer.footer>
-
+    <@footer.footer/>
 </body>
 </html>
