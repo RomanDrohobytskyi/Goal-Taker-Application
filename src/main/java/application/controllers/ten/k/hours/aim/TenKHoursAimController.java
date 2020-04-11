@@ -5,7 +5,6 @@ import application.entities.user.User;
 import application.menu.MenuTabs;
 import application.services.TenThousandHoursAimService;
 import application.services.TenThousandHoursAimTimeService;
-import application.utils.MapUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -15,7 +14,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Map;
-import java.util.Optional;
 
 @Controller
 public class TenKHoursAimController {
@@ -28,8 +26,9 @@ public class TenKHoursAimController {
     @GetMapping("/ten_thousand_hours_aim")
     public String allAims(Model model){
         model.addAttribute("all_aims", aimService.getAllLoggedUserAims());
-        model.addAttribute("timeSum", aimTimeService.getAimLoggedTimeSum((aimService.getAllLoggedUserAims())));
-        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
+        model.addAttribute("timeSum", aimTimeService.getAimsLoggedTimeSum((aimService.getAllLoggedUserAims())));
+        model.addAttribute("allAimsTimeSum", aimTimeService.getAimsLoggedTimeSum((aimService.getAllLoggedUserAims()))); //TODO
+        model.addAttribute("menuElements", new MenuTabs().smartGoalsMainMenu());
         model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
         return "ten_thousand_hours_aim";
     }
@@ -42,13 +41,8 @@ public class TenKHoursAimController {
             @RequestParam String text,
             Map<String, Object> model) {
 
-        Optional<TenThousandHoursAim> aimOptional = aimService.createAim(title, description, text, user);
-        if (aimOptional.isPresent()){
-            model.put("aims",  user.getTenThousandHoursAims());
-        }
-        else {
-            model.put("aims", MapUtils.oneElementHashMap("", ""));
-        }
+        aimService.createAim(title, description, text, user);
+        model.put("aims",  user.getTenThousandHoursAims());
         return "redirect:/ten_thousand_hours_aim#aimsTable";
     }
 

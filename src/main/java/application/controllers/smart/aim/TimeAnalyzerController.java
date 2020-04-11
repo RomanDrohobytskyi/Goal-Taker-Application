@@ -36,7 +36,8 @@ public class TimeAnalyzerController {
         model.addAttribute("lessProductive", timeService.getLessActiveTime(loggedTime));
         model.addAttribute("mostProductive", timeService.getMostActiveTime(loggedTime));
         model.addAttribute("lastSevenDaysTime", lastSevenDaysTime);
-        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
+        model.addAttribute("loggedTimeSum", timeService.getAimLoggedTimeSum(loggedTime));
+        model.addAttribute("menuElements", new MenuTabs().timeAnalyzerMenu());
         model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
         return "time_analyzer";
     }

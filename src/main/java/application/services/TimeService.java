@@ -106,4 +106,10 @@ public class TimeService {
         return newTime;
     }
 
+    public Double getAimLoggedTimeSum(List<Time> loggedTime) {
+        return loggedTime
+                .stream()
+                .mapToDouble(Time::getTime)
+                .sum();
+    }
 }

@@ -39,9 +39,8 @@ public class AimController {
     public String allAims(Model model){
         User loggedInUser = userManager.getLoggedInUser();
         Iterable<Aim> userAims = aimRepository.findByUser(loggedInUser);
-
         model.addAttribute("all_aims", userAims);
-        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
+        model.addAttribute("menuElements", new MenuTabs().smartGoalsMainMenu());
         model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
         return "main_aim";
     }

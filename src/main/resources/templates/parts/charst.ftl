@@ -39,71 +39,6 @@
     </#if>
 </#macro>
 
-<#macro columnChart time>
-     <script type="text/javascript">
-         window.onload = function () {
-
-             var chart1 = new CanvasJS.Chart("chartContainer1", {
-                 theme: "light1", // "light2", "dark1", "dark2"
-                 animationEnabled: false, // change to true
-                 title:{
-                     text: "Column chart"
-                 },
-                 data: [
-                     {
-                         // Change type to "bar", "area", "spline", "pie",etc.
-                         type: "column",
-                         dataPoints: [
-                                <#list time as time>
-                                    {label: '${time.getConvertedDate(time).toString()}', y: ${time.time?string}},
-                                </#list>
-                         ]
-                     }
-                 ]
-             });
-             chart1.render();
-
-         }
-     </script>
-            <div id="chartContainer1" style="height: 370px; width: 100%;"></div>
-            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
-</#macro>
-
-
-<#macro lineChart time>
-     <script type="text/javascript">
-         window.onload = function () {
-
-             var chart2 = new CanvasJS.Chart("chartContainer2", {
-                 theme: "light1", // "light2", "dark1", "dark2"
-                 animationEnabled: false, // change to true
-                 title:{
-                     text: "Line chart"
-                 },
-                 data: [
-                     {
-                         // Change type to "bar", "area", "spline", "pie",etc.
-                         type: "line",
-                         dataPoints: [
-                                <#list time as time>
-                                    <#assign day = time.getConvertedDate(time).day>
-                                    <#assign month = time.getConvertedDate(time).month>
-                                    <#assign year = time.getConvertedDate(time).year>
-                                    {label: '${time.getConvertedDate(time).toString()}', y: ${time.time?string}},
-                                </#list>
-                         ]
-                     }
-                 ]
-             });
-             chart2.render();
-
-         }
-     </script>
-            <div id="chartContainer2" style="height: 370px; width: 100%;"></div>
-            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
-</#macro>
-
-
 <#macro largeBarChart loggedTime>
     <style>
         .time:hover{
@@ -131,7 +66,6 @@
 
 
 <#macro all loggedTime lastSevenDaysTime mostProductive lessProductive>
-
 <script type="text/javascript">
     window.onload = function () {
         var chart = new CanvasJS.Chart("chartContainer1",
@@ -187,7 +121,6 @@
                 });
         chart.render();
 
-
         var chart = new CanvasJS.Chart("chartContainer3",
                 {
                     animationEnabled: true,
@@ -215,9 +148,9 @@
                                               {
                                                   label: '${time.getConvertedDate(time).toString()}',
                                                   y: ${time.time?string},
-                                                 indexLabel: "lowest",
-                                                 markerColor: "DarkSlateGrey",
-                                                 markerType: "cross"
+                                                  indexLabel: "lowest",
+                                                  markerColor: "DarkSlateGrey",
+                                                  markerType: "cross"
                                               },
                                          <#else>
                                              {

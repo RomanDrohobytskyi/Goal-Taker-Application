@@ -77,7 +77,6 @@
 
 
 <#macro addSmartAim>
-
      <div style=" margin-right: 10px;">
                     <@elements.input id="aim_title" name="title" type="text" placeholder="t i t l e . . ."
                     onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i t l e . . .'"/>
@@ -116,4 +115,13 @@
             A d d
         </button>
     </div>
+</#macro>
+
+<#macro smartAttributes aim>
+    <strong>S.M.A.R.T</strong> <br>
+    S: ${aim.specify} <br>
+    M: ${aim.measurable} <br>
+    A: ${aim.attainable} <br>
+    R: ${aim.relevant} <br>
+    T: ${aim.timeBased} <br>
 </#macro>

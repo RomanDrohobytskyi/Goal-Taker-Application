@@ -32,16 +32,13 @@ body, html {
 
 /* Create a Parallax Effect */
 .parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: no-repeat fixed center;
     background-size: cover;
 }
 
-/* Parallax images for greeting.ftl*/
 .big-img-greeting-1 {
     background-image: url("/static/images/webWithRainDrops.jpg");
-    min-height: 80%;
+    min-height: 100%;
 }
 
 .big-img-greeting-2 {
@@ -54,7 +51,6 @@ body, html {
     min-height: 400px;
 }
 
-/* Parallax images for login.ftl*/
 .big-img-login-1 {
     background-image: url("/static/images/cyberLock.png");
     min-height: 400px;
@@ -70,25 +66,21 @@ body, html {
     min-height: 70%;
 }
 
-/* Parallax images WELCOME */
 .big-img-welcome-1 {
     background-image: url("/static/images/welcome.jpg");
     min-height: 70%;
 }
 
-/* Parallax images USERS */
 .big-img-users-1 {
     background-image: url("/static/images/linkedUsers.jpg");
     min-height: 70%;
 }
 
-/* Parallax images USERS */
 .small-img-users-1 {
     background-image: url("/static/images/linkedUsers.jpg");
     min-height: 30%;
 }
 
-/*Big parallax photos for /projects*/
 .big-img-projects-1 {
     background-image: url("/static/images/hibernateLogo.png");
     min-height: 70%;
@@ -109,13 +101,11 @@ body, html {
     min-height: 70%;
 }
 
-/*Parallax photos for Aims */
 .big-img-smart {
     background-image: url("/static/images/smartGoals.jpg");
     min-height: 70%;
 }
 
-/*Parallax photos for Aims */
 .big-img-ten-k-hours {
     background-image: url("/static/images/tenKHourspng.png");
     min-height: 70%;
@@ -126,13 +116,11 @@ body, html {
     min-height: 70%;
 }
 
-/*Parallax photos for Aims */
 .big-img-aims {
     background-image: url("/static/images/cartoonWorld.jpg");
     min-height: 80%;
 }
 
-/*Parallax photos for Aims */
 .big-img-10k-hours {
     background-image: url("/static/images/tenKHours.png");
     min-height: 50%;
@@ -142,6 +130,7 @@ body, html {
     background-image: url("/static/images/smarterDesc.jpg");
     min-height: 70%;
 }
+
 .big-img-goals-plans {
     background-image: url("/static/images/2020Goals.jpg");
     min-height: 50%;
@@ -156,10 +145,50 @@ body, html {
     background-image: url("/static/images/mobileMessaging.jpg");
     min-height: 70%;
 }
+
 .big-img-messages-small {
     background-image: url("/static/images/mobileMessaging.jpg");
     min-height: 50%;
 }
+
+.big-img-macro-raindrop {
+    background-image: url("/static/images/raindrop.png");
+    min-height: 80%;
+}
+
+.big-img-macro-raindrop-small {
+    background-image: url("/static/images/raindrop.png");
+    min-height: 50%;
+}
+
+.big-img-macro-snowflake {
+    background-image: url("/static/images/snowflake.jpg");
+    min-height: 70%;
+}
+
+.big-img-macro-snowflake-2 {
+    background-image: url("/static/images/snowflake2.jpg");
+    min-height: 50%;
+}
+
+.big-img-macro-snowflake-3 {
+    background-image: url("/static/images/snowflake3.jpg");
+    min-height: 50%;
+}
+
+.big-img-analytics-charts-big {
+    background-image: url("/static/images/analiticsCharts2.jpg");
+    min-height: 80%;
+}
+
+.big-img-analytics-charts{
+    background-image: url("/static/images/analiticsCharts2.jpg");
+    min-height: 50%;
+}
+
+
+
+
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
@@ -167,7 +196,7 @@ body, html {
 a:hover {
     color: cornflowerblue;
 }
-/* selected link */
+
 a:active {
     color: seagreen;
 }

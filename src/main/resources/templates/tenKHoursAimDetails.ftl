@@ -21,6 +21,7 @@
     <#import "parts/elements.ftl" as elements>
     <#import "parts/charst.ftl" as charts>
     <#import "parts/details.ftl" as details>
+    <#import "parts/timeMacros.ftl" as time>
     <#import "parts/popups.ftl" as popups>
     <#import "parts/menu.ftl" as menu>
 
@@ -33,9 +34,9 @@
 
     <@menu.customMenu menuElements slideMenuElements/>
 
-    <div class="parallax big-img-users-1 w3-display-container w3-opacity-min" id="home">
+    <div class="parallax big-img-macro-raindrop w3-display-container w3-opacity-min" id="home">
         <div class="w3-display-middle" style="white-space:nowrap;">
-            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Aim</span>
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Details</span>
         </div>
     </div>
 
@@ -60,11 +61,11 @@
         </div>
 
         <div class="w3-center">
-            <h3 class="w3-center" style="color: #777!important;">Logged time</h3>
+            <h3 class="w3-center" style="color: #777!important;">Time logging</h3>
         </div>
 
         <div class="w3-row">
-        <#--Left side of dib-->
+            <#--Left side of dib-->
             <div class="w3-col m6 w3-center w3-padding-large">
                 <@charts.largeBarChart loggedTime=lastWeekLoggedTime/>
                 <@popups.details></@popups.details>
@@ -73,28 +74,10 @@
                     <button class="btn btn1 w3-button w3-padding-large">Analyzer</button>
                 </a>
             </div>
-
+            <#--Rigth side of dib-->
             <div class="w3-col m6 w3-hide-small w3-center">
                 <form action="/tenKHoursAimDetails/saveDetails" method="get">
-                    <p class="w3-center article">Log worked time on aim: <em>${aim.title}</em></p>
-
-                    <p>Time: </p>
-                    <@elements.input id="time" name="time" type="number" placeholder="t i m e . . ."
-                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i m e . . .'" step="0.5"
-                    min="0.5" max="24"/>
-
-                    <p>Description: </p>
-                      <@elements.input id="description" name="description" type="text" placeholder="d e s c . . ."
-                      onfocus="this.placeholder = ''"  onblur="this.placeholder = 'd e s c . . .'"/>
-
-                    <p>Date: </p>
-                     <@elements.input id="date" name="date" type="date" placeholder="d a t e . . ."
-                     onfocus="this.placeholder = ''"  onblur="this.placeholder = 'd a t e . . .'"/>
-                    <br>
-
-                    <input type="hidden" value="${aim.id}" name="aimId">
-                    <input type="hidden" name="_csrf" value="${_csrf.token}" />
-                    <button type="submit" class="btn btn1 w3-button w3-padding-large">L o g</button>
+                   <@time.timeLogging aim/>
                 </form>
             </div>
         </div>
@@ -106,7 +89,7 @@
         </div>
     </div>
 
-    <div class="parallax big-img-users-1 w3-display-container w3-opacity-min" id="home">
+    <div class="parallax big-img-macro-raindrop-small w3-display-container w3-opacity-min" id="home">
         <div class="w3-display-middle" style="white-space:nowrap;">
         </div>
     </div>

@@ -27,14 +27,13 @@
 
     <@menu.customMenu menuElements slideMenuElements/>
 
-    <div class="parallax big-img-old_clock w3-display-container w3-opacity-min" id="second">
+    <div class="parallax big-img-old_clock w3-display-container w3-opacity-min" id="home">
         <div class="w3-display-middle" style="white-space:nowrap;">
             <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">JUST CREATE</span>
         </div>
     </div>
 
-    <!-- Create AIM container-->
-    <div class="w3-content w3-container w3-padding-64" id="create">
+    <div class="w3-content w3-container w3-padding-64" id="createAim">
         <h3 class="w3-center w3-black ">Create Your A I M</h3>
         <p class="w3-center article">
             <em>It`s easier than You think</em>
@@ -77,7 +76,7 @@
     </div>
 
     <#--Aims-->
-    <div class="w3-content w3-container w3-padding-64" id="aims_table">
+    <div class="w3-content w3-container w3-padding-64" id="aimsList">
         <div id="aims" class="w3-center w3-row">
             <h3 class="w3-center">All aims</h3>
             <@aims.tenThousandAim all_aims/>

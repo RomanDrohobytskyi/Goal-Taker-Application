@@ -36,13 +36,9 @@
 
     <!-- Add new note Container -->
     <div class="w3-content w3-container w3-padding-64" id="add-message">
-
         <div class="w3-center w3-row">
-
             <h3 class="w3-center">Create note</h3>
-
             <form action="/main/add" method="post" enctype="multipart/form-data">
-
                 <p class="w3-center">Enter note title: </p>
                 <@elements.input id="title" name="text" type="text" placeholder="t e x t . . ."
                 onfocus="this.placeholder = ''"  onblur="this.placeholder = 't e x t . . .'"/>
@@ -57,7 +53,6 @@
                 <br>
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
                 <button type="submit" class="btn btn1 w3-button w3-padding-large">Add</button>
-
             </form>
         </div>
     </div>
@@ -73,20 +68,15 @@
     <div class="w3-content w3-container w3-padding-64" id="messages">
         <div id="messages" class="w3-center w3-row">
             <h3 class="w3-center">All notes</h3>
-
             <div id="menu">
                 <div class="form-item form-type-textfield form-item-count-checked-checkboxes">
-                <#-- Label for selected checkboxes -->
                     <label for="edit-count-checked-checkboxes" class="default-margin">
                         <span class="form-required">Selected messages</span>
                     </label>
                     <br>
                     <form method="post" action="/main/delete">
-                    <#-- Selected checkboxes count -->
                         <div class="count-checkboxes-wrapper">
-                        <#--Count only-->
                             <span id="count-checked-checkboxes" title="Selected notes count">0</span>
-                        <#-- Trash fa-fa icon -->
                             <i id="trash" class="fa fa-trash-o" aria-hidden="true" title="Delete selected notes"></i>
                             <br>
                             <input type="hidden" name="_csrf" value="${_csrf.token}" />
@@ -94,10 +84,8 @@
                         </div>
                     </form>
                 </div>
-
             </div>
 
-        <#-- Filter for messages form -->
             <form method="get" action="/main">
                 <p class="w3-center">
                     Find note by filter
@@ -111,9 +99,9 @@
                 <button type="submit" class="btn btn1 w3-button w3-padding-large" style="margin-bottom: 30px;">Find</button>
                 <br>
             </form>
-
-            <@aims.notes messages/>
-
+            <div>
+                <@aims.notes messages/>
+            </div>
         </div>
     </div>
 

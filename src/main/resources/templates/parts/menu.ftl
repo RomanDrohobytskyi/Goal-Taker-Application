@@ -6,9 +6,11 @@
     <div class="w3-top">
         <div class="w3-bar" id="myNavBar">
             <@customSlideMenu slideMenuElements/>
-
             <#list elements as element>
-                <a href="${element.url!''}" class="${element.hrefCssClass!''}"><i class="${element.cssClass!''}"></i>${element.name!''}</a>
+                <a href="${element.url!''}" class="${element.hrefCssClass!''}">
+                    <i class="${element.cssClass!''}"></i>
+                    ${element.name!''}
+                </a>
             </#list>
         </div>
     </div>
@@ -45,14 +47,11 @@
         .fa{margin-right: 5px;}
     </style>
 
-    <!-- NavBar (sit on top) -->
     <div class="w3-top">
         <div class="w3-bar" id="myNavBar">
-
             <#if withSlideMenu>
                 <@slideMenu/>
             </#if>
-
             <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
             <a href="#" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>UP</a>
             <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i>ABOUT</a>
@@ -62,13 +61,11 @@
             <a href="/profile" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-user"></i></a>
         </div>
 
-        <!-- NavBar on small screens -->
         <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
             <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
             <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
             <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
             <a href="/login" class="w3-bar-item w3-button w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
-
         </div>
     </div>
 </#macro>
@@ -109,7 +106,6 @@
         .fa{margin-right: 5px;}
     </style>
 
-    <!-- NavBar (sit on top) -->
     <div class="w3-top">
         <div class="w3-bar" id="myNavBar">
             <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
@@ -117,11 +113,10 @@
             <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
         </div>
 
-        <!-- NavBar on small screens -->
         <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
             <a href="/" class="w3-bar-item w3-button w3-right w3-hover-red"><i class="fa fa-home"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-right w3-hover-red"><i class="fa fa-chevron-up"></i>UP</a>
             <a href="/login" class="w3-bar-item w3-button w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
-
         </div>
     </div>
 </#macro>

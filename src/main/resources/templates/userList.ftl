@@ -64,20 +64,19 @@
 
     <!-- User ListContainer -->
     <div class="w3-content w3-container w3-padding-64" id="add-message">
-
         <h3 class="w3-center lucida-console" style="font-size:40px;">Users</h3>
-
         <div class="w3-center w3-row">
             <table align="center" width="100%" style="margin-top:30px">
-                    <tr>
-                        <th>Email</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>User Name</th>
-                        <th>Role</th>
-                        <th>Edit User</th>
-                    </tr>
-                    <tbody>
+                <tr>
+                    <th>Email</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>User Name</th>
+                    <th>Role</th>
+                    <th>Remove</th>
+                    <th>Edit</th>
+                </tr>
+                <tbody>
                     <#list users as user>
                         <tr style="height: 120px">
                             <#if !user.isActive()>
@@ -147,20 +146,17 @@
                             </#if>
                         </tr>
                     </#list>
-                    </tbody>
-                </table>
+                </tbody>
+            </table>
         </div>
     </div>
 
-    <#--Second Paralax IMG-->
     <div class="parallax big-img-users-1 w3-display-container w3-opacity-min" id="home">
         <div class="w3-display-middle" style="white-space:nowrap;">
         </div>
     </div>
 
-    <#--Footer-->
-    <@footer.footer>
-    </@footer.footer>
+    <@footer.footer/>
 
 </body>
 </html>

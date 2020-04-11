@@ -93,7 +93,7 @@ public class TenThousandHoursAimTimeService {
         return newTime;
     }
 
-    public Map<Long, Double> getAimLoggedTimeSum(List<TenThousandHoursAim> aims){
+    public Map<Long, Double> getAimsLoggedTimeSum(List<TenThousandHoursAim> aims){
         return aims
             .stream()
                 .collect(toMap(TenThousandHoursAim::getId,
@@ -102,6 +102,13 @@ public class TenThousandHoursAimTimeService {
                         .mapToDouble(TenThousandHoursAimTime::getTime)
                         .sum())
                 );
+    }
+
+    public Double getAimLoggedTimeSum(List<TenThousandHoursAimTime> time){
+        return time
+            .stream()
+            .mapToDouble(TenThousandHoursAimTime::getTime)
+            .sum();
     }
 
 }

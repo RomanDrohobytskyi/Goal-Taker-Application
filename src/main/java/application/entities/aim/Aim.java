@@ -48,7 +48,7 @@ public class Aim {
     @Column
     @NotNull
     private String aimState = State.AimState.NEW.toString();
-    @Column//(columnDefinition = "datetime default GETDATE()") //GETDATE()
+    @Column
     @NotNull
     private Date creationDate;
     @Column
