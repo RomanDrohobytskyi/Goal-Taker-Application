@@ -1,31 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimController.java" description="return &quot;ten_thousand_hours_aim&quot;;" line="32" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimController.java" description="return &quot;ten_thousand_hours_aim&quot;;" line="38" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc868ad4-fc12-4cb3-89c0-f8cbbc365e64" name="Default" comment="10K hours aim details">
+    <list default="true" id="fc868ad4-fc12-4cb3-89c0-f8cbbc365e64" name="Default" comment="Unversioned Files">
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-07-25" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-07-28" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-07-29" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-08-26" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-08-30" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-09-01" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-09-04" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-09-16" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-09-18" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-09-19" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-09-22" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-09-29" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-10-02" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-10-05" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-10-06" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-10-25" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-10-26" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-10-27" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-11-13" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-11-14" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-11-16" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-11-17" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-11-19" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-11-23" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-11-24" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-12-01" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-12-02" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-12-04" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-12-05" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-12-06" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-12-07" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-12-15" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-12-21" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-12-22" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2019-12-27" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-01-02" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-01-03" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-01-04" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-01-05" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-01-17" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-01-26" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-02-01" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-02-02" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-03-08" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-03-15" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-03-17" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-03-21" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-03-27" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-03-28" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-03-29" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-04-10" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/application/menu/CreatedMenuElements.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/analiticsCharts.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/analiticsCharts2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/analiticsHologram.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/animal.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/frozenBubble.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/macroGreen.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/raindrop.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/redberryInIce.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/snowflake.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/snowflake2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/snowflake3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/timeAnalizingMacros.ftl" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/timeMacros.ftl" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/TimeAnalyzerController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/TimeAnalyzerController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimTimeAnalyzerController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimTimeAnalyzerController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/aim/Aim.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/aim/Aim.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/managers/UserManager.java" afterPath="$PROJECT_DIR$/src/main/java/application/managers/UserManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java" afterPath="$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/services/TenThousandHoursAimTimeService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/TenThousandHoursAimTimeService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/services/TimeService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/TimeService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/aim_details.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/aim_details.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main_aim.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/main_aim.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/charst.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/charst.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/menu.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/menu.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/smartAimMarcos.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/smartAimMarcos.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/tenKHoursAimDetails.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/tenKHoursAimDetails.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ten_thousand_hours_aim.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/ten_thousand_hours_aim.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/time_analyzer.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/time_analyzer.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userList.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/userList.ftl" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/Application.class" afterPath="$PROJECT_DIR$/target/classes/application/Application.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/config/WebSecurityConfig.class" afterPath="$PROJECT_DIR$/target/classes/application/config/WebSecurityConfig.class" />
@@ -132,16 +179,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="smartAimMarcos.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/smartAimMarcos.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="125" column="28" lean-forward="false" selection-start-line="125" selection-start-column="28" selection-end-line="125" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TenKHoursAimTimeAnalyzerController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimTimeAnalyzerController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -152,21 +189,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TenThousandHoursAim.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/aim/TenThousandHoursAim.java">
+      <file leaf-file-name="TenThousandHoursAimTimeService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/services/TenThousandHoursAimTimeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="49" column="79" lean-forward="false" selection-start-line="49" selection-start-column="79" selection-end-line="49" selection-end-column="79" />
+            <state relative-caret-position="169">
+              <caret line="95" column="29" lean-forward="false" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TenThousandHoursAimTimeService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/services/TenThousandHoursAimTimeService.java">
+      <file leaf-file-name="TenKHoursAimController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="110" column="19" lean-forward="false" selection-start-line="107" selection-start-column="8" selection-end-line="110" selection-end-column="19" />
+            <state relative-caret-position="189">
+              <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timeMacros.ftl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/timeMacros.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="388">
+              <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreatedMenuElements.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/menu/CreatedMenuElements.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="50" lean-forward="true" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TenThousandHoursAimService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/services/TenThousandHoursAimService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="69" column="37" lean-forward="false" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -182,21 +249,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TimeService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/application/services/TimeService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="409">
               <caret line="111" column="33" lean-forward="false" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TenThousandHoursAimTime.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/time/data/TenThousandHoursAimTime.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -207,16 +264,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userList.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userList.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="158" column="20" lean-forward="false" selection-start-line="158" selection-start-column="20" selection-end-line="158" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -236,7 +283,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>/users</find>
       <find>sm-</find>
       <find>filter</find>
       <find>delet</find>
@@ -262,10 +308,11 @@
       <find>Biggest logged time</find>
       <find>public</find>
       <find>isLoggedUserAdmin</find>
-      <find>loggedTime</find>
       <find>big-img-greeting-1</find>
       <find>timeSum</find>
       <find>getAimLoggedTimeSum</find>
+      <find>loggedTime</find>
+      <find>todo</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -328,7 +375,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/ten_thousand_hours_aim.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/main_aim.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/userList.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/smartAimMarcos.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/application/services/TenThousandHoursAimTimeService.java" />
@@ -336,6 +382,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/time_analyzer.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/TimeAnalyzerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/services/TimeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimController.java" />
       </list>
     </option>
   </component>
@@ -941,7 +988,7 @@
       <workItem from="1585477314237" duration="5599000" />
       <workItem from="1585483276428" duration="3029000" />
       <workItem from="1586198963946" duration="2416000" />
-      <workItem from="1586373309289" duration="19873000" />
+      <workItem from="1586373309289" duration="20116000" />
     </task>
     <task id="LOCAL-00001" summary="Log4J added, little changes in templates">
       <created>1564081469808</created>
@@ -1076,11 +1123,18 @@
       <option name="project" value="LOCAL" />
       <updated>1585485575402</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="New features">
+      <created>1586624431036</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1586624431036</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="659725000" />
+    <option name="totallyTimeSpent" value="659968000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1093,6 +1147,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35598704" sideWeight="0.50751877" order="7" side_tool="true" content_ui="tabs" />
@@ -1103,9 +1158,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.390507" sideWeight="0.4924812" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.390507" sideWeight="0.4924812" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279396" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32291666" sideWeight="0.4978678" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32254586" sideWeight="0.4978678" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1139,7 +1194,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
     <MESSAGE value="Log4J added, little changes in templates" />
     <MESSAGE value="jQuery added, some front features." />
     <MESSAGE value="New front features, select all checkboxes by one click, count for selected checkbox." />
@@ -1160,7 +1214,8 @@
     <MESSAGE value="New custom Menu, refactoring, 10k hours aim charts" />
     <MESSAGE value="New menu" />
     <MESSAGE value="New features" />
-    <option name="LAST_COMMIT_MESSAGE" value="New features" />
+    <MESSAGE value="Unversioned Files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unversioned Files" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1190,13 +1245,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/editAim.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/message/MessageController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1321,14 +1369,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/timeMacros.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1489,14 +1529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/menu/CreatedMenuElements.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/charst.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1509,14 +1541,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
           <caret line="62" column="29" lean-forward="false" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="29" column="80" lean-forward="false" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
           <folding />
         </state>
       </provider>
@@ -1595,18 +1619,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/TenThousandHoursAimTimeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="110" column="19" lean-forward="false" selection-start-line="107" selection-start-column="8" selection-end-line="110" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/services/TimeService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
           <caret line="111" column="33" lean-forward="false" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/TenThousandHoursAimService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="69" column="37" lean-forward="false" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/TenThousandHoursAimTimeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="95" column="29" lean-forward="false" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/menu/CreatedMenuElements.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="50" lean-forward="true" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/timeMacros.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
           <folding />
         </state>
       </provider>
