@@ -3,15 +3,10 @@ package application.enums;
 public class State {
 
     public enum MessageState{
-        NEW ("New message"),
-        SENT ("Message has been sent"),
-        RECEIVED ("Message has been received"),
-        READ ("Message has been read"),
-        ARCHIVED ("Message has been archived"),
-        DELETED ("Message has been deleted"),
-        RECOVERED ("Message has been recovered"),
-        ACHIEVED ("Message has been achieved"),
-        EDITED ("Message has been edited");
+        NEW ("New note"),
+        DELETED ("Note has been deleted"),
+        ACHIEVED ("Note has been achieved"),
+        EDITED ("Note has been edited");
 
         private String state;
 

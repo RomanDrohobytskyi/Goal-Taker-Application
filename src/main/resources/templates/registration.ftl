@@ -31,52 +31,49 @@
 
     <!-- REGISTRATION Container -->
     <div class="w3-content w3-container w3-padding-64" id="registration">
-
         <div class="w3-center w3-row">
             <h3 class="w3-center">Registration</h3>
-            <p>Create Your new account!
+            Create Your new account!
                 <p style="color: red">
                     ${message!}
                 </p>
 
             <form action="/registration" method="post">
-                <p class="w3-center lucida-console">Email: </p>
-                <input class="registration-input" type="email" name="email" placeholder="email"/>
+                <#assign isUserPresent = user?has_content>
+                <p class="w3-center">Email: </p>
+                <input class="registration-input" type="email" name="email" value="${isUserPresent?then('${user.email}', '')}"/>
                 <p style="color: red">
-                ${userExist!}
+                    ${userExist!}
                 </p>
                 <p style="color: red">
-                ${emailIsEmpty!}
+                    ${emailIsEmpty!}
                 </p>
-                <p class="w3-center lucida-console">Create User Name: </p>
-                <input class="registration-input" type="text" name="username" placeholder="username"/>
 
-                <p class="w3-center lucida-console">First Name: </p>
-                <input class="registration-input" type="text" name="firstName" placeholder="first name"/>
+                <p class="w3-center">User Name: </p>
+                <input class="registration-input" type="text" name="username" value="${isUserPresent?then('${user.username}', '')}"/>
 
-                <p class="w3-center lucida-console">Last Name: </p>
-                <input class="registration-input" type="text" name="lastName" placeholder="last name"/>
+                <p class="w3-center">First Name: </p>
+                <input class="registration-input" type="text" name="firstName"  value="${isUserPresent?then('${user.firstName}', '')}"/>
 
-                <p class="w3-center lucida-console">Enter password: </p>
-                <input class="registration-input" type="password" name="password" placeholder="password"/>
-                <p class="w3-center lucida-console">Confirm password: </p>
-                <input class="registration-input" type="password" name="passwordConfirm" placeholder="confirm password"/>
+                <p class="w3-center">Last Name: </p>
+                <input class="registration-input" type="text" name="lastName"  value="${isUserPresent?then('${user.lastName}', '')}"/>
+
+                <p class="w3-center">Enter password: </p>
+                <input class="registration-input" type="password" name="password"/>
+
+                <p class="w3-center">Confirm password: </p>
+                <input class="registration-input" type="password" name="passwordConfirm"/>
+
                 <p style="color: red">
-                ${passwordNotMach!}
+                    ${passwordNotMach!}
                 </p>
-                <br>
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
-                <button type="submit" class="btn btn1 w3-button w3-padding-large">Create</button>
-                <h5>Already registered?<a href="/login"><b>Sing In!</b></a>!</h5>
+                <button type="submit" class="btn btn1 w3-button">Create</button>
+                <h5>Already registered? <a href="/login"><b>Sing In!</b></a>!</h5>
             </form>
-
         </div>
     </div>
-
-    <div class="parallax big-img-login-1 w3-display-container w3-opacity-min">
-
-    </div>
-
+    <div class="parallax big-img-login-1 w3-display-container w3-opacity-min"></div>
     <@footer.footer/>
 </body>
 </html>

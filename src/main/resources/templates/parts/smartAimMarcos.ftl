@@ -78,33 +78,32 @@
 
 <#macro addSmartAim>
      <div style=" margin-right: 10px;">
-                    <@elements.input id="aim_title" name="title" type="text" placeholder="t i t l e . . ."
-                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i t l e . . .'"/>
-         <br><br>
-     <#--<p class="w3-center">d e s c r i p t i o n</p>-->
-                    <@elements.input id="aim_description" name="description" type="text" placeholder="d e s c r i p t i o n  . . ."
-                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 'd e s c r i p t i o n  . . .'"/>
-         <br><br>
-         <textarea id="aim_text" name="text" placeholder="t e x t  . . ." rows="2" cols="21"
-                   style="text-align: center; width: 250px;"></textarea>
-         <br><br>
+        <@elements.input id="aim_title" name="title" type="text" placeholder="t i t l e . . ."
+            onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i t l e . . .'"/>
+        <br><br>
+        <@elements.input id="aim_description" name="description" type="text" placeholder="d e s c r i p t i o n  . . ."
+            onfocus="this.placeholder = ''"  onblur="this.placeholder = 'd e s c r i p t i o n  . . .'"/>
+        <br><br>
+        <textarea id="aim_text" name="text" placeholder="t e x t  . . ." rows="2" cols="21"
+            style="text-align: center; width: 250px;"></textarea>
+        <br><br>
      </div>
 
     <div style="">
         <@elements.input id="specific" name="specific" type="text" placeholder="s p e c i f i c"
-        onfocus="this.placeholder = ''"  onblur="this.placeholder = 's p e c i f i c'"/>
+            onfocus="this.placeholder = ''"  onblur="this.placeholder = 's p e c i f i c'"/>
         <br><br>
         <@elements.input id="measurable" name="measurable" type="text" placeholder="m e a s u r a b l e"
-        onfocus="this.placeholder = ''"  onblur="this.placeholder = 'm e a s u r a b l e'"/>
+            onfocus="this.placeholder = ''"  onblur="this.placeholder = 'm e a s u r a b l e'"/>
         <br><br>
         <@elements.input id="attainable" name="attainable" type="text" placeholder="a t t a i n a b l e"
-        onfocus="this.placeholder = ''"  onblur="this.placeholder = 'a t t a i n a b l e'"/>
+            onfocus="this.placeholder = ''"  onblur="this.placeholder = 'a t t a i n a b l e'"/>
         <br><br>
         <@elements.input id="relevant" name="relevant" type="text" placeholder="r e l e v a n t"
-        onfocus="this.placeholder = ''"  onblur="this.placeholder = 'r e l e v a n t'"/>
+            onfocus="this.placeholder = ''"  onblur="this.placeholder = 'r e l e v a n t'"/>
         <br><br>
         <@elements.input id="timeBased" name="timeBased" type="date" placeholder="t i m e b a s e d"
-        onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i m e b a s e d'"/>
+            onfocus="this.placeholder = ''"  onblur="this.placeholder = 't i m e b a s e d'"/>
     </div>
 
     <div class="w3-center" style="float:bottom">

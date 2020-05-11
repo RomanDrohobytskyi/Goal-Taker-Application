@@ -1,7 +1,6 @@
 package application.controllers.greeting;
 
 import application.menu.MenuTabs;
-import application.services.MailSenderService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +18,6 @@ public class GreetingController {
 
     @GetMapping("/send/note")
     public String sendNote(@PathVariable String userEmail, @PathVariable String userName, @PathVariable String message) {
-        new MailSenderService().send(userEmail, "Note", userName + "/n" + message);
         return "greeting";
     }
 }

@@ -56,14 +56,6 @@ public class UserController {
         return "userList";
     }
 
-    /**
-     * Getting form for edit user
-     * "{user}" - id from url like - "http://localhost:8080/user/10"
-     * @PathVariable User user - checked user.
-     * @param user
-     * @param model
-     * @return
-     */
     @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("{user}")
     public String userEditForm(@PathVariable User user, Model model){

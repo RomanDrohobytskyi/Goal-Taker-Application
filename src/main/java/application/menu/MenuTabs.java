@@ -23,7 +23,6 @@ public class MenuTabs {
         menuElements.add(createdMenuElements.homePage);
         menuElements.add(createdMenuElements.upToTheTop);
         menuElements.add(createdMenuElements.about);
-        menuElements.add(createdMenuElements.portfolio);
         menuElements.add(createdMenuElements.contact);
         menuElements.add(createdMenuElements.login);
         menuElements.add(createdMenuElements.profile);

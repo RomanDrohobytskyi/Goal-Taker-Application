@@ -1,4 +1,4 @@
-package application.controllers.all.aims;
+package application.controllers.aims;
 
 import application.menu.MenuTabs;
 import org.springframework.stereotype.Controller;

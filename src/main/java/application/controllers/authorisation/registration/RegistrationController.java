@@ -28,35 +28,27 @@ public class RegistrationController {
     public String addUser(User user, Map<String, Object> model,
                           @RequestParam String passwordConfirm) {
 
-        //If user not exist
-        if (userService.isUserExist(user)){
-            //If user email is not empty
+        if (!userService.isUserExist(user)){
             if (userService.isUserEmailEmpty(user.getEmail())){
-                //If passwords match - save user and user data
                 if (userService.isPasswordsMatch(user.getPassword(), passwordConfirm)){
                     userService.setUserData(user);
-                    userService.saveUser(user);
                     if (userService.sendActivationCode(user)){
+                        userService.saveUser(user);
                         return "redirect:/login";
                     } else {
                         model.put("message", "We can`t send to You activation code, sorry!");
-                        return "registration";
                     }
-                }
-                else {
+                } else {
                     model.put("passwordNotMach", "Sorry, but Your passwords do not match, check it again!");
-                    return "registration";
                 }
-            }
-            else {
+            }  else {
                 model.put("emailIsEmpty", "Sorry, Your email is empty, please check it again");
-                return "registration";
             }
-        }
-        else {
+        } else {
             model.put("userExist", "Sorry, user with email: " + user.getEmail() + ", already exist!");
-            return "registration";
         }
+        model.put("user", user);
+        return "registration";
     }
 
 

@@ -5,6 +5,10 @@ body, html {
     line-height: 1.8;
 }
 
+.user-avatar{
+
+}
+
 /*Gradients*/
 .gradient-blue{
     background: linear-gradient(to bottom right, blue, lightblue);
@@ -37,9 +41,13 @@ body, html {
 }
 
 .big-img-greeting-1 {
-    background-image: url("/static/images/webWithRainDrops.jpg");
-    min-height: 100%;
+    background-image:
+        linear-gradient(to bottom, rgb(255, 255, 255), rgba(0, 0, 0, 0) 10%),
+        url("/static/images/webWithRainDrops.jpg");
+    min-height: 80%;
+    background-size: cover;
 }
+
 
 .big-img-greeting-2 {
     background-image: url("/static/images/autumnLeaf.jpg");

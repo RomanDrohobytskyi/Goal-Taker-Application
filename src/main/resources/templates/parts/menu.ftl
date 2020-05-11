@@ -1,6 +1,11 @@
 <#macro customMenu elements slideMenuElements>
     <style>
         .fa{margin-right: 5px;}
+
+        .grad {
+            background: rgb(23, 148, 162) linear-gradient(141deg, rgb(46, 62, 55) 0%, rgb(23, 148, 162) 51%, rgb(17, 121, 160) 75%);
+            color: rgb(255, 255, 255);
+        }
     </style>
 
     <div class="w3-top">
@@ -32,6 +37,11 @@
                     <a href="${element.url!''}" class="${element.hrefCssClass!''}"><i class="${element.cssClass!''}"></i>${element.name!''}</a>
                 </#list>
             </div>
+            <#--<a href="/userProfile" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+
+                     <img alt="Qries" src="https://www.qries.com/images/banner_logo.png" width="15" height="10">
+
+                </a>-->
         </div>
     </div>
 

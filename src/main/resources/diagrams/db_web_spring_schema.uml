@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>d8904ba1-b051-4f55-85e8-45be13b913e6.SCHEMA:web_spring</OriginalElement>
+  <nodes>
+    <node x="0.0" y="568.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.smart_aim_time</node>
+    <node x="596.0" y="568.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.message</node>
+    <node x="596.0" y="0.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user</node>
+    <node x="282.0" y="866.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.hibernate_sequence</node>
+    <node x="0.0" y="0.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.aim</node>
+    <node x="0.0" y="866.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.aim_logged_time</node>
+    <node x="298.0" y="0.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.ten_thousand_hours_aim</node>
+    <node x="851.0" y="568.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user_roles</node>
+    <node x="298.0" y="568.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.ten_thousand_hours_aim_time</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="0.8156899810964091" x="468.0550834284503" y="603.8964042056589" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Key columns</Category>
+  </Categories>
+</Diagram>
+

@@ -61,7 +61,7 @@
                 <button type="submit" class="btn btn1 w3-button w3-padding-large">Sign In</button>
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
             </form>
-            <h5>No registered yet? Create easy new
+            <h5>Not registered yet? Create
                 <a href="/registration" style="text-decoration: none;">
                     <b>account</b>
                     <i class="fa fa-user-plus">

@@ -4,7 +4,7 @@ public class CreatedMenuElements {
 
     MenuElement homePage = new MenuElement("/", "w3-bar-item w3-button","fa fa-home", "HOME", "Home page");
     MenuElement login = new MenuElement("/login", "w3-bar-item w3-button w3-hide-small w3-right w3-hover-red","fa fa-sign-in", "", "Login");
-    MenuElement profile = new MenuElement("/profile", "w3-bar-item w3-button w3-hide-small w3-right w3-hover-red","fa fa-user", "", "Profile");
+    MenuElement profile = new MenuElement("/userProfile", "w3-bar-item w3-button w3-hide-small w3-right w3-hover-red","fa fa-user", "", "Profile");
 
     MenuElement upToTheTop = new MenuElement("#home", "w3-bar-item w3-button","fa fa-chevron-up", "UP", "Up to the top");
     MenuElement about = new MenuElement("#about", "w3-bar-item w3-button w3-hide-small","fa fa-user", "ABOUT", "About me");

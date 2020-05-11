@@ -11,3 +11,5 @@ public interface IUserRepository extends CrudRepository<User, Long> {
     User findByActivationCode(String code);
 
 }
+
+

@@ -34,13 +34,12 @@
     </div>
 
     <!-- Create AIM container-->
-    <div class="w3-content w3-container w3-padding-64" id="createAim">
+    <div class="w3-content w3-container w3-padding-32" id="createAim">
         <h3 class="w3-center w3-black ">Create Your A I M</h3>
         <p class="w3-center article">
             <em>It`s easier than You think</em>
         </p>
         <p class="article-text">
-            What is Lorem Ipsum?
         </p>
 
         <div class="w3-center w3-row">
@@ -60,7 +59,7 @@
         </div>
     </div>
 
-    <div class="w3-content w3-container w3-padding-64" id="aimsList">
+    <div class="w3-content w3-container w3-padding-32" id="aimsList">
         <div class="w3-center w3-row">
             <h3 class="w3-center">All aims</h3>
             <@smartMacros.smartTable aims=all_aims/>
