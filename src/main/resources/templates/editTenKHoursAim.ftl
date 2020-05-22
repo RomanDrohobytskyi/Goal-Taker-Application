@@ -38,18 +38,21 @@
             <form action="/editTenKHoursAim" method="post" style="margin: 30px 10px 10px">
 
                 <label>
-                    <i class="w3-center">t i t l e</i>
+                    <i class="w3-center">Title</i>
                     <br>
                     <input id="aim_title${aim.id}" class="w3-center" type="text" name="title" value="${aim.title}" style="margin: 20px;">
                     <br>
-                    <i class="w3-center">t e x t</i>
-                    <br>
-                    <input id="aim_text${aim.id}" class="w3-center" type="text" name="text" value="${aim.text}" style="margin: 20px;">
-                    <br>
-                    <i class="w3-center">d e s c r i p t i o n</i>
+                    <i class="w3-center">Description</i>
                     <br>
                     <input id="aim_description${aim.id}" class="w3-center" type="text" name="description" value="${aim.description}"
-                           style="margin: 20px;">
+                        style="margin: 20px;">
+                    <br>
+                    <i class="w3-center">Text</i>
+                    <br>
+                    <textarea id="aim_text${aim.id}" name="text" rows="2" cols="21"
+                        style="margin: 20px; text-align: center; width: 250px;">
+                        ${aim.text}
+                    </textarea>
                 </label>
                 <br>
 

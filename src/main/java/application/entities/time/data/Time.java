@@ -42,7 +42,7 @@ public class Time {
 
     public ConvertedDate getConvertedDate(Time time){
         ConvertedDate convertedDate = new ConvertedDate();
-        Date date = time.getCreationDate();
+        Date date = time.getDate();
         LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
         int year = localDate.getYear();
         int month = localDate.getMonthValue();
@@ -50,7 +50,7 @@ public class Time {
 
         convertedDate.setDay(day);
         convertedDate.setMonth(month);
-        convertedDate.setYear(Long.valueOf(year));
+        convertedDate.setYear((long) year);
 
         return convertedDate;
     }

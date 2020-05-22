@@ -1,0 +1,388 @@
+19:38:13  INFO [http-nio-8080-exec-2] - application.controllers.authorisation.login.LoginController.logInfo - ****************************************************************************************************
+19:38:13  INFO [http-nio-8080-exec-2] - application.controllers.authorisation.login.LoginController.logInfo - @GetMapping /login
+19:38:13  INFO [http-nio-8080-exec-2] - application.controllers.authorisation.login.LoginController.logInfo - ****************************************************************************************************
+19:38:13 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - Couldn't find template in cache for "login.ftl"("en_US", UTF-8, parsed); will try to load it.
+19:38:13 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("login_en_US.ftl"): Not found
+19:38:13 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("login_en.ftl"): Not found
+19:38:13 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("login.ftl"): Found
+19:38:13 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - Loading template for "login.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\login.ftl"
+19:38:13 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "login.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+19:38:13 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - Couldn't find template in cache for "parts/footer.ftl"("en_US", UTF-8, parsed); will try to load it.
+19:38:13 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+19:38:13 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+19:38:13 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+19:38:13 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - Loading template for "parts/footer.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\parts\\footer.ftl"
+19:38:14  INFO [http-nio-8080-exec-8] - application.controllers.authorisation.login.LoginController.logInfo - ****************************************************************************************************
+19:38:14  INFO [http-nio-8080-exec-8] - application.controllers.authorisation.login.LoginController.logInfo - @GetMapping /login
+19:38:14  INFO [http-nio-8080-exec-8] - application.controllers.authorisation.login.LoginController.logInfo - ****************************************************************************************************
+19:38:14 DEBUG [http-nio-8080-exec-8] - freemarker.cache.debug - "login.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+19:38:14 DEBUG [http-nio-8080-exec-8] - freemarker.cache.debug - "login.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+19:38:14 DEBUG [http-nio-8080-exec-8] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+19:39:33 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Couldn't find template in cache for "main.ftl"("en_US", UTF-8, parsed); will try to load it.
+19:39:33 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en_US.ftl"): Not found
+19:39:33 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en.ftl"): Not found
+19:39:33 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main.ftl"): Found
+19:39:33 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Loading template for "main.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\main.ftl"
+19:39:33 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+19:39:33 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+19:39:33 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+19:39:33 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+19:39:33 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\footer.ftl hasn't changed.
+19:39:39 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - Couldn't find template in cache for "error.ftl"("en_US", UTF-8, parsed); will try to load it.
+19:39:39 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error_en_US.ftl"): Not found
+19:39:39 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error_en.ftl"): Not found
+19:39:39 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error.ftl"): Not found
+19:39:41 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en_US.ftl"): Not found
+19:39:41 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en.ftl"): Not found
+19:39:41 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main.ftl"): Found
+19:39:41 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\main.ftl hasn't changed.
+19:39:41 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+19:39:41 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+19:39:41 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+19:39:41 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+19:39:41 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\footer.ftl hasn't changed.
+19:43:34 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Couldn't find template in cache for "main.ftl"("en_US", UTF-8, parsed); will try to load it.
+19:43:34 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en_US.ftl"): Not found
+19:43:34 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en.ftl"): Not found
+19:43:34 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main.ftl"): Found
+19:43:34 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Loading template for "main.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\main.ftl"
+19:43:34 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+19:43:34 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Couldn't find template in cache for "parts/footer.ftl"("en_US", UTF-8, parsed); will try to load it.
+19:43:34 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+19:43:34 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+19:43:34 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+19:43:34 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Loading template for "parts/footer.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\parts\\footer.ftl"
+19:43:34  INFO [http-nio-8080-exec-1] - freemarker.beans.info - Detected multiple classes with the same name, "application.entities.message.Message". Assuming it was a class-reloading. Clearing class introspection caches to release old data.
+19:43:39 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Couldn't find template in cache for "mainDelete.ftl"("en_US", UTF-8, parsed); will try to load it.
+19:43:39 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("mainDelete_en_US.ftl"): Not found
+19:43:39 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("mainDelete_en.ftl"): Not found
+19:43:39 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("mainDelete.ftl"): Not found
+19:43:39 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Couldn't find template in cache for "error.ftl"("en_US", UTF-8, parsed); will try to load it.
+19:43:39 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error_en_US.ftl"): Not found
+19:43:39 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error_en.ftl"): Not found
+19:43:39 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error.ftl"): Not found
+19:44:43 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - Couldn't find template in cache for "error.ftl"("en_US", UTF-8, parsed); will try to load it.
+19:44:43 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error_en_US.ftl"): Not found
+19:44:43 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error_en.ftl"): Not found
+19:44:43 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error.ftl"): Not found
+19:44:44 DEBUG [http-nio-8080-exec-8] - freemarker.cache.debug - "error.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+19:44:47 DEBUG [http-nio-8080-exec-7] - freemarker.cache.debug - "error.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+19:44:48 DEBUG [http-nio-8080-exec-5] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error_en_US.ftl"): Not found
+19:44:48 DEBUG [http-nio-8080-exec-5] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error_en.ftl"): Not found
+19:44:48 DEBUG [http-nio-8080-exec-5] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error.ftl"): Not found
+19:44:48 DEBUG [http-nio-8080-exec-5] - freemarker.cache.debug - "error.ftl"("en_US", UTF-8, parsed) no source found.
+19:44:48 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - "error.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+19:44:48 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - "error.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+19:44:48 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "error.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+19:44:56 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - Couldn't find template in cache for "greeting.ftl"("en_US", UTF-8, parsed); will try to load it.
+19:44:56 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - TemplateLoader.findTemplateSource("greeting_en_US.ftl"): Not found
+19:44:56 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - TemplateLoader.findTemplateSource("greeting_en.ftl"): Not found
+19:44:56 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - TemplateLoader.findTemplateSource("greeting.ftl"): Found
+19:44:56 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - Loading template for "greeting.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\greeting.ftl"
+19:44:56 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - "greeting.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+19:44:56 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - Couldn't find template in cache for "parts/footer.ftl"("en_US", UTF-8, parsed); will try to load it.
+19:44:56 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+19:44:56 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+19:44:56 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+19:44:56 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - Loading template for "parts/footer.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\parts\\footer.ftl"
+19:44:56 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - Couldn't find template in cache for "parts/image.ftl"("en_US", UTF-8, parsed); will try to load it.
+19:44:56 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/image_en_US.ftl"): Not found
+19:44:56 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/image_en.ftl"): Not found
+19:44:56 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/image.ftl"): Found
+19:44:56 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - Loading template for "parts/image.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\parts\\image.ftl"
+19:44:56 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "greeting.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+19:44:56 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "greeting.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+19:44:56 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+19:44:56 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "parts/image.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+19:44:59 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error_en_US.ftl"): Not found
+19:44:59 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error_en.ftl"): Not found
+19:44:59 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error.ftl"): Not found
+19:44:59 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - "error.ftl"("en_US", UTF-8, parsed) no source found.
+19:45:21 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - Couldn't find template in cache for "main.ftl"("en_US", UTF-8, parsed); will try to load it.
+19:45:21 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en_US.ftl"): Not found
+19:45:21 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en.ftl"): Not found
+19:45:21 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main.ftl"): Found
+19:45:21 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - Loading template for "main.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\main.ftl"
+19:45:21 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+19:45:21 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - Couldn't find template in cache for "parts/footer.ftl"("en_US", UTF-8, parsed); will try to load it.
+19:45:21 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+19:45:21 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+19:45:21 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+19:45:21 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - Loading template for "parts/footer.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\parts\\footer.ftl"
+19:45:21  INFO [http-nio-8080-exec-10] - freemarker.beans.info - Detected multiple classes with the same name, "application.entities.message.Message". Assuming it was a class-reloading. Clearing class introspection caches to release old data.
+20:21:32  INFO [http-nio-8080-exec-2] - application.controllers.authorisation.login.LoginController.logInfo - ****************************************************************************************************
+20:21:32  INFO [http-nio-8080-exec-2] - application.controllers.authorisation.login.LoginController.logInfo - @GetMapping /login
+20:21:32  INFO [http-nio-8080-exec-2] - application.controllers.authorisation.login.LoginController.logInfo - ****************************************************************************************************
+20:21:32 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - Couldn't find template in cache for "login.ftl"("en_US", UTF-8, parsed); will try to load it.
+20:21:32 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("login_en_US.ftl"): Not found
+20:21:32 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("login_en.ftl"): Not found
+20:21:32 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("login.ftl"): Found
+20:21:32 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - Loading template for "login.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\login.ftl"
+20:21:32 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "login.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:21:32 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - Couldn't find template in cache for "parts/footer.ftl"("en_US", UTF-8, parsed); will try to load it.
+20:21:32 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+20:21:32 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+20:21:32 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+20:21:32 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - Loading template for "parts/footer.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\parts\\footer.ftl"
+20:21:39 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - Couldn't find template in cache for "error.ftl"("en_US", UTF-8, parsed); will try to load it.
+20:21:39 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error_en_US.ftl"): Not found
+20:21:39 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error_en.ftl"): Not found
+20:21:39 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error.ftl"): Not found
+20:21:49 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Couldn't find template in cache for "greeting.ftl"("en_US", UTF-8, parsed); will try to load it.
+20:21:49 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("greeting_en_US.ftl"): Not found
+20:21:49 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("greeting_en.ftl"): Not found
+20:21:49 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("greeting.ftl"): Found
+20:21:49 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Loading template for "greeting.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\greeting.ftl"
+20:21:49 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "greeting.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:21:49 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+20:21:49 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+20:21:49 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+20:21:49 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\footer.ftl hasn't changed.
+20:21:49 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Couldn't find template in cache for "parts/image.ftl"("en_US", UTF-8, parsed); will try to load it.
+20:21:49 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/image_en_US.ftl"): Not found
+20:21:49 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/image_en.ftl"): Not found
+20:21:49 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/image.ftl"): Found
+20:21:49 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Loading template for "parts/image.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\parts\\image.ftl"
+20:21:51 DEBUG [http-nio-8080-exec-8] - freemarker.cache.debug - "greeting.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:21:51 DEBUG [http-nio-8080-exec-8] - freemarker.cache.debug - "greeting.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:21:51 DEBUG [http-nio-8080-exec-8] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:21:51 DEBUG [http-nio-8080-exec-8] - freemarker.cache.debug - "parts/image.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:21:53 DEBUG [http-nio-8080-exec-7] - freemarker.cache.debug - Couldn't find template in cache for "main_aim.ftl"("en_US", UTF-8, parsed); will try to load it.
+20:21:53 DEBUG [http-nio-8080-exec-7] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_aim_en_US.ftl"): Not found
+20:21:53 DEBUG [http-nio-8080-exec-7] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_aim_en.ftl"): Not found
+20:21:53 DEBUG [http-nio-8080-exec-7] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_aim.ftl"): Found
+20:21:53 DEBUG [http-nio-8080-exec-7] - freemarker.cache.debug - Loading template for "main_aim.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\main_aim.ftl"
+20:21:53 DEBUG [http-nio-8080-exec-7] - freemarker.cache.debug - "main_aim.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:21:53 DEBUG [http-nio-8080-exec-7] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:21:53 DEBUG [http-nio-8080-exec-7] - freemarker.cache.debug - Couldn't find template in cache for "parts/elements.ftl"("en_US", UTF-8, parsed); will try to load it.
+20:21:53 DEBUG [http-nio-8080-exec-7] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en_US.ftl"): Not found
+20:21:53 DEBUG [http-nio-8080-exec-7] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en.ftl"): Not found
+20:21:53 DEBUG [http-nio-8080-exec-7] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements.ftl"): Found
+20:21:53 DEBUG [http-nio-8080-exec-7] - freemarker.cache.debug - Loading template for "parts/elements.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\parts\\elements.ftl"
+20:21:56 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error_en_US.ftl"): Not found
+20:21:56 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error_en.ftl"): Not found
+20:21:56 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error.ftl"): Not found
+20:21:56 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - "error.ftl"("en_US", UTF-8, parsed) no source found.
+20:22:37 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Couldn't find template in cache for "main.ftl"("en_US", UTF-8, parsed); will try to load it.
+20:22:37 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en_US.ftl"): Not found
+20:22:37 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en.ftl"): Not found
+20:22:37 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main.ftl"): Found
+20:22:37 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Loading template for "main.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\main.ftl"
+20:22:37 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:22:37 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Couldn't find template in cache for "parts/footer.ftl"("en_US", UTF-8, parsed); will try to load it.
+20:22:37 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+20:22:37 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+20:22:37 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+20:22:37 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Loading template for "parts/footer.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\parts\\footer.ftl"
+20:22:37  INFO [http-nio-8080-exec-1] - freemarker.beans.info - Detected multiple classes with the same name, "application.entities.message.Message". Assuming it was a class-reloading. Clearing class introspection caches to release old data.
+20:22:51 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en_US.ftl"): Not found
+20:22:51 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en.ftl"): Not found
+20:22:51 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main.ftl"): Found
+20:22:51 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\main.ftl hasn't changed.
+20:22:51 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:22:51 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+20:22:51 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+20:22:51 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+20:22:51 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\footer.ftl hasn't changed.
+20:22:56 DEBUG [http-nio-8080-exec-7] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:22:56 DEBUG [http-nio-8080-exec-7] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:22:56 DEBUG [http-nio-8080-exec-7] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:28:09 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Couldn't find template in cache for "main.ftl"("en_US", UTF-8, parsed); will try to load it.
+20:28:09 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en_US.ftl"): Not found
+20:28:09 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en.ftl"): Not found
+20:28:09 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main.ftl"): Found
+20:28:09 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Loading template for "main.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\main.ftl"
+20:28:09 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:28:09 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Couldn't find template in cache for "parts/footer.ftl"("en_US", UTF-8, parsed); will try to load it.
+20:28:09 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+20:28:09 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+20:28:09 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+20:28:09 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Loading template for "parts/footer.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\parts\\footer.ftl"
+20:28:09 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Couldn't find template in cache for "parts/elements.ftl"("en_US", UTF-8, parsed); will try to load it.
+20:28:09 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en_US.ftl"): Not found
+20:28:09 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en.ftl"): Not found
+20:28:09 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements.ftl"): Found
+20:28:09 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Loading template for "parts/elements.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\parts\\elements.ftl"
+20:28:09  INFO [http-nio-8080-exec-1] - freemarker.beans.info - Detected multiple classes with the same name, "application.entities.message.Message". Assuming it was a class-reloading. Clearing class introspection caches to release old data.
+20:28:15 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - Couldn't find template in cache for "error.ftl"("en_US", UTF-8, parsed); will try to load it.
+20:28:15 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error_en_US.ftl"): Not found
+20:28:15 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error_en.ftl"): Not found
+20:28:15 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error.ftl"): Not found
+20:28:17 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en_US.ftl"): Not found
+20:28:17 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en.ftl"): Not found
+20:28:17 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main.ftl"): Found
+20:28:17 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\main.ftl hasn't changed.
+20:28:17 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:28:17 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+20:28:17 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+20:28:17 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+20:28:17 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\footer.ftl hasn't changed.
+20:28:17 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en_US.ftl"): Not found
+20:28:17 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en.ftl"): Not found
+20:28:17 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements.ftl"): Found
+20:28:17 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "parts/elements.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\elements.ftl hasn't changed.
+20:28:19 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - "error.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:28:54 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error_en_US.ftl"): Not found
+20:28:54 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error_en.ftl"): Not found
+20:28:54 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - TemplateLoader.findTemplateSource("error.ftl"): Not found
+20:28:54 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - "error.ftl"("en_US", UTF-8, parsed) no source found.
+20:28:57 DEBUG [http-nio-8080-exec-8] - freemarker.cache.debug - "error.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:28:57 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en_US.ftl"): Not found
+20:28:57 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en.ftl"): Not found
+20:28:57 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main.ftl"): Found
+20:28:57 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - Updating source because: lastModifiedNotChanged=false, cached.lastModified=1568917683443 != source.lastModified=1568917712346
+20:28:57 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - Loading template for "main.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\main.ftl"
+20:28:57 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:28:57 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+20:28:57 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+20:28:57 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+20:28:57 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\footer.ftl hasn't changed.
+20:28:57 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en_US.ftl"): Not found
+20:28:57 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en.ftl"): Not found
+20:28:57 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements.ftl"): Found
+20:28:57 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - "parts/elements.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\elements.ftl hasn't changed.
+20:29:25 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en_US.ftl"): Not found
+20:29:25 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en.ftl"): Not found
+20:29:25 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main.ftl"): Found
+20:29:25 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - Updating source because: lastModifiedNotChanged=false, cached.lastModified=1568917712346 != source.lastModified=1568917761236
+20:29:25 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - Loading template for "main.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\main.ftl"
+20:29:25 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:25 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+20:29:25 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+20:29:25 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+20:29:25 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\footer.ftl hasn't changed.
+20:29:25 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en_US.ftl"): Not found
+20:29:25 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en.ftl"): Not found
+20:29:25 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements.ftl"): Found
+20:29:25 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "parts/elements.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\elements.ftl hasn't changed.
+20:29:28 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:28 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:28 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:28 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "parts/elements.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:32 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en_US.ftl"): Not found
+20:29:32 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en.ftl"): Not found
+20:29:32 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main.ftl"): Found
+20:29:32 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\main.ftl hasn't changed.
+20:29:32 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:32 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+20:29:32 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+20:29:32 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+20:29:32 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\footer.ftl hasn't changed.
+20:29:32 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en_US.ftl"): Not found
+20:29:32 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en.ftl"): Not found
+20:29:32 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements.ftl"): Found
+20:29:32 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - "parts/elements.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\elements.ftl hasn't changed.
+20:29:38 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en_US.ftl"): Not found
+20:29:38 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en.ftl"): Not found
+20:29:38 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main.ftl"): Found
+20:29:38 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\main.ftl hasn't changed.
+20:29:38 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:38 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+20:29:38 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+20:29:38 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+20:29:38 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\footer.ftl hasn't changed.
+20:29:38 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en_US.ftl"): Not found
+20:29:38 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en.ftl"): Not found
+20:29:38 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements.ftl"): Found
+20:29:38 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - "parts/elements.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\elements.ftl hasn't changed.
+20:29:42 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:42 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:42 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:42 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - "parts/elements.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:46 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en_US.ftl"): Not found
+20:29:46 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en.ftl"): Not found
+20:29:46 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main.ftl"): Found
+20:29:46 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\main.ftl hasn't changed.
+20:29:46 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:46 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+20:29:46 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+20:29:46 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+20:29:46 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\footer.ftl hasn't changed.
+20:29:46 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en_US.ftl"): Not found
+20:29:46 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en.ftl"): Not found
+20:29:46 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements.ftl"): Found
+20:29:46 DEBUG [http-nio-8080-exec-10] - freemarker.cache.debug - "parts/elements.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\elements.ftl hasn't changed.
+20:29:48 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - Couldn't find template in cache for "main_aim.ftl"("en_US", UTF-8, parsed); will try to load it.
+20:29:48 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_aim_en_US.ftl"): Not found
+20:29:48 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_aim_en.ftl"): Not found
+20:29:48 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_aim.ftl"): Found
+20:29:48 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - Loading template for "main_aim.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\main_aim.ftl"
+20:29:48 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "main_aim.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:48 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:48 DEBUG [http-nio-8080-exec-2] - freemarker.cache.debug - "parts/elements.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:50 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:50 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:50 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:50 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "parts/elements.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:54 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en_US.ftl"): Not found
+20:29:54 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en.ftl"): Not found
+20:29:54 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main.ftl"): Found
+20:29:54 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\main.ftl hasn't changed.
+20:29:54 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:29:54 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+20:29:54 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+20:29:54 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+20:29:54 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\footer.ftl hasn't changed.
+20:29:54 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en_US.ftl"): Not found
+20:29:54 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en.ftl"): Not found
+20:29:54 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements.ftl"): Found
+20:29:54 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - "parts/elements.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\elements.ftl hasn't changed.
+20:30:12 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en_US.ftl"): Not found
+20:30:12 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en.ftl"): Not found
+20:30:12 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main.ftl"): Found
+20:30:12 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - Updating source because: lastModifiedNotChanged=false, cached.lastModified=1568917761236 != source.lastModified=1568917809019
+20:30:12 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - Loading template for "main.ftl"("en_US", UTF-8, parsed) from "C:\\Users\\roma_\\OneDrive\\Рабочий стол\\Programs\\Studies\\SpringWebApplication\\target\\classes\\templates\\main.ftl"
+20:30:12 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:30:12 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+20:30:12 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+20:30:12 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+20:30:12 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\footer.ftl hasn't changed.
+20:30:12 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en_US.ftl"): Not found
+20:30:12 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en.ftl"): Not found
+20:30:12 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements.ftl"): Found
+20:30:12 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - "parts/elements.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\elements.ftl hasn't changed.
+20:30:15 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:30:15 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:30:15 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:30:15 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - "parts/elements.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:30:30 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en_US.ftl"): Not found
+20:30:30 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en.ftl"): Not found
+20:30:30 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main.ftl"): Found
+20:30:30 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\main.ftl hasn't changed.
+20:30:30 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:30:30 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+20:30:30 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+20:30:30 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+20:30:30 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\footer.ftl hasn't changed.
+20:30:30 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en_US.ftl"): Not found
+20:30:30 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en.ftl"): Not found
+20:30:30 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements.ftl"): Found
+20:30:30 DEBUG [http-nio-8080-exec-1] - freemarker.cache.debug - "parts/elements.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\elements.ftl hasn't changed.
+20:30:32 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:30:32 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:30:32 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:30:32 DEBUG [http-nio-8080-exec-9] - freemarker.cache.debug - "parts/elements.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:30:35 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en_US.ftl"): Not found
+20:30:35 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_en.ftl"): Not found
+20:30:35 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main.ftl"): Found
+20:30:35 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\main.ftl hasn't changed.
+20:30:35 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:30:35 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en_US.ftl"): Not found
+20:30:35 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer_en.ftl"): Not found
+20:30:35 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/footer.ftl"): Found
+20:30:35 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\footer.ftl hasn't changed.
+20:30:35 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en_US.ftl"): Not found
+20:30:35 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements_en.ftl"): Not found
+20:30:35 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - TemplateLoader.findTemplateSource("parts/elements.ftl"): Found
+20:30:35 DEBUG [http-nio-8080-exec-3] - freemarker.cache.debug - "parts/elements.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\parts\elements.ftl hasn't changed.
+20:30:37 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_aim_en_US.ftl"): Not found
+20:30:37 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_aim_en.ftl"): Not found
+20:30:37 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - TemplateLoader.findTemplateSource("main_aim.ftl"): Found
+20:30:37 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - "main_aim.ftl"("en_US", UTF-8, parsed): using cached since C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\target\classes\templates\main_aim.ftl hasn't changed.
+20:30:37 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - "main_aim.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:30:37 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:30:37 DEBUG [http-nio-8080-exec-4] - freemarker.cache.debug - "parts/elements.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:30:39 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:30:39 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - "main.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:30:39 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - "parts/footer.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+20:30:39 DEBUG [http-nio-8080-exec-6] - freemarker.cache.debug - "parts/elements.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.

@@ -7,112 +7,68 @@
     <link rel="stylesheet" href="/static/css/photos.css">
     <link rel="stylesheet" href="/static/css/text.css">
     <script type="text/javascript" src="/static/javascript/js.js"></script>
+    <script type="text/javascript" src="/static/javascript/validators.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/menu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <#import "parts/menu.ftl" as menu>
+    <#import "parts/footer.ftl" as footer>
+    <#import "parts/elements.ftl" as elements>
+    <#import "parts/aims.ftl" as aims>
+    <#import "parts/smartAimMarcos.ftl" as smartMacros>
+
 </head>
 <body>
 
-<!-- NavBar (sit on top) -->
-<div class="w3-top">
-    <div class="w3-bar" id="myNavBar">
-        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-            <i class="fa fa-bars"></i>
-        </a>
-        <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
-        <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-chevron-up"></i>Up</a>
-        <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-        <a href="/main" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> MESSAGES</a>
-        <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-sign-out"></i>
-            <form action="/logout" method="post">
-                <input type="hidden" name="_csrf" value="${_csrf.token}" />
+    <@menu.customMenu menuElements slideMenuElements/>
+
+    <div class="parallax big-img-smart w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">JUST CREATE</span>
+        </div>
+    </div>
+
+    <!-- Create AIM container-->
+    <div class="w3-content w3-container w3-padding-32" id="createAim">
+        <h3 class="w3-center w3-black ">Create Your A I M</h3>
+        <p class="w3-center article">
+            <em>It`s easier than You think</em>
+        </p>
+        <p class="article-text">
+        </p>
+
+        <div class="w3-center w3-row">
+            <h3 class="w3-center">Create smart AIM</h3>
+            <form action="/main_aim/add" method="get" enctype="multipart/form-data">
+                <div class="w3-center">
+                    <@smartMacros.addSmartAim/>
+                </div>
             </form>
-        </a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-            <i class="fa fa-search"></i>
-        </a>
-    </div>
-
-    <!-- NavBar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-        <a href="main.ftl" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> MESSAGES</a>
-        <a href="/login" class="w3-bar-item w3-button w3-right w3-hover-red"><i class="fa fa-sign-in"></i></a>
-        <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-    </div>
-</div>
-
-<!-- First Parallax Image with Text -->
-<div class="parallax big-img-smart w3-display-container w3-opacity-min" id="home">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">YOUR AIMS</span>
-    </div>
-</div>
-
-<!-- Definition of AIM container-->
-<div class="w3-content w3-container w3-padding-64" id="about">
-    <h3 class="w3-center w3-black ">S.M.A.R.T</h3>
-    <p class="w3-center article"><em>It`s easier than You think</em></p>
-    <p class="article-text">
-        What is Lorem Ipsum?
-    </p>
-    <div class="w3-row">
-        <div class="w3-col m6 w3-center w3-padding-large">
-            <img src="https://www.professionalacademy.com/media/images-news/smarter-objectives.jpg" class="big-img-small-smart w3-round w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this)" alt="Photo of Me" width="100%">
-                <p>
-                    <b>S.M.A.R.T</b>
-                </p>
-            <br>
         </div>
 
-        <!-- Hide this text on small devices -->
-        <div class="w3-col m6 w3-hide-small w3-padding-large">
-            <p class="article-text">
-                Why do we use it?
-            </p>
+    </div>
+
+    <div class="parallax big-img-smart w3-display-container w3-opacity-min" id="third">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">YOUR AIMS</span>
         </div>
     </div>
-</div>
 
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="parallax big-img-smart w3-display-container w3-opacity-min" id="home">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">JUST CREATE</span>
-    </div>
-</div>
-
-<!-- Create AIM container-->
-<div class="w3-content w3-container w3-padding-64" id="about">
-    <h3 class="w3-center w3-black ">Create Your A I M</h3>
-    <p class="w3-center article">
-        <em>It`s easier than You think</em>
-    </p>
-    <p class="article-text">
-        What is Lorem Ipsum?
-    </p>
-
-    <div class="w3-center w3-row">
-        <h3 class="w3-center">Create smart AIM</h3>
-        <form method="post" enctype="multipart/form-data">
-            <p class="w3-center">T i t l e </p>
-            <input type="text" name="title" placeholder="t i t l e . . ."/>
-            <p class="w3-center">d e s c r i p t i o n</p>
-            <input type="text" name="description" placeholder="D e s c r i p t i o n  . . ."/>
-            <br>
-            <input type="hidden" name="_csrf" value="${_csrf.token}" />
-            <button type="submit" class="btn btn1 w3-button w3-padding-large">create</button>
-        </form>
+    <div class="w3-content w3-container w3-padding-32" id="aimsList">
+        <div class="w3-center w3-row">
+            <h3 class="w3-center">All aims</h3>
+            <@smartMacros.smartTable aims=all_aims/>
+        </div>
     </div>
 
+    <div class="parallax big-img-smart w3-display-container w3-opacity-min" id="fourth">
+    </div>
 
-</div>
-
-<!-- Footer -->
-<#import "parts/footer.ftl" as footer>
-<@footer.footer>
-</@footer.footer>
-
+    <@footer.footer/>
 </body>
 </html>

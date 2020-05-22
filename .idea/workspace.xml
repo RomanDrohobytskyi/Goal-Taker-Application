@@ -66,127 +66,49 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-05-05" />
       <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-05-07" />
       <change beforePath="" afterPath="$PROJECT_DIR$/log/logs.log.2020-05-09" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/user/UserProfileController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/UseCaseDiagrammdj.mdj" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/createDataBaseScript.sql" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/db_web_spring_schema.uml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/css/bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/css/jquery.bonsai.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/css/main.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/icon-font/icons.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/icon-font/icons.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/icon-font/icons.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/icon-font/icons.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/icon-font/icons.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/img/glyphicons-halflings-white.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/img/glyphicons-halflings.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/js/bootstrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/js/jquery-2.1.0.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/js/jquery.bonsai.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/js/less-1.7.0.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/0523f87905d0aa1edcda198ab683f3f5.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/0a8c0e192200904a6829eb21f4dab481.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/0bafed9a55bfea3a2317fc7cae7c54a2.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/1d8e6c079657fbcefb0feee8e09ae3a0.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/594af663de577680f35b13183109d675.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/a74bf0e3699da3f8e58beeb19b53e20a.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/adeb76fcc409179eebc9cb424780b753.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/b729e5e31ffa196d4951389d8352ee0e.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/c9669895cc784135dcd05bb15f3a1ff6.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/cf9c8b720f3815adeccaf3ef6e48c6c4.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/dd77def556176c8f5eefd3eaf2105dce.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/diagrams.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/eae3e7f68f443d7e9874c1254fcae838.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/element_index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/fed7abb6e81d4e6f78c4ec18d225ff4e.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/navigation.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/diagrams/a74bf0e3699da3f8e58beeb19b53e20a.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/diagrams/b729e5e31ffa196d4951389d8352ee0e.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/model.mwb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/model.mwb.bak" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/DB/createDataBaseScriptScreenShot.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/DB/createDataBaseScriptScreenShotCROPED.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/DB/db_web_spring_schema.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/DB/hibernate_sequence.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/DB/mysql_db_web_spring_diagram.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/DB/mysql_db_web_spring_diagram_with_relationships.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/DB/mysql_db_web_spring_diagram_with_relationships_2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/DB/note.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/DB/role.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/DB/smart_aim.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/DB/smart_aim_time.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/DB/ten_thousand_hours_aim.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/DB/ten_thousand_hours_aim_time.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/DB/user.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/activationCodeEmail.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/activationCodeEmailFull.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/createNote.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/createSmartAim.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/createSmartAim_1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/editNote.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/filteredNotes.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/footer.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/listOfusers.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/login.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/loginBiger.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/loginError.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/loginMobileVersion.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/mainPage.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/mainPageAboutSection.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/mainPageAboutSection2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/mainPageContact.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/mainPageMobileVersion.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/mainPageWithSubMenu.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/noAims.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/registration.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/registrationPasswordMatchError.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/registrationUserExistError.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/smartAimDesc_1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/subMenu.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/subMenuHover.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/tableOfNotes.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/userDataEditor.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/ScreenShots/usersMenu.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/UML/UseCaseDiagrammdj.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/code/IUserRepository.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/code/Note.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/code/ProjectStructure.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/code/WebSecurityConfig.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/code/applicationProperties.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/code/entityId.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/code/lombokAnotations_1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/code/lombokDataAnotation.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/code/mailSendingProperties.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/code/springBootStart.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/png/code/user.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/images/planingSticks.jpg" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d8904ba1-b051-4f55-85e8-45be13b913e6.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/d8904ba1-b051-4f55-85e8-45be13b913e6.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/config/WebSecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/application/config/WebSecurityConfig.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/connection/DataBase.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/all/aims/AllAimsController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/aims/AllAimsController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/authorisation/registration/RegistrationController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/authorisation/registration/RegistrationController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/greeting/GreetingController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/greeting/GreetingController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/message/MessageController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/message/MessageController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/user/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/user/UserController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/message/Message.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/message/Message.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/enums/State.java" afterPath="$PROJECT_DIR$/src/main/java/application/enums/State.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/managers/UserManager.java" afterPath="$PROJECT_DIR$/src/main/java/application/managers/UserManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/menu/CreatedMenuElements.java" afterPath="$PROJECT_DIR$/src/main/java/application/menu/CreatedMenuElements.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java" afterPath="$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/repositories/IUserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/application/repositories/IUserRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/services/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/UserService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/db-diagram.uml" afterPath="$PROJECT_DIR$/src/main/resources/diagrams/db-diagram.uml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main_aim.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/main_aim.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/menu.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/menu.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/smartAimMarcos.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/smartAimMarcos.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/userProfile.ftl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.ftl" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/TimeAnalyzerController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/TimeAnalyzerController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/aim/Aim.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/aim/Aim.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/time/data/TenThousandHoursAimTime.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/time/data/TenThousandHoursAimTime.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/time/data/Time.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/time/data/Time.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/css/bootstrap.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/css/jquery.bonsai.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/css/main.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/icon-font/icons.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/icon-font/icons.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/icon-font/icons.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/icon-font/icons.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/icon-font/icons.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/img/glyphicons-halflings-white.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/img/glyphicons-halflings.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/js/bootstrap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/js/jquery-2.1.0.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/js/jquery.bonsai.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/js/less-1.7.0.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/0523f87905d0aa1edcda198ab683f3f5.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/0a8c0e192200904a6829eb21f4dab481.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/0bafed9a55bfea3a2317fc7cae7c54a2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/1d8e6c079657fbcefb0feee8e09ae3a0.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/594af663de577680f35b13183109d675.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/a74bf0e3699da3f8e58beeb19b53e20a.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/adeb76fcc409179eebc9cb424780b753.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/b729e5e31ffa196d4951389d8352ee0e.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/c9669895cc784135dcd05bb15f3a1ff6.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/cf9c8b720f3815adeccaf3ef6e48c6c4.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/dd77def556176c8f5eefd3eaf2105dce.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/diagrams.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/eae3e7f68f443d7e9874c1254fcae838.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/element_index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/fed7abb6e81d4e6f78c4ec18d225ff4e.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/contents/navigation.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/diagrams/a74bf0e3699da3f8e58beeb19b53e20a.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/diagrams/b729e5e31ffa196d4951389d8352ee0e.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/diagrams/html-docs/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editTenKHoursAim.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/editTenKHoursAim.ftl" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/aims.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/aims.ftl" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/timeMacros.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/timeMacros.ftl" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ten_thousand_hours_aim.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/ten_thousand_hours_aim.ftl" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/time_analyzer.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/time_analyzer.ftl" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/Application.class" afterPath="$PROJECT_DIR$/target/classes/application/Application.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/config/WebSecurityConfig.class" afterPath="$PROJECT_DIR$/target/classes/application/config/WebSecurityConfig.class" />
@@ -295,57 +217,98 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <file leaf-file-name="timeMacros.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/timeMacros.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="126">
+              <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="State.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/enums/State.java">
+      <file leaf-file-name="time_analyzer.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/time_analyzer.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2625">
+              <caret line="125" column="24" lean-forward="false" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tenKHoursAimDetails.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tenKHoursAimDetails.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1659">
+              <caret line="79" column="34" lean-forward="false" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeAnalyzerController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/TimeAnalyzerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="903">
+              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d8904ba1-b051-4f55-85e8-45be13b913e6/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ten_thousand_hours_aim.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ten_thousand_hours_aim.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="53" column="83" lean-forward="true" selection-start-line="52" selection-start-column="23" selection-end-line="53" selection-end-column="83" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aims.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/aims.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="31" column="65" lean-forward="false" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
+              <folding>
+                <element signature="e#1316#1332#0#HTML" expanded="true" />
+                <element signature="e#1395#1411#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editAim.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/editAim.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editTenKHoursAim.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/editTenKHoursAim.ftl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
-              <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+              <caret line="52" column="24" lean-forward="false" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
               <folding>
-                <element signature="e#301#302#0" expanded="true" />
-                <element signature="e#343#344#0" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#label#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#label#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/message/MessageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding>
-                <element signature="e#1213#1229#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/services/MessageService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Aim.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/aim/Aim.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -353,28 +316,8 @@
       <file leaf-file-name="TenThousandHoursAim.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/aim/TenThousandHoursAim.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_aim.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main_aim.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-195">
-              <caret line="39" column="47" lean-forward="false" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="smartAimMarcos.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/smartAimMarcos.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <state relative-caret-position="252">
+              <caret line="37" column="27" lean-forward="false" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -394,11 +337,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getConvertedDate</find>
-      <find>largeBarChart</find>
-      <find>columnChart</find>
       <find>barChart</find>
-      <find>all</find>
       <find>lineChart</find>
       <find>lastSevenDaysTime</find>
       <find>chartContainer1</find>
@@ -424,6 +363,10 @@
       <find>w3-quarter</find>
       <find>We can`t send to You activation code, sorry!</find>
       <find>of me</find>
+      <find>aim</find>
+      <find>all</find>
+      <find>Max logged time</find>
+      <find>&lt;div class=&quot;w3-center w3-row&quot;&gt;</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -443,23 +386,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/user_analyzer.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/application/controllers/authorisation/login/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/main.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/aim_details.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/timeMacros.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/tenKHoursAimDetails.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/charst.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/ten_thousand_hours_aim.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/userList.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/application/services/TenThousandHoursAimTimeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimTimeAnalyzerController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/time_analyzer.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/TimeAnalyzerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/services/TimeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/entities/aim/Aim.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/controllers/user/UserProfilecontroller.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/user/userProfile.ft" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/user/profile.ftl" />
@@ -489,11 +423,20 @@
         <option value="$PROJECT_DIR$/src/main/java/application/controllers/aims/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/controllers/aims/User.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/greeting.ftl" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d8904ba1-b051-4f55-85e8-45be13b913e6/console.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/main_aim.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/application/enums/State.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/controllers/message/MessageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/entities/aim/Aim.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/entities/time/data/Time.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/entities/time/data/TenThousandHoursAimTime.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/time_analyzer.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/timeMacros.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/TimeAnalyzerController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ten_thousand_hours_aim.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/aims.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/editTenKHoursAim.ftl" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d8904ba1-b051-4f55-85e8-45be13b913e6/console.sql" />
       </list>
     </option>
   </component>
@@ -544,9 +487,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -626,6 +569,35 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringWebApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringWebApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="aim" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringWebApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringWebApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringWebApplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringWebApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="enums" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -691,7 +663,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1010,7 +982,9 @@
       <workItem from="1588830751845" duration="746000" />
       <workItem from="1588880563102" duration="14000" />
       <workItem from="1588880649421" duration="2653000" />
-      <workItem from="1588916723739" duration="6980000" />
+      <workItem from="1588916723739" duration="15789000" />
+      <workItem from="1590000292695" duration="2520000" />
+      <workItem from="1590039769541" duration="3223000" />
     </task>
     <task id="LOCAL-00001" summary="Log4J added, little changes in templates">
       <created>1564081469808</created>
@@ -1159,11 +1133,18 @@
       <option name="project" value="LOCAL" />
       <updated>1586624693930</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="New features. project details">
+      <created>1589231032900</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1589231032900</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="718392000" />
+    <option name="totallyTimeSpent" value="732944000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1183,13 +1164,13 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16004297" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16004297" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30097088" sideWeight="0.4924812" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32708332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32038835" sideWeight="0.4978678" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32038835" sideWeight="0.4978678" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1198,7 +1179,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23039742" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32686085" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23684211" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1212,7 +1194,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32686085" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.253125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1281,101 +1262,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.0/lombok-1.18.0.jar!/lombok/Setter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/Entity.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/ElementCollection.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar!/javax/validation/constraints/NotNull.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/roles/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.4.RELEASE/spring-core-5.0.4.RELEASE.jar!/org/springframework/util/StringUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="35" column="26" lean-forward="false" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/aim_details.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="89" column="102" lean-forward="true" selection-start-line="88" selection-start-column="21" selection-end-line="89" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/aims.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/editAim.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-504">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/aims.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="113" column="87" lean-forward="false" selection-start-line="113" selection-start-column="42" selection-end-line="113" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="53" column="36" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE.jar!/org/springframework/web/bind/annotation/PathVariable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userEdit.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-108">
           <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="49" column="36" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1436,20 +1326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/timeAnalizingMacros.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/timeMacros.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/menu.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1489,7 +1365,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1497,7 +1372,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1218">
           <caret line="58" column="123" lean-forward="false" selection-start-line="58" selection-start-column="123" selection-end-line="58" selection-end-column="123" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1513,7 +1387,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="60" column="46" lean-forward="false" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1528,10 +1401,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="798">
           <caret line="56" column="9" lean-forward="false" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
-          <folding>
-            <element signature="e#1084#1085#0" expanded="false" />
-            <element signature="e#1163#1164#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1540,7 +1409,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1555,10 +1423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="55" column="28" lean-forward="false" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
-          <folding>
-            <element signature="e#1668#1669#0" expanded="false" />
-            <element signature="e#1722#1723#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1566,31 +1430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1008">
           <caret line="48" column="19" lean-forward="false" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d8904ba1-b051-4f55-85e8-45be13b913e6/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/aim/Aim.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/aim/TenThousandHoursAim.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1598,7 +1437,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1606,7 +1444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-195">
           <caret line="39" column="47" lean-forward="false" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1622,10 +1459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-          <folding>
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#343#344#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1633,7 +1466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1641,44 +1473,165 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-          <folding>
-            <marker date="1545684913188" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1545684913188" expanded="false" signature="162:753" ph="..." />
-            <marker date="1545684913188" expanded="false" signature="1161:1172" ph=" { " />
-            <marker date="1545684913188" expanded="false" signature="1193:1199" ph=" }" />
-            <marker date="1545684913188" expanded="false" signature="1262:1273" ph=" { " />
-            <marker date="1545684913188" expanded="false" signature="1293:1299" ph=" }" />
-            <marker date="1545684913188" expanded="true" signature="1421:1477" ph="{...}" />
-            <marker date="1545684913188" expanded="true" signature="1556:1615" ph="{...}" />
-            <marker date="1545684913188" expanded="true" signature="1725:1784" ph="{...}" />
-            <marker date="1545684913188" expanded="true" signature="1878:1949" ph="{...}" />
-            <marker date="1545684913188" expanded="true" signature="2113:2718" ph="{...}" />
-            <marker date="1545684913188" expanded="true" signature="2878:4227" ph="{...}" />
-            <marker date="1545684913188" expanded="true" signature="4306:4483" ph="{...}" />
-            <marker date="1545684913188" expanded="true" signature="4603:5061" ph="{...}" />
-            <marker date="1545684913188" expanded="true" signature="5126:6283" ph="{...}" />
-            <marker date="1545684913188" expanded="true" signature="6368:6964" ph="{...}" />
-            <marker date="1545684913188" expanded="true" signature="7047:7618" ph="{...}" />
-            <marker date="1545684913188" expanded="true" signature="7678:8011" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/css/main.css">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/diagrams/html-docs/assets/css/main.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/message/MessageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="60" lean-forward="false" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+        <state relative-caret-position="217">
+          <caret line="40" column="49" lean-forward="false" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/aim/Aim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/message/MessageController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/charst.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="1407">
+          <caret line="67" column="8" lean-forward="false" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/time/data/Time.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/utils/ConvertedDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="e#1213#1229#1" expanded="true" />
+            <element signature="e#542#543#0" expanded="false" />
+            <element signature="e#610#611#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/time/data/TenThousandHoursAimTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/TimeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1323">
+          <caret line="80" column="16" lean-forward="false" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/timeAnalizingMacros.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tenKHoursAimDetails.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1659">
+          <caret line="79" column="34" lean-forward="false" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/timeMacros.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/time_analyzer.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2625">
+          <caret line="125" column="24" lean-forward="false" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/TimeAnalyzerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="903">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/aim/TenThousandHoursAim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="37" column="27" lean-forward="false" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/aims.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="31" column="65" lean-forward="false" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
+          <folding>
+            <element signature="e#1316#1332#0#HTML" expanded="true" />
+            <element signature="e#1395#1411#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/editAim.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ten_thousand_hours_aim.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="53" column="83" lean-forward="true" selection-start-line="52" selection-start-column="23" selection-end-line="53" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/editTenKHoursAim.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="52" column="24" lean-forward="false" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#label#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#label#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d8904ba1-b051-4f55-85e8-45be13b913e6/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>

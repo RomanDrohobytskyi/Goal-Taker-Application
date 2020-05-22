@@ -20,13 +20,26 @@ function myFunction() {
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {
     var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
+    if (x.className.indexOf("w3-show") === -1) {
         x.className += " w3-show";
     } else {
         x.className = x.className.replace(" w3-show", "");
     }
 }
-
-function clear(id){
-    document.getElementById(id).value = '';
+function slideMenuToggleFunction() {
+    var x = document.getElementById("slideMenu");
+    //var navBar = document.getElementById("myNavBar");
+    if (x.className.indexOf("w3-show") === -1) {
+        x.className += " w3-show";
+        //navBar.className += " slide-bar";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+       // navBar.className = x.className.replace(" slide-bar", "");
+    }
 }
+
+function setMaxHeightAndWight(elementId){
+    document.getElementById(elementId).style.maxHeight = "100%";
+    document.getElementById(elementId).style.maxWidth = "100%";
+}
+

@@ -41,16 +41,12 @@ public class TenThousandHoursAimTime {
 
     public ConvertedDate getConvertedDate(TenThousandHoursAimTime time){
         ConvertedDate convertedDate = new ConvertedDate();
-        Date date = time.getCreationDate();
+        Date date = time.getDate();
         LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 
-        int year = localDate.getYear();
-        int month = localDate.getMonthValue();
-        int day = localDate.getDayOfMonth();
-
-        convertedDate.setDay(day);
-        convertedDate.setMonth(month);
-        convertedDate.setYear(Long.valueOf(year));
+        convertedDate.setDay(localDate.getDayOfMonth());
+        convertedDate.setMonth(localDate.getMonthValue());
+        convertedDate.setYear((long) localDate.getYear());
 
         return convertedDate;
     }

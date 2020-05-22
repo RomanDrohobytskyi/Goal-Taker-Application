@@ -5,6 +5,10 @@ body, html {
     line-height: 1.8;
 }
 
+.user-avatar{
+
+}
+
 /*Gradients*/
 .gradient-blue{
     background: linear-gradient(to bottom right, blue, lightblue);
@@ -32,111 +36,179 @@ body, html {
 
 /* Create a Parallax Effect */
 .parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: no-repeat fixed center;
     background-size: cover;
 }
 
-/* Parallax images for greeting.ftl*/
 .big-img-greeting-1 {
-    background-image: url("https://pp.userapi.com/c847221/v847221064/126611/7O_a9n533XI.jpg");
+    background-image:
+        linear-gradient(to bottom, rgb(255, 255, 255), rgba(0, 0, 0, 0) 10%),
+        url("/static/images/webWithRainDrops.jpg");
     min-height: 80%;
+    background-size: cover;
 }
 
+
 .big-img-greeting-2 {
-    background-image: url("https://pp.userapi.com/c637317/v637317807/2460a/TLFfXV15QX0.jpg");
+    background-image: url("/static/images/autumnLeaf.jpg");
     min-height: 400px;
 }
 
 .big-img-greeting-3 {
-    background-image: url("https://pp.userapi.com/c637122/v637122807/2cd71/fOOd2agzTSs.jpg");
+    background-image: url("/static/images/snow.jpg");
     min-height: 400px;
 }
 
-/* Parallax images for login.ftl*/
 .big-img-login-1 {
-    background-image: url("https://blog.dieboldnixdorf.com/wp-content/uploads/2016/12/DN_DataSecurity_Blog.jpg");
+    background-image: url("/static/images/cyberLock.png");
     min-height: 400px;
 }
 
 .big-img-login-2 {
-    background-image: url("https://belimitless.com/wp-content/uploads/2017/08/blockchain.jpg");
+    background-image: url("/static/images/cyberEarth.jpg");
     min-height: 400px;
 }
 
 .big-img-login-3 {
-    background-image: url("https://belimitless.com/wp-content/uploads/2017/08/blockchain.jpg");
-    min-height: 400px;
+    background-image: url("/static/images/cyberEarth.jpg");
+    min-height: 70%;
 }
 
-/* Parallax images WELCOME */
 .big-img-welcome-1 {
-    background-image: url("http://www.crazytravellers.com/wp-content/uploads/2017/04/Welcome.jpg");
+    background-image: url("/static/images/welcome.jpg");
     min-height: 70%;
 }
 
-/* Parallax images USERS */
 .big-img-users-1 {
-    background-image: url("http://techstory.in/new/wp-content/uploads/2015/07/Internet-users-India.jpg");
+    background-image: url("/static/images/linkedUsers.jpg");
     min-height: 70%;
 }
 
-/*Big parallax photos for /projects*/
+.small-img-users-1 {
+    background-image: url("/static/images/linkedUsers.jpg");
+    min-height: 30%;
+}
+
 .big-img-projects-1 {
-    background-image: url("http://198.211.104.161/wp-content/uploads/2014/01/Hibernate-logo.png");
+    background-image: url("/static/images/hibernateLogo.png");
     min-height: 70%;
 }
 
 .big-img-projects-2 {
-    background-image: url("https://www.openhab.org/logos/jdbc.png");
+    background-image: url("/static/images/jdbcLogo.png");
     min-height: 70%;
 }
 
 .big-img-projects-3 {
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB_yCK06ouPnYKZg92oUPTBZtw80NTQ2K_VVisGQaM6BGCqrMg");
+    background-image: url("/static/images/javaLogo.png");
     min-height: 70%;
 }
 
 .big-img-projects-4 {
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB_yCK06ouPnYKZg92oUPTBZtw80NTQ2K_VVisGQaM6BGCqrMg");
+    background-image: url("/static/images/javaLogo.png");
     min-height: 70%;
 }
 
-/*Parallax photos for Aims */
 .big-img-smart {
-    background-image: url("https://cdn2.slidemodel.com/wp-content/uploads/6991-01-smart-goals-slide-design-1.jpg");
+    background-image: url("/static/images/smartGoals.jpg");
     min-height: 70%;
+}
+
+.big-img-ten-k-hours {
+    background-image: url("/static/images/tenKHourspng.png");
+    min-height: 70%;
+}
+
+.big-img-old_clock {
+    background-image: url("/static/images/oldClock.jpg");
+    min-height: 70%;
+}
+
+.big-img-aims {
+    background-image: url("/static/images/cartoonWorld.jpg");
+    min-height: 80%;
+}
+
+.big-img-10k-hours {
+    background-image: url("/static/images/tenKHours.png");
+    min-height: 50%;
 }
 
 .big-img-small-smart {
-    background-image: url("https://www.professionalacademy.com/media/images-news/smarter-objectives.jpg");
+    background-image: url("/static/images/smarterDesc.jpg");
     min-height: 70%;
 }
 
+.big-img-goals-plans {
+    background-image: url("/static/images/2020Goals.jpg");
+    min-height: 50%;
+}
+
+.big-img-small-smart-2 {
+    background-image: url("/static/images/smartWithImages.png");
+    min-height: 70%;
+}
+
+.big-img-messages {
+    background-image: url("/static/images/mobileMessaging.jpg");
+    min-height: 70%;
+}
+
+.big-img-messages-small {
+    background-image: url("/static/images/mobileMessaging.jpg");
+    min-height: 50%;
+}
+
+.big-img-macro-raindrop {
+    background-image: url("/static/images/raindrop.png");
+    min-height: 80%;
+}
+
+.big-img-macro-raindrop-small {
+    background-image: url("/static/images/raindrop.png");
+    min-height: 50%;
+}
+
+.big-img-macro-snowflake {
+    background-image: url("/static/images/snowflake.jpg");
+    min-height: 70%;
+}
+
+.big-img-macro-snowflake-2 {
+    background-image: url("/static/images/snowflake2.jpg");
+    min-height: 50%;
+}
+
+.big-img-macro-snowflake-3 {
+    background-image: url("/static/images/snowflake3.jpg");
+    min-height: 50%;
+}
+
+.big-img-analytics-charts-big {
+    background-image: url("/static/images/analiticsCharts2.jpg");
+    min-height: 80%;
+}
+
+.big-img-analytics-charts{
+    background-image: url("/static/images/analiticsCharts2.jpg");
+    min-height: 50%;
+}
+
+
+
+
+
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
-/* unvisited link */
-/*a:link {*/
-    /*color: darkblue;*/
-/*}*/
-/*!* visited link *!*/
-/*a:visited {*/
-    /*color: purple;*/
-/*}*/
-/* mouse over link */
+
 a:hover {
     color: cornflowerblue;
 }
-/* selected link */
+
 a:active {
     color: seagreen;
 }
 
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-    .big-img-index-1, .big-img-index-2, .big-img-index-3, .big-img-projects-1, .big-img-projects-2, .big-img-projects-3, .big-img-login-1, .big-img-login-2, .big-img-login-3, .big-img-welcome-1 {
-        background-attachment: scroll;
-        min-height: 400px;
-    }
+.default-margin{
+    margin: 10px;
 }

@@ -33,8 +33,8 @@ public class TimeAnalyzerController {
         List<Time> loggedTime = timeService.getLoggedTimeForAim(aim.getId());
         model.addAttribute("aim", aim);
         model.addAttribute("loggedTime", loggedTime);
-        model.addAttribute("lessProductive", timeService.getLessActiveTime(loggedTime));
         model.addAttribute("mostProductive", timeService.getMostActiveTime(loggedTime));
+        model.addAttribute("lessProductive", timeService.getLessActiveTime(loggedTime));
         model.addAttribute("lastSevenDaysTime", lastSevenDaysTime);
         model.addAttribute("loggedTimeSum", timeService.getAimLoggedTimeSum(loggedTime));
         model.addAttribute("menuElements", new MenuTabs().timeAnalyzerMenu());
@@ -55,5 +55,4 @@ public class TimeAnalyzerController {
 
         return "redirect:/analyzer/" + aim.getId()+ "#timeTable";
     }
-
 }
