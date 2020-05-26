@@ -24,6 +24,8 @@
     <#import "parts/details.ftl" as details>
     <#import "parts/popups.ftl" as popups>
     <#import "parts/menu.ftl" as menu>
+    <#import "parts/smartAimMarcos.ftl" as smart>
+    <#import "parts/userAnalyzerMacros.ftl" as userAnalyzer>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript"></script>
 </head>
@@ -31,59 +33,196 @@
 
     <@menu.customMenu menuElements slideMenuElements/>
 
-    <div class="parallax big-img-users-1 w3-display-container w3-opacity-min" id="home">
+    <div class="parallax big-img-analytics-hologram-big w3-display-container w3-opacity-min" id="home">
         <div class="w3-display-middle" style="white-space:nowrap;">
-            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Aim</span>
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">${user.getNames()}</span>
         </div>
     </div>
 
-    <#--Firts analizer container-->
-    <div class="w3-content w3-container w3-padding-64" id="details">
-
-        <h3 class="w3-center w3-black" style="background-color: #616161!important;">amdklawd</h3>
-        <p class="w3-center article"><em>!!!!!!!!!!!!!!!!!!!!!!!!!!!!</em></p>
-
-    <#--Aim main details-->
+    <div class="w3-content w3-container w3-padding-32" id="analyzer">
+        <h3 class="w3-center w3-black" style="background-color: #616161!important;">Your profile analyzer</h3>
+        <p class="w3-center article"><em>${user.email}</em></p>
         <div class="w3-row" id="main-details" style="padding: 12px 24px!important">
-            <div class="w3-col m6 w3-center w3-padding-large">
-                awd
+            <div class="w3-col m6 w3-center" style="">
+                <h3 class="w3-center w3-black" style="margin-right: 5px; background-color: #616161!important;">S.M.A.R.T</h3>
+                <#if mostProductive?has_content>
+                    <p style="w3-center"><strong>Most productive</strong></p>
+                    <br>
+                    <div style="text-align: left;">
+                       <@userAnalyzer.mostProductive mostProductive/>
+                    </div>
+                </#if>
+                <#if lessProductive?has_content>
+                     <p style="w3-center"><strong>Less productive</strong></p>
+                     <br>
+                     <div style="text-align: left;">
+                         <@userAnalyzer.lessProductive lessProductive/>
+                     </div>
+                </#if>
             </div>
             <div class="w3-col m6 w3-hide-small w3-center">
-                dd
+                <h3 class="w3-center w3-black" style="margin-left: 5px; background-color: #616161!important;">10,000 Hours Rule</h3>
+                 <#if tenThousandHoursAimMostProductive?has_content>
+                    <p style="w3-center"><strong>Most productive</strong></p>
+                    <br>
+                    <div style="text-align: right;">
+                       <@userAnalyzer.mostProductive tenThousandHoursAimMostProductive/>
+                    </div>
+                 </#if>
+                <#if tenThousandHoursAimLessProductive?has_content>
+                     <p style="w3-center"><strong>Less productive</strong></p>
+                     <br>
+                     <div style="text-align: right;">
+                         <@userAnalyzer.lessProductive tenThousandHoursAimLessProductive/>
+                     </div>
+                </#if>
             </div>
         </div>
+    </div>
 
+    <div class="parallax big-img-analytics-hologram w3-display-container w3-opacity-min" id="">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">More data</span>
+        </div>
+    </div>
+
+    <div class="w3-content w3-container w3-padding-32" id="moreData">
+        <div class="w3-row" id="main-details" style="padding: 12px 24px!important">
+            <div class="w3-col m6 w3-center">
+                <h3 class="w3-center w3-black" style="margin-right: 5px; background-color: #616161!important;">S.M.A.R.T</h3>
+                All S.M.A.R.T aims logged time sum:
+                <br>
+                <b>${sum!0}h</b>
+                <br>
+                <div style="text-align: left;">
+                    <#if mostActiveSmartAim.aimState == "ACHIEVED">
+                        <h3 class="w3-center w3-black" style="margin-right: 5px; background-color: #616161!important;">${mostActiveSmartAim.title!}
+                            <i class="fa fa-check" style="color: #2E9267;" title="Achieved!"></i>
+                        </h3>
+                    <#else>
+                       <h3 class="w3-center w3-black" style="margin-right: 5px; background-color: #616161!important;">${mostActiveSmartAim.title!}</h3>
+                    </#if>
+                    <p class="w3-center article"><em>${mostActiveSmartAim.description!}</em></p>
+                    <@details.aimDetails mostActiveSmartAim/>
+                    <@smart.smartAttributes mostActiveSmartAim/>
+                    <br>
+                </div>
+            </div>
+
+            <div class="w3-col m6 w3-hide-small w3-center">
+                <h3 class="w3-center w3-black" style="margin-left: 5px; background-color: #616161!important;">10,000 Hours Rule</h3>
+                All Ten Thousand Hours Rule aims logged time sum:
+                <br>
+                <b>${tenThousandHoursAimSum!0}h</b>
+
+                <div style="text-align: left;">
+                    <#if mostActiveTenThousandAim.aimState == "ACHIEVED">
+                        <h3 class="w3-center w3-black" style="margin-left: 5px; background-color: #616161!important;">${mostActiveTenThousandAim.title!}
+                            <i class="fa fa-check" style="color: #2E9267;" title="Achieved!"></i>
+                        </h3>
+                    <#else>
+                       <h3 class="w3-center w3-black" style="margin-left: 5px; background-color: #616161!important;">${mostActiveTenThousandAim.title!}</h3>
+                    </#if>
+                    <p class="w3-center article"><em>${mostActiveTenThousandAim.description!}</em></p>
+                    <@details.aimDetails mostActiveTenThousandAim/>
+                </div>
+
+                <div class="w3-light-grey">
+                    <div class="w3-container w3-padding-small w3-dark-grey w3-center"
+                         style="width:${(tenThousandHoursAimSum / 100)}%">
+                    ${tenThousandHoursAimSum}h
+                    </div>
+                </div>
+                of 10 000h
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax big-img-analytics-hologram w3-display-container w3-opacity-min" id="">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Smart Aim Charts</span>
+        </div>
+    </div>
+
+    <div class="w3-content w3-container w3-padding-32" id="smartCharts">
         <div class="w3-row">
-        <#--All logged time-->
-            <div class="w3-center">
-                <h3 class="w3-center">Logged time</h3>
-            <#-- Table of a aim and logged time -->
-                <p class="w3-center article"><em>Only not deleted time</em></p>
+            <h3 class="w3-center w3-black" style="background-color: #616161!important;">S.M.A.R.T - ${mostActiveSmartAim.title}</h3>
+            <div class="w3-col m6 w3-center w3-padding-large">
+                 <@charts.pieChart/>
             </div>
 
+            <div class="w3-col m6 w3-center w3-padding-large">
+                 <@charts.lineChart/>
+            </div>
+            <div style="display: none;">
+                <div class="w3-col m6 w3-center w3-padding-large">
+                     <@charts.splineAreaChart/>
+                </div>
+
+                <div class="w3-col m6 w3-center w3-padding-large">
+                     <@charts.columnChart/>
+                </div>
+            </div>
+            <@charts.all loggedTime lastSevenDaysTime mostProductive lessProductive tenKLoggedTime tenKLastSevenDays mostActiveTenThousandAim tenThousandHoursAimLessProductive/>
         </div>
     </div>
 
-    <div class="parallax big-img-users-1 w3-display-container w3-opacity-min" id="home">
+    <div class="parallax big-img-analytics-hologram w3-display-container w3-opacity-min" id="">
         <div class="w3-display-middle" style="white-space:nowrap;">
-            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Aim</span>
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Ten Thousand Hours Rule Aim Charts</span>
         </div>
     </div>
 
-    <#--Second char div-->
-    <div class="w3-content w3-container w3-padding-64" id="details">
-        <div class="w3-col m6 w3-hide-small w3-center">
-            <div class="w3-center w3-row">
-                <div id="chartContainer2"></div>
+    <div class="w3-content w3-container w3-padding-32" id="tenKCharts">
+        <div class="w3-row">
+            <h3 class="w3-center w3-black" style="background-color: #616161!important;">10,000 Hours Rule Aim - ${mostActiveTenThousandAim.title}</h3>
+
+            <div class="w3-col m6 w3-center w3-padding-large">
+                 <@charts.pieChart_two/>
+            </div>
+
+            <div class="w3-col m6 w3-center w3-padding-large">
+                 <@charts.lineChart_two/>
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax big-img-analytics-hologram w3-display-container w3-opacity-min">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Total Data</span>
+        </div>
+    </div>
+
+    <div class="w3-content w3-container w3-padding-32" id="totalData">
+        <div class="w3-row" id="main-details" style="padding: 12px 24px!important">
+            <div class="w3-col m6 w3-center">
+                <h3 class="w3-center w3-black" style="margin-right: 5px; background-color: #616161!important;">S.M.A.R.T</h3>
+                All goals count: ${notDeletedAims?size}
+                <br>
+                Achieved goals count: ${achievedAims?size}
+                <#assign leftToAchieve = notDeletedAims?size - achievedAims?size/>
+                <#if leftToAchieve gt 0>
+                    <br>
+                    Goals left to achieve: ${leftToAchieve}
+                </#if>
+            </div>
+
+            <div class="w3-col m6 w3-hide-small w3-center">
+                <h3 class="w3-center w3-black" style="margin-left: 5px; background-color: #616161!important;">10,000 Hours Rule</h3>
+                All goals count: ${notDeletedTenKdAims?size}
+                <br>
+                Achieved goals count: ${achieveTenKdAims?size}
+                <#assign leftToAchieve = notDeletedTenKdAims?size - achieveTenKdAims?size/>
+                <#if leftToAchieve gt 0>
+                    <br>
+                    Goals left to achieve: ${leftToAchieve}
+                </#if>
 
             </div>
         </div>
     </div>
 
-    <div class="parallax big-img-users-1 w3-display-container w3-opacity-min" id="home">
-        <div class="w3-display-middle" style="white-space:nowrap;">
-        </div>
-    </div>
+    <div class="parallax big-img-analytics-hologram w3-display-container w3-opacity-min" id="footer-img"></div>
 
     <@footer.footer/>
 

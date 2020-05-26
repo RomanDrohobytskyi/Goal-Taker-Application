@@ -100,4 +100,11 @@ public class AimService {
 
         return aim;
     }
+
+    public List<Aim> getAchievedUserAims(User user) {
+        return aimRepository.findAimsByAimStateAndUser(State.AimState.ACHIEVED.toString(), user);
+    }
+    public List<Aim> getNotDeletedUserAims(User user) {
+        return aimRepository.findAimsByAimStateIsNotLikeAndUser(State.AimState.DELETED.toString(), user);
+    }
 }

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 @Controller
 @RequestMapping("/tenKAimTimeAnalyzer")
@@ -30,7 +31,7 @@ public class TenKHoursAimTimeAnalyzerController {
     @RequestMapping("/{aim}")
     public String getEditForm(@PathVariable TenThousandHoursAim aim, Model model) {
         List<TenThousandHoursAimTime> lastSevenDaysTime = timeService.getLastWeekTime(aim.getId());
-        List<TenThousandHoursAimTime> loggedTime = timeService.getLoggedTimeForAim(aim.getId());
+        Set<TenThousandHoursAimTime> loggedTime = aim.getLoggedTime();
         model.addAttribute("aim", aim);
         model.addAttribute("loggedTime", loggedTime);
         model.addAttribute("lessProductive", timeService.getLessActiveTime(loggedTime));

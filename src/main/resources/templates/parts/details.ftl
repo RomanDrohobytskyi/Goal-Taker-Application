@@ -1,6 +1,5 @@
 <#macro userDetails user>
     <#if user?has_content>
-     <p class="w3-center article"> <em>User details</em></p> <br>
         ${user.firstName!} <br>
         ${user.lastName!} <br>
         ${user.email!} <br>
@@ -9,18 +8,16 @@
 
 <#macro aimDetails aim>
     <#if aim?has_content>
-        <p class="w3-center article"> <em>Aim details</em> <br> </p>
-        ${aim.title!} <br>
-        ${aim.description!} <br>
-        ${aim.aimState!} <br>
-        ${aim.creationDate!} <br>
+        Title - ${aim.title!} <br>
+        Description - ${aim.description!} <br>
+        State - ${aim.aimState!} <br>
+        Creation date - ${aim.creationDate!} <br>
     </#if>
 </#macro>
 
 <#macro loggedTimeDetail logged_time aim>
     <table id="timeTable" align="center" width="100%"
            style="padding: 10px;">
-    <#-- Table header -->
         <tr>
             <th>ID</th>
             <th>Description</th>

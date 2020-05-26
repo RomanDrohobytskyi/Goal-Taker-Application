@@ -194,6 +194,16 @@ body, html {
     min-height: 50%;
 }
 
+.big-img-analytics-hologram-big {
+    background-image: url("/static/images/analiticsHologram.jpg");
+    min-height: 80%;
+}
+
+.big-img-analytics-hologram{
+    background-image: url("/static/images/analiticsHologram.jpg");
+    min-height: 50%;
+}
+
 
 
 

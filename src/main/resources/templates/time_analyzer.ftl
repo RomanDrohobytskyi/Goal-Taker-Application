@@ -22,7 +22,6 @@
     <#import "parts/elements.ftl" as elements>
     <#import "parts/charst.ftl" as charts>
     <#import "parts/details.ftl" as details>
-    <#import "parts/timeAnalizingMacros.ftl" as analizer>
     <#import "parts/smartAimMarcos.ftl" as smart>
     <#import "parts/popups.ftl" as popups>
     <#import "parts/menu.ftl" as menu>
@@ -35,7 +34,7 @@
 
     <div class="parallax big-img-analytics-charts-big w3-display-container w3-opacity-min" id="home">
         <div class="w3-display-middle" style="white-space:nowrap;">
-            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Analizer</span>
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Analyzer</span>
         </div>
     </div>
 
@@ -68,10 +67,8 @@
         </div>
 
         <div class="w3-row">
-            <#--All logged time-->
             <div class="w3-center">
                 <h3 class="w3-center">Logged time</h3>
-                <#-- Table of a aim and logged time -->
                 <p class="w3-center article"><em>Only not deleted time</em></p>
                 <@details.loggedTimeDetail loggedTime aim/>
             </div>
@@ -106,7 +103,8 @@
                  <@charts.columnChart/>
             </div>
 
-            <@charts.all loggedTime lastSevenDaysTime mostProductive lessProductive/>
+            <@charts.all loggedTime=loggedTime lastSevenDaysTime=lastSevenDaysTime mostProductive=mostProductive
+                lessProductive=lessProductive loggedTime_2='' lastSevenDaysTime_2='' mostProductive_2='' lessProductive_2=''/>
         </div>
     </div>
 

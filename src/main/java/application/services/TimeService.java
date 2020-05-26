@@ -6,7 +6,6 @@ import application.enums.State;
 import application.repositories.IAimRepository;
 import application.repositories.ITenThousandHoursAimRepository;
 import application.repositories.ITimeRepository;
-import application.utils.ListUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -74,21 +73,36 @@ public class TimeService {
         return time;
     }
 
-    public Time getMostActiveTime(List<Time> times){
+    public Time getMostActiveTime(Set<Time> times){
         Optional<Time> time = times.stream().max(Comparator.comparing(Time::getTime));
         return time.get();
     }
-    public Time getLessActiveTime(List<Time> times){
+    public Time getLessActiveTime(Set<Time> times){
         Optional<Time> time = times.stream().min(Comparator.comparing(Time::getTime));
         return time.get();
     }
 
-    public List<Time> getAllLoggedTimeForUserAims(List<Aim> userAims){
-        List<Time> allAimsLoggedTime = new ArrayList<>();
+    public Set<Time> getAllLoggedTimeForUserAims(List<Aim> userAims){
+        Set<Time> allAimsLoggedTime = new HashSet<>();
         for (Aim aim : userAims){
             allAimsLoggedTime.addAll(aim.getLoggedTime());
         }
         return allAimsLoggedTime;
+    }
+
+    public Aim getMostActiveAim(List<Aim> userAims){
+        Aim maxTimeAim = null;
+        Double maxTime = 0D;
+        for (Aim aim : userAims){
+            Double sum = aim.getLoggedTime().stream()
+                    .mapToDouble(Time::getTime)
+                    .sum();
+            if (sum > maxTime){
+                maxTime = sum;
+                maxTimeAim = aim;
+            }
+        }
+        return maxTimeAim;
     }
 
     public Optional<Time> saveTimeForAim(Number time, String description, String date, Aim aim) {
@@ -98,7 +112,7 @@ public class TimeService {
             newTime = Optional.of(adaptTime(time.doubleValue(), convertedDate, description, State.DateState.NEW, aim));
             newTime.get().setCreationDate(new Date());
             timeRepository.save(newTime.get());
-            aim.setLoggedTime(ListUtils.oneElementArrayList(newTime.get()));
+            aim.setLoggedTime(Collections.singleton(newTime.get()));
             aimRepository.save(aim);
         } catch (ParseException e) {
             e.printStackTrace();
@@ -106,7 +120,7 @@ public class TimeService {
         return newTime;
     }
 
-    public Double getAimLoggedTimeSum(List<Time> loggedTime) {
+    public Double getAimLoggedTimeSum(Set<Time> loggedTime) {
         return loggedTime
                 .stream()
                 .mapToDouble(Time::getTime)

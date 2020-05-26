@@ -5,7 +5,6 @@ import application.entities.time.data.TenThousandHoursAimTime;
 import application.enums.State;
 import application.repositories.ITenThousandHoursAimRepository;
 import application.repositories.ITenThousandHoursAimTimeRepository;
-import application.utils.ListUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -69,11 +68,11 @@ public class TenThousandHoursAimTimeService {
         return time;
     }
 
-    public TenThousandHoursAimTime getMostActiveTime(List<TenThousandHoursAimTime> times){
+    public TenThousandHoursAimTime getMostActiveTime(Set<TenThousandHoursAimTime> times){
         Optional<TenThousandHoursAimTime> time = times.stream().max(Comparator.comparing(TenThousandHoursAimTime::getTime));
         return time.get();
     }
-    public TenThousandHoursAimTime getLessActiveTime(List<TenThousandHoursAimTime> times){
+    public TenThousandHoursAimTime getLessActiveTime(Set<TenThousandHoursAimTime> times){
         Optional<TenThousandHoursAimTime> time = times.stream().min(Comparator.comparing(TenThousandHoursAimTime::getTime));
         return time.get();
     }
@@ -85,12 +84,20 @@ public class TenThousandHoursAimTimeService {
             newTime = adaptTime(time.doubleValue(), convertedDate, description, State.DateState.NEW, aim);
             newTime.setCreationDate(new Date());
             iTenThousandHoursAimTimeRepository.save(newTime);
-            aim.setLoggedTime(ListUtils.oneElementArrayList(newTime));
+            aim.setLoggedTime(Collections.singleton(newTime));
             tenThousandHoursAimRepository.save(aim);
         } catch (ParseException e) {
             e.printStackTrace();
         }
         return newTime;
+    }
+
+    public Set<TenThousandHoursAimTime> getAllLoggedTimeForUserTenThousandHoursAims(List<TenThousandHoursAim> userAims){
+        Set<TenThousandHoursAimTime> allAimsLoggedTime = new HashSet<>();
+        for (TenThousandHoursAim aim : userAims){
+            allAimsLoggedTime.addAll(aim.getLoggedTime());
+        }
+        return allAimsLoggedTime;
     }
 
     public Map<Long, Double> getAimsLoggedTimeSum(List<TenThousandHoursAim> aims){
@@ -104,11 +111,25 @@ public class TenThousandHoursAimTimeService {
                 );
     }
 
-    public Double getAimLoggedTimeSum(List<TenThousandHoursAimTime> time){
+    public Double getAimLoggedTimeSum(Set<TenThousandHoursAimTime> time){
         return time
             .stream()
             .mapToDouble(TenThousandHoursAimTime::getTime)
             .sum();
     }
 
+    public TenThousandHoursAim getMostActiveAim(List<TenThousandHoursAim> userAims) {
+        TenThousandHoursAim maxTimeAim = null;
+        Double maxTime = 0D;
+        for (TenThousandHoursAim aim : userAims){
+            Double sum = aim.getLoggedTime().stream()
+                    .mapToDouble(TenThousandHoursAimTime::getTime)
+                    .sum();
+            if (sum > maxTime){
+                maxTime = sum;
+                maxTimeAim = aim;
+            }
+        }
+        return maxTimeAim;
+    }
 }

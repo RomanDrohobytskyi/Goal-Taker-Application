@@ -50,9 +50,11 @@
 
         <div class="w3-row" id="main-details" style="padding: 12px 24px!important">
             <div class="w3-col m6 w3-center w3-padding-large">
+                <p class="w3-center article"> <em>User details</em></p> <br>
                 <@details.userDetails user=aim.user/>
             </div>
             <div class="w3-col m6 w3-hide-small w3-center">
+                <p class="w3-center article"> <em>Aim details</em> <br> </p>
                 <@details.aimDetails aim=aim/>
             </div>
         </div>

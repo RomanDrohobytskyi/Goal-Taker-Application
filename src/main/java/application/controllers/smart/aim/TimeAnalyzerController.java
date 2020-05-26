@@ -30,13 +30,12 @@ public class TimeAnalyzerController {
     @RequestMapping("/{aim}")
     public String getEditForm(@PathVariable Aim aim, Model model) {
         List<Time> lastSevenDaysTime = timeService.getLastWeekTime(aim.getId());
-        List<Time> loggedTime = timeService.getLoggedTimeForAim(aim.getId());
         model.addAttribute("aim", aim);
-        model.addAttribute("loggedTime", loggedTime);
-        model.addAttribute("mostProductive", timeService.getMostActiveTime(loggedTime));
-        model.addAttribute("lessProductive", timeService.getLessActiveTime(loggedTime));
+        model.addAttribute("loggedTime", aim.getLoggedTime());
+        model.addAttribute("mostProductive", timeService.getMostActiveTime(aim.getLoggedTime()));
+        model.addAttribute("lessProductive", timeService.getLessActiveTime(aim.getLoggedTime()));
         model.addAttribute("lastSevenDaysTime", lastSevenDaysTime);
-        model.addAttribute("loggedTimeSum", timeService.getAimLoggedTimeSum(loggedTime));
+        model.addAttribute("loggedTimeSum", timeService.getAimLoggedTimeSum(aim.getLoggedTime()));
         model.addAttribute("menuElements", new MenuTabs().timeAnalyzerMenu());
         model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
         return "time_analyzer";

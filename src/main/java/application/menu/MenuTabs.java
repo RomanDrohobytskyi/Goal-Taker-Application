@@ -66,4 +66,17 @@ public class MenuTabs {
         menuElements.add(createdMenuElements.profile);
         return menuElements;
     }
+
+    public  List<MenuElement> userAnalyzerMenuItems(){
+        List<MenuElement> menuElements = new ArrayList<>();
+        menuElements.add(createdMenuElements.homePage);
+        menuElements.add(createdMenuElements.upToTheTop);
+        menuElements.add(createdMenuElements.personalUserAnalyzer);
+        menuElements.add(createdMenuElements.moreData);
+        menuElements.add(createdMenuElements.smartAimCharts);
+        menuElements.add(createdMenuElements.tenThousandHoursAimCharts);
+        menuElements.add(createdMenuElements.login);
+        menuElements.add(createdMenuElements.profile);
+        return menuElements;
+    }
 }

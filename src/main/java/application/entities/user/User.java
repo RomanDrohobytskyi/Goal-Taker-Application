@@ -81,4 +81,8 @@ public class User implements UserDetails{
     public boolean isEnabled() {
         return isActive();
     }
+
+    public String getNames(){
+        return firstName.concat(" ").concat(lastName);
+    }
 }

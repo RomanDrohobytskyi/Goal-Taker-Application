@@ -1,7 +1,6 @@
 package application.entities.aim;
 
 import application.entities.time.data.TenThousandHoursAimTime;
-import application.entities.time.data.Time;
 import application.entities.user.User;
 import application.enums.State;
 import lombok.Getter;
@@ -13,7 +12,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
-import java.util.List;
+import java.util.Set;
 
 @Entity(name = "ten_thousand_hours_aim")
 @Getter
@@ -47,8 +46,8 @@ public class TenThousandHoursAim {
     private Date achievedDate;
     @ManyToOne
     private User user;
-    @OneToMany(mappedBy = "aim", targetEntity = Time.class, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "aim", targetEntity = TenThousandHoursAimTime.class, fetch = FetchType.EAGER)
     @Column(name = "logged_time")
-    private List<TenThousandHoursAimTime> loggedTime;
+    private Set<TenThousandHoursAimTime> loggedTime;
 
 }

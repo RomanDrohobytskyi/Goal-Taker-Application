@@ -65,7 +65,7 @@
 </#macro>
 
 
-<#macro all loggedTime lastSevenDaysTime mostProductive lessProductive>
+<#macro all loggedTime lastSevenDaysTime mostProductive lessProductive loggedTime_2 lastSevenDaysTime_2 mostProductive_2 lessProductive_2>
 <script type="text/javascript">
     window.onload = function () {
         var chart = new CanvasJS.Chart("chartContainer1",
@@ -195,6 +195,79 @@
                     ]
                 });
         chart.render();
+
+        <#if loggedTime_2?has_content && lastSevenDaysTime_2?has_content && mostProductive_2?has_content && lessProductive_2?has_content>
+            var chart = new CanvasJS.Chart("chartContainer5",
+                    {
+                        animationEnabled: true,
+                        title: {
+                            text: "Last 7 days"
+                        },
+                        data: [
+                            {
+                                type: "pie",
+                                showInLegend: true,
+                                dataPoints: [
+                                    <#if lastSevenDaysTime_2?has_content>
+                                        <#list lastSevenDaysTime_2 as time>
+                                        {
+                                            y: ${time.time?string},
+                                            legendText: '${time.description + '/' + time.time + 'h'}',
+                                            indexLabel: '${time.getConvertedDate(time).toString()}'
+                                        },
+                                        </#list>
+                                    </#if>
+                                ]
+                            }
+                        ]
+                    });
+            chart.render();
+
+            var chart = new CanvasJS.Chart("chartContainer6",
+                    {
+                        animationEnabled: true,
+                        title: {
+                            text: "Line Chart"
+                        },
+                        data: [
+                            {
+                                type: "line",
+                                dataPoints: [
+                                     <#list loggedTime_2 as time>
+                                         <#assign day = time.getConvertedDate(time).day>
+                                         <#assign month = time.getConvertedDate(time).month>
+                                         <#assign year = time.getConvertedDate(time).year>
+
+                                         <#if time.state != "DELETED">
+                                             <#if mostProductive_2.id = time.id>
+                                                  {
+                                                      label: '${time.getConvertedDate(time).toString()}',
+                                                      y: ${time.time?string},
+                                                      indexLabel: "highest", markerColor: "red",
+                                                      markerType: "triangle"
+                                                  },
+                                             <#elseif lessProductive_2.id = time.id>
+                                                  {
+                                                      label: '${time.getConvertedDate(time).toString()}',
+                                                      y: ${time.time?string},
+                                                      indexLabel: "lowest",
+                                                      markerColor: "DarkSlateGrey",
+                                                      markerType: "cross"
+                                                  },
+                                             <#else>
+                                                 {
+                                                     label: '${time.getConvertedDate(time).toString()}',
+                                                     y: ${time.time?string}
+                                                 },
+                                             </#if>
+                                         </#if>
+                                     </#list>
+                                ]
+                            }
+                        ]
+                    });
+            chart.render();
+        </#if>
     }
 </script>
 <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
@@ -217,5 +290,13 @@
 
 <#macro columnChart>
     <div id="chartContainer4" style="width: 100%; height: 300px;display: inline-block;"></div>
+</#macro>
+
+<#macro pieChart_two>
+    <div id="chartContainer5" style="width: 100%; height: 300px;display: inline-block;"></div>
+</#macro>
+
+<#macro lineChart_two>
+    <div id="chartContainer6" style="width: 100%; height: 300px;display: inline-block;"></div>
 </#macro>
 

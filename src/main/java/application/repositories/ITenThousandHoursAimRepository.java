@@ -10,4 +10,6 @@ import java.util.List;
 @Repository
 public interface ITenThousandHoursAimRepository extends CrudRepository<TenThousandHoursAim, Long> {
     List<TenThousandHoursAim> findByUser(User user);
+    List<TenThousandHoursAim> findTenThousandHoursAimsByAimStateAndUser(String aimState, User user);
+    List<TenThousandHoursAim> findAimsByAimStateIsNotLikeAndUser(String aimStateNotLike, User user);
 }

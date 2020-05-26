@@ -10,7 +10,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
-import java.util.List;
+import java.util.Set;
 
 @Entity(name = "aim")
 @Getter
@@ -61,8 +61,8 @@ public class Aim {
     private Date achievedDate;
     @ManyToOne
     private User user;
-    @OneToMany(mappedBy = "aim", targetEntity=Time.class, fetch=FetchType.EAGER)
+    @OneToMany(mappedBy = "aim", cascade=CascadeType.ALL, targetEntity=Time.class, fetch=FetchType.EAGER)
     @Column(name = "logged_time")
-    private List<Time> loggedTime;
+    private Set<Time> loggedTime;
 
 }

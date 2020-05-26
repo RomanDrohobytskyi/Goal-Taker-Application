@@ -47,13 +47,15 @@
                 <p class="w3-center">Email: </p>
 
                 <@elements.input id="login" name="username" type="email" placeholder="e m a i l . . ."
-                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 'e m a  i l . . .'" class="login-input"/>
+                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 'e m a  i l . . .'" class="login-input"
+                    value="roman.drohobytskyi@gmail.com"/>
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
 
                 <p class="w3-center">Password: </p>
 
                 <@elements.input id="password" name="password" type="password" placeholder="p a s s w o r d . . ."
-                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 'p a s s w o r d . . .'" class="login-input"/>
+                    onfocus="this.placeholder = ''"  onblur="this.placeholder = 'p a s s w o r d . . .'" class="login-input"
+                    value="111"/>
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
 
                 <br>

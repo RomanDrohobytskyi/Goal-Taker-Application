@@ -38,7 +38,6 @@ public class TenThousandHoursAimService {
         aim.setModificationDate(new Date());
         aim.setDeletionDate(new Date());
         aim.setAimState(State.AimState.DELETED.toString());
-
         return aimRepository.save(aim);
     }
 
@@ -76,5 +75,13 @@ public class TenThousandHoursAimService {
         Optional<TenThousandHoursAim> aimOptional = adaptAim(title, description, text, user);
         aimOptional.ifPresent(tenThousandHoursAim -> aimRepository.save(tenThousandHoursAim));
         return aimOptional;
+    }
+
+    public List<TenThousandHoursAim> getAchievedUserAims(User user){
+        return aimRepository.findTenThousandHoursAimsByAimStateAndUser(State.AimState.ACHIEVED.toString(), user);
+    }
+
+    public List<TenThousandHoursAim> getNotDeletedUserAims(User user) {
+        return aimRepository.findAimsByAimStateIsNotLikeAndUser(State.AimState.DELETED.toString(), user);
     }
 }

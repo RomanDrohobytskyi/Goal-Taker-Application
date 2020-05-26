@@ -15,6 +15,9 @@ public class CreatedMenuElements {
     MenuElement lineChart = new MenuElement("#line-chart", "w3-bar-item w3-button w3-hide-small","fa fa-line-chart", "CHARTS", "Logged time charts");
     MenuElement aimsList = new MenuElement("#aimsList", "w3-bar-item w3-button w3-hide-small","fa fa-list", "AIMS", "List of aims");
     MenuElement createAim = new MenuElement("#createAim", "w3-bar-item w3-button w3-hide-small","fa fa-plus", "CREATE", "Create aim");
+    MenuElement personalUserAnalyzer = new MenuElement("#analyzer", "w3-bar-item w3-button w3-hide-small","fa fa-circle-o", "ANALYZER", "Personal user analyzer");
+    MenuElement smartAimCharts = new MenuElement("#smartCharts", "w3-bar-item w3-button w3-hide-small","fa fa-line-chart", "S.M.A.R.T CHARTS", "Smart charts");
+    MenuElement tenThousandHoursAimCharts = new MenuElement("#tenKCharts", "w3-bar-item w3-button w3-hide-small","fa fa-line-chart", "10,000 HOURS RULE CHARTS", "10k charts");
 
 
     MenuElement aims = new MenuElement("/aims", "w3-bar-item w3-button", "fa fa-circle-o", "ALL AIMS", ">ALL AIMS");

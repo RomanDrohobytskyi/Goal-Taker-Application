@@ -70,4 +70,5 @@ public class MessageService {
             return messageRepository.findByTagAndAndUser(filter, loggedInUser);
         }
     }
+
 }
