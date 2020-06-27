@@ -40,7 +40,6 @@ public class MessageService {
 
     public Message deleteMessage(Message message){
         message.setState(State.MessageState.DELETED.toString());
-
         return messageRepository.save(message);
     }
 
@@ -69,6 +68,14 @@ public class MessageService {
         } else {
             return messageRepository.findByTagAndAndUser(filter, loggedInUser);
         }
+    }
+
+    public Message save(Message message){
+        return messageRepository.save(message);
+    }
+
+    public List<Message> findByUser(User user){
+        return messageRepository.findByUser(user);
     }
 
 }

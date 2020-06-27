@@ -25,7 +25,11 @@ public class UserService implements UserDetailsService{
     private MailSenderService mailSenderService;
 
     @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+        return iUserRepository.findUserByEmail(s);
+    }
+
+    public User findUserByEmail(String email) throws UsernameNotFoundException {
         return iUserRepository.findUserByEmail(email);
     }
 
@@ -94,5 +98,4 @@ public class UserService implements UserDetailsService{
         }
         return user;
     }
-
 }

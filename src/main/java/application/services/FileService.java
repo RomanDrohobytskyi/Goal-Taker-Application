@@ -31,10 +31,6 @@ public class FileService {
         this.createdFileName = createdFileName;
     }
 
-    /**
-     * Method to upload file
-     * @param file
-     */
     public void uploadFile(MultipartFile file){
         try {
             if (file != null && !file.getOriginalFilename().isEmpty()) {

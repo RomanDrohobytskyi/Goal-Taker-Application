@@ -1,6 +1,5 @@
 package application.logger;
 
-import application.constants.CharConstants;
 import org.apache.log4j.Logger;
 
 /**
@@ -17,9 +16,9 @@ public class LoggerJ {
     public static void logInfo(Class logClass, String message) {
         try {
             Logger logger = Logger.getLogger(logClass);
-            logger.info(CharConstants.HUNDRED_STARS);
+            logger.info("****************************************************************************************************");
             logger.info(message);
-            logger.info(CharConstants.HUNDRED_STARS);
+            logger.info("****************************************************************************************************");
         } catch (Exception e){
             e.printStackTrace();
         }
@@ -33,9 +32,9 @@ public class LoggerJ {
     public static void logError(Class logClass, String message){
         try{
             Logger logger = Logger.getLogger(logClass);
-            logger.info(CharConstants.HUNDRED_STARS);
+            logger.info("****************************************************************************************************");
             logger.error(message);
-            logger.info(CharConstants.HUNDRED_STARS);
+            logger.info("****************************************************************************************************");
         } catch (Exception e){
             e.printStackTrace();
         }

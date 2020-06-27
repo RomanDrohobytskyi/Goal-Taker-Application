@@ -158,7 +158,7 @@
                     <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: roman.roman@mail.com<br>
                 </div>
                 <p>Leave me a note:</p>
-                <form action="/send/note">
+                <form action="/send/note" method="post">
                     <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
                         <div class="w3-half">
                             <input class="w3-input w3-border" type="text" placeholder="Name" required name="userName">
@@ -167,7 +167,9 @@
                             <input class="w3-input w3-border" type="text" placeholder="Email" required name="userEmail">
                         </div>
                     </div>
+
                     <input class="w3-input w3-border" type="text" placeholder="Message" required name="message">
+                    <input type="hidden" value="${_csrf.token}" name="_csrf">
 
                     <button class="w3-right w3-section btn btn1" type="submit">
                         <i class="fa fa-paper-plane"></i>

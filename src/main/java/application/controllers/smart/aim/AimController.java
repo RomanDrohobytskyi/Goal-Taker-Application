@@ -6,7 +6,6 @@ import application.managers.UserManager;
 import application.menu.MenuTabs;
 import application.repositories.IAimRepository;
 import application.services.AimService;
-import application.utils.MapUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -16,8 +15,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.text.SimpleDateFormat;
+import java.util.Collections;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
@@ -71,7 +70,7 @@ public class AimController {
                 model.put("aims", userAims);
             }
             else {
-                HashMap myMap = MapUtils.oneElementHashMap("", "");
+                Map myMap = Collections.EMPTY_MAP;
                 model.put("aims", myMap);
             }
         } catch (Exception e){

@@ -21,7 +21,6 @@ public class TenThousandHoursAimService {
     private UserManager userManager = new UserManager();
 
     public Optional<TenThousandHoursAim> adaptAim(String title, String description, String text, User user) {
-
         if (Strings.isNotEmpty(title) && Strings.isNotEmpty(description) && user != null){
             TenThousandHoursAim aim = new TenThousandHoursAim();
             aim.setTitle(title);

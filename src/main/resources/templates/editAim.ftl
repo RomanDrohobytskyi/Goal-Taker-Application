@@ -30,13 +30,9 @@
 
     <!-- Message edit div -->
     <div class="w3-content w3-container w3-padding-64" id="edit-aim">
-
         <h3 class="w3-center">E D I T</h3>
-
         <div class="w3-center w3-row">
-
             <form action="/editAim" method="post" style="margin: 30px 10px 10px">
-
                 <label>
                     <i class="w3-center">t i t l e</i>
                     <br>
@@ -52,7 +48,6 @@
                            style="margin: 20px;">
                 </label>
                 <br>
-
                 <label>
                     <i class="w3-center">specify</i>
                     <br>
@@ -70,7 +65,6 @@
                     <i class="w3-center">timeBased</i>
                     <br>
                     <input id="aim_t_${aim.id}" type="date" name="timeBased" value="${aim.timeBased}" style="margin: 20px;">
-
                 </label>
 
                 <input type="hidden" value="${aim.id}" name="aimId">

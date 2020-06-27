@@ -74,10 +74,11 @@
                         <span class="form-required">Selected messages</span>
                     </label>
                     <br>
-                    <form method="post" action="/main/delete">
+                    <form method="post" action="/main/deleteMessages">
                         <div class="count-checkboxes-wrapper">
                             <span id="count-checked-checkboxes" title="Selected notes count">0</span>
-                            <i id="trash" class="fa fa-trash-o" aria-hidden="true" title="Delete selected notes"></i>
+                            <button type="submit" name="deleteMessage"  title="Delete selected notes" style="border: none;" class="fa fa-trash-o">
+                            </button>
                             <br>
                             <input type="hidden" name="_csrf" value="${_csrf.token}" />
                         <#-- <button type="submit" name="deleteMessage" class="btn btn1 w3-button w3-padding-large">Delete</button>-->

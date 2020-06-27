@@ -32,11 +32,8 @@
 
     <!-- User Editor -->
     <div class="w3-content w3-container w3-padding-64" id="add-message">
-
         <h3 class="w3-center">EDITOR</h3>
-
         <div class="w3-center w3-row">
-
             <form action="/user" method="post" style="margin: 30px 10px 10px">
                 <p class="w3-center">User name: </p>
                 <label>
@@ -50,16 +47,15 @@
                 <label>
                     <input type="text" name="lastName" value="${user.lastName}">
                 </label>
-
                 <#list roles as role>
-                <br>
-                <div>
-                    <label>
-                        <input type="checkbox" name="${role}"
-                            ${user.roles?seq_contains(role)?string("checked", "")}>
-                        ${role}
-                    </label>
-                </div>
+                    <br>
+                    <div>
+                        <label>
+                            <input type="checkbox" name="${role}"
+                                ${user.roles?seq_contains(role)?string("checked", "")}>
+                            ${role}
+                        </label>
+                    </div>
                 </#list>
                 <br>
                 <input type="hidden" value="${user.id}" name="userId">
@@ -69,15 +65,12 @@
         </div>
     </div>
 
-    <#--Second Paralax IMG-->
     <div class="parallax big-img-users-1 w3-display-container w3-opacity-min" id="home">
         <div class="w3-display-middle" style="white-space:nowrap;">
         </div>
     </div>
 
-    <#--Footer-->
-    <@footer.footer>
-    </@footer.footer>
+    <@footer.footer/>
 
 </body>
 </html>

@@ -5,10 +5,8 @@ import application.entities.user.User;
 import application.enums.State;
 import application.managers.UserManager;
 import application.menu.MenuTabs;
-import application.repositories.IMessageRepository;
 import application.services.FileService;
 import application.services.MessageService;
-import application.utils.MapUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -20,14 +18,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.Collections;
 import java.util.Map;
 import java.util.Optional;
 
 @Controller
 public class MessageController {
 
-    @Autowired
-    private IMessageRepository messageRepo;
     @Autowired
     private MessageService messageService;
     @Value("${upload.path}")
@@ -56,21 +53,20 @@ public class MessageController {
         Optional<Message> optionalMessage = messageService.adaptMessage(text, tag, user);
 
         if (optionalMessage.isPresent()){
-
             Message message = optionalMessage.get();
             FileService fileService = new FileService();
             fileService.uploadFile(file);
             message.setFilename(fileService.getCreatedFileName());
             message.setState(State.MessageState.NEW.toString());
 
-            messageRepo.save(message);
+            messageService.save(message);
 
             User loggedInUser = userManager.getLoggedInUser();
-            Iterable<Message> userMessages = messageRepo.findByUser(loggedInUser);
+            Iterable<Message> userMessages = messageService.findByUser(loggedInUser);
 
             model.put("messages", userMessages);
         }else {
-            model.put("messages", MapUtils.oneElementHashMap("",""));
+            model.put("messages", Collections.EMPTY_MAP);
         }
         return "redirect:/main#messagesTable";
     }
@@ -79,13 +75,21 @@ public class MessageController {
     public String deleteMessage(
             @PathVariable Message message,
             Map<String, Object> model) {
-
         messageService.deleteMessage(message);
+        User loggedInUser = userManager.getLoggedInUser();
+        Iterable<Message> userMessages = messageService.findByUser(loggedInUser);
+        model.put("messages", userMessages);
+        return "redirect:/main#messagesTable";
+    }
+
+    @PostMapping("/main/deleteMessages")
+    public String deleteMessages(
+            @RequestParam Map <String, String> form,
+            Map<String, Object> model) {
 
         User loggedInUser = userManager.getLoggedInUser();
-        Iterable<Message> userMessages = messageRepo.findByUser(loggedInUser);
+        Iterable<Message> userMessages = messageService.findByUser(loggedInUser);
         model.put("messages", userMessages);
-
         return "redirect:/main#messagesTable";
     }
 
