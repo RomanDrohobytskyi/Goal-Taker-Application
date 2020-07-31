@@ -4,7 +4,7 @@ package application.controllers.authorisation.registration;
 import application.entities.user.User;
 import application.logger.LoggerJ;
 import application.services.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,9 +15,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.Map;
 
 @Controller
+@RequiredArgsConstructor
 public class RegistrationController {
-    @Autowired
-    private UserService userService;
+
+    private final UserService userService;
 
     @GetMapping("/registration")
     public String registration() {

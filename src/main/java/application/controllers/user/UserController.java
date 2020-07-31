@@ -14,7 +14,7 @@ import application.services.AimService;
 import application.services.MessageService;
 import application.services.TenThousandHoursAimService;
 import application.services.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,24 +28,17 @@ import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/user")
+@RequiredArgsConstructor
 public class UserController {
 
-    @Autowired
-    private IUserRepository iUserRepository;
-    @Autowired
-    private IMessageRepository messageRepo;
-    @Autowired
-    private IAimRepository aimRepository;
-    @Autowired
-    private ITenThousandHoursAimRepository tenThousandHoursAimRepository;
-    @Autowired
-    private UserService userService;
-    @Autowired
-    private MessageService messageService;
-    @Autowired
-    private AimService aimService;
-    @Autowired
-    private TenThousandHoursAimService thousandHoursAimService;
+    private final IUserRepository iUserRepository;
+    private final IMessageRepository messageRepo;
+    private final IAimRepository aimRepository;
+    private final ITenThousandHoursAimRepository tenThousandHoursAimRepository;
+    private final UserService userService;
+    private final MessageService messageService;
+    private final AimService aimService;
+    private final TenThousandHoursAimService thousandHoursAimService;
 
     @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping

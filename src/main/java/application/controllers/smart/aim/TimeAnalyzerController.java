@@ -5,7 +5,7 @@ import application.entities.time.data.Time;
 import application.menu.MenuTabs;
 import application.repositories.IAimRepository;
 import application.services.TimeService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,12 +19,11 @@ import java.util.Map;
 @Controller
 @RequestMapping("/analyzer")
 @PreAuthorize("hasAuthority('USER')")
+@RequiredArgsConstructor
 public class TimeAnalyzerController {
 
-    @Autowired
-    private TimeService timeService;
-    @Autowired
-    private IAimRepository aimRepository;
+    private final TimeService timeService;
+    private final IAimRepository aimRepository;
 
     @GetMapping
     @RequestMapping("/{aim}")

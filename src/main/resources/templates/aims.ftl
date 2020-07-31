@@ -32,7 +32,7 @@
     </div>
 
     <!-- Definition of AIM container-->
-    <div class="w3-content w3-container w3-padding-64" id="about">
+    <div class="w3-content w3-container w3-padding-32" id="about">
         <h3 class="w3-center w3-black ">AIM IS</h3>
         <p class="w3-center article"><em>Dream</em></p>
         <p class="article-text">
@@ -87,7 +87,7 @@
     </div>
 
     <!-- Definition of AIM container-->
-    <div class="w3-content w3-container w3-padding-64" id="definition">
+    <div class="w3-content w3-container w3-padding-32" id="definition">
         <h3 class="w3-center w3-black ">10,000 hours </h3>
         <p class="w3-center article"><em>Outliers: The Story of Success</em></p>
         <p class="article-text">
@@ -134,7 +134,7 @@
         </div>
     </div>
 
-    <div class="w3-content w3-container w3-padding-64" id="about">
+    <div class="w3-content w3-container w3-padding-32" id="about">
         <h3 class="w3-center w3-black ">S.M.A.R.T </h3>
         <p class="w3-center article"><em>Smart Criteria</em></p>
         <p class="article-text">

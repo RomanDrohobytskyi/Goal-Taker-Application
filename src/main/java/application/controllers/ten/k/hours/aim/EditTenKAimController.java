@@ -3,7 +3,7 @@ package application.controllers.ten.k.hours.aim;
 import application.entities.aim.TenThousandHoursAim;
 import application.menu.MenuTabs;
 import application.services.TenThousandHoursAimService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 @RequestMapping("/editTenKHoursAim")
 @PreAuthorize("hasAuthority('USER')")
+@RequiredArgsConstructor
 public class EditTenKAimController {
 
-    @Autowired
-    private TenThousandHoursAimService aimService;
+    private final TenThousandHoursAimService aimService;
 
     @GetMapping("{aim}")
     public String getEditForm(@PathVariable TenThousandHoursAim aim, Model model) {

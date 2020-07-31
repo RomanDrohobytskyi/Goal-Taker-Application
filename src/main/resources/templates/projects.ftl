@@ -29,7 +29,7 @@
     </div>
 
     <#--Hibernate project DIV-->
-    <div class="w3-content w3-container w3-padding-64" id="hibernate">
+    <div class="w3-content w3-container w3-padding-32" id="hibernate">
         <h3 class="w3-center">ABOUT ME</h3>
         <p class="w3-center"><em>I love photography</em></p>
         <p>First article.</p>
@@ -67,7 +67,7 @@
 
 
     <#--JDBC project DIV-->
-    <div class="w3-content w3-container w3-padding-64" id="jdbc">
+    <div class="w3-content w3-container w3-padding-32" id="jdbc">
         <h3 class="w3-center">ABOUT ME</h3>
         <p class="w3-center"><em>I love photography</em></p>
         <p>First article.</p>
@@ -104,7 +104,7 @@
     </div>
 
     <#--JSOUP project DIV-->
-    <div class="w3-content w3-container w3-padding-64" id="jsoup">
+    <div class="w3-content w3-container w3-padding-32" id="jsoup">
         <h3 class="w3-center">ABOUT ME</h3>
         <p class="w3-center"><em>I love photography</em></p>
         <p>First article.</p>
@@ -141,7 +141,7 @@
     </div>
 
     <#-- SPRING project DIV-->
-    <div class="w3-content w3-container w3-padding-64" id="spring">
+    <div class="w3-content w3-container w3-padding-32" id="spring">
         <h3 class="w3-center">ABOUT ME</h3>
         <p class="w3-center"><em>I love photography</em></p>
         <p>First article.</p>
@@ -174,7 +174,7 @@
     <!-- Modal for full size images on click-->
     <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
         <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-32">
             <img id="img01" class="w3-image">
             <p id="caption" class="w3-opacity w3-large"></p>
         </div>

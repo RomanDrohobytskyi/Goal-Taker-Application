@@ -5,7 +5,7 @@ import application.enums.State;
 import application.menu.MenuTabs;
 import application.services.MessageService;
 import application.services.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,12 +13,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@RequiredArgsConstructor
 public class GreetingController {
 
-    @Autowired
-    private UserService userService;
-    @Autowired
-    private MessageService messageService;
+    private final UserService userService;
+    private final MessageService messageService;
 
     @GetMapping("/")
     public String greeting(Model model) {
@@ -37,6 +36,6 @@ public class GreetingController {
         userMessage.setUser(userService.findUserByEmail("romabikebmx@gmail.com"));
         userMessage.setText("User " + userEmail + ", " + userName + ", left note: " + message);
         messageService.save(userMessage);
-        return "redirect:/";
+        return "redirect:/#contact";
     }
 }

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class PhotosController {
+
     @GetMapping("/photos")
     public String photos(Model model)
     {

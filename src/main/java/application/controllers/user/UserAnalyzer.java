@@ -9,8 +9,9 @@ import application.managers.UserManager;
 import application.menu.MenuTabs;
 import application.services.AimService;
 import application.services.TenThousandHoursAimService;
-import application.services.TenThousandHoursAimTimeService;
 import application.services.TimeService;
+import application.services.impl.TenThousandHoursAimTimeServiceImpl;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -25,16 +26,14 @@ import java.util.Set;
 @Controller
 @RequestMapping("userAnalyzer")
 @PreAuthorize("hasAuthority('USER')")
+@RequiredArgsConstructor
 public class UserAnalyzer {
 
+    private final TimeService timeService;
     @Autowired
-    private TimeService timeService;
-    @Autowired
-    private TenThousandHoursAimTimeService aimTimeService;
-    @Autowired
-    private TenThousandHoursAimService tenThousandHoursAimService;
-    @Autowired
-    private AimService aimService;
+    private TenThousandHoursAimTimeServiceImpl aimTimeService;
+    private final TenThousandHoursAimService tenThousandHoursAimService;
+    private final AimService aimService;
     private UserManager userManager = new UserManager();
 
     @GetMapping

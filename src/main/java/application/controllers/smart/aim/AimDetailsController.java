@@ -7,7 +7,7 @@ import application.managers.UserManager;
 import application.menu.MenuTabs;
 import application.repositories.IAimRepository;
 import application.services.TimeService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,13 +20,12 @@ import java.util.Map;
 
 @Controller
 @PreAuthorize("hasAuthority('USER')")
+@RequiredArgsConstructor
 public class AimDetailsController {
 
-    @Autowired
-    private IAimRepository aimRepository;
-    @Autowired
-    private TimeService timeService;
-    private UserManager userManager = new UserManager();
+    private final IAimRepository aimRepository;
+    private final TimeService timeService;
+    private final UserManager userManager = new UserManager();
 
     @GetMapping("aim_details/{aim}")
     public String aimDetails(@PathVariable Aim aim, Model model){

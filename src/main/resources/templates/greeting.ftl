@@ -108,7 +108,7 @@
     </@paralax.paralax>
 <#--
 
-    <div class="w3-content w3-container w3-padding-64" id="portfolio">
+    <div class="w3-content w3-container w3-padding-32" id="portfolio">
 
         <h3 class="w3-center">MY PROJECTS</h3>
         <p class="w3-center"><em>This`s my programing projects.<br> Click on the images to make them bigger</em></p><br>
@@ -145,7 +145,7 @@
     </div>
 -->
 
-    <div class="w3-content w3-container w3-padding-64" id="contact">
+    <div class="w3-content w3-container w3-padding-32" id="contact">
         <h3 class="w3-center">Contacts</h3>
         <div class="w3-row w3-padding-32 w3-section">
             <div class="w3-col m4 w3-container">

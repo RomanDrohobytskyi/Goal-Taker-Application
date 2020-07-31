@@ -30,7 +30,7 @@
     </div>
 
     <!-- REGISTRATION Container -->
-    <div class="w3-content w3-container w3-padding-64" id="registration">
+    <div class="w3-content w3-container w3-padding-32" id="registration">
         <div class="w3-center w3-row">
             <h3 class="w3-center">Registration</h3>
             Create Your new account!

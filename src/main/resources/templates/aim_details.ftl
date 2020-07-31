@@ -38,7 +38,7 @@
         </div>
     </div>
 
-    <div class="w3-content w3-container w3-padding-64" id="details">
+    <div class="w3-content w3-container w3-padding-32" id="details">
         <#if aim.aimState == "ACHIEVED">
             <h3 class="w3-center w3-black" style="background-color: #616161!important;">${aim.title!}
                 <i class="fa fa-check" style="color: #2E9267;" title="Achieved!"></i>

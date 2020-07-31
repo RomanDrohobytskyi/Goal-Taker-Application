@@ -3,7 +3,7 @@ package application.controllers.message;
 import application.entities.message.Message;
 import application.menu.MenuTabs;
 import application.services.MessageService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,10 +12,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 @RequestMapping("/editMessage")
+@RequiredArgsConstructor
 public class EditMessageController {
 
-    @Autowired
-    private MessageService messageService;
+    private final MessageService messageService;
 
     @GetMapping("{message}")
     @PreAuthorize("hasAuthority('USER')")

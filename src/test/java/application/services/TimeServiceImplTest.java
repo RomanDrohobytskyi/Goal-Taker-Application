@@ -2,23 +2,25 @@ package application.services;
 
 import application.entities.time.data.Time;
 import application.enums.State;
+import application.services.impl.TimeServiceImpl;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("TimeServiceTest")
-class TimeServiceTest {
+class TimeServiceImplTest {
 
-    private static TimeService timeService;
+    @Autowired
+    private static TimeServiceImpl timeService;
     private static List<Time> times;
 
     @BeforeAll
     static void initialize(){
-        timeService = new TimeService();
         times = new ArrayList<>(Arrays.asList(
                 timeService.adaptTime(new Double("2"), new Date(), "Test Time object 1", State.DateState.NEW, null),
                 timeService.adaptTime(new Double("3.5"), new Date(), "Test Time object 2", State.DateState.NEW, null)

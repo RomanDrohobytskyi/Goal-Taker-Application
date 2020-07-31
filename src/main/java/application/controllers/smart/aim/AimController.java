@@ -6,7 +6,7 @@ import application.managers.UserManager;
 import application.menu.MenuTabs;
 import application.repositories.IAimRepository;
 import application.services.AimService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,13 +26,12 @@ import static application.logger.LoggerJ.logError;
  * Smart aim Controller
  */
 @Controller
+@RequiredArgsConstructor
 public class AimController {
 
-    @Autowired
-    private AimService aimService;
-    @Autowired
-    private IAimRepository aimRepository;
-    private UserManager userManager = new UserManager();
+    private final AimService aimService;
+    private final IAimRepository aimRepository;
+    private final UserManager userManager = new UserManager();
 
     @GetMapping("/main_aim")
     public String allAims(Model model){
@@ -62,7 +61,7 @@ public class AimController {
 
         try{
             convertedDate = new SimpleDateFormat("yyyy-MM-dd").parse(timeBased);
-            aimOptional = aimService.adaptAim(title, description, text, specific, measurable, attainable, relevant, convertedDate, user);
+            aimOptional = aimService.adapt(title, description, text, specific, measurable, attainable, relevant, convertedDate, user);
             if (aimOptional.isPresent()){
                 Aim aim = aimOptional.get();
                 aimRepository.save(aim);
@@ -85,7 +84,7 @@ public class AimController {
             @PathVariable Aim aim,
             Map<String, Object> model) {
 
-        aimService.deleteAim(aim);
+        aimService.delete(aim);
         User loggedInUser = userManager.getLoggedInUser();
         Iterable<Aim> userAims = aimRepository.findByUser(loggedInUser);
         model.put("aims", userAims);

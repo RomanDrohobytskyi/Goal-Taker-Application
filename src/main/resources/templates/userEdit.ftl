@@ -31,7 +31,7 @@
     </div>
 
     <!-- User Editor -->
-    <div class="w3-content w3-container w3-padding-64" id="add-message">
+    <div class="w3-content w3-container w3-padding-32" id="add-message">
         <h3 class="w3-center">EDITOR</h3>
         <div class="w3-center w3-row">
             <form action="/user" method="post" style="margin: 30px 10px 10px">

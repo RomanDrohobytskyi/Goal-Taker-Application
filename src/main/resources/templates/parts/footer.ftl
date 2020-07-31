@@ -1,6 +1,6 @@
 <#macro footer>
     <#--Footer-->
-    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+    <footer class="w3-center w3-black w3-padding-32 w3-opacity w3-hover-opacity-off">
         <a href="#home" class="" style="text-decoration: none; color: #ABADAA;"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
         <div class="w3-xlarge w3-section">
             <a href = "https://www.facebook.com/roman.drohobytskyi" target="_blank"

@@ -35,7 +35,7 @@
     </div>
 
     <!-- LOGIN Container -->
-    <div class="w3-content w3-container w3-padding-64" id="login">
+    <div class="w3-content w3-container w3-padding-32" id="login">
         <div class="w3-center w3-row">
             <form method="get" action="/loginError">
                 <p style="color: red">

@@ -38,7 +38,7 @@
         </div>
     </div>
 
-    <div class="w3-content w3-container w3-padding-64" id="userProfile">
+    <div class="w3-content w3-container w3-padding-32" id="userProfile">
         <div class="w3-center w3-row">
             <form action="/userProfile/save" method="post" enctype="multipart/form-data">
                 <p class="w3-center">Email: ${user.email}</p>

@@ -30,7 +30,7 @@
     </div>
 
     <!-- Message edit div -->
-    <div class="w3-content w3-container w3-padding-64" id="edit-message">
+    <div class="w3-content w3-container w3-padding-32" id="edit-message">
 
         <h3 class="w3-center">E D I T</h3>
 

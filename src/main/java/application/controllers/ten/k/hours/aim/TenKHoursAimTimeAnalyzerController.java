@@ -4,7 +4,7 @@ import application.entities.aim.TenThousandHoursAim;
 import application.entities.time.data.TenThousandHoursAimTime;
 import application.menu.MenuTabs;
 import application.repositories.ITenThousandHoursAimRepository;
-import application.services.TenThousandHoursAimTimeService;
+import application.services.impl.TenThousandHoursAimTimeServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -23,7 +23,7 @@ import java.util.Set;
 public class TenKHoursAimTimeAnalyzerController {
 
     @Autowired
-    private TenThousandHoursAimTimeService timeService;
+    private TenThousandHoursAimTimeServiceImpl timeService;
     @Autowired
     private ITenThousandHoursAimRepository aimRepository;
 

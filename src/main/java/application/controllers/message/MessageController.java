@@ -7,7 +7,7 @@ import application.managers.UserManager;
 import application.menu.MenuTabs;
 import application.services.FileService;
 import application.services.MessageService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -23,18 +23,19 @@ import java.util.Map;
 import java.util.Optional;
 
 @Controller
+@RequiredArgsConstructor
 public class MessageController {
 
-    @Autowired
-    private MessageService messageService;
     @Value("${upload.path}")
     private String uploadPath;
     private UserManager userManager = new UserManager();
+    private final MessageService messageService;
+    private final FileService fileService;
 
     @GetMapping("/main")
     public String filter(@RequestParam(required = false, defaultValue = "")
                                String filter, Model model) {
-        Iterable<Message> messages = messageService.filterMessages(filter);
+        Iterable<Message> messages = messageService.filter(filter);
         model.addAttribute("messages", messages);
         model.addAttribute("filter", filter);
         model.addAttribute("menuElements", new MenuTabs().defaultMenu());
@@ -54,7 +55,6 @@ public class MessageController {
 
         if (optionalMessage.isPresent()){
             Message message = optionalMessage.get();
-            FileService fileService = new FileService();
             fileService.uploadFile(file);
             message.setFilename(fileService.getCreatedFileName());
             message.setState(State.MessageState.NEW.toString());
@@ -75,7 +75,7 @@ public class MessageController {
     public String deleteMessage(
             @PathVariable Message message,
             Map<String, Object> model) {
-        messageService.deleteMessage(message);
+        messageService.delete(message);
         User loggedInUser = userManager.getLoggedInUser();
         Iterable<Message> userMessages = messageService.findByUser(loggedInUser);
         model.put("messages", userMessages);

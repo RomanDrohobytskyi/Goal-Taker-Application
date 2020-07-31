@@ -35,7 +35,7 @@
     </div>
 
     <!-- Add new note Container -->
-    <div class="w3-content w3-container w3-padding-64" id="add-message">
+    <div class="w3-content w3-container w3-padding-32" id="add-message">
         <div class="w3-center w3-row">
             <h3 class="w3-center">Create note</h3>
             <form action="/main/add" method="post" enctype="multipart/form-data">
@@ -65,7 +65,7 @@
     </div>
 
     <!-- Messages Container -->
-    <div class="w3-content w3-container w3-padding-64" id="messages">
+    <div class="w3-content w3-container w3-padding-32" id="messages">
         <div id="messages" class="w3-center w3-row">
             <h3 class="w3-center">All notes</h3>
             <div id="menu">
@@ -81,7 +81,6 @@
                             </button>
                             <br>
                             <input type="hidden" name="_csrf" value="${_csrf.token}" />
-                        <#-- <button type="submit" name="deleteMessage" class="btn btn1 w3-button w3-padding-large">Delete</button>-->
                         </div>
                     </form>
                 </div>

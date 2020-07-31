@@ -5,6 +5,7 @@ import application.managers.UserManager;
 import application.menu.MenuTabs;
 import application.repositories.IUserRepository;
 import application.services.FileService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -15,12 +16,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 @Controller
+@RequiredArgsConstructor
 public class UserProfileController {
 
     @Autowired
     private IUserRepository iUserRepository;
     @Value("${upload.path}")
     private String uploadPath;
+    private final FileService fileService;
 
     @GetMapping("/userProfile")
     public String getUserProfile(Model model){
@@ -59,7 +62,6 @@ public class UserProfileController {
 
     private void addUserAvatar(User user, MultipartFile avatar){
         if(!avatar.getOriginalFilename().isEmpty()){
-            FileService fileService = new FileService();
             fileService.uploadFile(avatar);
             user.setAvatar(fileService.getCreatedFileName());
         }

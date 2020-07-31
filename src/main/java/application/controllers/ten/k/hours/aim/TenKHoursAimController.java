@@ -4,8 +4,8 @@ import application.entities.aim.TenThousandHoursAim;
 import application.entities.user.User;
 import application.menu.MenuTabs;
 import application.services.TenThousandHoursAimService;
-import application.services.TenThousandHoursAimTimeService;
-import org.springframework.beans.factory.annotation.Autowired;
+import application.services.impl.TenThousandHoursAimTimeServiceImpl;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,23 +16,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.Map;
 
 @Controller
+@RequiredArgsConstructor
 public class TenKHoursAimController {
 
-    @Autowired
-    private TenThousandHoursAimService aimService;
-    @Autowired
-    private TenThousandHoursAimTimeService aimTimeService;
+    private final TenThousandHoursAimService aimService;
+    private final TenThousandHoursAimTimeServiceImpl aimTimeService;
 
     @GetMapping("/ten_thousand_hours_aim")
     public String allAims(Model model){
         model.addAttribute("all_aims", aimService.getAllLoggedUserAims());
         model.addAttribute("timeSum", aimTimeService.getAimsLoggedTimeSum((aimService.getAllLoggedUserAims())));
-        //TODO
-        //TODO
-        //TODO
-        //TODO
-        //TODO
-        //TODO
         model.addAttribute("allAimsTimeSum", aimTimeService.getAimsLoggedTimeSum((aimService.getAllLoggedUserAims())));
         model.addAttribute("menuElements", new MenuTabs().smartGoalsMainMenu());
         model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
