@@ -4,8 +4,8 @@ import application.entities.aim.TenThousandHoursAim;
 import application.entities.time.data.TenThousandHoursAimTime;
 import application.menu.MenuTabs;
 import application.repositories.ITenThousandHoursAimRepository;
-import application.services.impl.TenThousandHoursAimTimeServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
+import application.services.TenThousandHoursAimTimeService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,12 +20,11 @@ import java.util.Set;
 @Controller
 @RequestMapping("/tenKAimTimeAnalyzer")
 @PreAuthorize("hasAuthority('USER')")
+@RequiredArgsConstructor
 public class TenKHoursAimTimeAnalyzerController {
 
-    @Autowired
-    private TenThousandHoursAimTimeServiceImpl timeService;
-    @Autowired
-    private ITenThousandHoursAimRepository aimRepository;
+    private final TenThousandHoursAimTimeService timeService;
+    private final ITenThousandHoursAimRepository aimRepository;
 
     @GetMapping
     @RequestMapping("/{aim}")

@@ -6,7 +6,6 @@ import application.menu.MenuTabs;
 import application.repositories.IUserRepository;
 import application.services.FileService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,10 +18,9 @@ import org.springframework.web.multipart.MultipartFile;
 @RequiredArgsConstructor
 public class UserProfileController {
 
-    @Autowired
-    private IUserRepository iUserRepository;
     @Value("${upload.path}")
     private String uploadPath;
+    private final IUserRepository iUserRepository;
     private final FileService fileService;
 
     @GetMapping("/userProfile")

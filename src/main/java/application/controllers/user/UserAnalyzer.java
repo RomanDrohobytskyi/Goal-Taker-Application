@@ -9,10 +9,9 @@ import application.managers.UserManager;
 import application.menu.MenuTabs;
 import application.services.AimService;
 import application.services.TenThousandHoursAimService;
+import application.services.TenThousandHoursAimTimeService;
 import application.services.TimeService;
-import application.services.impl.TenThousandHoursAimTimeServiceImpl;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,11 +29,10 @@ import java.util.Set;
 public class UserAnalyzer {
 
     private final TimeService timeService;
-    @Autowired
-    private TenThousandHoursAimTimeServiceImpl aimTimeService;
+    private final TenThousandHoursAimTimeService aimTimeService;
     private final TenThousandHoursAimService tenThousandHoursAimService;
     private final AimService aimService;
-    private UserManager userManager = new UserManager();
+    private final UserManager userManager = new UserManager();
 
     @GetMapping
     @RequestMapping("/activity")
