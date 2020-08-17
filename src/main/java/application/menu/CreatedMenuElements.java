@@ -25,8 +25,6 @@ public class CreatedMenuElements {
     MenuElement tenThousandHoursAim = new MenuElement("/ten_thousand_hours_aim", "w3-bar-item w3-button", "fa fa-dot-circle-o", "10k H", "10k H");
     MenuElement main = new MenuElement("/main", "w3-bar-item w3-button", "fa fa-book", "NOTES", "NOTES");
     MenuElement userAnalyzer = new MenuElement("/userAnalyzer/activity", "w3-bar-item w3-button", "fa fa-circle-o", "USER ANALYZER", "USER ANALYZER");
-    MenuElement photos = new MenuElement("/photos", "w3-bar-item w3-button", "fa fa-picture-o", "PHOTOS", "PHOTOS");
-    MenuElement projects = new MenuElement("/projects", "w3-bar-item w3-button", "fa fa-archive", "PROJECTS", "PROJECTS");
     MenuElement users = new MenuElement("/user", "w3-bar-item w3-button", "fa fa-user-circle", "USERS", "USERS");
 
 }

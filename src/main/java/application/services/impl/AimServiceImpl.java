@@ -48,7 +48,6 @@ public class AimServiceImpl implements AimService {
         aim.setModificationDate(new Date());
         aim.setDeletionDate(new Date());
         aim.setAimState(State.AimState.DELETED.toString());
-
         return aimRepository.save(aim);
     }
 
@@ -65,7 +64,6 @@ public class AimServiceImpl implements AimService {
         aim.setAimState(State.AimState.ACHIEVED.toString());
         aim.setModificationDate(new Date());
         aim.setAchievedDate(new Date());
-
         return aimRepository.save(aim);
     }
 
@@ -81,26 +79,27 @@ public class AimServiceImpl implements AimService {
         aim.setMeasurable(measurable);
         aim.setAttainable(attainable);
         aim.setRelevant(relevant);
-        aim.setTimeBased(parseDate(timeBased));
+        aim.setTimeBased(parseDate(timeBased).orElseThrow(IllegalArgumentException::new));
         aim.setModificationDate(new Date());
         aim.setAimState(State.AimState.EDITED.toString());
-
         return aim;
     }
 
     @Override
-    public Date parseDate(String timeBased){
+    public Optional<Date> parseDate(String timeBased){
         try {
-            return new SimpleDateFormat("yyyy-MM-dd").parse(timeBased);
+            Date parsedDate = new SimpleDateFormat("yyyy-MM-dd").parse(timeBased);
+            return Optional.of(parsedDate);
         } catch (ParseException e){
             e.printStackTrace();
         }
-        return null;
+        return Optional.empty();
     }
 
     public List<Aim> getAchievedUserAims(User user) {
         return aimRepository.findAimsByAimStateAndUser(State.AimState.ACHIEVED.toString(), user);
     }
+
     public List<Aim> getNotDeletedUserAims(User user) {
         return aimRepository.findAimsByAimStateIsNotLikeAndUser(State.AimState.DELETED.toString(), user);
     }

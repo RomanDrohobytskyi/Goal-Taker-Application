@@ -7,6 +7,7 @@ import application.managers.UserManager;
 import application.repositories.IMessageRepository;
 import application.services.FileService;
 import application.services.MessageService;
+import application.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Service;
@@ -23,11 +24,13 @@ public class MessageServiceImpl implements MessageService {
     private final UserManager userManager = new UserManager();
     private final IMessageRepository messageRepository;
     private final FileService fileService;
+    private final UserService userService;
 
     @Override
     public Optional<Message> adaptMessage(String text, String tag, User user){
         if(Strings.isNotEmpty(text) && Strings.isNotEmpty(tag) && user != null){
             Message message = new Message();
+            message.setState(State.MessageState.NEW.toString());
             message.setUser(user);
             message.setText(text);
             message.setTag(tag);
@@ -86,4 +89,22 @@ public class MessageServiceImpl implements MessageService {
         return messageRepository.findByUser(user);
     }
 
+    @Override
+    public Message adaptMessageAsNote(String message, String userName,  String userEmail) {
+        String messageText = "User " + userEmail + ", " + userName + ", left note: " + message;
+        String tag = "User Note";
+        return adaptMessage(messageText, tag, getMessageAsNoteReceiver())
+                .orElseThrow(IllegalArgumentException::new);
+    }
+
+    @Override
+    public User getMessageAsNoteReceiver() {
+        return Optional.of(userService.findUserByEmail("romabikebmx@gmail.com"))
+                .orElseThrow(IllegalArgumentException::new);
+    }
+
+    @Override
+    public Message sendMessageAsNote(Message message) {
+        return save(message);
+    }
 }

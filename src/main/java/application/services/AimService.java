@@ -16,6 +16,6 @@ public interface AimService {
              String attainable, String relevant, Date timeBased, User user);
     List<Aim> getAchievedUserAims(User user);
     List<Aim> getNotDeletedUserAims(User user);
-    Date parseDate(String timeBased);
+    Optional<Date> parseDate(String timeBased);
     void delete(List<Aim> aims);
 }

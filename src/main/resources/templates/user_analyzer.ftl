@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>A c t i v i t y</title>
-    <link rel="shortcut icon" type="image/png"
-          href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Group_font_awesome.svg/1024px-Group_font_awesome.svg.png">
+    <link rel="shortcut icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Group_font_awesome.svg/1024px-Group_font_awesome.svg.png">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/buttons.css">
     <script type="text/javascript" src="/static/javascript/js.js"></script>
@@ -27,7 +26,6 @@
     <#import "parts/smartAimMarcos.ftl" as smart>
     <#import "parts/userAnalyzerMacros.ftl" as userAnalyzer>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript"></script>
 </head>
 <body>
 
@@ -114,7 +112,6 @@
                 All Ten Thousand Hours Rule aims logged time sum:
                 <br>
                 <b>${tenThousandHoursAimSum!0}h</b>
-
                 <div style="text-align: left;">
                     <#if mostActiveTenThousandAim.aimState == "ACHIEVED">
                         <h3 class="w3-center w3-black" style="margin-left: 5px; background-color: #616161!important;">${mostActiveTenThousandAim.title!}
@@ -176,11 +173,9 @@
     <div class="w3-content w3-container w3-padding-32" id="tenKCharts">
         <div class="w3-row">
             <h3 class="w3-center w3-black" style="background-color: #616161!important;">10,000 Hours Rule Aim - ${mostActiveTenThousandAim.title}</h3>
-
             <div class="w3-col m6 w3-center w3-padding-large">
                  <@charts.pieChart_two/>
             </div>
-
             <div class="w3-col m6 w3-center w3-padding-large">
                  <@charts.lineChart_two/>
             </div>
@@ -217,7 +212,6 @@
                     <br>
                     Goals left to achieve: ${leftToAchieve}
                 </#if>
-
             </div>
         </div>
     </div>

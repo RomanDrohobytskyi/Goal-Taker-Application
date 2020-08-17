@@ -11,7 +11,7 @@ public interface UserService extends UserDetailsService {
     boolean isUserEmailEmpty(String email);
     boolean isPasswordsMatch(String password, String confirmedPassword);
     boolean sendActivationCode(User user);
-    boolean activateUser(String code);
+    void activateUser(String code);
     void setUserData(User user);
     void saveUser(User user);
 }

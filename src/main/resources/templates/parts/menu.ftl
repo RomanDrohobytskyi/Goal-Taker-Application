@@ -98,7 +98,6 @@
                 <a href="/main" ><i class="fa fa-book"></i>NOTES</a>
                 <a href="/userAnalyzer/activity" ><i class="fa fa-circle-o"></i>USER ANALYZER</a>
                 <a href="/photos" ><i class="fa fa-picture-o"></i>PHOTOS</a>
-                <a href="/projects" ><i class="fa fa-archive"></i>PROJECTS</a>
                 <a href="/user" ><i class="fa fa-user-circle"></i>USERS</a>
             </div>
         </div>

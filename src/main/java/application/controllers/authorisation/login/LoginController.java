@@ -15,7 +15,7 @@ public class LoginController {
 
     @GetMapping("/loginError")
     public String loginError(Map<String, Object> model) {
-        model.put("validatorError", "Wrong email or password, please try again.");
+        model.put("validatorError", "Wrong email or password, try again.");
         return "login";
     }
 }

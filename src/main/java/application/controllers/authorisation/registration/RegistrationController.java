@@ -2,7 +2,6 @@ package application.controllers.authorisation.registration;
 
 
 import application.entities.user.User;
-import application.logger.LoggerJ;
 import application.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -25,10 +24,10 @@ public class RegistrationController {
         return "registration";
     }
 
+    //TODO: Refactor!
     @PostMapping("/registration")
     public String addUser(User user, Map<String, Object> model,
                           @RequestParam String passwordConfirm) {
-
         if (!userService.isUserExist(user)){
             if (userService.isUserEmailEmpty(user.getEmail())){
                 if (userService.isPasswordsMatch(user.getPassword(), passwordConfirm)){
@@ -55,11 +54,10 @@ public class RegistrationController {
 
     @GetMapping("/activate/{code}")
     public String activate(Model model, @PathVariable String code){
-        boolean isActivated = userService.activateUser(code);
-        if (isActivated){
+        try{
+            userService.activateUser(code);
             model.addAttribute("message", "User successfully activated.");
-            LoggerJ.logInfo(getClass(), "User successfully activated.");
-        }else {
+        } catch (IllegalArgumentException e){
             model.addAttribute("message", "Activation code is not found!");
         }
         return "login";

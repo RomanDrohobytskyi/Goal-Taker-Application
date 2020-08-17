@@ -16,5 +16,7 @@ public interface MessageService {
     void delete(List<Message> messages);
     List<Message> filter(String filter);
     List<Message> findByUser(User user);
-
+    Message adaptMessageAsNote(String message, String userName, String userEmail);
+    User getMessageAsNoteReceiver();
+    Message sendMessageAsNote(Message message);
 }

@@ -2,7 +2,6 @@ package application.controllers.message;
 
 import application.entities.message.Message;
 import application.entities.user.User;
-import application.enums.State;
 import application.managers.UserManager;
 import application.menu.MenuTabs;
 import application.services.FileService;
@@ -57,7 +56,6 @@ public class MessageController {
             Message message = optionalMessage.get();
             fileService.uploadFile(file);
             message.setFilename(fileService.getCreatedFileName());
-            message.setState(State.MessageState.NEW.toString());
 
             messageService.save(message);
 

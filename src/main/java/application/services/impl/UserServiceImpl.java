@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import java.util.Collections;
+import java.util.Optional;
 import java.util.UUID;
 
 import static application.logger.LoggerJ.logError;
@@ -71,7 +72,6 @@ public class UserServiceImpl implements UserService {
         user.setActive(true);
         user.setRoles(Collections.singleton(Role.USER));
         user.setActivationCode(UUID.randomUUID().toString());
-        //user.setRoles(Collections.singleton(Role.ADMIN));
     }
 
     @Override
@@ -80,21 +80,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean activateUser(String code) {
-        User user = iUserRepository.findByActivationCode(code);
-        if (user == null)
-            return false;
-        user.setActivationCode(null);
-        iUserRepository.save(user);
-        return true;
+    public void activateUser(String code) {
+        Optional<User> user = Optional.of(iUserRepository.findByActivationCode(code));
+        user.orElseThrow(IllegalArgumentException::new).setActivationCode(null);
+        iUserRepository.save(user.get());
     }
 
     @Override
     public User delete(User user){
-        if (user != null){
-            user.setActive(false);
-            iUserRepository.save(user);
-        }
+        user.setActive(false);
+        iUserRepository.save(user);
         return user;
     }
 }
