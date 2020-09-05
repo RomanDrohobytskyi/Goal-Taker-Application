@@ -2,10 +2,8 @@ package application.controllers.smart.aim;
 
 import application.entities.aim.Aim;
 import application.entities.time.data.Time;
-import application.entities.user.User;
-import application.managers.UserManager;
 import application.menu.MenuTabs;
-import application.repositories.IAimRepository;
+import application.services.AimService;
 import application.services.TimeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -23,9 +21,8 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class AimDetailsController {
 
-    private final IAimRepository aimRepository;
+    private final AimService aimService;
     private final TimeService timeService;
-    private final UserManager userManager = new UserManager();
 
     @GetMapping("aim_details/{aim}")
     public String aimDetails(@PathVariable Aim aim, Model model){
@@ -44,11 +41,8 @@ public class AimDetailsController {
             @RequestParam String date,
             @RequestParam("aimId") Aim aim,
             Map<String, Object> model) {
-
-        timeService.saveTimeForAim(time, description, date, aim);
-        User loggedInUser = userManager.getLoggedInUser();
-        Iterable<Aim> userAims = aimRepository.findByUser(loggedInUser);
-        model.put("aims", userAims);
+        timeService.adaptAndSaveAimDetails(time, description, date, aim);
+        model.put("aims", aimService.getLoggedInUserAims());
         return "redirect:/aim_details/" + aim.getId() + "#details";
     }
 
@@ -59,8 +53,7 @@ public class AimDetailsController {
             @RequestParam String date,
             @PathVariable Aim aim,
             Map<String, Object> model) {
-
-        timeService.saveTimeForAim(time, description, date, aim);
+        timeService.adaptAndSaveAimDetails(time, description, date, aim);
         model.put("aim", aim);
         return "redirect:/aim_details#details" + aim.getId();
     }

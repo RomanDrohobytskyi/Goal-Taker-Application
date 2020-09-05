@@ -82,7 +82,6 @@ public class MessageController {
 
     @PostMapping("/main/deleteMessages")
     public String deleteMessages(
-            @RequestParam Map <String, String> form,
             Map<String, Object> model) {
 
         User loggedInUser = userManager.getLoggedInUser();

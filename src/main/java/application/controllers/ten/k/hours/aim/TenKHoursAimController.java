@@ -4,7 +4,7 @@ import application.entities.aim.TenThousandHoursAim;
 import application.entities.user.User;
 import application.menu.MenuTabs;
 import application.services.TenThousandHoursAimService;
-import application.services.impl.TenThousandHoursAimTimeServiceImpl;
+import application.services.TenThousandHoursAimTimeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -20,7 +20,7 @@ import java.util.Map;
 public class TenKHoursAimController {
 
     private final TenThousandHoursAimService aimService;
-    private final TenThousandHoursAimTimeServiceImpl aimTimeService;
+    private final TenThousandHoursAimTimeService aimTimeService;
 
     @GetMapping("/ten_thousand_hours_aim")
     public String allAims(Model model){

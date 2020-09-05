@@ -24,33 +24,12 @@ public class RegistrationController {
         return "registration";
     }
 
-    //TODO: Refactor!
     @PostMapping("/registration")
     public String addUser(User user, Map<String, Object> model,
                           @RequestParam String passwordConfirm) {
-        if (!userService.isUserExist(user)){
-            if (userService.isUserEmailEmpty(user.getEmail())){
-                if (userService.isPasswordsMatch(user.getPassword(), passwordConfirm)){
-                    userService.setUserData(user);
-                    if (userService.sendActivationCode(user)){
-                        userService.saveUser(user);
-                        return "redirect:/login";
-                    } else {
-                        model.put("message", "We can`t send to You activation code, sorry!");
-                    }
-                } else {
-                    model.put("passwordNotMach", "Sorry, but Your passwords do not match, check it again!");
-                }
-            }  else {
-                model.put("emailIsEmpty", "Sorry, Your email is empty, please check it again");
-            }
-        } else {
-            model.put("userExist", "Sorry, user with email: " + user.getEmail() + ", already exist!");
-        }
-        model.put("user", user);
-        return "registration";
+        model.putAll(userService.validateUserRegistrationData(user, passwordConfirm));
+        return model.containsKey("success") ? "redirect:/login" : "registration";
     }
-
 
     @GetMapping("/activate/{code}")
     public String activate(Model model, @PathVariable String code){
@@ -61,5 +40,11 @@ public class RegistrationController {
             model.addAttribute("message", "Activation code is not found!");
         }
         return "login";
+    }
+
+    @PostMapping("/registration/resendVerificationCode")
+    public String resendVerificationCode(User user, Map<String, Object> model) {
+        userService.resendVerificationToken(user);
+        return model.containsKey("success") ? "redirect:/login" : "registration";
     }
 }

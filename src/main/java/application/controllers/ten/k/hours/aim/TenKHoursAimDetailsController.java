@@ -3,7 +3,7 @@ package application.controllers.ten.k.hours.aim;
 import application.entities.aim.TenThousandHoursAim;
 import application.menu.MenuTabs;
 import application.services.TenThousandHoursAimService;
-import application.services.impl.TenThousandHoursAimTimeServiceImpl;
+import application.services.TenThousandHoursAimTimeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -20,7 +20,7 @@ import java.util.Map;
 public class TenKHoursAimDetailsController {
 
     private final TenThousandHoursAimService aimService;
-    private final TenThousandHoursAimTimeServiceImpl timeService;
+    private final TenThousandHoursAimTimeService timeService;
 
     @GetMapping("tenKHoursAimDetails/{aim}")
     public String aimDetails(@PathVariable TenThousandHoursAim aim, Model model){
