@@ -20,7 +20,7 @@ public class TimeService {
 
     private final ITimeRepository timeRepository;
 
-    public Time adaptTime(Double loggedTime, Date date, String description, State.DateState state, Aim aim){
+    public Time adaptTime(Double loggedTime, Date date, String description, State.Date state, Aim aim){
         Time time = new Time();
         time.setTime(loggedTime);
         time.setDate(date);
@@ -31,7 +31,7 @@ public class TimeService {
     }
 
     public Optional<Time> adaptAndSaveAimDetails(Number loggedTime, String date, String description, Aim aim) {
-        Optional<Time> time = adaptTime(loggedTime, date, description, State.DateState.NEW, aim);
+        Optional<Time> time = adaptTime(loggedTime, date, description, State.Date.NEW, aim);
         time.ifPresent(this::save);
         return time;
     }
@@ -44,7 +44,7 @@ public class TimeService {
         return timeRepository.saveAll(times);
     }
 
-    public Optional<Time> adaptTime(Number loggedTime, String date, String description, State.DateState state, Aim aim){
+    public Optional<Time> adaptTime(Number loggedTime, String date, String description, State.Date state, Aim aim){
         try {
             Date convertedDate = new SimpleDateFormat("yyyy-MM-dd").parse(date);
             return Optional.of(adaptTime(loggedTime.doubleValue(), convertedDate, description, state, aim));
@@ -58,7 +58,7 @@ public class TimeService {
         List<Time> aimTime = getLoggedTimeForAim(aimId);
         List<Time> lastWeekendTime = aimTime;
         if (!CollectionUtils.isEmpty(aimTime) && aimTime.size() >= 7) {
-            lastWeekendTime = getTimeForDateRange(aimTime, 7L);
+            lastWeekendTime = getTimeForDateRange(aimTime, 7);
         }
 
         return lastWeekendTime;
@@ -68,7 +68,7 @@ public class TimeService {
         return timeRepository.findByAim_Id(aimId);
     }
 
-    public List<Time> getTimeForDateRange(List<Time> time, Long dayRange){
+    public List<Time> getTimeForDateRange(List<Time> time, int dayRange){
         return time.stream()
                 .sorted(Comparator.comparing(Time::getDate).reversed())
                 .limit(dayRange)
@@ -77,7 +77,7 @@ public class TimeService {
 
     public Time deleteTime(Time time) {
         time.setModificationDate(new Date());
-        time.setState(State.DateState.DELETED.toString());
+        time.setState(State.Date.DELETED.toString());
         timeRepository.save(time);
         return time;
     }
@@ -97,21 +97,6 @@ public class TimeService {
             allAimsLoggedTime.addAll(aim.getLoggedTime());
         }
         return allAimsLoggedTime;
-    }
-
-    public Aim getMostActiveAim(List<Aim> userAims){
-        Aim maxTimeAim = null;
-        Double maxTime = 0D;
-        for (Aim aim : userAims){
-            Double sum = aim.getLoggedTime().stream()
-                    .mapToDouble(Time::getTime)
-                    .sum();
-            if (sum > maxTime){
-                maxTime = sum;
-                maxTimeAim = aim;
-            }
-        }
-        return maxTimeAim;
     }
 
     public Double getAimLoggedTimeSum(Set<Time> loggedTime) {

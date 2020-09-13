@@ -41,7 +41,7 @@ public class User implements UserDetails{
     private String password;
     private String avatar;
     private String activationCode;
-    private boolean active;
+    private boolean active = false;
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
     @Enumerated(EnumType.STRING)
     @NotNull
@@ -84,5 +84,15 @@ public class User implements UserDetails{
 
     public String getNames(){
         return firstName.concat(" ").concat(lastName);
+    }
+
+    @Override
+    public String toString() {
+        return "User{ " +
+                "id = " + id +
+                ", email = '" + email + '\'' +
+                ", username = '" + username + '\'' +
+                ", names = '" + getNames() + '\'' +
+                '}';
     }
 }

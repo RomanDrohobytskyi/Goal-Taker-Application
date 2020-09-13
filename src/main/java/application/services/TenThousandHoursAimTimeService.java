@@ -23,7 +23,7 @@ public class TenThousandHoursAimTimeService {
     private final ITenThousandHoursAimRepository tenThousandHoursAimRepository;
     private final ITenThousandHoursAimTimeRepository iTenThousandHoursAimTimeRepository;
 
-    public TenThousandHoursAimTime adaptTime(Double loggedTime, Date date, String description, State.DateState state, TenThousandHoursAim aim){
+    public TenThousandHoursAimTime adaptTime(Double loggedTime, Date date, String description, State.Date state, TenThousandHoursAim aim){
         TenThousandHoursAimTime time = new TenThousandHoursAimTime();
         time.setTime(loggedTime);
         time.setDate(date);
@@ -62,7 +62,7 @@ public class TenThousandHoursAimTimeService {
 
     public TenThousandHoursAimTime deleteTime(TenThousandHoursAimTime time) {
         time.setModificationDate(new Date());
-        time.setState(State.DateState.DELETED.toString());
+        time.setState(State.Date.DELETED.toString());
         iTenThousandHoursAimTimeRepository.save(time);
         return time;
     }
@@ -81,7 +81,7 @@ public class TenThousandHoursAimTimeService {
         TenThousandHoursAimTime newTime = null;
         try {
             Date convertedDate = new SimpleDateFormat("yyyy-MM-dd").parse(date);
-            newTime = adaptTime(time.doubleValue(), convertedDate, description, State.DateState.NEW, aim);
+            newTime = adaptTime(time.doubleValue(), convertedDate, description, State.Date.NEW, aim);
             newTime.setCreationDate(new Date());
             iTenThousandHoursAimTimeRepository.save(newTime);
             aim.setLoggedTime(Collections.singleton(newTime));

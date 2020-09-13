@@ -3,6 +3,7 @@ package application.entities.aim;
 import application.entities.time.data.TenThousandHoursAimTime;
 import application.entities.user.User;
 import application.enums.State;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -18,6 +19,7 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
+@Builder
 public class TenThousandHoursAim {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -34,7 +36,7 @@ public class TenThousandHoursAim {
     private String text;
     @Column
     @NotNull
-    private String aimState = State.AimState.NEW.toString();
+    private String aimState = State.Aim.NEW.toString();
     @NotNull
     @CreationTimestamp
     private Date creationDate;

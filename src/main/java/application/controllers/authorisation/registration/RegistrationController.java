@@ -28,7 +28,8 @@ public class RegistrationController {
     public String addUser(User user, Map<String, Object> model,
                           @RequestParam String passwordConfirm) {
         model.putAll(userService.validateUserRegistrationData(user, passwordConfirm));
-        return model.containsKey("success") ? "redirect:/login" : "registration";
+        model.put("user", user);
+        return /*model.containsKey("success") ? "redirect:/login" :*/ "registration";
     }
 
     @GetMapping("/activate/{code}")
@@ -42,9 +43,14 @@ public class RegistrationController {
         return "login";
     }
 
-    @PostMapping("/registration/resendVerificationCode")
-    public String resendVerificationCode(User user, Map<String, Object> model) {
-        userService.resendVerificationToken(user);
-        return model.containsKey("success") ? "redirect:/login" : "registration";
+    @GetMapping("/registration/resendVerificationCode")
+    public String resendVerificationCode(@RequestParam String email, Model model) {
+        boolean resend = userService.resendVerificationToken(email);
+        if (resend) {
+            model.addAttribute("message", "Activation code successfully resend!");
+        } else {
+            model.addAttribute("message", "Activation code was not resend!");
+        }
+        return "registration";
     }
 }

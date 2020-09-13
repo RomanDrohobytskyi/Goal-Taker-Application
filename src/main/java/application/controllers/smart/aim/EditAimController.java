@@ -2,7 +2,6 @@ package application.controllers.smart.aim;
 
 import application.entities.aim.Aim;
 import application.menu.MenuTabs;
-import application.repositories.IAimRepository;
 import application.services.AimService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -16,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class EditAimController {
 
-    private final IAimRepository aimRepository;
     private final AimService aimService;
 
     @GetMapping("{aim}")
@@ -27,7 +25,7 @@ public class EditAimController {
         return "editAim";
     }
 
-    @PostMapping
+    @PostMapping("/saveEditedAim")
     public String saveEditedMessage(
             @RequestParam String title,
             @RequestParam String text,
@@ -39,9 +37,7 @@ public class EditAimController {
             @RequestParam String timeBased,
             @RequestParam("aimId") Aim aim) {
 
-        aim = aimService.edit(title, text, description, specific, measurable, attainable, relevant, timeBased, aim);
-        aimRepository.save(aim);
-
+        aim = aimService.editAndSave(title, text, description, specific, measurable, attainable, relevant, timeBased, aim);
         return "redirect:/main_aim#aim_" + aim.getId();
     }
 

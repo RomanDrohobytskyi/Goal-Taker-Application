@@ -69,13 +69,21 @@
                 </p>
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
                 <button type="submit" class="btn btn1 w3-button">Create</button>
-                <h5>Already registered? <a href="/login"><b>Sing In!</b></a>!</h5>
+                <h5>Already registered? <a href="/login"><b>Sing In!</b></a></h5>
             </form>
             <br>
-            <a href="/registration/resendVerificationCode">
-                <h5>Resend activation code.</h5>
-            </a>
-            <input type="hidden" name="_csrf" value="${_csrf.token}" />
+            <#if user?has_content && user.email?has_content>
+                <div>
+                    <form action="/registration/resendVerificationCode">
+                        <#--<a href="/registration/resendVerificationCode/${user.email}">
+                            <h5>Resend activation code.</h5>
+                        </a>-->
+                        <button type="submit" class="btn btn1 w3-button">Resend</button>
+                        <input type="hidden" name="email" value="${user.email}" />
+                        <input type="hidden" value="${_csrf.token}" name="_csrf">
+                    </form>
+                </div>
+            </#if>
         </div>
     </div>
     <div class="parallax big-img-login-1 w3-display-container w3-opacity-min"></div>

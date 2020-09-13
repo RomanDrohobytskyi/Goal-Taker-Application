@@ -2,7 +2,7 @@ package application.enums;
 
 public class State {
 
-    public enum MessageState{
+    public enum Message {
         NEW ("New note"),
         DELETED ("Note has been deleted"),
         ACHIEVED ("Note has been achieved"),
@@ -10,7 +10,7 @@ public class State {
 
         private String state;
 
-        MessageState(String state){
+        Message(String state){
             this.state = state;
         }
 
@@ -19,7 +19,7 @@ public class State {
         }
     }
 
-    public enum AimState{
+    public enum Aim {
         NEW ("New aim"),
         ARCHIVED ("Aim has been archived"),
         DELETED ("Aim has been deleted"),
@@ -28,7 +28,7 @@ public class State {
 
         private String state;
 
-        AimState(String state){
+        Aim(String state){
             this.state = state;
         }
 
@@ -37,14 +37,14 @@ public class State {
         }
     }
 
-    public enum DateState{
+    public enum Date {
         NEW ("New date"),
         DELETED ("Date has been deleted"),
         EDITED ("Date has been edited");
 
         private String state;
 
-        DateState(String state){
+        Date(String state){
             this.state = state;
         }
 

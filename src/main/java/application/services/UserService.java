@@ -22,15 +22,15 @@ public class UserService implements UserDetailsService {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
-    private final IUserRepository iUserRepository;
+    private final IUserRepository userRepository;
     private final MailSenderService mailSenderService;
 
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        return iUserRepository.findUserByEmail(s);
+        return userRepository.findUserByEmail(s);
     }
 
     public User findUserByEmail(String email) throws UsernameNotFoundException {
-        return iUserRepository.findUserByEmail(email);
+        return userRepository.findUserByEmail(email);
     }
 
     public Map<String, Object> validateUserRegistrationData(User user, String passwordConfirm) {
@@ -56,7 +56,7 @@ public class UserService implements UserDetailsService {
     }
 
     public boolean isUserExist(User user){
-        return iUserRepository.findUserByEmail(user.getEmail()) != null;
+        return userRepository.findUserByEmail(user.getEmail()) != null;
     }
 
     public boolean isUserEmailEmpty(User user){
@@ -98,25 +98,26 @@ public class UserService implements UserDetailsService {
         user.setActivationCode(generateVerificationToken());
     }
 
-    public boolean resendVerificationToken(User user) {
-        generateNewVerificationTokenForUser(user);
-        return sendActivationCode(user);
+    public boolean resendVerificationToken(String email) {
+        Optional<User> user = Optional.ofNullable(userRepository.findUserByEmail(email));
+        generateNewVerificationTokenForUser(user.orElseThrow(IllegalArgumentException::new));
+        return sendActivationCode(user.get());
     }
 
     public void saveUser(User user){
-            iUserRepository.save(user);
+            userRepository.save(user);
     }
 
     public void activateUser(String code) {
-        Optional<User> user = Optional.of(iUserRepository.findByActivationCode(code));
+        Optional<User> user = Optional.of(userRepository.findByActivationCode(code));
         user.orElseThrow(IllegalArgumentException::new).setActivationCode(null);
         user.orElseThrow(IllegalArgumentException::new).setActive(true);
-        iUserRepository.save(user.get());
+        userRepository.save(user.get());
     }
 
     public User delete(User user){
         user.setActive(false);
-        iUserRepository.save(user);
+        userRepository.save(user);
         return user;
     }
 

@@ -1,6 +1,5 @@
-package application.repository;
+package application.integration.repository;
 
-import application.entities.aim.Aim;
 import application.enums.State;
 import application.repositories.IAimRepository;
 import org.junit.jupiter.api.Test;
@@ -22,7 +21,7 @@ public class AimRepositoryTest {
 
     @Test
     public void shouldUpdatePartially() {
-        Aim aim = new Aim();
+        application.entities.aim.Aim aim = new application.entities.aim.Aim();
         aim.setTitle("Test title");
         aim.setText("Test text");
         aim.setDescription("Test description");
@@ -31,7 +30,7 @@ public class AimRepositoryTest {
         aim.setAttainable("Test ");
         aim.setRelevant("Test ");
         aim.setCreationDate(new Date());
-        aim.setAimState(State.AimState.NEW.getState());
+        aim.setAimState(State.Aim.NEW.getState());
 
         aimRepository.save(aim);
         assertNotNull(aim.getId());

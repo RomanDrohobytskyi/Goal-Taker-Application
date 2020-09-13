@@ -1,6 +1,6 @@
 package application.services;
 
-import application.entities.aim.Aim;
+import application.entities.time.data.Time;
 import application.entities.user.User;
 import application.enums.State;
 import application.managers.UserManager;
@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+
+import static application.logger.LoggerJ.logError;
 
 @Service
 @RequiredArgsConstructor
@@ -22,11 +22,10 @@ public class AimService {
     private final IAimRepository aimRepository;
     private UserManager userManager = new UserManager();
 
-
-    public Optional<Aim> adapt(String title, String description, String text, String specific, String measurable,
-                               String attainable, String relevant, Date timeBased, User user){
+    public Optional<application.entities.aim.Aim> adapt(String title, String description, String text, String specific, String measurable,
+                                                        String attainable, String relevant, Date timeBased, User user){
         if (userService.isUserExist(user)){
-            Aim aim = new Aim();
+            application.entities.aim.Aim aim = new application.entities.aim.Aim();
             aim.setTitle(title);
             aim.setDescription(description);
             aim.setText(text);
@@ -36,49 +35,67 @@ public class AimService {
             aim.setRelevant(relevant);
             aim.setTimeBased(timeBased);
             aim.setCreationDate(new Date());
-
             aim.setUser(user);
             return Optional.of(aim);
         }
-        return Optional.empty();
+        logError(getClass(), "User " + user.getEmail() + " not exist!");
+        throw new IllegalArgumentException();
     }
 
-    public Aim delete(Aim aim) {
-        aim.setModificationDate(new Date());
-        aim.setDeletionDate(new Date());
-        aim.setAimState(State.AimState.DELETED.toString());
+    public application.entities.aim.Aim save(application.entities.aim.Aim aim) {
         return aimRepository.save(aim);
     }
 
-    public void delete(List<Aim> aims) {
-        for (Aim aim : aims){
-            if (!aim.getAimState().equals(State.AimState.DELETED.toString())) {
+    public application.entities.aim.Aim delete(application.entities.aim.Aim aim) {
+        Date deletionDate = new Date();
+        aim.setModificationDate(deletionDate);
+        aim.setDeletionDate(deletionDate);
+        aim.setAimState(State.Aim.DELETED.toString());
+        return aimRepository.save(aim);
+    }
+
+    public void delete(List<application.entities.aim.Aim> aims) {
+        for (application.entities.aim.Aim aim : aims){
+            if (!aim.getAimState().equals(State.Aim.DELETED.toString())) {
                 delete(aim);
             }
         }
     }
 
-    public Aim achieve(Aim aim){
-        aim.setAimState(State.AimState.ACHIEVED.toString());
+    public application.entities.aim.Aim addAndSaveAim(User user, String title, String description, String text, String specific,
+                                                      String measurable, String attainable, String relevant, String timeBased){
+        Date timeBasedDate = parseDate(timeBased).orElseThrow(IllegalArgumentException::new);
+        Optional<application.entities.aim.Aim> aimOptional = adapt(title, description, text, specific, measurable, attainable, relevant,
+                timeBasedDate, user);
+        return save(aimOptional.orElseThrow(IllegalArgumentException::new));
+    }
+
+    public application.entities.aim.Aim achieve(application.entities.aim.Aim aim){
+        aim.setAimState(State.Aim.ACHIEVED.toString());
         aim.setModificationDate(new Date());
         aim.setAchievedDate(new Date());
         return aimRepository.save(aim);
     }
 
-    public Aim edit(String title, String text, String description, String specific,
-                    String measurable, String attainable, String relevant, String timeBased, Aim aim){
+    public application.entities.aim.Aim editAndSave(String title, String text, String description, String specific,
+                                                    String measurable, String attainable, String relevant, String timeBased, application.entities.aim.Aim aim) {
+        this.edit(title,text,description,specific,measurable,attainable,relevant,timeBased,aim);
+        return this.save(aim);
+    }
 
+    public application.entities.aim.Aim edit(String title, String text, String description, String specific,
+                                             String measurable, String attainable, String relevant, String timeBased, application.entities.aim.Aim aim){
         aim.setText(text);
         aim.setDescription(description);
         aim.setTitle(title);
-        aim.setAimState(State.AimState.EDITED.toString());
+        aim.setAimState(State.Aim.EDITED.toString());
         aim.setSpecify(specific);
         aim.setMeasurable(measurable);
         aim.setAttainable(attainable);
         aim.setRelevant(relevant);
         aim.setTimeBased(parseDate(timeBased).orElseThrow(IllegalArgumentException::new));
         aim.setModificationDate(new Date());
-        aim.setAimState(State.AimState.EDITED.toString());
+        aim.setAimState(State.Aim.EDITED.toString());
         return aim;
     }
 
@@ -87,21 +104,30 @@ public class AimService {
             Date parsedDate = new SimpleDateFormat("yyyy-MM-dd").parse(timeBased);
             return Optional.of(parsedDate);
         } catch (ParseException e){
-            e.printStackTrace();
+            logError(AimService.class, "AimService.parse(" + timeBased + "), error message:"
+            + e.getMessage());
         }
         return Optional.empty();
     }
 
-    public List<Aim> getAchievedUserAims(User user) {
-        return aimRepository.findAimsByAimStateAndUser(State.AimState.ACHIEVED.toString(), user);
+    public List<application.entities.aim.Aim> getAchievedUserAims(User user) {
+        return aimRepository.findAimsByAimStateAndUser(State.Aim.ACHIEVED.toString(), user);
     }
 
-    public List<Aim> getNotDeletedUserAims(User user) {
-        return aimRepository.findAimsByAimStateIsNotLikeAndUser(State.AimState.DELETED.toString(), user);
+    public List<application.entities.aim.Aim> getNotDeletedUserAims(User user) {
+        return aimRepository.findAimsByAimStateIsNotLikeAndUser(State.Aim.DELETED.toString(), user);
     }
 
-    public List<Aim> getLoggedInUserAims() {
+    public List<application.entities.aim.Aim> getLoggedInUserAims() {
         User loggedInUser = userManager.getLoggedInUser();
         return getNotDeletedUserAims(loggedInUser);
+    }
+
+    public application.entities.aim.Aim getMostActiveAim(List<application.entities.aim.Aim> userAims) {
+        return Collections.max(userAims,
+                Comparator.comparing(a -> a.getLoggedTime()
+                        .stream()
+                        .mapToDouble(Time::getTime)
+                        .sum()));
     }
 }

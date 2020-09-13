@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="/static/css/menu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <#import "parts/footer.ftlh" as footer>
     <#import "parts/menu.ftlh" as menu>
     <#import "parts/elements.ftlh" as elements>
@@ -32,7 +35,7 @@
     <div class="w3-content w3-container w3-padding-32" id="edit-aim">
         <h3 class="w3-center">E D I T</h3>
         <div class="w3-center w3-row">
-            <form action="/editAim" method="post" style="margin: 30px 10px 10px">
+            <form action="/editAim/saveEditedAim" method="post" style="margin: 30px 10px 10px">
                 <label>
                     <i class="w3-center">t i t l e</i>
                     <br>
@@ -74,12 +77,11 @@
                         class="small-btn btn2 w3-button w3-padding-large">
                     Save
                 </button>
-
-                <form action="/editAim/cancel" method="post" style="margin: 30px 10px 10px">
-                    <button type="submit" class="small-btn btn2 w3-button w3-padding-large">
-                        Cancel
-                    </button>
-                </form>
+            </form>
+            <form action="/editAim/cancel" method="get" style="margin: 30px 10px 10px">
+                <button type="submit" class="small-btn btn2 w3-button w3-padding-large">
+                    Cancel
+                </button>
             </form>
         </div>
     </div>

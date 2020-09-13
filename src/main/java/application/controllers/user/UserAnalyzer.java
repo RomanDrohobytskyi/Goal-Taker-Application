@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("userAnalyzer")
-@PreAuthorize("hasAuthority('USER')")
+@PreAuthorize("hasAnyAuthority('USER', 'ADMIN')")
 @RequiredArgsConstructor
 public class UserAnalyzer {
 

@@ -16,12 +16,13 @@
     <link rel="stylesheet" href="/static/css/menu.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <#import "parts/menu.ftlh" as menu>
     <#import "parts/footer.ftlh" as footer>
+    <#import "parts/menu.ftlh" as menu>
     <#import "parts/elements.ftlh" as elements>
 
 </head>
 <body>
+
     <@menu.customMenu menuElements slideMenuElements/>
 
     <!-- First Parallax Image with Text -->

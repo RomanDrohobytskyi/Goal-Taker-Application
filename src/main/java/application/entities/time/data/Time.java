@@ -11,7 +11,6 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.time.ZoneId;
-import java.util.Date;
 
 @Entity(name = "smart_aim_time")
 @Getter
@@ -27,22 +26,22 @@ public class Time {
     private Double time;
     @NotNull
     @Column(name = "date")
-    private Date date;
+    private java.util.Date date;
     @Column(name = "description")
     private String description;
     @NotNull
     @Column(name = "creation_date")
-    private Date creationDate;
+    private java.util.Date creationDate;
     @Column(name = "modification_date")
-    private Date modificationDate;
+    private java.util.Date modificationDate;
     @Column(name = "state")
-    private String state = State.DateState.NEW.toString();
+    private String state = State.Date.NEW.toString();
     @ManyToOne
     private Aim aim;
 
     public ConvertedDate getConvertedDate(Time time){
         ConvertedDate convertedDate = new ConvertedDate();
-        Date date = time.getDate();
+        java.util.Date date = time.getDate();
         LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
         int year = localDate.getYear();
         int month = localDate.getMonthValue();

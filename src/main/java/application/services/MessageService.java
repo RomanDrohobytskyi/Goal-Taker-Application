@@ -1,6 +1,5 @@
 package application.services;
 
-import application.entities.message.Message;
 import application.entities.user.User;
 import application.enums.State;
 import application.managers.UserManager;
@@ -23,10 +22,10 @@ public class MessageService {
     private final FileService fileService;
     private final UserService userService;
 
-    public Optional<Message> adaptMessage(String text, String tag, User user){
+    public Optional<application.entities.message.Message> adaptMessage(String text, String tag, User user){
         if(Strings.isNotEmpty(text) && Strings.isNotEmpty(tag) && user != null){
-            Message message = new Message();
-            message.setState(State.MessageState.NEW.toString());
+            application.entities.message.Message message = new application.entities.message.Message();
+            message.setState(State.Message.NEW.toString());
             message.setUser(user);
             message.setText(text);
             message.setTag(tag);
@@ -35,34 +34,34 @@ public class MessageService {
         return Optional.empty();
     }
 
-    public void delete(List<Message> messages){
-        for (Message message : messages)
+    public void delete(List<application.entities.message.Message> messages){
+        for (application.entities.message.Message message : messages)
             delete(message);
     }
 
-    public Message delete(Message message){
-        message.setState(State.MessageState.DELETED.toString());
+    public application.entities.message.Message delete(application.entities.message.Message message){
+        message.setState(State.Message.DELETED.toString());
         return messageRepository.save(message);
     }
 
-    public Message achieve(Message message){
-        message.setState(State.AimState.ACHIEVED.toString());
+    public application.entities.message.Message achieve(application.entities.message.Message message){
+        message.setState(State.Aim.ACHIEVED.toString());
         return messageRepository.save(message);
     }
 
-    public Message adaptEditedMessage(Message message, String text, String tag, MultipartFile file) {
+    public application.entities.message.Message adaptEditedMessage(application.entities.message.Message message, String text, String tag, MultipartFile file) {
         fileService.uploadFile(file);
         message.setText(text);
         message.setTag(tag);
         message.setFilename(fileService.getCreatedFileName());
-        message.setState(State.MessageState.EDITED.toString());
+        message.setState(State.Message.EDITED.toString());
         message.setFilename(fileService.getCreatedFileName());
 
         messageRepository.save(message);
         return  message;
     }
 
-    public List<Message> filter(String filter) {
+    public List<application.entities.message.Message> filter(String filter) {
         User loggedInUser = userManager.getLoggedInUser();
         if (StringUtils.isEmpty(filter))
             return messageRepository.findByUser(loggedInUser);
@@ -70,15 +69,15 @@ public class MessageService {
             return messageRepository.findByTagAndAndUser(filter, loggedInUser);
     }
 
-    public Message save(Message message){
+    public application.entities.message.Message save(application.entities.message.Message message){
         return messageRepository.save(message);
     }
 
-    public List<Message> findByUser(User user){
+    public List<application.entities.message.Message> findByUser(User user){
         return messageRepository.findByUser(user);
     }
 
-    public Message adaptMessageAsNote(String message, String userName,  String userEmail) {
+    public application.entities.message.Message adaptMessageAsNote(String message, String userName, String userEmail) {
         String messageText = "User " + userEmail + ", " + userName + ", left note: " + message;
         String tag = "User Note";
         return adaptMessage(messageText, tag, getMessageAsNoteReceiver())
@@ -90,7 +89,7 @@ public class MessageService {
                 .orElseThrow(IllegalArgumentException::new);
     }
 
-    public Message sendMessageAsNote(Message message) {
+    public application.entities.message.Message sendMessageAsNote(application.entities.message.Message message) {
         return save(message);
     }
 }

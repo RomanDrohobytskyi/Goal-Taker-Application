@@ -14,16 +14,12 @@ import java.util.Date;
 @Setter
 public class SmartAim extends AimTest {
     @Column(columnDefinition = "varchar(255) default ''")
-    //@NotNull
     private String specify;
     @Column(columnDefinition = "varchar(255) default ''")
-    //@NotNull
     private String measurable;
     @Column(columnDefinition = "varchar(255) default ''")
-    //@NotNull
     private String attainable;
     @Column(columnDefinition = "varchar(255) default ''")
-    //@NotNull
     private String relevant;
     @Column
     private Date timeBased;

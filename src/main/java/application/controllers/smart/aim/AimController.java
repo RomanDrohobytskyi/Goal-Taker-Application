@@ -14,13 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.text.SimpleDateFormat;
-import java.util.Collections;
-import java.util.Date;
 import java.util.Map;
-import java.util.Optional;
-
-import static application.logger.LoggerJ.logError;
 
 /**
  * Smart aim Controller
@@ -56,26 +50,9 @@ public class AimController {
             @RequestParam String timeBased,
             Map<String, Object> model) {
 
-        Date convertedDate;
-        Optional<Aim> aimOptional = Optional.empty();
-
-        try{
-            convertedDate = new SimpleDateFormat("yyyy-MM-dd").parse(timeBased);
-            aimOptional = aimService.adapt(title, description, text, specific, measurable, attainable, relevant, convertedDate, user);
-            if (aimOptional.isPresent()){
-                Aim aim = aimOptional.get();
-                aimRepository.save(aim);
-                Iterable<Aim> userAims = user.getAims();
-                model.put("aims", userAims);
-            }
-            else {
-                Map myMap = Collections.EMPTY_MAP;
-                model.put("aims", myMap);
-            }
-        } catch (Exception e){
-            logError(getClass(), "Could not save aim: " + aimOptional.get());
-            e.printStackTrace();
-        }
+            aimService.addAndSaveAim(user, description, text, specific, measurable, attainable, relevant,
+                    timeBased, title);
+            model.put("aims", user.getAims());
         return "redirect:/main_aim#aimsTable";
     }
 
@@ -93,7 +70,7 @@ public class AimController {
     }
 
     @GetMapping("/main_aim/achieve/{aim}")
-    public String achieve(@PathVariable Aim aim, Map<String, Object> model){
+    public String achieve(@PathVariable Aim aim){
         aimService.achieve(aim);
         return "redirect:/main_aim#aimsTable";
     }
