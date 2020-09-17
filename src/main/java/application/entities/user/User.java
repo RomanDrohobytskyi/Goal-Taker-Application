@@ -95,4 +95,6 @@ public class User implements UserDetails{
                 ", names = '" + getNames() + '\'' +
                 '}';
     }
+
+
 }

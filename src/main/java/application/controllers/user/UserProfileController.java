@@ -59,9 +59,6 @@ public class UserProfileController {
     }
 
     private void addUserAvatar(User user, MultipartFile avatar){
-        if(!avatar.getOriginalFilename().isEmpty()){
-            fileService.uploadFile(avatar);
-            user.setAvatar(fileService.getCreatedFileName());
-        }
+        user.setAvatar(fileService.uploadFile(avatar));
     }
 }

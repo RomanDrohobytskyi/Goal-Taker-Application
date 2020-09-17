@@ -9,8 +9,6 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
-import java.time.ZoneId;
 
 @Entity(name = "smart_aim_time")
 @Getter
@@ -40,17 +38,6 @@ public class Time {
     private Aim aim;
 
     public ConvertedDate getConvertedDate(Time time){
-        ConvertedDate convertedDate = new ConvertedDate();
-        java.util.Date date = time.getDate();
-        LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-        int year = localDate.getYear();
-        int month = localDate.getMonthValue();
-        int day = localDate.getDayOfMonth();
-
-        convertedDate.setDay(day);
-        convertedDate.setMonth(month);
-        convertedDate.setYear((long) year);
-
-        return convertedDate;
+        return new ConvertedDate(time);
     }
 }

@@ -14,8 +14,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
@@ -25,41 +25,42 @@ public class AimServiceUnitTest {
     private AimService aimService;
     @Autowired
     private TimeService timeService;
-    private List<application.entities.aim.Aim> aims;
+    private List<Aim> aims;
 
 
+    private List<Time> time() {
+        ArrayList<Time> aimTime = new ArrayList<>();
+        for (int i = 0; i <= 4; i++) {
+            Time time = timeService.adaptTime((double) i, new Date(),
+                    "Test time " + i, State.Date.NEW, null);
+            aimTime.add(time);
+            time.setId((long) i);
+        }
+        return aimTime;
+    }
     @BeforeEach
     void createAimsWithTimes(){
-        application.entities.aim.Aim aim1 = new application.entities.aim.Aim();
-        ArrayList<Time> times1 = new ArrayList<>(Arrays.asList(
-                timeService.adaptTime(new Double("2"), new Date(), "Test Time object 1",
-                        State.Date.NEW, aim1),
-                timeService.adaptTime(new Double("3.5"), new Date(), "Test Time object 2",
-                        State.Date.NEW, aim1)
-        ));
-        times1.get(0).setId(1L);
-        times1.get(1).setId(2L);
-        aim1.setLoggedTime(new HashSet<>(times1));
+        Aim aim1 = new Aim();
+        Aim aim2 = new Aim();
+        List<Time> timesForAim = time();
 
-        application.entities.aim.Aim aim2 = new application.entities.aim.Aim();
-        ArrayList<Time> times2 = new ArrayList<>(Arrays.asList(
-                timeService.adaptTime(new Double("1"), new Date(), "Test Time object 3",
-                        State.Date.NEW, aim2),
-                timeService.adaptTime(new Double("1.5"), new Date(), "Test Time object 4",
-                        State.Date.NEW, aim2)
-        ));
-        aim2.setLoggedTime(new HashSet<>(times2));
-        times2.get(0).setId(3L);
-        times2.get(1).setId(4L);
+        aim1.setLoggedTime(new HashSet<>(Arrays.asList(timesForAim.get(0), timesForAim.get(1))));
+        aim2.setLoggedTime(new HashSet<>(Arrays.asList(timesForAim.get(2), timesForAim.get(3))));
+
+        timesForAim.get(0).setAim(aim1);
+        timesForAim.get(1).setAim(aim1);
+
+        timesForAim.get(2).setAim(aim2);
+        timesForAim.get(3).setAim(aim2);
 
         this.aims = new ArrayList<>(Arrays.asList(aim1, aim2));
     }
 
     @Test
     void mostActiveAim() {
-        application.entities.aim.Aim mostActiveAim = aimService.getMostActiveAim(aims);
+        Aim mostActiveAim = aimService.getMostActiveAim(aims);
 
-        assertEquals(mostActiveAim, aims.get(0));
+        assertEquals(mostActiveAim, aims.get(1));
     }
 
     @Test
@@ -73,13 +74,14 @@ public class AimServiceUnitTest {
 
     @Test
     void parseWrongDate(){
-        assertEquals(Optional.empty(), aimService.parseDate("213"));
+        Optional<Date> shouldBeEmptyParsedDate = aimService.parseDate("213");
+        assertThat(Optional.empty()).isEqualTo(shouldBeEmptyParsedDate);
     }
 
     @Test
     void builderTest(){
         Aim aim = new Aim.AimBuilder("Test title", "Description", "Text")
                 .build();
-
+        assertNotNull(aim);
     }
 }

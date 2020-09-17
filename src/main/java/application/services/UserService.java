@@ -36,20 +36,24 @@ public class UserService implements UserDetailsService {
     public Map<String, Object> validateUserRegistrationData(User user, String passwordConfirm) {
         Map<String, Object> model = new HashMap<>();
 
-        if (isUserExist(user))
-            model.put("userExist", "Sorry, user with email: " + user.getEmail() + ", already exist!");
-        if (isUserEmailEmpty(user))
-            model.put("emailIsEmpty", "Sorry, Your email is empty, please check it again");
-        if (!isPasswordsMatch(user.getPassword(), passwordConfirm))
-            model.put("passwordNotMach", "Sorry, but Your passwords do not match, check it again!");
-        else {
-            setNewUserData(user);
-            if (sendActivationCode(user)){
-                saveUser(user);
+        if (!isUserEmailEmpty(user)) {
+            if (!isUserExist(user)) {
+                if (isPasswordsMatch(user.getPassword(), passwordConfirm)) {
+                    setNewUserData(user);
+                    if (sendActivationCode(user)){
+                        saveUser(user);
+                    } else {
+                        model.put("message", "We can`t send to You activation code, sorry!");
+                    }
+                    model.put("success", "Success");
+                } else {
+                    model.put("passwordNotMach", "Sorry, but Your passwords do not match, check it again!");
+                }
             } else {
-                model.put("message", "We can`t send to You activation code, sorry!");
+                model.put("userExist", "Sorry, user with email: " + user.getEmail() + ", already exist!");
             }
-            model.put("success", "Success");
+        } else {
+            model.put("emailIsEmpty", "Sorry, Your email is empty, please check it again");
         }
         model.put("user", user);
         return model;
@@ -105,7 +109,7 @@ public class UserService implements UserDetailsService {
     }
 
     public void saveUser(User user){
-            userRepository.save(user);
+        userRepository.save(user);
     }
 
     public void activateUser(String code) {

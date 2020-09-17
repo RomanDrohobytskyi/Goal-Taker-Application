@@ -2,9 +2,7 @@ package application.controllers.message;
 
 import application.entities.message.Message;
 import application.entities.user.User;
-import application.managers.UserManager;
 import application.menu.MenuTabs;
-import application.services.FileService;
 import application.services.MessageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,9 +15,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.util.Collections;
+import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 @Controller
 @RequiredArgsConstructor
@@ -27,9 +24,7 @@ public class MessageController {
 
     @Value("${upload.path}")
     private String uploadPath;
-    private UserManager userManager = new UserManager();
     private final MessageService messageService;
-    private final FileService fileService;
 
     @GetMapping("/main")
     public String filter(@RequestParam(required = false, defaultValue = "")
@@ -50,22 +45,9 @@ public class MessageController {
             Map<String, Object> model,
             @RequestParam(name = "file", required = false, defaultValue = "") MultipartFile file) {
 
-        Optional<Message> optionalMessage = messageService.adaptMessage(text, tag, user);
-
-        if (optionalMessage.isPresent()){
-            Message message = optionalMessage.get();
-            fileService.uploadFile(file);
-            message.setFilename(fileService.getCreatedFileName());
-
-            messageService.save(message);
-
-            User loggedInUser = userManager.getLoggedInUser();
-            Iterable<Message> userMessages = messageService.findByUser(loggedInUser);
-
-            model.put("messages", userMessages);
-        }else {
-            model.put("messages", Collections.EMPTY_MAP);
-        }
+        messageService.addNewMessage(text, tag, file, user);
+        List<Message> userMessages = messageService.getLoggedInUserAims();
+        model.put("messages", userMessages);
         return "redirect:/main#messagesTable";
     }
 
@@ -74,8 +56,7 @@ public class MessageController {
             @PathVariable Message message,
             Map<String, Object> model) {
         messageService.delete(message);
-        User loggedInUser = userManager.getLoggedInUser();
-        Iterable<Message> userMessages = messageService.findByUser(loggedInUser);
+        List<Message> userMessages = messageService.getLoggedInUserAims();
         model.put("messages", userMessages);
         return "redirect:/main#messagesTable";
     }
@@ -84,8 +65,7 @@ public class MessageController {
     public String deleteMessages(
             Map<String, Object> model) {
 
-        User loggedInUser = userManager.getLoggedInUser();
-        Iterable<Message> userMessages = messageService.findByUser(loggedInUser);
+        List<Message> userMessages = messageService.getLoggedInUserAims();
         model.put("messages", userMessages);
         return "redirect:/main#messagesTable";
     }

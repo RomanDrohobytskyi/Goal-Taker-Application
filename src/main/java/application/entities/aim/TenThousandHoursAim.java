@@ -3,7 +3,6 @@ package application.entities.aim;
 import application.entities.time.data.TenThousandHoursAimTime;
 import application.entities.user.User;
 import application.enums.State;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -19,7 +18,6 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
-@Builder
 public class TenThousandHoursAim {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

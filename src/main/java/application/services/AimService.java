@@ -1,5 +1,6 @@
 package application.services;
 
+import application.entities.aim.Aim;
 import application.entities.time.data.Time;
 import application.entities.user.User;
 import application.enums.State;
@@ -22,10 +23,10 @@ public class AimService {
     private final IAimRepository aimRepository;
     private UserManager userManager = new UserManager();
 
-    public Optional<application.entities.aim.Aim> adapt(String title, String description, String text, String specific, String measurable,
+    public Optional<Aim> adapt(String title, String description, String text, String specific, String measurable,
                                                         String attainable, String relevant, Date timeBased, User user){
         if (userService.isUserExist(user)){
-            application.entities.aim.Aim aim = new application.entities.aim.Aim();
+            Aim aim = new Aim();
             aim.setTitle(title);
             aim.setDescription(description);
             aim.setText(text);
@@ -42,11 +43,11 @@ public class AimService {
         throw new IllegalArgumentException();
     }
 
-    public application.entities.aim.Aim save(application.entities.aim.Aim aim) {
+    public Aim save(Aim aim) {
         return aimRepository.save(aim);
     }
 
-    public application.entities.aim.Aim delete(application.entities.aim.Aim aim) {
+    public Aim delete(Aim aim) {
         Date deletionDate = new Date();
         aim.setModificationDate(deletionDate);
         aim.setDeletionDate(deletionDate);
@@ -54,37 +55,37 @@ public class AimService {
         return aimRepository.save(aim);
     }
 
-    public void delete(List<application.entities.aim.Aim> aims) {
-        for (application.entities.aim.Aim aim : aims){
+    public void delete(List<Aim> aims) {
+        for (Aim aim : aims){
             if (!aim.getAimState().equals(State.Aim.DELETED.toString())) {
                 delete(aim);
             }
         }
     }
 
-    public application.entities.aim.Aim addAndSaveAim(User user, String title, String description, String text, String specific,
+    public Aim addAndSaveAim(User user, String title, String description, String text, String specific,
                                                       String measurable, String attainable, String relevant, String timeBased){
         Date timeBasedDate = parseDate(timeBased).orElseThrow(IllegalArgumentException::new);
-        Optional<application.entities.aim.Aim> aimOptional = adapt(title, description, text, specific, measurable, attainable, relevant,
+        Optional<Aim> aimOptional = adapt(title, description, text, specific, measurable, attainable, relevant,
                 timeBasedDate, user);
         return save(aimOptional.orElseThrow(IllegalArgumentException::new));
     }
 
-    public application.entities.aim.Aim achieve(application.entities.aim.Aim aim){
+    public Aim achieve(Aim aim){
         aim.setAimState(State.Aim.ACHIEVED.toString());
         aim.setModificationDate(new Date());
         aim.setAchievedDate(new Date());
         return aimRepository.save(aim);
     }
 
-    public application.entities.aim.Aim editAndSave(String title, String text, String description, String specific,
-                                                    String measurable, String attainable, String relevant, String timeBased, application.entities.aim.Aim aim) {
+    public Aim editAndSave(String title, String text, String description, String specific,
+                                                    String measurable, String attainable, String relevant, String timeBased, Aim aim) {
         this.edit(title,text,description,specific,measurable,attainable,relevant,timeBased,aim);
         return this.save(aim);
     }
 
-    public application.entities.aim.Aim edit(String title, String text, String description, String specific,
-                                             String measurable, String attainable, String relevant, String timeBased, application.entities.aim.Aim aim){
+    public Aim edit(String title, String text, String description, String specific,
+                                             String measurable, String attainable, String relevant, String timeBased, Aim aim){
         aim.setText(text);
         aim.setDescription(description);
         aim.setTitle(title);
@@ -110,20 +111,20 @@ public class AimService {
         return Optional.empty();
     }
 
-    public List<application.entities.aim.Aim> getAchievedUserAims(User user) {
+    public List<Aim> getAchievedUserAims(User user) {
         return aimRepository.findAimsByAimStateAndUser(State.Aim.ACHIEVED.toString(), user);
     }
 
-    public List<application.entities.aim.Aim> getNotDeletedUserAims(User user) {
+    public List<Aim> getNotDeletedUserAims(User user) {
         return aimRepository.findAimsByAimStateIsNotLikeAndUser(State.Aim.DELETED.toString(), user);
     }
 
-    public List<application.entities.aim.Aim> getLoggedInUserAims() {
+    public List<Aim> getLoggedInUserAims() {
         User loggedInUser = userManager.getLoggedInUser();
         return getNotDeletedUserAims(loggedInUser);
     }
 
-    public application.entities.aim.Aim getMostActiveAim(List<application.entities.aim.Aim> userAims) {
+    public Aim getMostActiveAim(List<Aim> userAims) {
         return Collections.max(userAims,
                 Comparator.comparing(a -> a.getLoggedTime()
                         .stream()
