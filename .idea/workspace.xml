@@ -21,8 +21,11 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/diagrams/png/ScreenShots/userAnalyzerTotalData.jpg" />
       <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/diagrams/png/ScreenShots/userProfileIcon.jpg" />
       <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/diagrams/png/ScreenShots/userProfileMain.jpg" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/SpringWebApplication.iml" afterPath="$PROJECT_DIR$/SpringWebApplication.iml" />
       <change beforePath="$PROJECT_DIR$/log/logs.log" afterPath="$PROJECT_DIR$/log/logs.log" />
       <change beforePath="$PROJECT_DIR$/log/logs.log.2019-07-25" afterPath="" />
       <change beforePath="$PROJECT_DIR$/log/logs.log.2019-07-28" afterPath="" />
@@ -89,25 +92,18 @@
       <change beforePath="$PROJECT_DIR$/log/logs.log.2020-05-13" afterPath="" />
       <change beforePath="$PROJECT_DIR$/log/logs.log.2020-05-20" afterPath="" />
       <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/message/MessageController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/message/MessageController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/user/UserProfileController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/user/UserProfileController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/aim/TenThousandHoursAim.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/aim/TenThousandHoursAim.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/message/Message.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/message/Message.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimDetailsController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimDetailsController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/time/data/TenThousandHoursAimTime.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/time/data/TenThousandHoursAimTime.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/time/data/Time.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/time/data/Time.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/user/User.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/user/User.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/repositories/IUserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/application/repositories/IUserRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/services/AimService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/AimService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/services/FileService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/FileService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/services/MessageService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/MessageService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/services/TenThousandHoursAimService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/TenThousandHoursAimService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/services/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/UserService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/utils/ConvertedDate.java" afterPath="$PROJECT_DIR$/src/main/java/application/utils/ConvertedDate.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/application/services/UserServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/application/services/UserServiceTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/application/unit/AimServiceUnitTest.java" afterPath="$PROJECT_DIR$/src/test/java/application/unit/AimServiceUnitTest.java" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/Application.class" afterPath="$PROJECT_DIR$/target/classes/application/Application.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/config/MailConfig.class" afterPath="$PROJECT_DIR$/target/classes/application/config/MailConfig.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/config/MvcConfig.class" afterPath="$PROJECT_DIR$/target/classes/application/config/MvcConfig.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/config/WebSecurityConfig.class" afterPath="$PROJECT_DIR$/target/classes/application/config/WebSecurityConfig.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/constants/CharConstants.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/constants/TextConstants.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/controllers/aims/AllAimsController.class" afterPath="$PROJECT_DIR$/target/classes/application/controllers/aims/AllAimsController.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/controllers/authorisation/login/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/application/controllers/authorisation/login/LoginController.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/controllers/authorisation/registration/RegistrationController.class" afterPath="$PROJECT_DIR$/target/classes/application/controllers/authorisation/registration/RegistrationController.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/controllers/greeting/GreetingController.class" afterPath="$PROJECT_DIR$/target/classes/application/controllers/greeting/GreetingController.class" />
@@ -139,20 +135,26 @@
       <change beforePath="$PROJECT_DIR$/target/classes/application/logger/LoggerJ.class" afterPath="$PROJECT_DIR$/target/classes/application/logger/LoggerJ.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/managers/AimManager.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/managers/MessageManager.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/managers/UserManager.class" afterPath="$PROJECT_DIR$/target/classes/application/managers/UserManager.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/menu/CreatedMenuElements.class" afterPath="$PROJECT_DIR$/target/classes/application/menu/CreatedMenuElements.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/menu/MenuElement.class" afterPath="$PROJECT_DIR$/target/classes/application/menu/MenuElement.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/menu/MenuTabs.class" afterPath="$PROJECT_DIR$/target/classes/application/menu/MenuTabs.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/repositories/IAimRepository.class" afterPath="$PROJECT_DIR$/target/classes/application/repositories/IAimRepository.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/repositories/IMessageRepository.class" afterPath="$PROJECT_DIR$/target/classes/application/repositories/IMessageRepository.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/repositories/ITenThousandHoursAimRepository.class" afterPath="$PROJECT_DIR$/target/classes/application/repositories/ITenThousandHoursAimRepository.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/repositories/ITenThousandHoursAimTimeRepository.class" afterPath="$PROJECT_DIR$/target/classes/application/repositories/ITenThousandHoursAimTimeRepository.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/repositories/ITimeRepository.class" afterPath="$PROJECT_DIR$/target/classes/application/repositories/ITimeRepository.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/repositories/IUserRepository.class" afterPath="$PROJECT_DIR$/target/classes/application/repositories/IUserRepository.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/roles/Role.class" afterPath="$PROJECT_DIR$/target/classes/application/roles/Role.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/services/AimService.class" afterPath="$PROJECT_DIR$/target/classes/application/services/AimService.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/services/FileService.class" afterPath="$PROJECT_DIR$/target/classes/application/services/FileService.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/services/MailSenderService.class" afterPath="$PROJECT_DIR$/target/classes/application/services/MailSenderService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application/services/MessageService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/services/MessageService.class" afterPath="$PROJECT_DIR$/target/classes/application/services/MessageService.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/services/TenThousandHoursAimService.class" afterPath="$PROJECT_DIR$/target/classes/application/services/TenThousandHoursAimService.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/services/TenThousandHoursAimTimeService.class" afterPath="$PROJECT_DIR$/target/classes/application/services/TenThousandHoursAimTimeService.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/services/TimeService.class" afterPath="$PROJECT_DIR$/target/classes/application/services/TimeService.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/services/UserService.class" afterPath="$PROJECT_DIR$/target/classes/application/services/UserService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/utils/ConvertedDate.class" afterPath="$PROJECT_DIR$/target/classes/application/utils/ConvertedDate.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/utils/ListUtils.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/utils/MapUtils.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/utils/StringUtils.class" afterPath="" />
@@ -234,24 +236,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="web_spring@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="web_spring@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="web_spring@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="web_spring: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="web_spring@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="web_spring: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="aim_test: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -260,36 +244,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MessageService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/services/MessageService.java">
+      <file leaf-file-name="TimeService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/services/TimeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1461">
-              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-              <folding>
-                <element signature="e#2897#2898#0" expanded="true" />
-                <element signature="e#2951#2952#0" expanded="true" />
-                <element signature="e#3944#3945#0" expanded="true" />
-                <element signature="e#3980#3981#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AimServiceUnitTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/application/unit/AimServiceUnitTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="35" column="42" lean-forward="false" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+            <state relative-caret-position="227">
+              <caret line="32" column="41" lean-forward="false" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/services/TimeService.java">
+      <file leaf-file-name="AimDetailsController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimDetailsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+            <state relative-caret-position="425">
+              <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -298,33 +267,35 @@
       <file leaf-file-name="Time.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/time/data/Time.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="345">
+              <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
               <folding>
-                <element signature="e#1079#1080#0" expanded="true" />
+                <element signature="e#1082#1083#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConvertedDate.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DateFormat.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/text/DateFormat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="394" column="0" lean-forward="false" selection-start-line="394" selection-start-column="0" selection-end-line="394" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConvertedDate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/application/utils/ConvertedDate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="42" column="45" lean-forward="false" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+            <state relative-caret-position="236">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#898#899#0" expanded="true" />
+                <element signature="e#966#967#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AimService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/services/AimService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="126" column="15" lean-forward="false" selection-start-line="126" selection-start-column="15" selection-end-line="126" selection-end-column="15" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -332,35 +303,42 @@
       <file leaf-file-name="TimeServiceTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/application/services/TimeServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-189">
-              <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+            <state relative-caret-position="557">
+              <caret line="45" column="29" lean-forward="false" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/services/FileService.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            <state relative-caret-position="428">
+              <caret line="125" column="19" lean-forward="false" selection-start-line="125" selection-start-column="19" selection-end-line="125" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditMessageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/message/EditMessageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TenThousandHoursAimTime.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/time/data/TenThousandHoursAimTime.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="38" column="56" lean-forward="false" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
               <folding>
-                <element signature="e#315#331#1" expanded="true" />
-                <element signature="e#435#436#0" expanded="true" />
-                <element signature="e#468#469#0" expanded="true" />
-                <element signature="e#510#511#0" expanded="true" />
-                <element signature="e#548#549#0" expanded="true" />
+                <element signature="e#1108#1109#0" expanded="true" />
+                <element signature="e#1164#1165#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/message/MessageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -368,7 +346,7 @@
       <file leaf-file-name="MessageServiceTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/application/services/MessageServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
+            <state relative-caret-position="386">
               <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -392,8 +370,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>spring-boot-starter-tes</find>
-      <find>VALIDATIO</find>
       <find>ArticleRepositoryTest</find>
       <find>WebSecurityConfig</find>
       <find>data</find>
@@ -422,6 +398,8 @@
       <find>juni</find>
       <find>application.entities.message.</find>
       <find>application.entities.aim.</find>
+      <find>maven</find>
+      <find>jquery</find>
     </findStrings>
     <replaceStrings>
       <replace>w3-padding-32</replace>
@@ -443,11 +421,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/application/controllers/user/UserController.java" />
         <option value="$PROJECT_DIR$/src/test/java/application/services/ArticleServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/TimeAnalyzerController.java" />
-        <option value="$PROJECT_DIR$/src/test/java/application/services/TimeServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimDetailsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/services/TimeService.java" />
         <option value="$PROJECT_DIR$/src/test/java/application/repository/AimRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/config/WebSecurityConfig.java" />
@@ -478,7 +453,6 @@
         <option value="$PROJECT_DIR$/src/main/java/application/entities/user/User.java" />
         <option value="$PROJECT_DIR$/src/test/java/application/integration/repository/UserServiceTest.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d8904ba1-b051-4f55-85e8-45be13b913e6/console.sql" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/application/integration/repository/UserRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/services/UserService.java" />
         <option value="$PROJECT_DIR$/src/test/java/application/services/UserServiceTest.java" />
@@ -492,8 +466,12 @@
         <option value="$PROJECT_DIR$/src/main/java/application/services/MessageService.java" />
         <option value="$PROJECT_DIR$/src/test/java/application/services/MessageServiceTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/application/unit/AimServiceUnitTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/entities/time/data/Time.java" />
+        <option value="$PROJECT_DIR$/src/test/java/application/services/TimeServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/utils/ConvertedDate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/entities/time/data/TenThousandHoursAimTime.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/application/entities/time/data/Time.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimDetailsController.java" />
       </list>
     </option>
   </component>
@@ -544,6 +522,37 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope">
+        <subPane subId="Tests">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="AimTakerRefactoring" type="cbb8eebc:String" user="AimTakerRefactoring" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="AimTakerRefactoring" type="cbb8eebc:String" user="AimTakerRefactoring" />
+              <item name="src/test/java" type="cbb8eebc:String" user="src/test/java" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="AimTakerRefactoring" type="cbb8eebc:String" user="AimTakerRefactoring" />
+              <item name="src/test/java" type="cbb8eebc:String" user="src/test/java" />
+              <item name="application" type="cbb8eebc:String" user="application" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="AimTakerRefactoring" type="cbb8eebc:String" user="AimTakerRefactoring" />
+              <item name="src/test/java" type="cbb8eebc:String" user="src/test/java" />
+              <item name="application" type="cbb8eebc:String" user="application" />
+              <item name="integration/repository" type="cbb8eebc:String" user="integration/repository" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -734,42 +743,11 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="Scope">
-        <subPane subId="Tests">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="AimTakerRefactoring" type="cbb8eebc:String" user="AimTakerRefactoring" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="AimTakerRefactoring" type="cbb8eebc:String" user="AimTakerRefactoring" />
-              <item name="src/test/java" type="cbb8eebc:String" user="src/test/java" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="AimTakerRefactoring" type="cbb8eebc:String" user="AimTakerRefactoring" />
-              <item name="src/test/java" type="cbb8eebc:String" user="src/test/java" />
-              <item name="application" type="cbb8eebc:String" user="application" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="AimTakerRefactoring" type="cbb8eebc:String" user="AimTakerRefactoring" />
-              <item name="src/test/java" type="cbb8eebc:String" user="src/test/java" />
-              <item name="application" type="cbb8eebc:String" user="application" />
-              <item name="integration/repository" type="cbb8eebc:String" user="integration/repository" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -782,9 +760,9 @@
     <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.5018382" />
+    <property name="project.structure.side.proportion" value="0.32077205" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/roma_/OneDrive/Рабочий стол/Programs/Studies/AimTakerRefactoring/src/main/java/application/integration/services/TimeService.java" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="extract.method.default.visibility" value="private" />
@@ -833,7 +811,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AimServiceUnitTest">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -1035,6 +1013,8 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="application.Application" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="13.0" />
       <module name="SpringWebApplication" />
       <envs />
     </configuration>
@@ -1073,19 +1053,18 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JUnit.JUnitTests" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.UserServiceTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.AimRepositoryTest" />
-      <item index="3" class="java.lang.String" itemvalue="Spring Boot.Application" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.UserRepositoryTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.UserServiceTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.AimRepositoryTest" />
       <item index="4" class="java.lang.String" itemvalue="JUnit.MessageServiceTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.AimServiceUnitTest" />
+      <item index="5" class="java.lang.String" itemvalue="Spring Boot.Application" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.AimServiceUnitTest" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Spring Boot.Application" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.MessageServiceTest" />
-        <item index="2" class="java.lang.String" itemvalue="Spring Boot.Application" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.UserServiceTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.AimRepositoryTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.UserServiceTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.AimRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1267,7 +1246,8 @@
       <workItem from="1599296684661" duration="9493000" />
       <workItem from="1599374519175" duration="43191000" />
       <workItem from="1600234781441" duration="1873000" />
-      <workItem from="1600321350065" duration="8975000" />
+      <workItem from="1600321350065" duration="9101000" />
+      <workItem from="1600406684448" duration="3335000" />
     </task>
     <task id="LOCAL-00001" summary="Log4J added, little changes in templates">
       <created>1564081469808</created>
@@ -1486,7 +1466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600004704694</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Refactoring, Tests">
+      <created>1600374958776</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1600374958776</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1522,7 +1509,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="929250000" />
+    <option name="totallyTimeSpent" value="932711000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1539,10 +1526,10 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32708332" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19119227" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1595059" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1595059" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1553,11 +1540,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3387271" sideWeight="0.48872182" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686085" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3387271" sideWeight="0.48872182" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32604167" sideWeight="0.4914712" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23093449" sideWeight="0.48613375" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23415682" sideWeight="0.48613375" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23093449" sideWeight="0.51386625" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2524272" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1582,7 +1569,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Not committed changes" />
     <MESSAGE value="Two ways mapping fixed, only logged in user aims, messages shows" />
     <MESSAGE value="Logging time for aim feature" />
     <MESSAGE value="Time analyzer" />
@@ -1607,7 +1593,8 @@
     <MESSAGE value="Spring boot 2.3.0, Integration tests etc." />
     <MESSAGE value="Uncommitted files" />
     <MESSAGE value="Tests, builder pattern, refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests, builder pattern, refactoring" />
+    <MESSAGE value="Refactoring, Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring, Tests" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1661,28 +1648,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/application/unit/TimeServiceUnitTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="50" column="10" lean-forward="true" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5287">
-          <caret line="649" column="15" lean-forward="false" selection-start-line="649" selection-start-column="15" selection-end-line="649" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/UserAnalyzerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="43" column="44" lean-forward="false" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/application/services/EntityInheritanceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -1834,15 +1799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="70" column="19" lean-forward="false" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1870,89 +1826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
-          <folding>
-            <marker date="1599082423564" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1599082423564" expanded="false" signature="148:674" ph="..." />
-            <marker date="1599082423564" expanded="true" signature="1087:1094" ph="{}" />
-            <marker date="1599082423564" expanded="false" signature="1151:1162" ph=" { " />
-            <marker date="1599082423564" expanded="false" signature="1199:1205" ph=" }" />
-            <marker date="1599082423564" expanded="false" signature="1270:1281" ph=" { " />
-            <marker date="1599082423564" expanded="false" signature="1320:1326" ph=" }" />
-            <marker date="1599082423564" expanded="false" signature="1385:1396" ph=" { " />
-            <marker date="1599082423564" expanded="false" signature="1433:1439" ph=" }" />
-            <marker date="1599082423564" expanded="true" signature="1503:1579" ph="{...}" />
-            <marker date="1599082423564" expanded="false" signature="1636:1647" ph=" { " />
-            <marker date="1599082423564" expanded="false" signature="1705:1711" ph=" }" />
-            <marker date="1599082423564" expanded="true" signature="1771:1990" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="2065:2395" ph="{...}" />
-            <marker date="1599082423564" expanded="false" signature="2463:2474" ph=" { " />
-            <marker date="1599082423564" expanded="false" signature="2519:2525" ph=" }" />
-            <marker date="1599082423564" expanded="true" signature="2579:3089" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="3146:3570" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="3631:3938" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="4000:4335" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="4418:4721" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="4806:5138" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="5234:5380" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="5474:5649" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="5745:6080" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="6147:6460" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="6560:7489" ph="{...}" />
-            <marker date="1599082423564" expanded="false" signature="7555:7566" ph=" { " />
-            <marker date="1599082423564" expanded="false" signature="7604:7610" ph=" }" />
-            <marker date="1599082423564" expanded="true" signature="7696:8336" ph="{...}" />
-            <marker date="1599082423564" expanded="false" signature="8404:8415" ph=" { " />
-            <marker date="1599082423564" expanded="false" signature="8459:8465" ph=" }" />
-            <marker date="1599082423564" expanded="true" signature="8542:8614" ph="{...}" />
-            <marker date="1599082423564" expanded="false" signature="8672:8683" ph=" { " />
-            <marker date="1599082423564" expanded="false" signature="8720:8726" ph=" }" />
-            <marker date="1599082423564" expanded="true" signature="8801:8890" ph="{...}" />
-            <marker date="1599082423564" expanded="false" signature="8939:8950" ph=" { " />
-            <marker date="1599082423564" expanded="false" signature="8993:8999" ph=" }" />
-            <marker date="1599082423564" expanded="false" signature="9050:9061" ph=" { " />
-            <marker date="1599082423564" expanded="false" signature="9105:9111" ph=" }" />
-            <marker date="1599082423564" expanded="true" signature="9196:9805" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="9881:10109" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="10194:10570" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="10633:10900" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="10979:11346" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="11396:13498" ph="{...}" />
-            <marker date="1599082423564" expanded="false" signature="13564:13575" ph=" { " />
-            <marker date="1599082423564" expanded="false" signature="13624:13630" ph=" }" />
-            <marker date="1599082423564" expanded="true" signature="13699:15010" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="15083:15464" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="15544:15635" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="15707:15786" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="15884:16696" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="16760:17111" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="17117:17135" ph="/**...*/" />
-            <marker date="1599082423564" expanded="true" signature="17206:17316" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="17388:17708" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="17792:17924" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="18010:18133" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="18217:18523" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="18644:19071" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="19077:19095" ph="/**...*/" />
-            <marker date="1599082423564" expanded="true" signature="19100:19125" ph="@{...}" />
-            <marker date="1599082423564" expanded="true" signature="19225:19816" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="19877:20037" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="20100:20465" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="20533:20757" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="20860:21353" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="21465:21553" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="21697:22419" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="22511:22585" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="22724:23424" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="23530:23610" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="23748:24694" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="24777:24837" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="24915:25043" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="25172:25613" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="25712:25784" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="25874:25936" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="26024:26524" ph="{...}" />
-            <marker date="1599082423564" expanded="true" signature="26603:26659" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1960,7 +1833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19320">
           <caret line="975" column="19" lean-forward="false" selection-start-line="975" selection-start-column="19" selection-end-line="975" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1991,10 +1863,10 @@
           <caret line="71" column="18" lean-forward="false" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1069#1070#0" expanded="false" />
-            <element signature="e#1107#1108#0" expanded="false" />
-            <element signature="e#1151#1152#0" expanded="false" />
-            <element signature="e#1193#1194#0" expanded="false" />
+            <element signature="e#938#939#0" expanded="false" />
+            <element signature="e#976#977#0" expanded="false" />
+            <element signature="e#1020#1021#0" expanded="false" />
+            <element signature="e#1062#1063#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2003,7 +1875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="47" lean-forward="false" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2011,14 +1882,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/message/EditMessageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -2044,8 +1907,8 @@
         <state relative-caret-position="386">
           <caret line="60" column="31" lean-forward="false" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
           <folding>
-            <element signature="e#2004#2005#0" expanded="true" />
-            <element signature="e#2052#2053#0" expanded="true" />
+            <element signature="e#2004#2005#0" expanded="false" />
+            <element signature="e#2052#2053#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2054,7 +1917,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2063,7 +1925,7 @@
         <state relative-caret-position="348">
           <caret line="61" column="5" lean-forward="false" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
           <folding>
-            <element signature="e#2238#2239#0" expanded="true" />
+            <element signature="e#2238#2239#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2072,7 +1934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="1307" column="19" lean-forward="false" selection-start-line="1307" selection-start-column="19" selection-end-line="1307" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2087,59 +1948,40 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/message/MessageController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/services/FileService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        <state relative-caret-position="273">
+          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
           <folding>
-            <element signature="e#315#331#1" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/application/services/TimeServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-189">
-          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/application/services/MessageServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#435#436#0" expanded="false" />
+            <element signature="e#468#469#0" expanded="false" />
+            <element signature="e#510#511#0" expanded="false" />
+            <element signature="e#548#549#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/services/MessageService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1461">
+        <state relative-caret-position="126">
           <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
-            <element signature="e#2897#2898#0" expanded="true" />
-            <element signature="e#2951#2952#0" expanded="true" />
-            <element signature="e#3944#3945#0" expanded="true" />
-            <element signature="e#3980#3981#0" expanded="true" />
+            <element signature="e#2897#2898#0" expanded="false" />
+            <element signature="e#2951#2952#0" expanded="false" />
+            <element signature="e#3944#3945#0" expanded="false" />
+            <element signature="e#3980#3981#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/services/AimService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
+        <state relative-caret-position="2331">
           <caret line="126" column="15" lean-forward="false" selection-start-line="126" selection-start-column="15" selection-end-line="126" selection-end-column="15" />
           <folding />
         </state>
@@ -2147,37 +1989,100 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/application/unit/AimServiceUnitTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="35" column="42" lean-forward="false" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+        <state relative-caret-position="378">
+          <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/TimeService.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/application/services/MessageServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        <state relative-caret-position="386">
+          <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/application/services/TimeServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="45" column="29" lean-forward="false" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/message/EditMessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/utils/ConvertedDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#898#899#0" expanded="true" />
+            <element signature="e#966#967#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/time/data/TenThousandHoursAimTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="38" column="56" lean-forward="false" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
+          <folding>
+            <element signature="e#1108#1109#0" expanded="true" />
+            <element signature="e#1164#1165#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="125" column="19" lean-forward="false" selection-start-line="125" selection-start-column="19" selection-end-line="125" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/time/data/Time.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="345">
+          <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
           <folding>
-            <element signature="e#1079#1080#0" expanded="true" />
+            <element signature="e#1082#1083#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/utils/ConvertedDate.java">
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/text/DateFormat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="42" column="45" lean-forward="false" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="194">
+          <caret line="394" column="0" lean-forward="false" selection-start-line="394" selection-start-column="0" selection-end-line="394" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/TimeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="32" column="41" lean-forward="false" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2190,7 +2095,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.5018382" />
+                <option value="0.32077205" />
               </list>
             </option>
           </splitter-proportions>
@@ -2202,7 +2107,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.5018382" />
+                <option value="0.32077205" />
               </list>
             </option>
           </splitter-proportions>
@@ -2214,7 +2119,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.5018382" />
+                <option value="0.32077205" />
               </list>
             </option>
           </splitter-proportions>
@@ -2222,11 +2127,11 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>9.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.5018382" />
+                <option value="0.32077205" />
               </list>
             </option>
           </splitter-proportions>
@@ -2238,8 +2143,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.5018382" />
-                <option value="0.6" />
+                <option value="0.32077205" />
               </list>
             </option>
           </splitter-proportions>
@@ -2263,12 +2167,15 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.5018382" />
+                <option value="0.32077205" />
               </list>
             </option>
           </splitter-proportions>
         </settings>
       </state>
     </states>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="" />
   </component>
 </project>

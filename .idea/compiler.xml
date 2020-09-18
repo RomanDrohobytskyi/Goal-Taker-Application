@@ -9,8 +9,8 @@
         <module name="SpringWebApplication" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="SpringWebApplication" target="1.8" />
+    <bytecodeTargetLevel target="9">
+      <module name="SpringWebApplication" target="9" />
     </bytecodeTargetLevel>
   </component>
 </project>
