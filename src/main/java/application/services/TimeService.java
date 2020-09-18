@@ -20,28 +20,10 @@ public class TimeService {
 
     private final ITimeRepository timeRepository;
 
-    public Time adaptTime(Double loggedTime, Date date, String description, State.Date state, Aim aim){
-        Time time = new Time();
-        time.setTime(loggedTime);
-        time.setDate(date);
-        time.setDescription(description);
-        time.setState(state.toString());
-        time.setAim(aim);
-        return time;
-    }
-
     public Optional<Time> adaptAndSaveAimDetails(Number loggedTime, String date, String description, Aim aim) {
         Optional<Time> time = adaptTime(loggedTime, date, description, State.Date.NEW, aim);
         time.ifPresent(this::save);
         return time;
-    }
-
-    public Time save(Time time) {
-        return timeRepository.save(time);
-    }
-
-    public Iterable<Time> saveAll(List<Time> times) {
-        return timeRepository.saveAll(times);
     }
 
     public Optional<Time> adaptTime(Number loggedTime, String date, String description, State.Date state, Aim aim){
@@ -52,6 +34,25 @@ public class TimeService {
             e.printStackTrace();
         }
         return Optional.empty();
+    }
+
+    public Time adaptTime(Double loggedTime, Date date, String description, State.Date state, Aim aim){
+        Time time = new Time();
+        time.setTime(loggedTime);
+        time.setDate(date);
+        time.setCreationDate(new Date());
+        time.setDescription(description);
+        time.setState(state.toString());
+        time.setAim(aim);
+        return time;
+    }
+
+    public Time save(Time time) {
+        return timeRepository.save(time);
+    }
+
+    public Iterable<Time> saveAll(List<Time> times) {
+        return timeRepository.saveAll(times);
     }
 
     public List<Time> getLastWeekTime(Long aimId) {

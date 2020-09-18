@@ -9,8 +9,6 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
-import java.time.ZoneId;
 
 @Entity(name = "ten_thousand_hours_aim_time")
 @Getter
@@ -39,14 +37,6 @@ public class TenThousandHoursAimTime {
     private TenThousandHoursAim aim;
 
     public ConvertedDate getConvertedDate(TenThousandHoursAimTime time){
-        ConvertedDate convertedDate = new ConvertedDate();
-        java.util.Date date = time.getDate();
-        LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-
-        convertedDate.setDay(localDate.getDayOfMonth());
-        convertedDate.setMonth(localDate.getMonthValue());
-        convertedDate.setYear((long) localDate.getYear());
-
-        return convertedDate;
+        return new ConvertedDate(time.getDate());
     }
 }

@@ -21,11 +21,8 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/diagrams/png/ScreenShots/userAnalyzerTotalData.jpg" />
       <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/diagrams/png/ScreenShots/userProfileIcon.jpg" />
       <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/diagrams/png/ScreenShots/userProfileMain.jpg" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/SpringWebApplication.iml" afterPath="$PROJECT_DIR$/SpringWebApplication.iml" />
       <change beforePath="$PROJECT_DIR$/log/logs.log" afterPath="$PROJECT_DIR$/log/logs.log" />
       <change beforePath="$PROJECT_DIR$/log/logs.log.2019-07-25" afterPath="" />
       <change beforePath="$PROJECT_DIR$/log/logs.log.2019-07-28" afterPath="" />
@@ -91,10 +88,10 @@
       <change beforePath="$PROJECT_DIR$/log/logs.log.2020-05-12" afterPath="" />
       <change beforePath="$PROJECT_DIR$/log/logs.log.2020-05-13" afterPath="" />
       <change beforePath="$PROJECT_DIR$/log/logs.log.2020-05-20" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimDetailsController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimDetailsController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/time/data/TenThousandHoursAimTime.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/time/data/TenThousandHoursAimTime.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/time/data/Time.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/time/data/Time.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/services/TimeService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/TimeService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/utils/ConvertedDate.java" afterPath="$PROJECT_DIR$/src/main/java/application/utils/ConvertedDate.java" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/Application.class" afterPath="$PROJECT_DIR$/target/classes/application/Application.class" />
@@ -247,18 +244,51 @@
       <file leaf-file-name="TimeService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/application/services/TimeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="32" column="41" lean-forward="false" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+            <state relative-caret-position="252">
+              <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+              <folding>
+                <element signature="e#1803#1804#0" expanded="true" />
+                <element signature="e#1855#1856#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d8904ba1-b051-4f55-85e8-45be13b913e6/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AimDetailsController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AimDetailsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimDetailsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+            <state relative-caret-position="189">
+              <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aim_details.ftlh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/aim_details.ftlh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="67" column="35" lean-forward="true" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="charst.ftlh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/charst.ftlh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3">
+              <caret line="37" column="14" lean-forward="true" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -268,7 +298,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/time/data/Time.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+              <caret line="39" column="53" lean-forward="false" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
               <folding>
                 <element signature="e#1082#1083#0" expanded="true" />
               </folding>
@@ -300,31 +330,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeServiceTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/application/services/TimeServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
-              <caret line="45" column="29" lean-forward="false" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="428">
               <caret line="125" column="19" lean-forward="false" selection-start-line="125" selection-start-column="19" selection-end-line="125" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditMessageController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/message/EditMessageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -338,18 +348,6 @@
               <folding>
                 <element signature="e#1108#1109#0" expanded="true" />
                 <element signature="e#1164#1165#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageServiceTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/application/services/MessageServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -370,7 +368,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ArticleRepositoryTest</find>
       <find>WebSecurityConfig</find>
       <find>data</find>
       <find>ViewResolver</find>
@@ -400,6 +397,7 @@
       <find>application.entities.aim.</find>
       <find>maven</find>
       <find>jquery</find>
+      <find>adaptTime</find>
     </findStrings>
     <replaceStrings>
       <replace>w3-padding-32</replace>
@@ -421,9 +419,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/application/services/ArticleServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/TimeAnalyzerController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/services/TimeService.java" />
         <option value="$PROJECT_DIR$/src/test/java/application/repository/AimRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/registration.ftlh" />
@@ -452,7 +447,6 @@
         <option value="$PROJECT_DIR$/src/main/java/application/repositories/IUserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/entities/user/User.java" />
         <option value="$PROJECT_DIR$/src/test/java/application/integration/repository/UserServiceTest.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d8904ba1-b051-4f55-85e8-45be13b913e6/console.sql" />
         <option value="$PROJECT_DIR$/src/test/java/application/integration/repository/UserRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/services/UserService.java" />
         <option value="$PROJECT_DIR$/src/test/java/application/services/UserServiceTest.java" />
@@ -472,6 +466,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/application/entities/time/data/Time.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/aim_details.ftlh" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/charst.ftlh" />
+        <option value="$PROJECT_DIR$/src/main/java/application/services/TimeService.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d8904ba1-b051-4f55-85e8-45be13b913e6/console.sql" />
       </list>
     </option>
   </component>
@@ -1247,7 +1245,7 @@
       <workItem from="1599374519175" duration="43191000" />
       <workItem from="1600234781441" duration="1873000" />
       <workItem from="1600321350065" duration="9101000" />
-      <workItem from="1600406684448" duration="3335000" />
+      <workItem from="1600406684448" duration="4297000" />
     </task>
     <task id="LOCAL-00001" summary="Log4J added, little changes in templates">
       <created>1564081469808</created>
@@ -1473,7 +1471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600374958776</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Java 9">
+      <created>1600410065751</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1600410065751</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1509,7 +1514,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="932711000" />
+    <option name="totallyTimeSpent" value="933673000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1529,7 +1534,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19119227" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1595059" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1595059" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1541,9 +1546,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686085" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3387271" sideWeight="0.48872182" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3387271" sideWeight="0.48872182" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32604167" sideWeight="0.4914712" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3257821" sideWeight="0.49785176" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23415682" sideWeight="0.48613375" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23093449" sideWeight="0.51386625" order="7" side_tool="true" content_ui="tabs" />
@@ -1559,7 +1565,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3257821" sideWeight="0.49785176" order="15" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1569,7 +1574,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Two ways mapping fixed, only logged in user aims, messages shows" />
     <MESSAGE value="Logging time for aim feature" />
     <MESSAGE value="Time analyzer" />
     <MESSAGE value="Canvas charts added" />
@@ -1594,7 +1598,8 @@
     <MESSAGE value="Uncommitted files" />
     <MESSAGE value="Tests, builder pattern, refactoring" />
     <MESSAGE value="Refactoring, Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring, Tests" />
+    <MESSAGE value="Java 9" />
+    <option name="LAST_COMMIT_MESSAGE" value="Java 9" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1613,12 +1618,6 @@
           <option name="timeStamp" value="208" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/application/services/TimeService.java</url>
-          <line>43</line>
-          <properties />
-          <option name="timeStamp" value="209" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/EditAimController.java</url>
           <line>39</line>
           <properties />
@@ -1634,7 +1633,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="224" />
+      <option name="time" value="225" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1648,13 +1647,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/application/services/EntityInheritanceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/test/SmartAim.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1733,13 +1725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/charst.ftlh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1331">
-          <caret line="70" column="12" lean-forward="false" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/aim/TenThousandHoursAim.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -1792,13 +1777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="363" column="0" lean-forward="false" selection-start-line="363" selection-start-column="0" selection-end-line="363" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d8904ba1-b051-4f55-85e8-45be13b913e6/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1875,6 +1853,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="47" lean-forward="false" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2000,7 +1979,7 @@
         <state relative-caret-position="386">
           <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2055,7 +2034,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/time/data/Time.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+          <caret line="39" column="53" lean-forward="false" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
           <folding>
             <element signature="e#1082#1083#0" expanded="true" />
           </folding>
@@ -2070,18 +2049,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/aim_details.ftlh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="67" column="35" lean-forward="true" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/services/TimeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="32" column="41" lean-forward="false" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-          <folding />
+        <state relative-caret-position="252">
+          <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+          <folding>
+            <element signature="e#1803#1804#0" expanded="true" />
+            <element signature="e#1855#1856#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimDetailsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+        <state relative-caret-position="189">
+          <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/charst.ftlh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="37" column="14" lean-forward="true" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d8904ba1-b051-4f55-85e8-45be13b913e6/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
           <folding />
         </state>
       </provider>

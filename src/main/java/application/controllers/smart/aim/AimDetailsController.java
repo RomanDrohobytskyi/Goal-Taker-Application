@@ -41,7 +41,7 @@ public class AimDetailsController {
             @RequestParam String date,
             @RequestParam("aimId") Aim aim,
             Map<String, Object> model) {
-        timeService.adaptAndSaveAimDetails(time, description, date, aim);
+        timeService.adaptAndSaveAimDetails(time, date, description, aim);
         model.put("aims", aimService.getLoggedInUserAims());
         return "redirect:/aim_details/" + aim.getId() + "#details";
     }
@@ -53,7 +53,7 @@ public class AimDetailsController {
             @RequestParam String date,
             @PathVariable Aim aim,
             Map<String, Object> model) {
-        timeService.adaptAndSaveAimDetails(time, description, date, aim);
+        timeService.adaptAndSaveAimDetails(time, date, description, aim);
         model.put("aim", aim);
         return "redirect:/aim_details#details" + aim.getId();
     }

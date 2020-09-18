@@ -38,6 +38,6 @@ public class Time {
     private Aim aim;
 
     public ConvertedDate getConvertedDate(Time time){
-        return new ConvertedDate(time);
+        return new ConvertedDate(time.getDate());
     }
 }

@@ -1,7 +1,5 @@
 package application.utils;
 
-import application.entities.time.data.Time;
-
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
@@ -36,10 +34,8 @@ public class ConvertedDate{
         this.year = year;
     }
 
-    public ConvertedDate(Time time){
-        Date date = time.getDate();
+    public ConvertedDate(Date date){
         LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-
         this.day = localDate.getDayOfMonth();
         this.month = localDate.getMonthValue();
         this.year = (long) localDate.getYear();
