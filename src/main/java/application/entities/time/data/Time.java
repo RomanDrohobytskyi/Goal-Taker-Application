@@ -3,9 +3,7 @@ package application.entities.time.data;
 import application.entities.aim.Aim;
 import application.enums.State;
 import application.utils.ConvertedDate;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -13,6 +11,8 @@ import javax.validation.constraints.NotNull;
 @Entity(name = "smart_aim_time")
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor
 public class Time {
 

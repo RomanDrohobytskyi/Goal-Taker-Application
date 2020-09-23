@@ -14,7 +14,7 @@ class EntityInheritanceTest {
 
 
     @Autowired
-    private AimRepositoryTest repo; //Mock - in case if field is static
+    private AimRepositoryTest repo;
 
     @Test
     void createSmartAim(){

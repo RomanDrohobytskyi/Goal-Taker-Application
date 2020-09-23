@@ -27,19 +27,19 @@ public class Aim {
     @Column
     @NotBlank
     private String description;
-    @Column(columnDefinition = "varchar(255) default ''")
+    @Column(columnDefinition = "varchar(255)")
     @NotBlank
     private String text;
-    @Column(columnDefinition = "varchar(255) default ''")
+    @Column(columnDefinition = "varchar(255)")
     @NotBlank
     private String specify;
-    @Column(columnDefinition = "varchar(255) default ''")
+    @Column(columnDefinition = "varchar(255)")
     @NotBlank
     private String measurable;
-    @Column(columnDefinition = "varchar(255) default ''")
+    @Column(columnDefinition = "varchar(255)")
     @NotBlank
     private String attainable;
-    @Column(columnDefinition = "varchar(255) default ''")
+    @Column(columnDefinition = "varchar(255)")
     @NotBlank
     private String relevant;
     @Column
@@ -80,10 +80,24 @@ public class Aim {
         this.title = builder.title;
         this.description = builder.description;
         this.text = builder.text;
+
+        this.id = builder.id;
+        this.specify = builder.specify;
+        this.measurable = builder.measurable;
+        this.attainable = builder.attainable;
+        this.relevant = builder.relevant;
+        this.timeBased =builder.timeBased;
+        this.aimState = builder.aimState;
+        this.creationDate = builder.creationDate;
+        this.modificationDate = builder.modificationDate;
+        this.deletionDate = builder.deletionDate;
+        this.dateFrom = builder.dateFrom;
+        this.dateTo = builder.dateTo;
+        this.achievedDate = builder.achievedDate;
+        this.user = builder.user;
+        this.loggedTime = builder.loggedTime;
     }
 
-    @Getter
-    @Setter
     public static class AimBuilder {
         private Long id;
         private final String title;
@@ -112,6 +126,81 @@ public class Aim {
 
         public Aim build(){
             return new Aim(this);
+        }
+
+        public AimBuilder setId(Long id) {
+            this.id = id;
+            return this;
+        }
+
+        public AimBuilder specify(String specify) {
+            this.specify = specify;
+            return this;
+        }
+
+        public AimBuilder measurable(String measurable) {
+            this.measurable = measurable;
+            return this;
+        }
+
+        public AimBuilder attainable(String attainable) {
+            this.attainable = attainable;
+            return this;
+        }
+
+        public AimBuilder relevant(String relevant) {
+            this.relevant = relevant;
+            return this;
+        }
+
+        public AimBuilder timeBased(Date timeBased) {
+            this.timeBased = timeBased;
+            return this;
+        }
+
+        public AimBuilder aimState(String aimState) {
+            this.aimState = aimState;
+            return this;
+        }
+
+        public AimBuilder creationDate(Date creationDate) {
+            this.creationDate = creationDate;
+            return this;
+        }
+
+        public AimBuilder modificationDate(Date modificationDate) {
+            this.modificationDate = modificationDate;
+            return this;
+        }
+
+        public AimBuilder deletionDate(Date deletionDate) {
+            this.deletionDate = deletionDate;
+            return this;
+        }
+
+        public AimBuilder dateFrom(Date dateFrom) {
+            this.dateFrom = dateFrom;
+            return this;
+        }
+
+        public AimBuilder dateTo(Date dateTo) {
+            this.dateTo = dateTo;
+            return this;
+        }
+
+        public AimBuilder achievedDate(Date achievedDate) {
+            this.achievedDate = achievedDate;
+            return this;
+        }
+
+        public AimBuilder user(User user) {
+            this.user = user;
+            return this;
+        }
+
+        public AimBuilder loggedTime(Set<Time> loggedTime) {
+            this.loggedTime = loggedTime;
+            return this;
         }
     }
 }

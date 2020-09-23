@@ -51,7 +51,7 @@ public class AimController {
             Map<String, Object> model) {
 
             aimService.addAndSaveAim(user, description, text, specific, measurable, attainable, relevant,
-                    timeBased, title);
+                    title, timeBased);
             model.put("aims", user.getAims());
         return "redirect:/main_aim#aimsTable";
     }

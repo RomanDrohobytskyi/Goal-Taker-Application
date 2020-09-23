@@ -43,7 +43,7 @@ public class UserAnalyzerService {
         Set<Time> smartAimsTime = timeService.getAllLoggedTimeForUserAims(userSmartAims);
         Aim mostActiveSmartAim = aimService.getMostActiveAim(userSmartAims);
         Double sum = timeService.getAimLoggedTimeSum(smartAimsTime);
-        Time mostActiveTime = timeService.getMostActiveTime(smartAimsTime).orElseThrow(IllegalArgumentException :: new);
+        Time mostActiveTime = timeService.getMostActiveTime(smartAimsTime);
         Time lessActiveTime = timeService.getLessActiveTime(smartAimsTime);
         List<Time> lastSevenDaysTime = timeService.getLastWeekTime(mostActiveSmartAim.getId());
         List<Aim> achievedAims = aimService.getAchievedUserAims(user);
@@ -64,14 +64,18 @@ public class UserAnalyzerService {
         if (CollectionUtils.isEmpty(userAims)){
             return;
         }
-        Set<TenThousandHoursAimTime> aimsTime = aimTimeService.getAllLoggedTimeForUserTenThousandHoursAims(userAims);
+        Set<TenThousandHoursAimTime> aimsTime = aimTimeService
+                .getAllLoggedTimeForUserTenThousandHoursAims(userAims);
         Double sum = aimTimeService.getAimLoggedTimeSum(aimsTime);
         TenThousandHoursAimTime mostActiveTime = aimTimeService.getMostActiveTime(aimsTime);
         TenThousandHoursAimTime lessActiveTime = aimTimeService.getLessActiveTime(aimsTime);
         TenThousandHoursAim mostActiveTenThousandAim = aimTimeService.getMostActiveAim(userAims);
-        List<TenThousandHoursAimTime> lastSevenDaysTime = aimTimeService.getLastWeekTime(mostActiveTenThousandAim.getId());
-        List<TenThousandHoursAim> achievedAims = tenThousandHoursAimService.getAchievedUserAims(user);
-        List<TenThousandHoursAim> notDeletedTenKdAims = tenThousandHoursAimService.getNotDeletedUserAims(user);
+        List<TenThousandHoursAimTime> lastSevenDaysTime = aimTimeService
+                .getLastWeekTime(mostActiveTenThousandAim.getId());
+        List<TenThousandHoursAim> achievedAims = tenThousandHoursAimService
+                .getAchievedUserAims(user);
+        List<TenThousandHoursAim> notDeletedTenKdAims = tenThousandHoursAimService
+                .getNotDeletedUserAims(user);
 
         model.addAttribute("tenThousandHoursAimSum", sum);
         model.addAttribute("tenThousandHoursAimMostProductive", mostActiveTime);

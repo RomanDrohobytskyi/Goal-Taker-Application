@@ -21,12 +21,12 @@ public class TimeService {
     private final ITimeRepository timeRepository;
 
     public Optional<Time> adaptAndSaveAimDetails(Number loggedTime, String date, String description, Aim aim) {
-        Optional<Time> time = adaptTime(loggedTime, date, description, State.Date.NEW, aim);
+        Optional<Time> time = adaptTimeWithStringDate(loggedTime, date, description, State.Date.NEW, aim);
         time.ifPresent(this::save);
         return time;
     }
 
-    public Optional<Time> adaptTime(Number loggedTime, String date, String description, State.Date state, Aim aim){
+    public Optional<Time> adaptTimeWithStringDate(Number loggedTime, String date, String description, State.Date state, Aim aim){
         try {
             Date convertedDate = new SimpleDateFormat("yyyy-MM-dd").parse(date);
             return Optional.of(adaptTime(loggedTime.doubleValue(), convertedDate, description, state, aim));
@@ -36,15 +36,15 @@ public class TimeService {
         return Optional.empty();
     }
 
-    public Time adaptTime(Double loggedTime, Date date, String description, State.Date state, Aim aim){
-        Time time = new Time();
-        time.setTime(loggedTime);
-        time.setDate(date);
-        time.setCreationDate(new Date());
-        time.setDescription(description);
-        time.setState(state.toString());
-        time.setAim(aim);
-        return time;
+    public Time adaptTime(Double loggedTime, Date date, String description, State.Date state, Aim aim) {
+        return Time.builder()
+                .time(loggedTime)
+                .date(date)
+                .creationDate(date)
+                .description(description)
+                .state(state.toString())
+                .aim(aim)
+                .build();
     }
 
     public Time save(Time time) {
@@ -83,8 +83,8 @@ public class TimeService {
         return time;
     }
 
-    public Optional<Time> getMostActiveTime(Set<Time> times){
-        return times.stream().max(Comparator.comparing(Time::getTime));
+    public Time getMostActiveTime(Set<Time> times) {
+        return times.stream().max(Comparator.comparing(Time::getTime)).orElseThrow(IllegalArgumentException :: new);
     }
 
     public Time getLessActiveTime(Set<Time> times){

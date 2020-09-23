@@ -31,7 +31,7 @@ public class TimeAnalyzerController {
         List<Time> lastSevenDaysTime = timeService.getLastWeekTime(aim.getId());
         model.addAttribute("aim", aim);
         model.addAttribute("loggedTime", aim.getLoggedTime());
-        model.addAttribute("mostProductive", timeService.getMostActiveTime(aim.getLoggedTime()).orElseThrow(IllegalArgumentException::new));
+        model.addAttribute("mostProductive", timeService.getMostActiveTime(aim.getLoggedTime()));
         model.addAttribute("lessProductive", timeService.getLessActiveTime(aim.getLoggedTime()));
         model.addAttribute("lastSevenDaysTime", lastSevenDaysTime);
         model.addAttribute("loggedTimeSum", timeService.getAimLoggedTimeSum(aim.getLoggedTime()));

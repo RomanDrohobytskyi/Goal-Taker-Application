@@ -27,17 +27,6 @@ public class AimServiceUnitTest {
     private TimeService timeService;
     private List<Aim> aims;
 
-
-    private List<Time> time() {
-        ArrayList<Time> aimTime = new ArrayList<>();
-        for (int i = 0; i <= 4; i++) {
-            Time time = timeService.adaptTime((double) i, new Date(),
-                    "Test time " + i, State.Date.NEW, null);
-            aimTime.add(time);
-            time.setId((long) i);
-        }
-        return aimTime;
-    }
     @BeforeEach
     void createAimsWithTimes(){
         Aim aim1 = new Aim();
@@ -56,32 +45,39 @@ public class AimServiceUnitTest {
         this.aims = new ArrayList<>(Arrays.asList(aim1, aim2));
     }
 
+    private List<Time> time() {
+        ArrayList<Time> aimTime = new ArrayList<>();
+        for (int i = 0; i <= 4; i++) {
+            Time time = timeService.adaptTime((double) i, new Date(),
+                    "Test time " + i, State.Date.NEW, null);
+            aimTime.add(time);
+            time.setId((long) i);
+        }
+        return aimTime;
+    }
+
     @Test
     void mostActiveAim() {
         Aim mostActiveAim = aimService.getMostActiveAim(aims);
+        Aim expectedAim = aims.get(1);
 
-        assertEquals(mostActiveAim, aims.get(1));
-    }
-
-    @Test
-    void parsedDatePresentAndCorrect(){
-        String date = "2020-02-20";
-        Optional<Date> parsedDate = aimService.parseDate(date);
-        assertTrue(parsedDate.isPresent());
-
-        assertEquals("Thu Feb 20 00:00:00 CET 2020", parsedDate.get().toString());
-    }
-
-    @Test
-    void parseWrongDate(){
-        Optional<Date> shouldBeEmptyParsedDate = aimService.parseDate("213");
-        assertThat(Optional.empty()).isEqualTo(shouldBeEmptyParsedDate);
+        assertThat(mostActiveAim).isEqualTo(expectedAim);
     }
 
     @Test
     void builderTest(){
-        Aim aim = new Aim.AimBuilder("Test title", "Description", "Text")
-                .build();
-        assertNotNull(aim);
+        String title = "Test title";
+        String description =  "Description";
+        String text = "Text";
+
+        Aim aim = new Aim.AimBuilder(title, description, text).build();
+
+        assertAll(
+                () -> assertNotNull(aim),
+                () -> assertNull(aim.getId()),
+                () -> assertThat(aim.getTitle()).isEqualTo(title),
+                () -> assertThat(aim.getDescription()).isEqualTo(description),
+                () -> assertThat(aim.getText()).isEqualTo(text)
+        );
     }
 }

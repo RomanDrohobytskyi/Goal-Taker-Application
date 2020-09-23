@@ -21,18 +21,20 @@ public class TenThousandHoursAimService {
     private final UserManager userManager = new UserManager();
 
     public Optional<TenThousandHoursAim> createAim(String title, String description, String text, User user){
-        Optional<TenThousandHoursAim> aimOptional = adaptAim(title, description, text, user);
+        Optional<TenThousandHoursAim> aimOptional = adaptAim(title, description, text, State.Aim.NEW.toString(), user);
         aimOptional.ifPresent(aimRepository::save);
         return aimOptional;
     }
 
-    public Optional<TenThousandHoursAim> adaptAim(String title, String description, String text, User user) {
+    public Optional<TenThousandHoursAim> adaptAim(String title, String description, String text,
+                                                  String state, User user) {
         if (Strings.isNotEmpty(title) && Strings.isNotEmpty(description) && user != null){
             TenThousandHoursAim aim = new TenThousandHoursAim();
             aim.setTitle(title);
             aim.setDescription(description);
             aim.setText(text);
             aim.setCreationDate(new Date());
+            aim.setAimState(state);
             aim.setUser(user);
             return Optional.of(aim);
         }
@@ -49,19 +51,19 @@ public class TenThousandHoursAimService {
         return aim;
     }
 
-    public TenThousandHoursAim deleteAim(TenThousandHoursAim aim) {
-        aim.setModificationDate(new Date());
-        aim.setDeletionDate(new Date());
-        aim.setAimState(State.Aim.DELETED.toString());
-        return aimRepository.save(aim);
-    }
-
     public void delete(List<TenThousandHoursAim> aims){
         for (TenThousandHoursAim aim : aims){
             if (!aim.getAimState().equals(State.Aim.DELETED.toString())){
                 deleteAim(aim);
             }
         }
+    }
+
+    public TenThousandHoursAim deleteAim(TenThousandHoursAim aim) {
+        aim.setModificationDate(new Date());
+        aim.setDeletionDate(new Date());
+        aim.setAimState(State.Aim.DELETED.toString());
+        return aimRepository.save(aim);
     }
 
     public TenThousandHoursAim achieve(TenThousandHoursAim aim){

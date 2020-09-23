@@ -6,11 +6,10 @@ import application.entities.user.User;
 import application.enums.State;
 import application.managers.UserManager;
 import application.repositories.IAimRepository;
+import application.utils.date.DateParser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 import static application.logger.LoggerJ.logError;
@@ -24,23 +23,22 @@ public class AimService {
     private UserManager userManager = new UserManager();
 
     public Optional<Aim> adapt(String title, String description, String text, String specific, String measurable,
-                                                        String attainable, String relevant, Date timeBased, User user){
-        if (userService.isUserExist(user)){
-            Aim aim = new Aim();
-            aim.setTitle(title);
-            aim.setDescription(description);
-            aim.setText(text);
-            aim.setSpecify(specific);
-            aim.setMeasurable(measurable);
-            aim.setAttainable(attainable);
-            aim.setRelevant(relevant);
-            aim.setTimeBased(timeBased);
-            aim.setCreationDate(new Date());
-            aim.setUser(user);
+                               String attainable, String relevant, Date timeBased, User user) {
+        if (userService.isUserExist(user)) {
+            Aim aim = new Aim.AimBuilder(title, description, text)
+                    .specify(specific)
+                    .measurable(measurable)
+                    .attainable(attainable)
+                    .relevant(relevant)
+                    .timeBased(timeBased)
+                    .creationDate(new Date())
+                    .user(user)
+                    .build();
+
             return Optional.of(aim);
         }
         logError(getClass(), "User " + user.getEmail() + " not exist!");
-        throw new IllegalArgumentException();
+        return Optional.empty();
     }
 
     public Aim save(Aim aim) {
@@ -56,7 +54,7 @@ public class AimService {
     }
 
     public void delete(List<Aim> aims) {
-        for (Aim aim : aims){
+        for (Aim aim : aims) {
             if (!aim.getAimState().equals(State.Aim.DELETED.toString())) {
                 delete(aim);
             }
@@ -64,14 +62,15 @@ public class AimService {
     }
 
     public Aim addAndSaveAim(User user, String title, String description, String text, String specific,
-                                                      String measurable, String attainable, String relevant, String timeBased){
-        Date timeBasedDate = parseDate(timeBased).orElseThrow(IllegalArgumentException::new);
-        Optional<Aim> aimOptional = adapt(title, description, text, specific, measurable, attainable, relevant,
-                timeBasedDate, user);
-        return save(aimOptional.orElseThrow(IllegalArgumentException::new));
+                             String measurable, String attainable, String relevant, String timeBased) {
+        Date timeBasedDate = DateParser.parseStringToDateForDefaultPattern(timeBased)
+                .orElseThrow(IllegalArgumentException::new);
+        Aim aim = adapt(title, description, text, specific, measurable, attainable, relevant,
+                timeBasedDate, user).orElseThrow(IllegalArgumentException::new);
+        return save(aim);
     }
 
-    public Aim achieve(Aim aim){
+    public Aim achieve(Aim aim) {
         aim.setAimState(State.Aim.ACHIEVED.toString());
         aim.setModificationDate(new Date());
         aim.setAchievedDate(new Date());
@@ -79,13 +78,13 @@ public class AimService {
     }
 
     public Aim editAndSave(String title, String text, String description, String specific,
-                                                    String measurable, String attainable, String relevant, String timeBased, Aim aim) {
-        this.edit(title,text,description,specific,measurable,attainable,relevant,timeBased,aim);
+                           String measurable, String attainable, String relevant, String timeBased, Aim aim) {
+        this.edit(title, text, description, specific, measurable, attainable, relevant, timeBased, aim);
         return this.save(aim);
     }
 
     public Aim edit(String title, String text, String description, String specific,
-                                             String measurable, String attainable, String relevant, String timeBased, Aim aim){
+                    String measurable, String attainable, String relevant, String timeBased, Aim aim) {
         aim.setText(text);
         aim.setDescription(description);
         aim.setTitle(title);
@@ -94,21 +93,11 @@ public class AimService {
         aim.setMeasurable(measurable);
         aim.setAttainable(attainable);
         aim.setRelevant(relevant);
-        aim.setTimeBased(parseDate(timeBased).orElseThrow(IllegalArgumentException::new));
+        aim.setTimeBased(DateParser.parseStringToDateForDefaultPattern(timeBased)
+                .orElseThrow(IllegalArgumentException::new));
         aim.setModificationDate(new Date());
         aim.setAimState(State.Aim.EDITED.toString());
         return aim;
-    }
-
-    public Optional<Date> parseDate(String timeBased){
-        try {
-            Date parsedDate = new SimpleDateFormat("yyyy-MM-dd").parse(timeBased);
-            return Optional.of(parsedDate);
-        } catch (ParseException e){
-            logError(AimService.class, "AimService.parse(" + timeBased + "), error message:"
-            + e.getMessage());
-        }
-        return Optional.empty();
     }
 
     public List<Aim> getAchievedUserAims(User user) {

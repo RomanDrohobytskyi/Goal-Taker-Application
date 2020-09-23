@@ -12,8 +12,6 @@ import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -33,10 +31,10 @@ class TimeServiceTest {
 
     @BeforeEach
     void init(){
-        times = new ArrayList<>(Arrays.asList(
+        times = List.of(
                 timeService.adaptTime(new Double("2"), new Date(), "Test Time object 1", State.Date.NEW, null),
                 timeService.adaptTime(new Double("3.5"), new Date(), "Test Time object 2", State.Date.NEW, null)
-        ));
+        );
         times.get(0).setId(1L);
         times.get(1).setId(2L);
     }
