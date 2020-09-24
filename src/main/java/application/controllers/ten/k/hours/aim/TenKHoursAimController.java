@@ -33,7 +33,7 @@ public class TenKHoursAimController {
     }
 
     @GetMapping("/ten_thousand_hours_aim/add")
-    public String addAim(
+    public String add(
             @AuthenticationPrincipal User user,
             @RequestParam String title,
             @RequestParam String description,
@@ -46,7 +46,7 @@ public class TenKHoursAimController {
     }
 
     @GetMapping("/ten_thousand_hours_aim/delete/{aim}")
-    public String deleteMessage(
+    public String delete(
             @PathVariable TenThousandHoursAim aim,
             Map<String, Object> model) {
 

@@ -85,4 +85,8 @@ public class TenThousandHoursAimService {
     public List<TenThousandHoursAim> getNotDeletedUserAims(User user) {
         return aimRepository.findAimsByAimStateIsNotLikeAndUser(State.Aim.DELETED.toString(), user);
     }
+
+    public List<TenThousandHoursAim> findByUser(User user) {
+        return aimRepository.findByUser(user);
+    }
 }

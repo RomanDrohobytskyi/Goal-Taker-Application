@@ -28,7 +28,7 @@ public class TenKHoursAimTimeAnalyzerController {
 
     @GetMapping
     @RequestMapping("/{aim}")
-    public String getEditForm(@PathVariable TenThousandHoursAim aim, Model model) {
+    public String getTenKHoursAimTimeAnalyzer(@PathVariable TenThousandHoursAim aim, Model model) {
         List<TenThousandHoursAimTime> lastSevenDaysTime = timeService.getLastWeekTime(aim.getId());
         Set<TenThousandHoursAimTime> loggedTime = aim.getLoggedTime();
         model.addAttribute("aim", aim);
@@ -43,7 +43,7 @@ public class TenKHoursAimTimeAnalyzerController {
     }
 
     @GetMapping("/{aim}/delete/{time}")
-    public String deleteMessage(
+    public String delete(
             @PathVariable TenThousandHoursAimTime time,
             @PathVariable TenThousandHoursAim aim,
             Map<String, Object> model) {

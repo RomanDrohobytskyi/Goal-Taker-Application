@@ -120,4 +120,8 @@ public class AimService {
                         .mapToDouble(Time::getTime)
                         .sum()));
     }
+
+    public List<Aim> findByUser(User user) {
+        return aimRepository.findByUser(user);
+    }
 }

@@ -1,8 +1,5 @@
 package application.controllers.user;
 
-import application.entities.aim.Aim;
-import application.entities.aim.TenThousandHoursAim;
-import application.entities.message.Message;
 import application.entities.user.User;
 import application.menu.MenuTabs;
 import application.repositories.IAimRepository;
@@ -20,11 +17,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/user")
@@ -43,7 +36,8 @@ public class UserController {
     @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping
     public String userList(Model model){
-        model.addAttribute("users", iUserRepository.findAll());
+        Iterable<User> users = userService.findAll();
+        model.addAttribute("users", users);
         model.addAttribute("menuElements", new MenuTabs().defaultMenu());
         model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
         return "userList";
@@ -68,38 +62,15 @@ public class UserController {
             @RequestParam Map <String, String> form,
             @RequestParam("userId") User user) {
 
-        user.setUsername(username);
-        user.setFirstName(firstName);
-        user.setLastName(lastName);
-        Set<String> roles = Arrays.stream(Role.values())
-                .map(Role::name)
-                .collect(Collectors.toSet());
-
-        user.getRoles().clear();
-
-        for (String key : form.keySet()){
-            if (roles.contains(key)){
-                user.getRoles().add(Role.valueOf(key));
-            }
-        }
-        iUserRepository.save(user);
+        userService.adaptEditedUserAndSave(username, firstName, lastName, form, user);
         return "redirect:/user";
     }
 
     @GetMapping("/delete/{user}")
     public String delete(@PathVariable User user,  Map<String, Object> model){
-        List<Message> notes = messageRepo.findByUser(user);
-        List<Aim> aims =aimRepository.findByUser(user);
-        List<TenThousandHoursAim> thousandHoursAims =
-                tenThousandHoursAimRepository.findByUser(user);
-
-        messageService.delete(notes);
-        aimService.delete(aims);
-        thousandHoursAimService.delete(thousandHoursAims);
-        userService.delete(user);
-
+        userService.deleteUserWithAllNotesAndAims(user);
         model.put("users", iUserRepository.findAll());
-
         return "redirect:/user";
     }
+
 }

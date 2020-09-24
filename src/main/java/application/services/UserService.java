@@ -1,5 +1,8 @@
 package application.services;
 
+import application.entities.aim.Aim;
+import application.entities.aim.TenThousandHoursAim;
+import application.entities.message.Message;
 import application.entities.user.User;
 import application.repositories.IUserRepository;
 import application.roles.Role;
@@ -13,6 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static application.logger.LoggerJ.logError;
 
@@ -24,6 +28,9 @@ public class UserService implements UserDetailsService {
     private PasswordEncoder passwordEncoder;
     private final IUserRepository userRepository;
     private final MailSenderService mailSenderService;
+    private final MessageService messageService;
+    private final AimService aimService;
+    private final TenThousandHoursAimService tenThousandHoursAimService;
 
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         return userRepository.findUserByEmail(s);
@@ -31,6 +38,10 @@ public class UserService implements UserDetailsService {
 
     public User findUserByEmail(String email) throws UsernameNotFoundException {
         return userRepository.findUserByEmail(email);
+    }
+
+    public Iterable<User> findAll(){
+        return userRepository.findAll();
     }
 
     public Map<String, Object> validateUserRegistrationData(User user, String passwordConfirm) {
@@ -114,15 +125,49 @@ public class UserService implements UserDetailsService {
 
     public void activateUser(String code) {
         Optional<User> user = Optional.of(userRepository.findByActivationCode(code));
-        user.orElseThrow(IllegalArgumentException::new).setActivationCode(null);
-        user.orElseThrow(IllegalArgumentException::new).setActive(true);
-        userRepository.save(user.get());
+        if (user.isPresent()) {
+            user.get().setActivationCode(null);
+            user.get().setActive(true);
+            userRepository.save(user.get());
+        } else {
+            throw new IllegalArgumentException();
+        }
     }
 
     public User delete(User user){
         user.setActive(false);
         userRepository.save(user);
         return user;
+    }
+
+    public void adaptEditedUserAndSave(String username, String firstName, String lastName, Map<String, String> form, User user) {
+        user.setUsername(username);
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        Set<String> roles = Arrays.stream(Role.values())
+                .map(Role::name)
+                .collect(Collectors.toSet());
+
+        user.getRoles().clear();
+
+        for (String key : form.keySet()){
+            if (roles.contains(key)){
+                user.getRoles().add(Role.valueOf(key));
+            }
+        }
+        userRepository.save(user);
+    }
+
+    public void deleteUserWithAllNotesAndAims(User user) {
+        List<Message> notes = messageService.findByUser(user);
+        List<Aim> aims = aimService.findByUser(user);
+        List<TenThousandHoursAim> thousandHoursAims =
+                tenThousandHoursAimService.findByUser(user);
+
+        messageService.delete(notes);
+        aimService.delete(aims);
+        tenThousandHoursAimService.delete(thousandHoursAims);
+        this.delete(user);
     }
 
     public void encodeUserPassword(User user) {

@@ -31,11 +31,7 @@ public class EditTenKAimController {
             @RequestParam String text,
             @RequestParam String description,
             @RequestParam("aimId") TenThousandHoursAim aim) {
-        try {
-            aimService.adaptEditedAim(aim, title, text, description);
-        } catch (Exception e){
-            e.printStackTrace();
-        }
+        aimService.adaptEditedAim(aim, title, text, description);
         return "redirect:/ten_thousand_hours_aim";
     }
 

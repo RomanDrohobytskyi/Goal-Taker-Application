@@ -27,7 +27,7 @@ public class TimeAnalyzerController {
 
     @GetMapping
     @RequestMapping("/{aim}")
-    public String getEditForm(@PathVariable Aim aim, Model model) {
+    public String getTimeAnalyzer(@PathVariable Aim aim, Model model) {
         List<Time> lastSevenDaysTime = timeService.getLastWeekTime(aim.getId());
         model.addAttribute("aim", aim);
         model.addAttribute("loggedTime", aim.getLoggedTime());
@@ -41,13 +41,13 @@ public class TimeAnalyzerController {
     }
 
     @GetMapping("/{aim}/delete/{time}")
-    public String deleteMessage(
+    public String deleteAimTime(
             @PathVariable Time time,
             @PathVariable Aim aim,
             Map<String, Object> model) {
 
         timeService.deleteTime(time);
-        Aim reloadedAim = (aimRepository.findById(aim.getId())).get();
+        Aim reloadedAim = (aimRepository.findById(aim.getId())).orElseThrow(IllegalArgumentException::new);
         model.put("aim", reloadedAim);
         model.put("logged_time", reloadedAim.getLoggedTime());
 

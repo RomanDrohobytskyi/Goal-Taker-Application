@@ -2,9 +2,7 @@ package application.controllers.smart.aim;
 
 import application.entities.aim.Aim;
 import application.entities.user.User;
-import application.managers.UserManager;
 import application.menu.MenuTabs;
-import application.repositories.IAimRepository;
 import application.services.AimService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -14,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -24,13 +23,10 @@ import java.util.Map;
 public class AimController {
 
     private final AimService aimService;
-    private final IAimRepository aimRepository;
-    private final UserManager userManager = new UserManager();
 
     @GetMapping("/main_aim")
     public String allAims(Model model){
-        User loggedInUser = userManager.getLoggedInUser();
-        Iterable<Aim> userAims = aimRepository.findByUser(loggedInUser);
+        List<Aim> userAims = aimService.getLoggedInUserAims();
         model.addAttribute("all_aims", userAims);
         model.addAttribute("menuElements", new MenuTabs().smartGoalsMainMenu());
         model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
@@ -50,9 +46,9 @@ public class AimController {
             @RequestParam String timeBased,
             Map<String, Object> model) {
 
-            aimService.addAndSaveAim(user, description, text, specific, measurable, attainable, relevant,
-                    title, timeBased);
-            model.put("aims", user.getAims());
+        aimService.addAndSaveAim(user, description, text, specific, measurable, attainable, relevant,
+                title, timeBased);
+        model.put("aims", user.getAims());
         return "redirect:/main_aim#aimsTable";
     }
 
@@ -62,8 +58,7 @@ public class AimController {
             Map<String, Object> model) {
 
         aimService.delete(aim);
-        User loggedInUser = userManager.getLoggedInUser();
-        Iterable<Aim> userAims = aimRepository.findByUser(loggedInUser);
+        List<Aim> userAims = aimService.getLoggedInUserAims();
         model.put("aims", userAims);
 
         return "redirect:/main_aim#aimsTable";
