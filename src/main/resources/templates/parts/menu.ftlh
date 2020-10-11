@@ -1,4 +1,4 @@
-<#macro customMenu elements slideMenuElements>
+<#macro customMenu elements slideMenuElements withZIndex2 = false>
     <style>
         .fa{margin-right: 5px;}
 
@@ -8,7 +8,7 @@
         }
     </style>
 
-    <div class="w3-top">
+    <div class="w3-top" style= "${withZIndex2?then('z-index: 2;', '')}">
         <div class="w3-bar" id="myNavBar">
             <@customSlideMenu slideMenuElements/>
             <#list elements as element>

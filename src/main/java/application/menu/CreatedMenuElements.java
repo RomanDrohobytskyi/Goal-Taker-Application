@@ -24,6 +24,8 @@ public class CreatedMenuElements {
     MenuElement smartAim = new MenuElement("/main_aim", "w3-bar-item w3-button", "fa fa-dot-circle-o", "S.M.A.R.T", "SMART");
     MenuElement tenThousandHoursAim = new MenuElement("/ten_thousand_hours_aim", "w3-bar-item w3-button", "fa fa-dot-circle-o", "10k H", "10k H");
     MenuElement main = new MenuElement("/main", "w3-bar-item w3-button", "fa fa-book", "NOTES", "NOTES");
+    MenuElement events = new MenuElement("/events", "w3-bar-item w3-button", "fa fa-calendar", "EVENTS", "EVENTS");
+
     MenuElement userAnalyzer = new MenuElement("/userAnalyzer/activity", "w3-bar-item w3-button", "fa fa-circle-o", "USER ANALYZER", "USER ANALYZER");
     MenuElement users = new MenuElement("/user", "w3-bar-item w3-button", "fa fa-user-circle", "USERS", "USERS");
 

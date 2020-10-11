@@ -2,6 +2,7 @@ package application.entities.user;
 
 import application.entities.aim.Aim;
 import application.entities.aim.TenThousandHoursAim;
+import application.entities.event.Event;
 import application.entities.message.Message;
 import application.roles.Role;
 import lombok.Getter;
@@ -52,7 +53,8 @@ public class User implements UserDetails{
     private Set<Aim> aims;
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
     private Set<TenThousandHoursAim> tenThousandHoursAims;
-
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    private Set<Event> events;
     public boolean isAdmin(){
         return getRoles().contains(Role.ADMIN);
     }

@@ -28,9 +28,12 @@ public class UserService implements UserDetailsService {
     private PasswordEncoder passwordEncoder;
     private final IUserRepository userRepository;
     private final MailSenderService mailSenderService;
-    private final MessageService messageService;
-    private final AimService aimService;
-    private final TenThousandHoursAimService tenThousandHoursAimService;
+    @Autowired
+    private MessageService messageService;
+    @Autowired
+    private AimService aimService;
+    @Autowired
+    private TenThousandHoursAimService tenThousandHoursAimService;
 
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         return userRepository.findUserByEmail(s);

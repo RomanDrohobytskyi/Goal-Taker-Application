@@ -48,6 +48,14 @@ body, html {
     background-size: cover;
 }
 
+.big-img-greeting-small {
+    background-image:
+        linear-gradient(to bottom, rgb(255, 255, 255), rgba(0, 0, 0, 0) 10%),
+        url("/static/images/webWithRainDrops.jpg");
+    min-height: 30%;
+    background-size: cover;
+}
+
 
 .big-img-greeting-2 {
     background-image: url("/static/images/autumnLeaf.jpg");

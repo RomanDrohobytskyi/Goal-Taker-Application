@@ -35,7 +35,10 @@ public class MenuTabs {
         menuElements.add(createdMenuElements.smartAim);
         menuElements.add(createdMenuElements.tenThousandHoursAim);
         menuElements.add(createdMenuElements.main);
+        menuElements.add(createdMenuElements.events);
+
         menuElements.add(createdMenuElements.userAnalyzer);
+
         if (new UserManager().isLoggedUserAdmin()){
             menuElements.add(createdMenuElements.users);
         }

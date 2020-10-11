@@ -2,14 +2,8 @@ package application.controllers.user;
 
 import application.entities.user.User;
 import application.menu.MenuTabs;
-import application.repositories.IAimRepository;
-import application.repositories.IMessageRepository;
-import application.repositories.ITenThousandHoursAimRepository;
 import application.repositories.IUserRepository;
 import application.roles.Role;
-import application.services.AimService;
-import application.services.MessageService;
-import application.services.TenThousandHoursAimService;
 import application.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -25,13 +19,7 @@ import java.util.Map;
 public class UserController {
 
     private final IUserRepository iUserRepository;
-    private final IMessageRepository messageRepo;
-    private final IAimRepository aimRepository;
-    private final ITenThousandHoursAimRepository tenThousandHoursAimRepository;
     private final UserService userService;
-    private final MessageService messageService;
-    private final AimService aimService;
-    private final TenThousandHoursAimService thousandHoursAimService;
 
     @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping

@@ -1,7 +1,5 @@
 package application.utils.date;
 
-import application.services.AimService;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -18,10 +16,11 @@ public class DateParser {
             Date parsedDate = new SimpleDateFormat(dateParsingPattern).parse(date);
             return Optional.of(parsedDate);
         } catch (ParseException e) {
-            logError(AimService.class, "DateParser.parseStringToDateForDefaultPattern("
+            logError(DateParser.class, "DateParser.parseStringToDateForDefaultPattern("
                     + date + "), error message:" + e.getMessage());
             e.printStackTrace();
         }
         return Optional.empty();
     }
+
 }
