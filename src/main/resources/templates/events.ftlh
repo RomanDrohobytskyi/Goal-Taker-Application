@@ -39,7 +39,7 @@ cssClass="parallax big-img-greeting-1 w3-display-container w3-opacity-min"/>
         <h3 class="w3-center">Add event</h3>
         <form action="/events/add" method="post">
             <p class="w3-center" style="color: red;">
-            ${message!}
+                ${message!}
             </p>
             <br>
             <@elements.input id="title" name="title" type="text" placeholder="t e x t"

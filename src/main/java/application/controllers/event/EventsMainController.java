@@ -1,8 +1,6 @@
 package application.controllers.event;
 
-import application.entities.event.Event;
 import application.entities.user.User;
-import application.menu.MenuTabs;
 import application.services.EventService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -14,8 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Date;
-import java.util.List;
-import java.util.Map;
 
 @Controller
 @RequiredArgsConstructor
@@ -25,10 +21,7 @@ public class EventsMainController {
 
     @GetMapping("/events")
     public String events(Model model) {
-        Map<String, List<Event>> events = eventService.getSortedEventsForFullWeekFromTodayWithDay();
-        model.addAttribute("events", events);
-        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
-        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
+        eventService.addEventsAndMenu(model);
         return "events";
     }
 
@@ -39,8 +32,13 @@ public class EventsMainController {
                       @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date date,
                       @AuthenticationPrincipal User user,
                       Model model) {
-        eventService.addNewEvent(title, from, to, date, user);
-        return "redirect:/events";
+        eventService.addNewEvent(title, from, to, date, user, model);
+        if (model.asMap().isEmpty()){
+            return "redirect:/events";
+        } else {
+            eventService.addEventsAndMenu(model);
+            return "events";
+        }
     }
 
 }

@@ -2,12 +2,14 @@ package application.services;
 
 import application.entities.event.Event;
 import application.entities.user.User;
+import application.menu.MenuTabs;
 import application.repositories.IEventRepository;
 import application.utils.DayOfWeek;
 import application.utils.date.DateInstances;
 import application.utils.date.TimeParser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import java.time.LocalTime;
 import java.util.*;
@@ -20,11 +22,28 @@ import static java.util.stream.Collectors.toList;
 @RequiredArgsConstructor
 public class EventService {
     private final IEventRepository eventRepository;
+    private Model model;
 
-    public Event addNewEvent(String title, String from, String to, Date date, User user) {
+    public Event addNewEvent(String title, String from, String to, Date date, User user, Model model) {
+        this.model = model;
         Event event = adaptEvent(title, from, to, date, user);
-        save(event);
+        if (validateEvent(event)) {
+            save(event);
+        }
         return event;
+    }
+
+    public boolean validateEvent(Event event) {
+        if (!validateAvailableHours(event)) {
+            model.addAttribute("message", "This time is already taken for another event!");
+            return false;
+        }
+        return true;
+    }
+
+    public boolean validateAvailableHours(Event event) {
+        Event first = eventRepository.getFirstByFromBeforeAndToBeforeAndDayOfWeek(event.getFrom(), event.getTo(), event.getDayOfWeek());
+        return first == null;
     }
 
     public Event adaptEvent(String title, String from, String to, Date date, User user) {
@@ -111,5 +130,12 @@ public class EventService {
     public Optional<List<Event>> getEventsByDateBetweenOrderByDate(Date from, Date to) {
         List<Event> events = eventRepository.getEventsByDateBetweenOrderByDate(from, to);
         return Optional.ofNullable(events);
+    }
+
+    public void addEventsAndMenu(Model model) {
+        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
+        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
+        Map<String, List<Event>> events = getSortedEventsForFullWeekFromTodayWithDay();
+        model.addAttribute("events", events);
     }
 }

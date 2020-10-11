@@ -4,7 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimController.java" description="return &quot;ten_thousand_hours_aim&quot;;" line="31" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc868ad4-fc12-4cb3-89c0-f8cbbc365e64" name="Default" comment="New features. project details">
+    <list default="true" id="fc868ad4-fc12-4cb3-89c0-f8cbbc365e64" name="Default" comment="Event registration time validation">
       <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/diagrams/Untitled.png" />
       <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/diagrams/png/ScreenShots/10KHoursAims.jpg" />
       <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/diagrams/png/ScreenShots/analyzerCharts10KHoursRuleAim.jpg" />
@@ -23,23 +23,12 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/diagrams/png/ScreenShots/userProfileMain.jpg" />
       <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/templates/parts/userAnalyzerMacros.ftl" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_13.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_13.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_30.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_freemarker_2_3_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/SpringWebApplication.iml" afterPath="$PROJECT_DIR$/SpringWebApplication.iml" />
       <change beforePath="$PROJECT_DIR$/log/logs.log" afterPath="$PROJECT_DIR$/log/logs.log" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/user/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/user/UserController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/user/User.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/user/User.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/menu/CreatedMenuElements.java" afterPath="$PROJECT_DIR$/src/main/java/application/menu/CreatedMenuElements.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java" afterPath="$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/services/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/UserService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/utils/date/DateParser.java" afterPath="$PROJECT_DIR$/src/main/java/application/utils/date/DateParser.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting.ftlh" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.ftlh" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/menu.ftlh" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/menu.ftlh" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/event/EventsMainController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/event/EventsMainController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/repositories/IEventRepository.java" afterPath="$PROJECT_DIR$/src/main/java/application/repositories/IEventRepository.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/services/EventService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/EventService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.ftlh" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.ftlh" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/Application.class" afterPath="$PROJECT_DIR$/target/classes/application/Application.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/config/MailConfig.class" afterPath="$PROJECT_DIR$/target/classes/application/config/MailConfig.class" />
@@ -202,8 +191,18 @@
       <file leaf-file-name="EventsMainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/event/EventsMainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+            <state relative-caret-position="483">
+              <caret line="34" column="29" lean-forward="false" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/user/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="53" column="25" lean-forward="false" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -212,44 +211,22 @@
       <file leaf-file-name="events.ftlh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/events.ftlh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+            <state relative-caret-position="-1060">
+              <caret line="40" column="40" lean-forward="false" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
               <folding>
+                <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="greeting.ftlh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="greeting.ftlh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.ftlh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+            <state relative-caret-position="1827">
+              <caret line="87" column="14" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="87" selection-end-column="14" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GreetingController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/greeting/GreetingController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="21" column="67" lean-forward="false" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuTabs.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="36" column="47" lean-forward="false" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
-              <folding>
-                <element signature="e#365#366#0" expanded="true" />
-                <element signature="e#414#415#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -264,27 +241,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EventService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/application/services/EventService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="399">
+              <caret line="35" column="47" lean-forward="true" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
               <folding>
-                <element signature="e#1474#1475#0" expanded="true" />
-                <element signature="e#1526#1527#0" expanded="true" />
-                <element signature="e#2023#2024#0" expanded="true" />
-                <element signature="e#2073#2074#0" expanded="true" />
+                <element signature="e#2142#2143#0" expanded="true" />
+                <element signature="e#2194#2195#0" expanded="true" />
+                <element signature="e#2691#2692#0" expanded="true" />
+                <element signature="e#2741#2742#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IEventRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/repositories/IEventRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="41" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -292,22 +259,20 @@
       <file leaf-file-name="Event.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/event/Event.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
-              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="420">
+              <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DayOfWeek.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/utils/DayOfWeek.java">
+      <file leaf-file-name="IEventRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/repositories/IEventRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+            <state relative-caret-position="315">
+              <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#614#615#0" expanded="true" />
-                <element signature="e#640#641#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -329,7 +294,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>parseDate</find>
       <find>Aim</find>
       <find>new Ten</find>
       <find>juni</find>
@@ -359,6 +323,7 @@
       <find>freem</find>
       <find>we</find>
       <find>eve</find>
+      <find>red</find>
     </findStrings>
     <replaceStrings>
       <replace>w3-padding-32</replace>
@@ -425,13 +390,13 @@
         <option value="$PROJECT_DIR$/src/main/java/application/utils/Day.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/utils/date/DateParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/utils/DayOfWeek.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/menu/CreatedMenuElements.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/greeting.ftlh" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/events.ftlh" />
         <option value="$PROJECT_DIR$/src/main/java/application/controllers/event/EventsMainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/repositories/IEventRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/services/EventService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/menu/CreatedMenuElements.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/greeting.ftlh" />
       </list>
     </option>
   </component>
@@ -776,25 +741,25 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="application" />
+      <recent name="application.services" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\AimTakerRefactoring\src\test\java\application" />
+      <recent name="C:\Users\roma_\IdeaProjects\Spring-Boot-Application_git\src\main\resources\templates\aim" />
+      <recent name="C:\Users\Рома\Desktop\Programs\Studies\SpringWebApplication\src\main\resources\static" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="application.unit" />
+      <recent name="application.controllers" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\AimTakerRefactoring\src\main\resources\static\javascript" />
       <recent name="C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\AimTakerRefactoring\src\main\resources\static\css" />
       <recent name="C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\AimTakerRefactoring\src\main\resources\templates" />
       <recent name="C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\AimTakerRefactoring\src\main\resources\templates\event" />
       <recent name="C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\src\main\resources\static\images" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="application" />
-      <recent name="application.services" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="application.unit" />
-      <recent name="application.controllers" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\AimTakerRefactoring\src\test\java\application" />
-      <recent name="C:\Users\roma_\IdeaProjects\Spring-Boot-Application_git\src\main\resources\templates\aim" />
-      <recent name="C:\Users\Рома\Desktop\Programs\Studies\SpringWebApplication\src\main\resources\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1253,7 +1218,7 @@
       <workItem from="1601320508466" duration="4868000" />
       <workItem from="1601802765832" duration="2059000" />
       <workItem from="1601803987022" duration="3318000" />
-      <workItem from="1601810134796" duration="40354000" />
+      <workItem from="1601810134796" duration="46896000" />
     </task>
     <task id="LOCAL-00001" summary="Log4J added, little changes in templates">
       <created>1564081469808</created>
@@ -1507,7 +1472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600980827407</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Events schedule, adding events features">
+      <created>1602422218067</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1602422218067</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1543,7 +1515,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1040833000" />
+    <option name="totallyTimeSpent" value="1047375000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1555,7 +1527,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <frame x="-9" y="-9" width="2418" height="1368" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1567,9 +1539,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33656958" sideWeight="0.48657358" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26065162" sideWeight="0.48657358" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686085" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32038835" sideWeight="0.4978678" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31996658" sideWeight="0.4978678" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1579,7 +1551,7 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3257821" sideWeight="0.4914712" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25350595" sideWeight="0.49785176" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29377013" sideWeight="0.4763889" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23356105" sideWeight="0.4763889" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27658433" sideWeight="0.5236111" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2524272" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1603,7 +1575,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="10k hours, new features, canvas" />
     <MESSAGE value="New features, updates" />
     <MESSAGE value="Achieving aim, notes" />
     <MESSAGE value="Refactoring, new features" />
@@ -1628,7 +1599,8 @@
     <MESSAGE value="Fix time logging error" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Refactoring, methods names changed, cleaned controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring, methods names changed, cleaned controllers" />
+    <MESSAGE value="Events schedule, adding events features" />
+    <option name="LAST_COMMIT_MESSAGE" value="Events schedule, adding events features" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1668,7 +1640,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="253" />
+      <option name="time" value="255" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1702,14 +1674,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/authorisation/registration/RegistrationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="28" column="65" lean-forward="false" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registration.ftlh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1089">
@@ -1851,18 +1815,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/user/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="53" column="26" lean-forward="false" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/event-yoga-1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1890,28 +1847,6 @@
         <state relative-caret-position="126">
           <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-          <folding>
-            <marker date="1599082423646" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1599082423646" expanded="false" signature="162:754" ph="..." />
-            <marker date="1599082423646" expanded="false" signature="1216:1227" ph=" { " />
-            <marker date="1599082423646" expanded="false" signature="1248:1254" ph=" }" />
-            <marker date="1599082423646" expanded="false" signature="1317:1328" ph=" { " />
-            <marker date="1599082423646" expanded="false" signature="1348:1354" ph=" }" />
-            <marker date="1599082423646" expanded="true" signature="1476:1532" ph="{...}" />
-            <marker date="1599082423646" expanded="true" signature="1611:1670" ph="{...}" />
-            <marker date="1599082423646" expanded="true" signature="1780:1831" ph="{...}" />
-            <marker date="1599082423646" expanded="true" signature="1925:1996" ph="{...}" />
-            <marker date="1599082423646" expanded="true" signature="2160:2419" ph="{...}" />
-            <marker date="1599082423646" expanded="true" signature="2581:4038" ph="{...}" />
-            <marker date="1599082423646" expanded="true" signature="4117:5209" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2035,7 +1970,7 @@
         <state relative-caret-position="147">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2061,56 +1996,9 @@
         <state relative-caret-position="105">
           <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#640#641#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/event/EventsMainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/event/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/repositories/IEventRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/EventService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#1474#1475#0" expanded="true" />
-            <element signature="e#1526#1527#0" expanded="true" />
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2073#2074#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/events.ftlh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#614#615#0" expanded="false" />
+            <element signature="e#640#641#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2128,8 +2016,8 @@
         <state relative-caret-position="336">
           <caret line="36" column="47" lean-forward="false" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
           <folding>
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="false" />
+            <element signature="e#414#415#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2144,9 +2032,97 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.ftlh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+        <state relative-caret-position="1827">
+          <caret line="87" column="14" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="87" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding>
+            <marker date="1599082423646" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1599082423646" expanded="false" signature="162:754" ph="..." />
+            <marker date="1599082423646" expanded="false" signature="1216:1227" ph=" { " />
+            <marker date="1599082423646" expanded="false" signature="1248:1254" ph=" }" />
+            <marker date="1599082423646" expanded="false" signature="1317:1328" ph=" { " />
+            <marker date="1599082423646" expanded="false" signature="1348:1354" ph=" }" />
+            <marker date="1599082423646" expanded="true" signature="1476:1532" ph="{...}" />
+            <marker date="1599082423646" expanded="true" signature="1611:1670" ph="{...}" />
+            <marker date="1599082423646" expanded="true" signature="1780:1831" ph="{...}" />
+            <marker date="1599082423646" expanded="true" signature="1925:1996" ph="{...}" />
+            <marker date="1599082423646" expanded="true" signature="2160:2419" ph="{...}" />
+            <marker date="1599082423646" expanded="true" signature="2581:4038" ph="{...}" />
+            <marker date="1599082423646" expanded="true" signature="4117:5209" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/events.ftlh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1060">
+          <caret line="40" column="40" lean-forward="false" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/user/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="53" column="25" lean-forward="false" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/time/DayOfWeek.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="108" column="12" lean-forward="false" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/event/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/repositories/IEventRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/event/EventsMainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="34" column="29" lean-forward="false" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/EventService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="35" column="47" lean-forward="true" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+          <folding>
+            <element signature="e#2142#2143#0" expanded="true" />
+            <element signature="e#2194#2195#0" expanded="true" />
+            <element signature="e#2691#2692#0" expanded="true" />
+            <element signature="e#2741#2742#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
