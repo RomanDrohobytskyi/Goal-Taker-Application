@@ -7,6 +7,10 @@ import application.entities.time.data.Time;
 import application.entities.user.User;
 import application.managers.UserManager;
 import application.menu.MenuTabs;
+import application.services.aim.SmartAimService;
+import application.services.aim.TenThousandHoursAimService;
+import application.services.time.SmartAimTimeService;
+import application.services.time.TenThousandHoursAimTimeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
@@ -20,10 +24,10 @@ import java.util.Set;
 @RequiredArgsConstructor
 public class UserAnalyzerService {
 
-    private final TimeService timeService;
+    private final SmartAimTimeService timeService;
     private final TenThousandHoursAimTimeService aimTimeService;
     private final TenThousandHoursAimService tenThousandHoursAimService;
-    private final AimService aimService;
+    private final SmartAimService aimService;
     private final UserManager userManager = new UserManager();
 
     public void addAnalyzerData(Model model) {

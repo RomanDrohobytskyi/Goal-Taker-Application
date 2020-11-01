@@ -4,7 +4,7 @@ import application.entities.time.data.Time;
 import application.enums.State;
 import application.repositories.IAimRepository;
 import application.repositories.ITimeRepository;
-import application.services.TimeService;
+import application.services.time.SmartAimTimeService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -28,7 +28,7 @@ class TimeServiceUnitTest {
     @Mock
     private ITimeRepository timeRepository;
     @InjectMocks
-    private TimeService timeService;
+    private SmartAimTimeService timeService;
     private List<Time> times;
 
     @BeforeEach

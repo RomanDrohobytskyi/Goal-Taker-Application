@@ -2,7 +2,7 @@ package application.controllers.smart.aim;
 
 import application.entities.aim.Aim;
 import application.menu.MenuTabs;
-import application.services.AimService;
+import application.services.aim.SmartAimService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class EditAimController {
 
-    private final AimService aimService;
+    private final SmartAimService aimService;
 
     @GetMapping("{aim}")
     public String getEditForm(@PathVariable Aim aim, Model model) {

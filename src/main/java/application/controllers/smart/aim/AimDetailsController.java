@@ -3,8 +3,8 @@ package application.controllers.smart.aim;
 import application.entities.aim.Aim;
 import application.entities.time.data.Time;
 import application.menu.MenuTabs;
-import application.services.AimService;
-import application.services.TimeService;
+import application.services.aim.SmartAimService;
+import application.services.time.SmartAimTimeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -21,8 +21,8 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class AimDetailsController {
 
-    private final AimService aimService;
-    private final TimeService timeService;
+    private final SmartAimService aimService;
+    private final SmartAimTimeService timeService;
 
     @GetMapping("aim_details/{aim}")
     public String aimDetails(@PathVariable Aim aim, Model model){

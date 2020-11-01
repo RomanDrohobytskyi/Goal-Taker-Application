@@ -3,7 +3,7 @@ package application.controllers.smart.aim;
 import application.entities.aim.Aim;
 import application.entities.user.User;
 import application.menu.MenuTabs;
-import application.services.AimService;
+import application.services.aim.SmartAimService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -22,7 +22,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class AimController {
 
-    private final AimService aimService;
+    private final SmartAimService aimService;
 
     @GetMapping("/main_aim")
     public String allAims(Model model){

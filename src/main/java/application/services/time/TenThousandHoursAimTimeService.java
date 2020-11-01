@@ -1,4 +1,4 @@
-package application.services;
+package application.services.time;
 
 import application.entities.aim.TenThousandHoursAim;
 import application.entities.time.data.TenThousandHoursAimTime;
@@ -68,12 +68,14 @@ public class TenThousandHoursAimTimeService {
     }
 
     public TenThousandHoursAimTime getMostActiveTime(Set<TenThousandHoursAimTime> times){
-        Optional<TenThousandHoursAimTime> time = times.stream().max(Comparator.comparing(TenThousandHoursAimTime::getTime));
+        Optional<TenThousandHoursAimTime> time = times.stream()
+                .max(Comparator.comparing(TenThousandHoursAimTime::getTime));
         return time.get();
     }
 
     public TenThousandHoursAimTime getLessActiveTime(Set<TenThousandHoursAimTime> times){
-        Optional<TenThousandHoursAimTime> time = times.stream().min(Comparator.comparing(TenThousandHoursAimTime::getTime));
+        Optional<TenThousandHoursAimTime> time = times.stream()
+                .min(Comparator.comparing(TenThousandHoursAimTime::getTime));
         return time.get();
     }
 

@@ -4,7 +4,7 @@ import application.entities.aim.TenThousandHoursAim;
 import application.entities.time.data.TenThousandHoursAimTime;
 import application.menu.MenuTabs;
 import application.repositories.ITenThousandHoursAimRepository;
-import application.services.TenThousandHoursAimTimeService;
+import application.services.time.TenThousandHoursAimTimeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;

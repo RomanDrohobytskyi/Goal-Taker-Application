@@ -1,4 +1,4 @@
-package application.services;
+package application.services.time;
 
 import application.entities.aim.Aim;
 import application.entities.time.data.Time;
@@ -16,7 +16,7 @@ import static java.util.stream.Collectors.toList;
 
 @Service
 @RequiredArgsConstructor
-public class TimeService {
+public class SmartAimTimeService {
 
     private final ITimeRepository timeRepository;
 
@@ -51,10 +51,6 @@ public class TimeService {
         return timeRepository.save(time);
     }
 
-    public Iterable<Time> saveAll(List<Time> times) {
-        return timeRepository.saveAll(times);
-    }
-
     public List<Time> getLastWeekTime(Long aimId) {
         List<Time> aimTime = getLoggedTimeForAim(aimId);
         List<Time> lastWeekendTime = aimTime;
@@ -84,11 +80,14 @@ public class TimeService {
     }
 
     public Time getMostActiveTime(Set<Time> times) {
-        return times.stream().max(Comparator.comparing(Time::getTime)).orElseThrow(IllegalArgumentException :: new);
+        return times.stream()
+                .max(Comparator.comparing(Time::getTime))
+                .orElseThrow(IllegalArgumentException :: new);
     }
 
     public Time getLessActiveTime(Set<Time> times){
-        Optional<Time> time = times.stream().min(Comparator.comparing(Time::getTime));
+        Optional<Time> time = times.stream()
+                .min(Comparator.comparing(Time::getTime));
         return time.get();
     }
 

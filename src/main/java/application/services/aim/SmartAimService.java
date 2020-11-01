@@ -1,4 +1,4 @@
-package application.services;
+package application.services.aim;
 
 import application.entities.aim.Aim;
 import application.entities.time.data.Time;
@@ -6,6 +6,7 @@ import application.entities.user.User;
 import application.enums.State;
 import application.managers.UserManager;
 import application.repositories.IAimRepository;
+import application.services.UserService;
 import application.utils.date.DateParser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,7 @@ import static application.logger.LoggerJ.logError;
 
 @Service
 @RequiredArgsConstructor
-public class AimService {
+public class SmartAimService implements AimService<Aim> {
 
     private final UserService userService;
     private final IAimRepository aimRepository;
@@ -41,10 +42,21 @@ public class AimService {
         return Optional.empty();
     }
 
+    @Override
     public Aim save(Aim aim) {
         return aimRepository.save(aim);
     }
 
+    @Override
+    public void delete(List<Aim> aims) {
+        for (Aim aim : aims) {
+            if (!aim.getAimState().equals(State.Aim.DELETED.toString())) {
+                delete(aim);
+            }
+        }
+    }
+
+    @Override
     public Aim delete(Aim aim) {
         Date deletionDate = new Date();
         aim.setModificationDate(deletionDate);
@@ -53,12 +65,12 @@ public class AimService {
         return aimRepository.save(aim);
     }
 
-    public void delete(List<Aim> aims) {
-        for (Aim aim : aims) {
-            if (!aim.getAimState().equals(State.Aim.DELETED.toString())) {
-                delete(aim);
-            }
-        }
+    @Override
+    public Aim achieve(Aim aim) {
+        aim.setAimState(State.Aim.ACHIEVED.toString());
+        aim.setModificationDate(new Date());
+        aim.setAchievedDate(new Date());
+        return aimRepository.save(aim);
     }
 
     public Aim addAndSaveAim(User user, String title, String description, String text, String specific,
@@ -68,13 +80,6 @@ public class AimService {
         Aim aim = adapt(title, description, text, specific, measurable, attainable, relevant,
                 timeBasedDate, user).orElseThrow(IllegalArgumentException::new);
         return save(aim);
-    }
-
-    public Aim achieve(Aim aim) {
-        aim.setAimState(State.Aim.ACHIEVED.toString());
-        aim.setModificationDate(new Date());
-        aim.setAchievedDate(new Date());
-        return aimRepository.save(aim);
     }
 
     public Aim editAndSave(String title, String text, String description, String specific,
@@ -124,4 +129,5 @@ public class AimService {
     public List<Aim> findByUser(User user) {
         return aimRepository.findByUser(user);
     }
+
 }

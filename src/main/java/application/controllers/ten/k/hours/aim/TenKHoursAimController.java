@@ -3,8 +3,8 @@ package application.controllers.ten.k.hours.aim;
 import application.entities.aim.TenThousandHoursAim;
 import application.entities.user.User;
 import application.menu.MenuTabs;
-import application.services.TenThousandHoursAimService;
-import application.services.TenThousandHoursAimTimeService;
+import application.services.aim.TenThousandHoursAimService;
+import application.services.time.TenThousandHoursAimTimeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -50,7 +50,7 @@ public class TenKHoursAimController {
             @PathVariable TenThousandHoursAim aim,
             Map<String, Object> model) {
 
-        aimService.deleteAim(aim);
+        aimService.delete(aim);
         model.put("aims",  aimService.getAllLoggedUserAims());
         return "redirect:/ten_thousand_hours_aim#aimsTable";
     }

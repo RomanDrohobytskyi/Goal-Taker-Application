@@ -6,6 +6,8 @@ import application.entities.message.Message;
 import application.entities.user.User;
 import application.repositories.IUserRepository;
 import application.roles.Role;
+import application.services.aim.SmartAimService;
+import application.services.aim.TenThousandHoursAimService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -31,7 +33,7 @@ public class UserService implements UserDetailsService {
     @Autowired
     private MessageService messageService;
     @Autowired
-    private AimService aimService;
+    private SmartAimService aimService;
     @Autowired
     private TenThousandHoursAimService tenThousandHoursAimService;
 

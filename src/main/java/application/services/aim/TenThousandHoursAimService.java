@@ -1,4 +1,4 @@
-package application.services;
+package application.services.aim;
 
 import application.entities.aim.TenThousandHoursAim;
 import application.entities.user.User;
@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class TenThousandHoursAimService {
+public class TenThousandHoursAimService implements AimService<TenThousandHoursAim> {
 
     private final ITenThousandHoursAimRepository aimRepository;
     private final UserManager userManager = new UserManager();
@@ -51,21 +51,29 @@ public class TenThousandHoursAimService {
         return aim;
     }
 
+    @Override
+    public TenThousandHoursAim save(TenThousandHoursAim aim) {
+        return aimRepository.save(aim);
+    }
+
+    @Override
     public void delete(List<TenThousandHoursAim> aims){
         for (TenThousandHoursAim aim : aims){
             if (!aim.getAimState().equals(State.Aim.DELETED.toString())){
-                deleteAim(aim);
+                delete(aim);
             }
         }
     }
 
-    public TenThousandHoursAim deleteAim(TenThousandHoursAim aim) {
+    @Override
+    public TenThousandHoursAim delete(TenThousandHoursAim aim) {
         aim.setModificationDate(new Date());
         aim.setDeletionDate(new Date());
         aim.setAimState(State.Aim.DELETED.toString());
         return aimRepository.save(aim);
     }
 
+    @Override
     public TenThousandHoursAim achieve(TenThousandHoursAim aim){
         aim.setAimState(State.Aim.ACHIEVED.toString());
         aim.setModificationDate(new Date());

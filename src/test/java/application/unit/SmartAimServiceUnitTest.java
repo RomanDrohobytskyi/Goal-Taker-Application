@@ -3,8 +3,8 @@ package application.unit;
 import application.entities.aim.Aim;
 import application.entities.time.data.Time;
 import application.enums.State;
-import application.services.AimService;
-import application.services.TimeService;
+import application.services.aim.SmartAimService;
+import application.services.time.SmartAimTimeService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -19,12 +19,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
-public class AimServiceUnitTest {
+public class SmartAimServiceUnitTest {
 
     @Autowired
-    private AimService aimService;
+    private SmartAimService aimService;
     @Autowired
-    private TimeService timeService;
+    private SmartAimTimeService timeService;
     private List<Aim> aims;
 
     @BeforeEach

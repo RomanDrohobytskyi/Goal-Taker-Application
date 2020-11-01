@@ -33,6 +33,7 @@ public class AimRepositoryTest {
         aim.setAimState(State.Aim.NEW.getState());
 
         aimRepository.save(aim);
+
         assertNotNull(aim.getId());
     }
 }
