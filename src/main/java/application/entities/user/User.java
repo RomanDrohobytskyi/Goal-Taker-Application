@@ -85,7 +85,7 @@ public class User implements UserDetails{
     }
 
     public String getNames(){
-        return firstName.concat(" ").concat(lastName);
+        return firstName + " " +lastName;
     }
 
     @Override

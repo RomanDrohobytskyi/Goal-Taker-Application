@@ -90,7 +90,7 @@ public class UserRepositoryTest {
 
     @Test
     void shouldNotFindUserWithActivationCode(){
-        this.user.setActivationCode(null);
+        this.user.setActivationCode(userActivationCode);
         repository.save(this.user);
 
         User user = repository.findActiveUserWithoutActivationCodeByEmail(this.userEmail);
