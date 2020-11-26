@@ -75,7 +75,7 @@ public class UserAnalyzerService {
         TenThousandHoursAimTime lessActiveTime = aimTimeService.getLessActiveTime(aimsTime);
         TenThousandHoursAim mostActiveTenThousandAim = aimTimeService.getMostActiveAim(userAims);
         List<TenThousandHoursAimTime> lastSevenDaysTime = aimTimeService
-                .getLastWeekTime(mostActiveTenThousandAim.getId());
+                .getLastSevenLoggedTimesForAim(mostActiveTenThousandAim.getId());
         List<TenThousandHoursAim> achievedAims = tenThousandHoursAimService
                 .getAchievedUserAims(user);
         List<TenThousandHoursAim> notDeletedTenKdAims = tenThousandHoursAimService

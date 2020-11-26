@@ -3,8 +3,8 @@ package application.services;
 import application.entities.event.Event;
 import application.entities.user.User;
 import application.menu.MenuTabs;
-import application.repositories.IEventRepository;
-import application.utils.DayOfWeek;
+import application.models.DayOfWeek;
+import application.repositories.EventRepository;
 import application.utils.date.DateInstances;
 import application.utils.date.TimeParser;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +21,7 @@ import static java.util.stream.Collectors.toList;
 @Service
 @RequiredArgsConstructor
 public class EventService {
-    private final IEventRepository eventRepository;
+    private final EventRepository eventRepository;
     private Model model;
 
     public Event addNewEvent(String title, String from, String to, Date date, User user, Model model) {
@@ -42,6 +42,7 @@ public class EventService {
     }
 
     public boolean validateAvailableHours(Event event) {
+        //TODO; refactor, add date check
         Event first = eventRepository.getFirstByFromBeforeAndToBeforeAndDayOfWeek(event.getFrom(), event.getTo(), event.getDayOfWeek());
         return first == null;
     }
@@ -50,15 +51,15 @@ public class EventService {
         LocalTime fromParsed = TimeParser.parseToLocalTime(from).orElseThrow(IllegalArgumentException::new);
         LocalTime toParsed = TimeParser.parseToLocalTime(to).orElseThrow(IllegalArgumentException::new);
         DayOfWeek dayOfWeek = getDayOfWeekByDayNumber(date.getDay());
-        Optional<Event> event = buildEvent(title, fromParsed, toParsed, date, dayOfWeek, user);
-        return event.orElseThrow(NullPointerException::new);
+        Event event = buildEvent(title, fromParsed, toParsed, date, dayOfWeek, user);
+        return event;
     }
 
     public DayOfWeek getDayOfWeekByDayNumber(int dayNumber) {
         return DayOfWeek.values()[dayNumber];
     }
 
-    public Optional<Event> buildEvent(String title, LocalTime from, LocalTime to, Date date, DayOfWeek dayOfWeek, User user) {
+    public Event buildEvent(String title, LocalTime from, LocalTime to, Date date, DayOfWeek dayOfWeek, User user) {
         Event event = Event.builder()
                 .title(title)
                 .from(from)
@@ -68,7 +69,7 @@ public class EventService {
                 .user(user)
                 .creationDate(new Date())
                 .build();
-        return Optional.ofNullable(event);
+        return event;
     }
 
     public Event save(Event event) {
@@ -117,7 +118,7 @@ public class EventService {
         Date today = DateInstances.startOfDay(new Date());
         Date todayPlusSixDays = DateInstances.endOfDay(addDays(today, 6));
         return getEventsByDateBetweenOrderByDate(today, todayPlusSixDays)
-                .orElseThrow(NullPointerException::new);
+                .orElseThrow(IllegalArgumentException::new);
     }
 
     private Date addDays(Date date, int amount) {
@@ -128,8 +129,7 @@ public class EventService {
     }
 
     public Optional<List<Event>> getEventsByDateBetweenOrderByDate(Date from, Date to) {
-        List<Event> events = eventRepository.getEventsByDateBetweenOrderByDate(from, to);
-        return Optional.ofNullable(events);
+        return eventRepository.getEventsByDateBetweenOrderByDate(from, to);
     }
 
     public void addEventsAndMenu(Model model) {
@@ -137,5 +137,9 @@ public class EventService {
         model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
         Map<String, List<Event>> events = getSortedEventsForFullWeekFromTodayWithDay();
         model.addAttribute("events", events);
+    }
+
+    public void deleteEvent(Event event) {
+        eventRepository.delete(event);
     }
 }

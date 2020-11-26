@@ -4,9 +4,10 @@ import application.entities.aim.TenThousandHoursAim;
 import application.entities.user.User;
 import application.enums.State;
 import application.managers.UserManager;
-import application.repositories.ITenThousandHoursAimRepository;
+import application.repositories.TenThousandHoursAimRepository;
 import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.util.Strings;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -17,7 +18,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class TenThousandHoursAimService implements AimService<TenThousandHoursAim> {
 
-    private final ITenThousandHoursAimRepository aimRepository;
+    private final TenThousandHoursAimRepository aimRepository;
     private final UserManager userManager = new UserManager();
 
     public Optional<TenThousandHoursAim> createAim(String title, String description, String text, User user){
@@ -41,7 +42,7 @@ public class TenThousandHoursAimService implements AimService<TenThousandHoursAi
         return Optional.empty();
     }
 
-    public TenThousandHoursAim adaptEditedAim(TenThousandHoursAim aim, String title, String text, String description) {
+    public TenThousandHoursAim adaptEditedAim(@NonNull TenThousandHoursAim aim, String title, String text, String description) {
         aim.setTitle(title);
         aim.setDescription(description);
         aim.setText(text);

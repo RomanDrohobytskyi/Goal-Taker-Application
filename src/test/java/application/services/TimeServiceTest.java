@@ -2,8 +2,8 @@ package application.services;
 
 import application.entities.time.data.Time;
 import application.enums.State;
-import application.repositories.IAimRepository;
-import application.repositories.ITimeRepository;
+import application.repositories.AimRepository;
+import application.repositories.TimeRepository;
 import application.services.time.SmartAimTimeService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,9 +23,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class TimeServiceTest {
 
     @Mock
-    private IAimRepository aimRepository;
+    private AimRepository aimRepository;
     @Mock
-    private ITimeRepository timeRepository;
+    private TimeRepository timeRepository;
     @InjectMocks
     private SmartAimTimeService timeService;
     private List<Time> times;

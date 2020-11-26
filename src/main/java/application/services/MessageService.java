@@ -4,7 +4,7 @@ import application.entities.message.Message;
 import application.entities.user.User;
 import application.enums.State;
 import application.managers.UserManager;
-import application.repositories.IMessageRepository;
+import application.repositories.MessageRepository;
 import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Service;
@@ -21,7 +21,7 @@ import java.util.Optional;
 public class MessageService {
 
     private UserManager userManager = new UserManager();
-    private final IMessageRepository messageRepository;
+    private final MessageRepository messageRepository;
     private final FileService fileService;
     private final UserService userService;
 

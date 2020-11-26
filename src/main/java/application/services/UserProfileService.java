@@ -1,7 +1,7 @@
 package application.services;
 
 import application.entities.user.User;
-import application.repositories.IUserRepository;
+import application.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ public class UserProfileService {
 
     @Value("${upload.path}")
     private String uploadPath;
-    private final IUserRepository iUserRepository;
+    private final UserRepository iUserRepository;
     private final FileService fileService;
 
     public void adaptAndSaveEditedUserProfile(MultipartFile avatar, String firstName,

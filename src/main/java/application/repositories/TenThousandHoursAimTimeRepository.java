@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ITenThousandHoursAimTimeRepository extends CrudRepository<TenThousandHoursAimTime, Long> {
+public interface TenThousandHoursAimTimeRepository extends CrudRepository<TenThousandHoursAimTime, Long> {
     List<TenThousandHoursAimTime> findByAim_Id(Long aimId);
 }

@@ -2,7 +2,7 @@ package application.entities.time.data;
 
 import application.entities.aim.TenThousandHoursAim;
 import application.enums.State;
-import application.utils.ConvertedDate;
+import application.models.ConvertedDate;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

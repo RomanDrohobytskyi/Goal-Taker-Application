@@ -3,7 +3,7 @@ package application.controllers.smart.aim;
 import application.entities.aim.Aim;
 import application.entities.time.data.Time;
 import application.menu.MenuTabs;
-import application.repositories.IAimRepository;
+import application.repositories.AimRepository;
 import application.services.time.SmartAimTimeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -23,7 +23,7 @@ import java.util.Map;
 public class TimeAnalyzerController {
 
     private final SmartAimTimeService timeService;
-    private final IAimRepository aimRepository;
+    private final AimRepository aimRepository;
 
     @GetMapping
     @RequestMapping("/{aim}")

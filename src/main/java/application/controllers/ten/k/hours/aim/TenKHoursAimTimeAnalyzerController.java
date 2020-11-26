@@ -3,7 +3,7 @@ package application.controllers.ten.k.hours.aim;
 import application.entities.aim.TenThousandHoursAim;
 import application.entities.time.data.TenThousandHoursAimTime;
 import application.menu.MenuTabs;
-import application.repositories.ITenThousandHoursAimRepository;
+import application.repositories.TenThousandHoursAimRepository;
 import application.services.time.TenThousandHoursAimTimeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -24,12 +24,12 @@ import java.util.Set;
 public class TenKHoursAimTimeAnalyzerController {
 
     private final TenThousandHoursAimTimeService timeService;
-    private final ITenThousandHoursAimRepository aimRepository;
+    private final TenThousandHoursAimRepository aimRepository;
 
     @GetMapping
     @RequestMapping("/{aim}")
     public String getTenKHoursAimTimeAnalyzer(@PathVariable TenThousandHoursAim aim, Model model) {
-        List<TenThousandHoursAimTime> lastSevenDaysTime = timeService.getLastWeekTime(aim.getId());
+        List<TenThousandHoursAimTime> lastSevenDaysTime = timeService.getLastSevenLoggedTimesForAim(aim.getId());
         Set<TenThousandHoursAimTime> loggedTime = aim.getLoggedTime();
         model.addAttribute("aim", aim);
         model.addAttribute("loggedTime", loggedTime);

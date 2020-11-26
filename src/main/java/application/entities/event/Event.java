@@ -1,7 +1,7 @@
 package application.entities.event;
 
 import application.entities.user.User;
-import application.utils.DayOfWeek;
+import application.models.DayOfWeek;
 import lombok.*;
 
 import javax.persistence.*;
@@ -18,7 +18,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class Event {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @NotBlank
     private String title;

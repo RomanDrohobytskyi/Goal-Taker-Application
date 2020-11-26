@@ -3,7 +3,7 @@ package application.services.time;
 import application.entities.aim.Aim;
 import application.entities.time.data.Time;
 import application.enums.State;
-import application.repositories.ITimeRepository;
+import application.repositories.TimeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -18,7 +18,7 @@ import static java.util.stream.Collectors.toList;
 @RequiredArgsConstructor
 public class SmartAimTimeService {
 
-    private final ITimeRepository timeRepository;
+    private final TimeRepository timeRepository;
 
     public Optional<Time> adaptAndSaveAimDetails(Number loggedTime, String date, String description, Aim aim) {
         Optional<Time> time = adaptTimeWithStringDate(loggedTime, date, description, State.Date.NEW, aim);

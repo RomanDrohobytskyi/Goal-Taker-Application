@@ -15,7 +15,6 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import java.util.*;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
@@ -62,22 +61,5 @@ public class SmartAimServiceUnitTest {
         Aim expectedAim = aims.get(1);
 
         assertThat(mostActiveAim).isEqualTo(expectedAim);
-    }
-
-    @Test
-    void builderTest(){
-        String title = "Test title";
-        String description =  "Description";
-        String text = "Text";
-
-        Aim aim = new Aim.AimBuilder(title, description, text).build();
-
-        assertAll(
-                () -> assertNotNull(aim),
-                () -> assertNull(aim.getId()),
-                () -> assertThat(aim.getTitle()).isEqualTo(title),
-                () -> assertThat(aim.getDescription()).isEqualTo(description),
-                () -> assertThat(aim.getText()).isEqualTo(text)
-        );
     }
 }

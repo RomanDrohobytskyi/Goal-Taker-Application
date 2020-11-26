@@ -3,8 +3,8 @@ package application.services.time;
 import application.entities.aim.TenThousandHoursAim;
 import application.entities.time.data.TenThousandHoursAimTime;
 import application.enums.State;
-import application.repositories.ITenThousandHoursAimRepository;
-import application.repositories.ITenThousandHoursAimTimeRepository;
+import application.repositories.TenThousandHoursAimRepository;
+import application.repositories.TenThousandHoursAimTimeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -20,10 +20,10 @@ import static java.util.stream.Collectors.toMap;
 @RequiredArgsConstructor
 public class TenThousandHoursAimTimeService {
 
-    private final ITenThousandHoursAimRepository tenThousandHoursAimRepository;
-    private final ITenThousandHoursAimTimeRepository iTenThousandHoursAimTimeRepository;
+    private final TenThousandHoursAimRepository tenThousandHoursAimRepository;
+    private final TenThousandHoursAimTimeRepository iTenThousandHoursAimTimeRepository;
 
-    public TenThousandHoursAimTime adaptTime(Double loggedTime, Date date, String description, State.Date state, TenThousandHoursAim aim){
+    public TenThousandHoursAimTime adaptTime(Double loggedTime, Date date, String description, State.Date state, TenThousandHoursAim aim) {
         TenThousandHoursAimTime time = new TenThousandHoursAimTime();
         time.setTime(loggedTime);
         time.setDate(date);
@@ -33,12 +33,12 @@ public class TenThousandHoursAimTimeService {
         return time;
     }
 
-    public List<TenThousandHoursAimTime> getLastWeekTime(Long aimId) {
+    public List<TenThousandHoursAimTime> getLastSevenLoggedTimesForAim(Long aimId) {
         List<TenThousandHoursAimTime> aimTime = getLoggedTimeForAim(aimId);
         List<TenThousandHoursAimTime> lastWeekendTime = aimTime;
 
         if (!CollectionUtils.isEmpty(aimTime) && aimTime.size() >= 7){
-            lastWeekendTime = getTimeForDateRange(aimTime, 7L, false);
+            lastWeekendTime = getLimitedAndSortedTime(aimTime, 7L);
         }
         return lastWeekendTime;
     }
@@ -47,16 +47,10 @@ public class TenThousandHoursAimTimeService {
         return iTenThousandHoursAimTimeRepository.findByAim_Id(aimId);
     }
 
-    public List<TenThousandHoursAimTime> getTimeForDateRange(List<TenThousandHoursAimTime> time, Long dayRange, boolean asc){
-        if (asc){
-            return time.stream()
-                    .sorted(Comparator.comparing(TenThousandHoursAimTime::getDate))
-                    .limit(dayRange)
-                    .collect(toList());
-        }
-        else return time.stream()
+    public List<TenThousandHoursAimTime> getLimitedAndSortedTime(List<TenThousandHoursAimTime> time, Long limit) {
+        return time.stream()
                 .sorted(Comparator.comparing(TenThousandHoursAimTime::getDate).reversed())
-                .limit(dayRange)
+                .limit(limit)
                 .collect(toList());
     }
 
@@ -70,13 +64,13 @@ public class TenThousandHoursAimTimeService {
     public TenThousandHoursAimTime getMostActiveTime(Set<TenThousandHoursAimTime> times){
         Optional<TenThousandHoursAimTime> time = times.stream()
                 .max(Comparator.comparing(TenThousandHoursAimTime::getTime));
-        return time.get();
+        return time.orElse(null);
     }
 
     public TenThousandHoursAimTime getLessActiveTime(Set<TenThousandHoursAimTime> times){
         Optional<TenThousandHoursAimTime> time = times.stream()
                 .min(Comparator.comparing(TenThousandHoursAimTime::getTime));
-        return time.get();
+        return time.orElse(null);
     }
 
     public TenThousandHoursAimTime saveTimeForTenKHoursAim(Number time, String description, String date, TenThousandHoursAim aim) {
@@ -102,36 +96,27 @@ public class TenThousandHoursAimTimeService {
         return allAimsLoggedTime;
     }
 
-    public Map<Long, Double> getAimsLoggedTimeSum(List<TenThousandHoursAim> aims){
-        return aims
-            .stream()
+    public Map<Long, Double> getAimsLoggedTimeSum(List<TenThousandHoursAim> aims) {
+        return aims.stream()
                 .collect(toMap(TenThousandHoursAim::getId,
-                    aim -> aim.getLoggedTime()
-                        .stream()
-                        .mapToDouble(TenThousandHoursAimTime::getTime)
-                        .sum())
+                        aim -> aim.getLoggedTime().stream()
+                                .mapToDouble(TenThousandHoursAimTime::getTime)
+                                .sum())
                 );
     }
 
     public Double getAimLoggedTimeSum(Set<TenThousandHoursAimTime> time){
-        return time
-            .stream()
+        return time.stream()
             .mapToDouble(TenThousandHoursAimTime::getTime)
             .sum();
     }
 
     public TenThousandHoursAim getMostActiveAim(List<TenThousandHoursAim> userAims) {
-        TenThousandHoursAim maxTimeAim = null;
-        Double maxTime = 0D;
-        for (TenThousandHoursAim aim : userAims){
-            Double sum = aim.getLoggedTime().stream()
-                    .mapToDouble(TenThousandHoursAimTime::getTime)
-                    .sum();
-            if (sum > maxTime){
-                maxTime = sum;
-                maxTimeAim = aim;
-            }
-        }
-        return maxTimeAim;
+        Optional<TenThousandHoursAim> maxTimeAim = userAims.stream()
+                .max(Comparator.comparing(aim -> aim.getLoggedTime().stream()
+                        .mapToDouble(TenThousandHoursAimTime::getTime)
+                        .sum()));
+
+        return maxTimeAim.orElseThrow(IllegalArgumentException :: new);
     }
 }

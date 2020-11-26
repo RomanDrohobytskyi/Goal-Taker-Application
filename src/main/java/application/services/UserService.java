@@ -4,7 +4,7 @@ import application.entities.aim.Aim;
 import application.entities.aim.TenThousandHoursAim;
 import application.entities.message.Message;
 import application.entities.user.User;
-import application.repositories.IUserRepository;
+import application.repositories.UserRepository;
 import application.roles.Role;
 import application.services.aim.SmartAimService;
 import application.services.aim.TenThousandHoursAimService;
@@ -28,21 +28,19 @@ public class UserService implements UserDetailsService {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
-    private final IUserRepository userRepository;
+    private final UserRepository userRepository;
     private final MailSenderService mailSenderService;
-    @Autowired
-    private MessageService messageService;
-    @Autowired
-    private SmartAimService aimService;
-    @Autowired
-    private TenThousandHoursAimService tenThousandHoursAimService;
+    private final MessageService messageService;
+    private final SmartAimService aimService;
+    private final TenThousandHoursAimService tenThousandHoursAimService;
 
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        return userRepository.findUserByEmail(s);
+        return findUserByEmail(s);
     }
 
     public User findUserByEmail(String email) throws UsernameNotFoundException {
-        return userRepository.findUserByEmail(email);
+        return userRepository.findUserByEmail(email)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found: " + email));
     }
 
     public Iterable<User> findAll(){
@@ -51,7 +49,6 @@ public class UserService implements UserDetailsService {
 
     public Map<String, Object> validateUserRegistrationData(User user, String passwordConfirm) {
         Map<String, Object> model = new HashMap<>();
-
         if (!isUserEmailEmpty(user)) {
             if (!isUserExist(user)) {
                 if (isPasswordsMatch(user.getPassword(), passwordConfirm)) {
@@ -76,7 +73,7 @@ public class UserService implements UserDetailsService {
     }
 
     public boolean isUserExist(User user){
-        return userRepository.findUserByEmail(user.getEmail()) != null;
+        return userRepository.findUserByEmail(user.getEmail()).isPresent();
     }
 
     public boolean isUserEmailEmpty(User user){
@@ -119,9 +116,9 @@ public class UserService implements UserDetailsService {
     }
 
     public boolean resendVerificationToken(String email) {
-        Optional<User> user = Optional.ofNullable(userRepository.findUserByEmail(email));
-        generateNewVerificationTokenForUser(user.orElseThrow(IllegalArgumentException::new));
-        return sendActivationCode(user.get());
+        User user = findUserByEmail(email);
+        generateNewVerificationTokenForUser(user);
+        return sendActivationCode(user);
     }
 
     public void saveUser(User user){
@@ -129,7 +126,7 @@ public class UserService implements UserDetailsService {
     }
 
     public void activateUser(String code) {
-        Optional<User> user = Optional.of(userRepository.findByActivationCode(code));
+        Optional<User> user = userRepository.findByActivationCode(code);
         if (user.isPresent()) {
             user.get().setActivationCode(null);
             user.get().setActive(true);

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface IMessageRepository extends CrudRepository<Message, Long> {
+public interface MessageRepository extends CrudRepository<Message, Long> {
     List<Message> findByTagAndAndUser(String tag, User user);
     List<Message> findByUser(User user);
 }

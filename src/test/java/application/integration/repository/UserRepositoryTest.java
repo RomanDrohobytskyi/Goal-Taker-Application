@@ -1,7 +1,7 @@
 package application.integration.repository;
 
 import application.entities.user.User;
-import application.repositories.IUserRepository;
+import application.repositories.UserRepository;
 import application.roles.Role;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,6 +11,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.Collections;
+import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
@@ -20,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class UserRepositoryTest {
 
     @Autowired
-    private IUserRepository repository;
+    private UserRepository repository;
     private String userEmail = "test.email@test.test";
     private String userActivationCode = "fWrV$52e!";
     private User user;
@@ -49,20 +50,20 @@ public class UserRepositoryTest {
     void shouldFindUserByEmail(){
         repository.save(this.user);
 
-        User user = repository.findUserByEmail(this.userEmail);
+        Optional<User> user = repository.findUserByEmail(this.userEmail);
 
-        assertNotNull(user);
-        assertThat(user.getEmail()).isEqualTo(this.userEmail);
+        assertTrue(user.isPresent());
+        assertThat(user.get().getEmail()).isEqualTo(this.userEmail);
     }
 
     @Test
     void shouldFindByActivationCode(){
         repository.save(this.user);
 
-        User user = repository.findByActivationCode(this.userActivationCode);
+        Optional<User> user = repository.findByActivationCode(this.userActivationCode);
 
-        assertNotNull(user);
-        assertThat(user.getActivationCode()).isEqualTo(this.userActivationCode);
+        assertTrue(user.isPresent());
+        assertThat(user.get().getActivationCode()).isEqualTo(this.userActivationCode);
     }
 
     @Test
@@ -97,4 +98,5 @@ public class UserRepositoryTest {
 
         assertNull(user);
     }
+
 }

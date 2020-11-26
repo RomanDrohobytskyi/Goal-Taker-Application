@@ -1,7 +1,7 @@
 package application.services;
 
 import application.entities.user.User;
-import application.repositories.IUserRepository;
+import application.repositories.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserServiceTest {
 
     @Mock
-    private IUserRepository userRepository;
+    private UserRepository userRepository;
     @Mock
     private MailSenderService mailSenderService;
     @Mock
@@ -70,5 +70,13 @@ class UserServiceTest {
         assertTrue(userService.isUserEmailEmpty(user));
     }
 
+    @Test
+    public void isUserExist(){
+        user.setEmail("test.test@test.test");
+
+        userRepository.save(this.user);
+
+        boolean isUserExist = userService.isUserExist(user);
+    }
 
 }

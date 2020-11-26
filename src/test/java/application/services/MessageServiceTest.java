@@ -2,7 +2,7 @@ package application.services;
 
 import application.entities.message.Message;
 import application.entities.user.User;
-import application.repositories.IMessageRepository;
+import application.repositories.MessageRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class MessageServiceTest {
 
     @Mock
-    private IMessageRepository messageRepository;
+    private MessageRepository messageRepository;
     @Mock
     private FileService fileService;
     @Mock

@@ -25,7 +25,7 @@ public class TenKHoursAimDetailsController {
     @GetMapping("tenKHoursAimDetails/{aim}")
     public String aimDetails(@PathVariable TenThousandHoursAim aim, Model model){
         model.addAttribute("aim", aim);
-        model.addAttribute("lastWeekLoggedTime",  timeService.getLastWeekTime(aim.getId()));
+        model.addAttribute("lastWeekLoggedTime",  timeService.getLastSevenLoggedTimesForAim(aim.getId()));
         model.addAttribute("menuElements", new MenuTabs().defaultMenu());
         model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
         return "tenKHoursAimDetails";

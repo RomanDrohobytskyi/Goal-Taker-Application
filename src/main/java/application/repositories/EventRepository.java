@@ -1,17 +1,18 @@
 package application.repositories;
 
 import application.entities.event.Event;
-import application.utils.DayOfWeek;
+import application.models.DayOfWeek;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalTime;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
-public interface IEventRepository extends CrudRepository<Event, Long> {
+public interface EventRepository extends CrudRepository<Event, Long> {
 
-    List<Event> getEventsByDateBetweenOrderByDate(Date from, Date to);
+    Optional<List<Event>> getEventsByDateBetweenOrderByDate(Date from, Date to);
     Event getFirstByFromBeforeAndToBeforeAndDayOfWeek(LocalTime from, LocalTime to, DayOfWeek dayOfWeek);
 }

@@ -2,7 +2,7 @@ package application.controllers.user;
 
 import application.entities.user.User;
 import application.menu.MenuTabs;
-import application.repositories.IUserRepository;
+import application.repositories.UserRepository;
 import application.roles.Role;
 import application.services.UserService;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +18,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class UserController {
 
-    private final IUserRepository iUserRepository;
+    private final UserRepository iUserRepository;
     private final UserService userService;
 
     @PreAuthorize("hasAuthority('ADMIN')")

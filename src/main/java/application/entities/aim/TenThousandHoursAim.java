@@ -3,9 +3,7 @@ package application.entities.aim;
 import application.entities.time.data.TenThousandHoursAimTime;
 import application.entities.user.User;
 import application.enums.State;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -17,6 +15,8 @@ import java.util.Set;
 @Entity(name = "ten_thousand_hours_aim")
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor
 public class TenThousandHoursAim {
     @Id

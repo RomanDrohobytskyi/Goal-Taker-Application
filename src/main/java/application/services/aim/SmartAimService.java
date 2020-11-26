@@ -5,7 +5,7 @@ import application.entities.time.data.Time;
 import application.entities.user.User;
 import application.enums.State;
 import application.managers.UserManager;
-import application.repositories.IAimRepository;
+import application.repositories.AimRepository;
 import application.services.UserService;
 import application.utils.date.DateParser;
 import lombok.RequiredArgsConstructor;
@@ -20,13 +20,16 @@ import static application.logger.LoggerJ.logError;
 public class SmartAimService implements AimService<Aim> {
 
     private final UserService userService;
-    private final IAimRepository aimRepository;
+    private final AimRepository aimRepository;
     private UserManager userManager = new UserManager();
 
     public Optional<Aim> adapt(String title, String description, String text, String specific, String measurable,
                                String attainable, String relevant, Date timeBased, User user) {
         if (userService.isUserExist(user)) {
-            Aim aim = new Aim.AimBuilder(title, description, text)
+            Aim aim = Aim.builder()
+                    .title(title)
+                    .description(description)
+                    .text(text)
                     .specify(specific)
                     .measurable(measurable)
                     .attainable(attainable)
