@@ -43,10 +43,10 @@
                 <p class="w3-center">Email: </p>
                 <input class="registration-input" type="email" name="email" value="${isUserPresent?then('${user.email}', '')}"/>
                 <p style="color: red">
-                    ${userExist!}
+                    ${USER_EXIST!}
                 </p>
                 <p style="color: red">
-                    ${emailIsEmpty!}
+                    ${EMPTY_EMAIL!}
                 </p>
 
                 <p class="w3-center">User Name: </p>
@@ -65,7 +65,7 @@
                 <input class="registration-input" type="password" name="passwordConfirm"/>
 
                 <p style="color: red">
-                    ${passwordNotMach!}
+                    ${PASSWORDS_NOT_MATCHING!}
                 </p>
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
                 <button type="submit" class="btn btn1 w3-button">Create</button>
@@ -75,9 +75,9 @@
             <#if user?has_content && user.email?has_content>
                 <div>
                     <form action="/registration/resendVerificationCode">
-                        <#--<a href="/registration/resendVerificationCode/${user.email}">
+                        <a href="/registration/resendVerificationCode/${user.email}">
                             <h5>Resend activation code.</h5>
-                        </a>-->
+                        </a>
                         <button type="submit" class="btn btn1 w3-button">Resend</button>
                         <input type="hidden" name="email" value="${user.email}" />
                         <input type="hidden" value="${_csrf.token}" name="_csrf">

@@ -10,6 +10,7 @@ import application.services.UserService;
 import application.utils.date.DateParser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
@@ -38,7 +39,6 @@ public class SmartAimService implements AimService<Aim> {
                     .creationDate(new Date())
                     .user(user)
                     .build();
-
             return Optional.of(aim);
         }
         logError(getClass(), "User " + user.getEmail() + " not exist!");
@@ -51,6 +51,7 @@ public class SmartAimService implements AimService<Aim> {
     }
 
     @Override
+    @Transactional
     public void delete(List<Aim> aims) {
         for (Aim aim : aims) {
             if (!aim.getAimState().equals(State.Aim.DELETED.toString())) {

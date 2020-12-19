@@ -11,8 +11,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import java.util.Map;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
@@ -40,25 +38,6 @@ class UserServiceTest {
     }
 
     @Test
-    void validateRegistrationEmptyEmail(){
-        user.setEmail("");
-
-        Map<String, Object> validationResult = userService.validateUserRegistrationData(user, null);
-
-        assertTrue(validationResult.containsKey("emailIsEmpty"));
-    }
-
-    @Test
-    void validateRegistrationPasswordNotMach (){
-        user.setEmail("someRandomUniqueEmailAddress@test.test");
-        user.setPassword("111");
-        String confirmationPassword = "222";
-        Map<String, Object> validationResult = userService.validateUserRegistrationData(user, confirmationPassword);
-
-        assertTrue(validationResult.containsKey("passwordNotMach"));
-    }
-
-    @Test
     void notEmptyEmailTest(){
         user.setEmail("non empty");
         assertFalse(userService.isUserEmailEmpty(user));
@@ -76,7 +55,7 @@ class UserServiceTest {
 
         userRepository.save(this.user);
 
-        boolean isUserExist = userService.isUserExist(user);
+        assertTrue(userService.isUserExist(user));
     }
 
 }

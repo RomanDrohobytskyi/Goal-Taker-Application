@@ -15,8 +15,7 @@ import java.time.LocalTime;
 import java.util.*;
 import java.util.stream.Stream;
 
-import static java.util.stream.Collectors.groupingBy;
-import static java.util.stream.Collectors.toList;
+import static java.util.stream.Collectors.*;
 
 @Service
 @RequiredArgsConstructor
@@ -42,8 +41,8 @@ public class EventService {
     }
 
     public boolean validateAvailableHours(Event event) {
-        //TODO; refactor, add date check
-        Event first = eventRepository.getFirstByFromBeforeAndToBeforeAndDayOfWeek(event.getFrom(), event.getTo(), event.getDayOfWeek());
+        Event first = eventRepository.getFirstByFromBeforeAndToBeforeAndDayOfWeekAndDate(
+                event.getFrom(), event.getTo(), event.getDayOfWeek(), event.getDate());
         return first == null;
     }
 
@@ -51,8 +50,7 @@ public class EventService {
         LocalTime fromParsed = TimeParser.parseToLocalTime(from).orElseThrow(IllegalArgumentException::new);
         LocalTime toParsed = TimeParser.parseToLocalTime(to).orElseThrow(IllegalArgumentException::new);
         DayOfWeek dayOfWeek = getDayOfWeekByDayNumber(date.getDay());
-        Event event = buildEvent(title, fromParsed, toParsed, date, dayOfWeek, user);
-        return event;
+        return buildEvent(title, fromParsed, toParsed, date, dayOfWeek, user);
     }
 
     public DayOfWeek getDayOfWeekByDayNumber(int dayNumber) {
@@ -60,7 +58,7 @@ public class EventService {
     }
 
     public Event buildEvent(String title, LocalTime from, LocalTime to, Date date, DayOfWeek dayOfWeek, User user) {
-        Event event = Event.builder()
+        return Event.builder()
                 .title(title)
                 .from(from)
                 .to(to)
@@ -69,7 +67,6 @@ public class EventService {
                 .user(user)
                 .creationDate(new Date())
                 .build();
-        return event;
     }
 
     public Event save(Event event) {
@@ -78,20 +75,10 @@ public class EventService {
 
     public Map<String, List<Event>> getSortedEventsForFullWeekFromTodayWithDay() {
         List<String> weekDaysSortedFromToday = getWeekDaysStartsFromToday();
-        Map<String, List<Event>> events = new HashMap<>(getEventsForWeekFromTodayWithDay());
-        Map<String, List<Event>> sortedEventsForWeekFromToday = new LinkedHashMap<>();
+        Map<String, List<Event>> events = fillEmptyDaysOfWeek(weekDaysSortedFromToday);
 
-        for (String day : weekDaysSortedFromToday) {
-            if (!events.containsKey(day)) {
-                events.put(day, Collections.emptyList());
-            }
-        }
-
-        for (String day : weekDaysSortedFromToday) {
-            sortedEventsForWeekFromToday.put(day, events.get(day));
-        }
-
-        return sortedEventsForWeekFromToday;
+        return weekDaysSortedFromToday.stream()
+                .collect(toMap(day -> day, events::get));
     }
 
     public List<String> getWeekDaysStartsFromToday() {
@@ -109,6 +96,18 @@ public class EventService {
                 .collect(toList());
     }
 
+    private Map<String, List<Event>> fillEmptyDaysOfWeek(List<String> weekDaysSortedFromToday) {
+        Map<String, List<Event>> events = getEventsForWeekFromTodayWithDay();
+
+        for (String day : weekDaysSortedFromToday) {
+            if (!events.containsKey(day)) {
+                events.put(day, Collections.emptyList());
+            }
+        }
+
+        return events;
+    }
+
     public Map<String, List<Event>> getEventsForWeekFromTodayWithDay() {
         return getEventsForWeekFromToday().stream()
                 .collect(groupingBy(a -> a.getDayOfWeek().getDay()));
@@ -118,7 +117,7 @@ public class EventService {
         Date today = DateInstances.startOfDay(new Date());
         Date todayPlusSixDays = DateInstances.endOfDay(addDays(today, 6));
         return getEventsByDateBetweenOrderByDate(today, todayPlusSixDays)
-                .orElseThrow(IllegalArgumentException::new);
+                .orElse(Collections.emptyList());
     }
 
     private Date addDays(Date date, int amount) {

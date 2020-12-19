@@ -2,7 +2,7 @@ package application.controllers.authorisation.registration;
 
 
 import application.entities.user.User;
-import application.services.UserService;
+import application.services.UserRegistrationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,7 +17,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class RegistrationController {
 
-    private final UserService userService;
+    private final UserRegistrationService userRegistrationService;
 
     @GetMapping("/registration")
     public String registration() {
@@ -27,7 +27,7 @@ public class RegistrationController {
     @PostMapping("/registration")
     public String addUser(User user, Map<String, Object> model,
                           @RequestParam String passwordConfirm) {
-        model.putAll(userService.validateUserRegistrationData(user, passwordConfirm));
+        model.putAll(userRegistrationService.validateUser(user, passwordConfirm));
         model.put("user", user);
         return /*model.containsKey("success") ? "redirect:/login" :*/ "registration";
     }
@@ -35,7 +35,7 @@ public class RegistrationController {
     @GetMapping("/activate/{code}")
     public String activate(Model model, @PathVariable String code){
         try{
-            userService.activateUser(code);
+            userRegistrationService.activateUserByActivationCode(code);
             model.addAttribute("message", "User successfully activated.");
         } catch (IllegalArgumentException e){
             model.addAttribute("message", "Activation code is not found!");
@@ -45,7 +45,7 @@ public class RegistrationController {
 
     @GetMapping("/registration/resendVerificationCode")
     public String resendVerificationCode(@RequestParam String email, Model model) {
-        boolean resend = userService.resendVerificationToken(email);
+        boolean resend = userRegistrationService.resendVerificationToken(email);
         if (resend) {
             model.addAttribute("message", "Activation code successfully resend!");
         } else {

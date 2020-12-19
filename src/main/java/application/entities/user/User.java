@@ -5,9 +5,7 @@ import application.entities.aim.TenThousandHoursAim;
 import application.entities.event.Event;
 import application.entities.message.Message;
 import application.roles.Role;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -22,6 +20,8 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class User implements UserDetails{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

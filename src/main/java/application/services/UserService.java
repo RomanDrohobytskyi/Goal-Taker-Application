@@ -15,12 +15,13 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 import static application.logger.LoggerJ.logError;
+import static java.util.stream.Collectors.toSet;
 
 @Service
 @RequiredArgsConstructor
@@ -28,14 +29,16 @@ public class UserService implements UserDetailsService {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
+    @Autowired
+    private MessageService messageService;
+    @Autowired
+    private SmartAimService aimService;
     private final UserRepository userRepository;
     private final MailSenderService mailSenderService;
-    private final MessageService messageService;
-    private final SmartAimService aimService;
     private final TenThousandHoursAimService tenThousandHoursAimService;
 
-    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        return findUserByEmail(s);
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return findUserByEmail(username);
     }
 
     public User findUserByEmail(String email) throws UsernameNotFoundException {
@@ -45,31 +48,6 @@ public class UserService implements UserDetailsService {
 
     public Iterable<User> findAll(){
         return userRepository.findAll();
-    }
-
-    public Map<String, Object> validateUserRegistrationData(User user, String passwordConfirm) {
-        Map<String, Object> model = new HashMap<>();
-        if (!isUserEmailEmpty(user)) {
-            if (!isUserExist(user)) {
-                if (isPasswordsMatch(user.getPassword(), passwordConfirm)) {
-                    setNewUserData(user);
-                    if (sendActivationCode(user)){
-                        saveUser(user);
-                    } else {
-                        model.put("message", "We can`t send to You activation code, sorry!");
-                    }
-                    model.put("success", "Success");
-                } else {
-                    model.put("passwordNotMach", "Sorry, but Your passwords do not match, check it again!");
-                }
-            } else {
-                model.put("userExist", "Sorry, user with email: " + user.getEmail() + ", already exist!");
-            }
-        } else {
-            model.put("emailIsEmpty", "Sorry, Your email is empty, please check it again");
-        }
-        model.put("user", user);
-        return model;
     }
 
     public boolean isUserExist(User user){
@@ -101,65 +79,29 @@ public class UserService implements UserDetailsService {
         return false;
     }
 
-    public void setNewUserData(User user){
-        user.setRoles(Collections.singleton(Role.USER));
-        user.setActivationCode(generateVerificationToken());
-        encodeUserPassword(user);
-    }
-
-    public String generateVerificationToken() {
-        return UUID.randomUUID().toString();
-    }
-
-    public void generateNewVerificationTokenForUser(User user) {
-        user.setActivationCode(generateVerificationToken());
-    }
-
-    public boolean resendVerificationToken(String email) {
-        User user = findUserByEmail(email);
-        generateNewVerificationTokenForUser(user);
-        return sendActivationCode(user);
-    }
-
     public void saveUser(User user){
         userRepository.save(user);
     }
 
-    public void activateUser(String code) {
-        Optional<User> user = userRepository.findByActivationCode(code);
-        if (user.isPresent()) {
-            user.get().setActivationCode(null);
-            user.get().setActive(true);
-            userRepository.save(user.get());
-        } else {
-            throw new IllegalArgumentException();
-        }
-    }
-
-    public User delete(User user){
-        user.setActive(false);
-        userRepository.save(user);
-        return user;
-    }
-
     public void adaptEditedUserAndSave(String username, String firstName, String lastName, Map<String, String> form, User user) {
-        user.setUsername(username);
-        user.setFirstName(firstName);
-        user.setLastName(lastName);
         Set<String> roles = Arrays.stream(Role.values())
                 .map(Role::name)
-                .collect(Collectors.toSet());
+                .collect(toSet());
 
         user.getRoles().clear();
 
-        for (String key : form.keySet()){
-            if (roles.contains(key)){
-                user.getRoles().add(Role.valueOf(key));
-            }
-        }
+        roles.stream()
+                .filter(form::containsKey)
+                .forEach(role -> user.getRoles().add(Role.valueOf(form.get(role))));
+
+        user.setUsername(username);
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+
         userRepository.save(user);
     }
 
+    @Transactional
     public void deleteUserWithAllNotesAndAims(User user) {
         List<Message> notes = messageService.findByUser(user);
         List<Aim> aims = aimService.findByUser(user);
@@ -169,10 +111,21 @@ public class UserService implements UserDetailsService {
         messageService.delete(notes);
         aimService.delete(aims);
         tenThousandHoursAimService.delete(thousandHoursAims);
-        this.delete(user);
+        delete(user);
+    }
+
+    private User delete(User user){
+        user.setActive(false);
+        userRepository.save(user);
+        return user;
+    }
+
+    public Optional<User> findByActivationCode(String code) {
+        return userRepository.findByActivationCode(code);
     }
 
     public void encodeUserPassword(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
     }
+
 }

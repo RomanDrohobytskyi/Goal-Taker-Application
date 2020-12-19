@@ -12,7 +12,6 @@ import java.util.Optional;
 
 @Repository
 public interface EventRepository extends CrudRepository<Event, Long> {
-
     Optional<List<Event>> getEventsByDateBetweenOrderByDate(Date from, Date to);
-    Event getFirstByFromBeforeAndToBeforeAndDayOfWeek(LocalTime from, LocalTime to, DayOfWeek dayOfWeek);
+    Event getFirstByFromBeforeAndToBeforeAndDayOfWeekAndDate(LocalTime from, LocalTime to, DayOfWeek dayOfWeek, Date date);
 }
