@@ -2,6 +2,7 @@ package application.controllers.authorisation.registration;
 
 
 import application.entities.user.User;
+import application.enums.UserRegisterValidationState;
 import application.services.UserRegistrationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -27,9 +28,10 @@ public class RegistrationController {
     @PostMapping("/registration")
     public String addUser(User user, Map<String, Object> model,
                           @RequestParam String passwordConfirm) {
-        model.putAll(userRegistrationService.validateUser(user, passwordConfirm));
-        model.put("user", user);
-        return /*model.containsKey("success") ? "redirect:/login" :*/ "registration";
+        Map<String, Object> validationResult = userRegistrationService.validateUser(user, passwordConfirm);
+        model.putAll(validationResult);
+        return validationResult.containsKey(UserRegisterValidationState.SUCCESS.state)
+                ? "redirect:/login" : "registration";
     }
 
     @GetMapping("/activate/{code}")

@@ -29,8 +29,8 @@ public class AimDetailsController {
         List<Time> lastWeekLoggedTime = timeService.getLastWeekTime(aim.getId());
         model.addAttribute("aim", aim);
         model.addAttribute("lastWeekLoggedTime", lastWeekLoggedTime);
-        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
-        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
+        model.addAttribute("menuElements", MenuTabs.defaultMenu());
+        model.addAttribute("slideMenuElements", MenuTabs.defaultSlideMenu());
         return "aim_details";
     }
 

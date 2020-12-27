@@ -37,8 +37,8 @@ public class TenKHoursAimTimeAnalyzerController {
         model.addAttribute("mostProductive", timeService.getMostActiveTime(loggedTime));
         model.addAttribute("lastSevenDaysTime", lastSevenDaysTime);
         model.addAttribute("loggedTimeSum", timeService.getAimLoggedTimeSum(loggedTime));
-        model.addAttribute("menuElements", new MenuTabs().timeAnalyzerMenu());
-        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
+        model.addAttribute("menuElements", MenuTabs.timeAnalyzerMenu());
+        model.addAttribute("slideMenuElements", MenuTabs.defaultSlideMenu());
         return "time_analyzer";
     }
 
@@ -49,7 +49,7 @@ public class TenKHoursAimTimeAnalyzerController {
             Map<String, Object> model) {
 
         timeService.deleteTime(time);
-        TenThousandHoursAim reloadedAim = (aimRepository.findById(aim.getId())).get();
+        TenThousandHoursAim reloadedAim = aimRepository.findById(aim.getId()).get();
         model.put("aim", reloadedAim);
         model.put("logged_time", reloadedAim.getLoggedTime());
 

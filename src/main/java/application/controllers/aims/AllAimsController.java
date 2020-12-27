@@ -10,8 +10,8 @@ public class AllAimsController {
 
     @GetMapping("/aims")
     public String allAims(Model model){
-        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
-        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
+        model.addAttribute("menuElements", MenuTabs.defaultMenu());
+        model.addAttribute("slideMenuElements", MenuTabs.defaultSlideMenu());
         return "aims";
     }
 }

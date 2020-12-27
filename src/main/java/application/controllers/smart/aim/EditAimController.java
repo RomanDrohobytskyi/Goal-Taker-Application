@@ -20,8 +20,8 @@ public class EditAimController {
     @GetMapping("{aim}")
     public String getEditForm(@PathVariable Aim aim, Model model) {
         model.addAttribute("aim", aim);
-        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
-        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
+        model.addAttribute("menuElements", MenuTabs.defaultMenu());
+        model.addAttribute("slideMenuElements", MenuTabs.defaultSlideMenu());
         return "editAim";
     }
 

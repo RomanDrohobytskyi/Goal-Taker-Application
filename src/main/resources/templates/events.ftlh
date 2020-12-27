@@ -16,6 +16,7 @@
 
     <script type="text/javascript" src="/static/javascript/js.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a39ccd76f8.js" crossorigin="anonymous"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -31,8 +32,13 @@
 <body>
 
 <@menu.customMenu menuElements slideMenuElements true/>
-<@paralax.paralax id="home" image="" title="" text="Events"
-cssClass="parallax big-img-greeting-1 w3-display-container w3-opacity-min"/>
+
+<div class="parallax big-img-greeting-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity" title="Events">Events</span>
+    </div>
+</div>
+
 
 <div class="w3-content w3-container w3-padding-32" id="add-event">
     <div class="w3-center w3-row">
@@ -54,6 +60,12 @@ cssClass="parallax big-img-greeting-1 w3-display-container w3-opacity-min"/>
             <@elements.input id="date" name="date" type="date" placeholder="d a t e"
             onfocus="this.placeholder = ''"  onblur="this.placeholder = 'd a t e'"/>
             <br><br>
+            <select name="eventType">
+                <#list eventTypes as type>
+                    <option value="${type}">${type}</option>
+                </#list>
+            </select>
+            <br><br>
             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
             <button type="submit" class="btn btn1 w3-button w3-padding-large" style="box-shadow:none;">
                 Add
@@ -63,8 +75,28 @@ cssClass="parallax big-img-greeting-1 w3-display-container w3-opacity-min"/>
 </div>
 
 <div>
-    <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
+    <div class="w3-content w3-container w3-padding-32" id="choose-event">
+        <div class="w3-center w3-row">
+            <h3 class="w3-center">Choose event</h3>
+            <form action="/events" method="get" style="margin: 30px 10px 10px">
+                <button type="submit" value="${'SPORT'}" name="eventType"
+                        title="Sport" style="border: none;" class="fas fa-running">
+                </button>
+                <button type="submit" value="${'ART'}" name="eventType"
+                        title="Art" style="border: none;" class="fas fa-palette">
+                </button>
+                <button type="submit" value="${'EDUCATION'}" name="eventType"
+                        title="Education" style="border: none;" class="fas fa-graduation-cap">
+                </button>
+                <button type="submit" name="eventType"
+                        title="Clear" style="border: none;" class="fas fa-eraser">
+                </button>
+                <input type="hidden" value="${_csrf.token}" name="_csrf">
+            </form>
+        </div>
+    </div>
 
+    <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
         <@event.timeline/>
 
         <div class="cd-schedule__events">
@@ -108,8 +140,6 @@ cssClass="parallax big-img-greeting-1 w3-display-container w3-opacity-min"/>
 <script src="../static/javascript/main.js"></script>
 
 <div class="parallax big-img-greeting-small w3-display-container w3-opacity-min" id="end">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-    </div>
 </div>
 
 <@footer.footer/>

@@ -18,8 +18,8 @@ public class GreetingController {
 
     @GetMapping("/")
     public String greeting(Model model) {
-        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
-        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
+        model.addAttribute("menuElements", MenuTabs.defaultMenu());
+        model.addAttribute("slideMenuElements", MenuTabs.defaultSlideMenu());
         return "greeting";
     }
 

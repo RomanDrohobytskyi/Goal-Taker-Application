@@ -10,7 +10,7 @@ public enum UserRegisterValidationState {
     public final String state;
     public final String description;
 
-    private UserRegisterValidationState(String state, String description){
+    UserRegisterValidationState(String state, String description){
         this.state = state;
         this.description = description;
     }

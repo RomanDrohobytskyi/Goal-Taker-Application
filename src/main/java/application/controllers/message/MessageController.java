@@ -32,8 +32,8 @@ public class MessageController {
         Iterable<Message> messages = messageService.filter(filter);
         model.addAttribute("messages", messages);
         model.addAttribute("filter", filter);
-        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
-        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
+        model.addAttribute("menuElements", MenuTabs.defaultMenu());
+        model.addAttribute("slideMenuElements", MenuTabs.defaultSlideMenu());
         return "main";
     }
 

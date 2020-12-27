@@ -28,8 +28,8 @@ public class AimController {
     public String allAims(Model model){
         List<Aim> userAims = aimService.getLoggedInUserAims();
         model.addAttribute("all_aims", userAims);
-        model.addAttribute("menuElements", new MenuTabs().smartGoalsMainMenu());
-        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
+        model.addAttribute("menuElements", MenuTabs.smartGoalsMainMenu());
+        model.addAttribute("slideMenuElements", MenuTabs.defaultSlideMenu());
         return "main_aim";
     }
 
@@ -55,12 +55,11 @@ public class AimController {
     @GetMapping("/main_aim/delete/{aim}")
     public String delete(
             @PathVariable Aim aim,
-            Map<String, Object> model) {
+            Model model) {
 
         aimService.delete(aim);
         List<Aim> userAims = aimService.getLoggedInUserAims();
-        model.put("aims", userAims);
-
+        model.addAttribute("aims", userAims);
         return "redirect:/main_aim#aimsTable";
     }
 

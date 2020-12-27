@@ -21,8 +21,8 @@ public class EditMessageController {
     @PreAuthorize("hasAuthority('USER')")
     public String getEditForm(@PathVariable Message message, Model model){
         model.addAttribute("message", message);
-        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
-        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
+        model.addAttribute("menuElements", MenuTabs.defaultMenu());
+        model.addAttribute("slideMenuElements", MenuTabs.defaultSlideMenu());
         return "editMessage";
     }
 

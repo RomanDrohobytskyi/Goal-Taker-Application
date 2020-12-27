@@ -8,17 +8,17 @@ import java.util.List;
 
 public class MenuTabs {
 
-    private CreatedMenuElements createdMenuElements = new CreatedMenuElements();
+    private static CreatedMenuElements createdMenuElements = new CreatedMenuElements();
 
-    public List<MenuElement> defaultMenu(){
+    public static List<MenuElement> defaultMenu(){
         return getDefaultMenuItems();
     }
 
-    public List<MenuElement> defaultSlideMenu(){
+    public static List<MenuElement> defaultSlideMenu(){
         return getDefaultSlideMenuItems();
     }
 
-    public  List<MenuElement> getDefaultMenuItems(){
+    public static List<MenuElement> getDefaultMenuItems(){
         List<MenuElement> menuElements = new ArrayList<>();
         menuElements.add(createdMenuElements.homePage);
         menuElements.add(createdMenuElements.upToTheTop);
@@ -29,7 +29,7 @@ public class MenuTabs {
         return menuElements;
     }
 
-    public  List<MenuElement> getDefaultSlideMenuItems(){
+    public static List<MenuElement> getDefaultSlideMenuItems(){
         List<MenuElement> menuElements = new ArrayList<>();
         menuElements.add(createdMenuElements.aims);
         menuElements.add(createdMenuElements.smartAim);
@@ -45,7 +45,7 @@ public class MenuTabs {
         return menuElements;
     }
 
-    public List<MenuElement> smartGoalsMainMenu(){
+    public static List<MenuElement> smartGoalsMainMenu(){
         List<MenuElement> menuElements = new ArrayList<>();
         menuElements.add(createdMenuElements.homePage);
         menuElements.add(createdMenuElements.upToTheTop);
@@ -56,7 +56,7 @@ public class MenuTabs {
         return menuElements;
     }
 
-    public  List<MenuElement> timeAnalyzerMenu(){
+    public static List<MenuElement> timeAnalyzerMenu(){
         List<MenuElement> menuElements = new ArrayList<>();
         menuElements.add(createdMenuElements.homePage);
         menuElements.add(createdMenuElements.upToTheTop);
@@ -68,7 +68,7 @@ public class MenuTabs {
         return menuElements;
     }
 
-    public  List<MenuElement> userAnalyzerMenuItems(){
+    public static List<MenuElement> userAnalyzerMenuItems(){
         List<MenuElement> menuElements = new ArrayList<>();
         menuElements.add(createdMenuElements.homePage);
         menuElements.add(createdMenuElements.upToTheTop);

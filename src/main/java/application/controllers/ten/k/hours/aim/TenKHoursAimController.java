@@ -27,8 +27,8 @@ public class TenKHoursAimController {
         model.addAttribute("all_aims", aimService.getAllLoggedUserAims());
         model.addAttribute("timeSum", aimTimeService.getAimsLoggedTimeSum((aimService.getAllLoggedUserAims())));
         model.addAttribute("allAimsTimeSum", aimTimeService.getAimsLoggedTimeSum((aimService.getAllLoggedUserAims())));
-        model.addAttribute("menuElements", new MenuTabs().smartGoalsMainMenu());
-        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
+        model.addAttribute("menuElements", MenuTabs.smartGoalsMainMenu());
+        model.addAttribute("slideMenuElements", MenuTabs.defaultSlideMenu());
         return "ten_thousand_hours_aim";
     }
 

@@ -5,24 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc868ad4-fc12-4cb3-89c0-f8cbbc365e64" name="Default" comment="Event registration time validation">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d8904ba1-b051-4f55-85e8-45be13b913e6.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/d8904ba1-b051-4f55-85e8-45be13b913e6.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_13.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_13.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/log/logs.log" afterPath="$PROJECT_DIR$/log/logs.log" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/aims/AllAimsController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/aims/AllAimsController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/authorisation/registration/RegistrationController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/authorisation/registration/RegistrationController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/user/User.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/user/User.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/repositories/EventRepository.java" afterPath="$PROJECT_DIR$/src/main/java/application/repositories/EventRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/services/EventService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/EventService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/services/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/UserService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/services/aim/SmartAimService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/aim/SmartAimService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/test/AimRepositoryTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/test/AimTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/test/SmartAim.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.ftlh" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.ftlh" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/application/services/EntityInheritanceTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/application/services/UserServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/application/services/UserServiceTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/event/EventsMainController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/event/EventsMainController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/greeting/GreetingController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/greeting/GreetingController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/message/EditMessageController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/message/EditMessageController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/message/MessageController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/message/MessageController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimDetailsController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimDetailsController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/EditAimController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/EditAimController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/TimeAnalyzerController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/TimeAnalyzerController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/EditTenKAimController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/EditTenKAimController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimDetailsController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimDetailsController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimTimeAnalyzerController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimTimeAnalyzerController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/user/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/user/UserController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controllers/user/UserProfileController.java" afterPath="$PROJECT_DIR$/src/main/java/application/controllers/user/UserProfileController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/entities/event/Event.java" afterPath="$PROJECT_DIR$/src/main/java/application/entities/event/Event.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/enums/UserRegisterValidationState.java" afterPath="$PROJECT_DIR$/src/main/java/application/enums/UserRegisterValidationState.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java" afterPath="$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/services/EventService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/event/EventService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/services/UserAnalyzerService.java" afterPath="$PROJECT_DIR$/src/main/java/application/services/UserAnalyzerService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/events.ftlh" afterPath="$PROJECT_DIR$/src/main/resources/templates/events.ftlh" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/config/WebSecurityConfig.class" afterPath="$PROJECT_DIR$/target/classes/application/config/WebSecurityConfig.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/controllers/aims/AllAimsController.class" afterPath="$PROJECT_DIR$/target/classes/application/controllers/aims/AllAimsController.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/controllers/authorisation/registration/RegistrationController.class" afterPath="$PROJECT_DIR$/target/classes/application/controllers/authorisation/registration/RegistrationController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/controllers/greeting/GreetingController.class" afterPath="$PROJECT_DIR$/target/classes/application/controllers/greeting/GreetingController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/controllers/message/EditMessageController.class" afterPath="$PROJECT_DIR$/target/classes/application/controllers/message/EditMessageController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/controllers/message/MessageController.class" afterPath="$PROJECT_DIR$/target/classes/application/controllers/message/MessageController.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/controllers/smart/aim/AimController.class" afterPath="$PROJECT_DIR$/target/classes/application/controllers/smart/aim/AimController.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/controllers/smart/aim/AimDetailsController.class" afterPath="$PROJECT_DIR$/target/classes/application/controllers/smart/aim/AimDetailsController.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/controllers/smart/aim/EditAimController.class" afterPath="$PROJECT_DIR$/target/classes/application/controllers/smart/aim/EditAimController.class" />
@@ -32,11 +46,13 @@
       <change beforePath="$PROJECT_DIR$/target/classes/application/controllers/ten/k/hours/aim/TenKHoursAimDetailsController.class" afterPath="$PROJECT_DIR$/target/classes/application/controllers/ten/k/hours/aim/TenKHoursAimDetailsController.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/controllers/ten/k/hours/aim/TenKHoursAimTimeAnalyzerController.class" afterPath="$PROJECT_DIR$/target/classes/application/controllers/ten/k/hours/aim/TenKHoursAimTimeAnalyzerController.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/controllers/user/UserController.class" afterPath="$PROJECT_DIR$/target/classes/application/controllers/user/UserController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/controllers/user/UserProfileController.class" afterPath="$PROJECT_DIR$/target/classes/application/controllers/user/UserProfileController.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/entities/aim/Aim.class" afterPath="$PROJECT_DIR$/target/classes/application/entities/aim/Aim.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/entities/aim/TenThousandHoursAim.class" afterPath="$PROJECT_DIR$/target/classes/application/entities/aim/TenThousandHoursAim.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/entities/time/data/TenThousandHoursAimTime.class" afterPath="$PROJECT_DIR$/target/classes/application/entities/time/data/TenThousandHoursAimTime.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/entities/time/data/Time.class" afterPath="$PROJECT_DIR$/target/classes/application/entities/time/data/Time.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/entities/user/User.class" afterPath="$PROJECT_DIR$/target/classes/application/entities/user/User.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/menu/MenuTabs.class" afterPath="$PROJECT_DIR$/target/classes/application/menu/MenuTabs.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/repositories/IAimRepository.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/repositories/IMessageRepository.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/repositories/ITenThousandHoursAimRepository.class" afterPath="" />
@@ -96,6 +112,17 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="web_spring@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="web_spring@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="web_spring@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="web_spring: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
     </expand>
     <select />
   </component>
@@ -104,178 +131,115 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/services/UserService.java">
+      <file leaf-file-name="EventsMainController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/event/EventsMainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="764">
-              <caret line="66" column="21" lean-forward="false" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
-              <folding>
-                <element signature="e#2142#2143#0" expanded="true" />
-                <element signature="e#2201#2202#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db-diagram.uml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/diagrams/db-diagram.uml">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>DATABASE</ID>
-              <OriginalElement>d8904ba1-b051-4f55-85e8-45be13b913e6</OriginalElement>
-              <nodes>
-                <node x="1060.5" y="533.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user_roles</node>
-                <node x="0.0" y="1174.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.hibernate_sequence</node>
-                <node x="769.5" y="424.5">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.ten_thousand_hours_aim</node>
-                <node x="506.0" y="0.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user</node>
-                <node x="519.5" y="903.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.smart_aim</node>
-                <node x="769.5" y="876.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.ten_thousand_hours_aim_time</node>
-                <node x="0.0" y="876.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.smart_aim_time</node>
-                <node x="0.0" y="330.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.aim</node>
-                <node x="521.0" y="492.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.aim_test</node>
-                <node x="291.0" y="478.5">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.message</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.smart_aim_time" target="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.aim">
-                  <point x="0.0" y="-126.5" />
-                  <point x="0.0" y="248.0" />
-                </edge>
-                <edge source="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user_roles" target="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user">
-                  <point x="0.0" y="-45.0" />
-                  <point x="1152.0" y="300.0" />
-                  <point x="737.3" y="300.0" />
-                  <point x="102.80000000000001" y="140.0" />
-                </edge>
-                <edge source="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.message" target="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user">
-                  <point x="0.0" y="-99.5" />
-                  <point x="396.0" y="310.0" />
-                  <point x="583.1" y="310.0" />
-                  <point x="-51.39999999999999" y="140.0" />
-                </edge>
-                <edge source="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.aim_test" target="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user">
-                  <point x="0.0" y="-86.0" />
-                  <point x="0.0" y="140.0" />
-                </edge>
-                <edge source="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.aim" target="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user">
-                  <point x="0.0" y="-248.0" />
-                  <point x="135.5" y="300.0" />
-                  <point x="531.6999999999999" y="300.0" />
-                  <point x="-102.8" y="140.0" />
-                </edge>
-                <edge source="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.smart_aim" target="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.aim_test">
-                  <point x="0.0" y="-99.5" />
-                  <point x="0.0" y="86.0" />
-                </edge>
-                <edge source="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.ten_thousand_hours_aim_time" target="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.ten_thousand_hours_aim">
-                  <point x="0.0" y="-126.5" />
-                  <point x="0.0" y="153.5" />
-                </edge>
-                <edge source="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.ten_thousand_hours_aim" target="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user">
-                  <point x="0.0" y="-153.5" />
-                  <point x="905.0" y="310.0" />
-                  <point x="685.9" y="310.0" />
-                  <point x="51.400000000000006" y="140.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="240.0" y="240.0" />
-              <SelectedNodes />
-              <Categories>
-                <Category>Columns</Category>
-                <Category>Key columns</Category>
-              </Categories>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createDataBaseScript.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/diagrams/createDataBaseScript.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+            <state relative-caret-position="289">
+              <caret line="44" column="69" lean-forward="false" selection-start-line="44" selection-start-column="69" selection-end-line="44" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PasswordEncoder.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.3.2.RELEASE/spring-security-core-5.3.2.RELEASE.jar!/org/springframework/security/crypto/password/PasswordEncoder.class">
+      <file leaf-file-name="DefaultEventService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/services/event/strategy/DefaultEventService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-              <folding>
-                <marker date="1599082418088" expanded="false" signature="0:104" ph="/.../" />
-                <marker date="1599082418088" expanded="false" signature="348:359" ph=" { " />
-                <marker date="1599082418088" expanded="false" signature="372:378" ph=" }" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserRegistrationService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/services/UserRegistrationService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+            <state relative-caret-position="17">
+              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1174#1175#0" expanded="true" />
-                <element signature="e#1225#1226#0" expanded="true" />
-                <element signature="e#3029#3030#0" expanded="true" />
-                <element signature="e#3096#3097#0" expanded="true" />
+                <element signature="e#616#617#0" expanded="true" />
+                <element signature="e#683#684#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserRegistrationServiceTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/application/services/UserRegistrationServiceTest.java">
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d8904ba1-b051-4f55-85e8-45be13b913e6/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="408">
+              <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArtEventService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/services/event/strategy/ArtEventService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
-                <element signature="e#947#948#0" expanded="true" />
-                <element signature="e#997#998#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#485#486#0" expanded="true" />
+                <element signature="e#522#523#0" expanded="true" />
+                <element signature="e#875#876#0" expanded="true" />
+                <element signature="e#925#926#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DateInstances.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/utils/date/DateInstances.java">
+      <file leaf-file-name="EventService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/services/event/EventService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="323">
+              <caret line="28" column="76" lean-forward="false" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2745#2746#0" expanded="true" />
+                <element signature="e#2795#2796#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EducationEventService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/services/event/strategy/EducationEventService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="31" selection-end-column="5" />
+              <folding>
+                <element signature="e#496#497#0" expanded="true" />
+                <element signature="e#539#540#0" expanded="true" />
+                <element signature="e#910#911#0" expanded="true" />
+                <element signature="e#966#967#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SportEventService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/services/event/strategy/SportEventService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+              <folding>
+                <element signature="e#488#489#0" expanded="true" />
+                <element signature="e#527#528#0" expanded="true" />
+                <element signature="e#886#887#0" expanded="true" />
+                <element signature="e#938#939#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/enums/EventType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registration.ftlh" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registration.ftlh">
+      <file leaf-file-name="EventsService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/services/event/strategy/EventsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/user/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserRegisterValidationState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/enums/UserRegisterValidationState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="23" />
+            <state relative-caret-position="85">
+              <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -297,24 +261,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lombok</find>
-      <find>AimTest</find>
-      <find>assertthat</find>
-      <find>save</find>
-      <find>junit</find>
-      <find>package application\.controllers\.event\;\n\nimport application\.entities\.user\.User\;\nimport application\.services\.EventService\;\nimport lombok\.RequiredArgsConstructor\;\nimport org\.springframework\.format\.annotation\.DateTimeFormat\;\nimport org\.springframework\.security\.core\.annotation\.AuthenticationPrincipal\;\nimport org\.springframework\.stereotype\.Controller\;\nimport org\.springframework\.ui\.Model\;\nimport org\.springframework\.web\.bind\.annotation\.GetMapping\;\nimport org\.springframework\.web\.bind\.annotation\.PostMapping\;\nimport org\.springframework\.web\.bind\.annotation\.RequestMapping\;\nimport org\.springframework\.web\.bind\.annotation\.RequestParam\;\n\nimport java\.util\.Date\;\n\n\@Controller\n\@RequestMapping\(\&quot;events\&quot;\)\n\@RequiredArgsConstructor\npublic class EventsMainController \{\n\n    private final EventService eventService\;\n\n    \@GetMapping\n    public String events\(Model model\) \{\n        eventService\.addEventsAndMenu\(model\)\;\n        return \&quot;events\&quot;\;\n    \}\n\n    \@PostMapping\(\&quot;\/add\&quot;\)\n    public String add\(\@RequestParam String title\,\n                      \@RequestParam String from\,\n                      \@RequestParam String to\,\n                      \@RequestParam \@DateTimeFormat\(pattern \= \&quot;yyyy\-MM\-dd\&quot;\) Date date\,\n                      \@AuthenticationPrincipal User user\,\n                      Model model\) \{\n        eventService\.addNewEvent\(title\, from\, to\, date\, user\, model\)\;\n        if \(model\.asMap\(\)\.isEmpty\(\)\)\{\n            return \&quot;redirect\:\/events\&quot;\;\n        \} else \{\n            eventService\.addEventsAndMenu\(model\)\;\n            return \&quot;events\&quot;\;\n        \}\n    \}\n    \n    \@PostMapping\(\&quot;\/delete\&quot;\)\n    public String delete \(\)\n\n\}\n</find>
-      <find>{</find>
-      <find>trash</find>
-      <find>TenThousandHoursAimService</find>
-      <find>this tim</find>
-      <find>assertThat</find>
-      <find>Aim</find>
-      <find>mock</find>
-      <find>secu</find>
-      <find>mostProductive</find>
-      <find>getLimmittedAndSortedTime</find>
-      <find>ConvertedDate</find>
-      <find>userservice</find>
       <find>optional.o</find>
       <find>optional</find>
       <find>optional.of</find>
@@ -327,11 +273,30 @@
       <find>sendac</find>
       <find>sendActivationCode</find>
       <find>EMPTY_EMAIL</find>
+      <find>Map&lt;Str</find>
+      <find>Map&lt;String,</find>
+      <find>about</find>
+      <find>edit</find>
+      <find>editTenKHoursAim</find>
+      <find>filter</find>
+      <find>select</find>
+      <find>eventType</find>
+      <find>hidden</find>
+      <find>FA</find>
+      <find>clear</find>
+      <find>delete</find>
+      <find>/delete</find>
+      <find>new MenuTabs().defaultSlideMenu()</find>
+      <find>new MenuTabs().</find>
+      <find>MenuTabs.</find>
+      <find>MenuTabs.)</find>
+      <find>MenuTabs</find>
     </findStrings>
     <replaceStrings>
       <replace>w3-padding-32</replace>
-      <replace />
       <replace>passwordNotMatch</replace>
+      <replace />
+      <replace>MenuTabs.</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\roma_\OneDrive\Рабочий стол\Programs\Studies\SpringWebApplication\src\main\resources\templates\parts</dir>
@@ -350,57 +315,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/application/utils/date/DateInstances.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/utils/Day.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/utils/date/DateParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/utils/DayOfWeek.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/menu/CreatedMenuElements.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/greeting.ftlh" />
-        <option value="$PROJECT_DIR$/src/main/java/application/services/time/TimeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/services/aim/AimServiceFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/services/aim/AimService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/services/time/SmartAimTimeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/controllers/event/description" />
-        <option value="$PROJECT_DIR$/src/main/java/application/config/WebSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/controllers/event/EventsMainController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/repositories/IUserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/repositories/IEventRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/services/aim/TenThousandHoursAimService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/entities/event/Event.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/events.ftlh" />
-        <option value="$PROJECT_DIR$/src/test/java/application/integration/repository/AimRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/application/integration/services/AimRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/application/integration/services/AimServiceintegrationTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/entities/aim/Aim.java" />
-        <option value="$PROJECT_DIR$/src/test/java/application/unit/SmartAimServiceUnitTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/application/integration/IntegrationTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/application/integration/services/AimServiceIntegrationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/application/services/TenThousandHoursAimTimeServiceUnitTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/entities/aim/TenThousandHoursAim.java" />
-        <option value="$PROJECT_DIR$/src/test/java/application/services/TenThousandHoursAimTimeServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/services/time/TenThousandHoursAimTimeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/utils/ConvertedDate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/models/ConvertedDate.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/models/DayOfWeek.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/repositories/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/test/java/application/integration/repository/UserRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/services/aim/SmartAimService.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/services/MessageService.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d8904ba1-b051-4f55-85e8-45be13b913e6/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/application/repositories/EventRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/services/EventService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/application/services/UserServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/services/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/controllers/authorisation/registration/RegistrationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/enums/awdawdas.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/enums/SOMECLASS.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/entities/user/User.java" />
         <option value="$PROJECT_DIR$/src/test/java/application/services/UserRegistrationServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/enums/UserRegisterValidationState.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/services/UserRegistrationService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/registration.ftlh" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/authorisation/registration/RegistrationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/services/event/strategy/SportEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/services/event/strategy/SportEventЫукмшсу.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/enums/UserRegisterValidationState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/entities/event/Event.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/events.ftlh" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/user/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/user/UserProfileController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimTimeAnalyzerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/EditTenKAimController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/TimeAnalyzerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/EditAimController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/message/MessageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/message/EditMessageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/greeting/GreetingController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/aims/AllAimsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/managers/UserManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/services/UserAnalyzerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/services/event/strategy/DefaultEventService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controllers/event/EventsMainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/services/event/strategy/SportEventService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/services/event/strategy/EducationEventService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/services/event/strategy/EventService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/services/event/strategy/EventыService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/services/event/strategy/EventsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/services/event/strategy/ArtEvents.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/services/event/strategy/ArtEventService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/enums/EventType.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d8904ba1-b051-4f55-85e8-45be13b913e6/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/application/services/event/EventService.java" />
       </list>
     </option>
   </component>
@@ -429,10 +394,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="167" />
-    <option name="y" value="244" />
-    <option name="width" value="1552" />
-    <option name="height" value="880" />
+    <option name="x" value="-9" />
+    <option name="width" value="697" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -452,6 +416,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -502,7 +468,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="authorisation" type="462c0819:PsiDirectoryNode" />
+              <item name="aims" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AimTakerRefactoring" type="b2602c69:ProjectViewProjectNode" />
@@ -512,47 +478,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="authorisation" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AimTakerRefactoring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AimTakerRefactoring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="authorisation" type="462c0819:PsiDirectoryNode" />
-              <item name="registration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AimTakerRefactoring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AimTakerRefactoring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AimTakerRefactoring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AimTakerRefactoring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-              <item name="aim" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AimTakerRefactoring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AimTakerRefactoring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
               <item name="event" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -562,7 +487,17 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="greeting" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AimTakerRefactoring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AimTakerRefactoring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
               <item name="message" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -572,8 +507,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="aim" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AimTakerRefactoring" type="b2602c69:ProjectViewProjectNode" />
@@ -582,7 +517,17 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="aim" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AimTakerRefactoring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AimTakerRefactoring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -592,7 +537,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
+              <item name="menu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AimTakerRefactoring" type="b2602c69:ProjectViewProjectNode" />
@@ -620,6 +565,27 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AimTakerRefactoring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AimTakerRefactoring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="event" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AimTakerRefactoring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AimTakerRefactoring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="event" type="462c0819:PsiDirectoryNode" />
+              <item name="strategy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AimTakerRefactoring" type="b2602c69:ProjectViewProjectNode" />
@@ -728,8 +694,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope">
         <subPane subId="Tests">
           <expand>
@@ -898,7 +862,7 @@
     <configuration name="TenThousandHoursAimTimeServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="application.services.*" />
+          <option name="PATTERN" value="application.services.event.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -923,7 +887,7 @@
     <configuration name="UserRegistrationServiceTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="application.services.*" />
+          <option name="PATTERN" value="application.services.event.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -973,7 +937,7 @@
     <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="application.services.*" />
+          <option name="PATTERN" value="application.services.event.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -1303,7 +1267,13 @@
       <workItem from="1607880836846" duration="6162000" />
       <workItem from="1608151852600" duration="135000" />
       <workItem from="1608236297276" duration="592000" />
-      <workItem from="1608408998618" duration="2220000" />
+      <workItem from="1608408998618" duration="3184000" />
+      <workItem from="1608483905284" duration="2133000" />
+      <workItem from="1608578817329" duration="4417000" />
+      <workItem from="1608844729862" duration="2988000" />
+      <workItem from="1608886669079" duration="1090000" />
+      <workItem from="1608911409229" duration="11425000" />
+      <workItem from="1608982423265" duration="15715000" />
     </task>
     <task id="LOCAL-00001" summary="Log4J added, little changes in templates">
       <created>1564081469808</created>
@@ -1592,7 +1562,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606422825639</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Registration validation refactoring">
+      <created>1608411480150</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1608411480151</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1628,7 +1605,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1146883000" />
+    <option name="totallyTimeSpent" value="1185615000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1640,7 +1617,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1648,23 +1625,24 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19119227" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21581769" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2153518" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33645833" sideWeight="0.48657358" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.259375" sideWeight="0.48657358" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32604167" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31666666" sideWeight="0.4978678" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32604167" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33549082" sideWeight="0.48872182" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38079828" sideWeight="0.48872182" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.325" sideWeight="0.4914712" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25208333" sideWeight="0.49785176" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25479743" sideWeight="0.4763889" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2094522" sideWeight="0.4763889" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27658433" sideWeight="0.5236111" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2588997" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1679,7 +1657,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.253125" sideWeight="0.49785176" order="15" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1699,7 +1676,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="New custom Menu, refactoring, 10k hours aim charts" />
     <MESSAGE value="New menu" />
     <MESSAGE value="New features" />
     <MESSAGE value="Unversioned Files" />
@@ -1724,7 +1700,8 @@
     <MESSAGE value="Renamed aim services" />
     <MESSAGE value="User repo integration test fixed" />
     <MESSAGE value="Code issues, part 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code issues, part 1" />
+    <MESSAGE value="Registration validation refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Registration validation refactoring" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1802,7 +1779,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="270" />
+      <option name="time" value="282" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1856,158 +1833,108 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/time/data/TenThousandHoursAimTime.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registration.ftlh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/models/ConvertedDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/models/DayOfWeek.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/repositories/AimRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/TimeAnalyzerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.3.2.RELEASE/spring-security-core-5.3.2.RELEASE.jar!/org/springframework/security/core/userdetails/UsernameNotFoundException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/test/AimRepositoryTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/test/AimTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/test/SmartAim.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/aim/SmartAimService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="e#5022#5023#0" expanded="true" />
-            <element signature="e#5075#5076#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.2.6.RELEASE/spring-tx-5.2.6.RELEASE.jar!/org/springframework/transaction/annotation/Transactional.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/user/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="58" column="33" lean-forward="false" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/application/services/EntityInheritanceTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/aim/TenThousandHoursAimService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/MailSenderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/MessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="45" column="16" lean-forward="false" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
-          <folding>
-            <element signature="e#3942#3943#0" expanded="false" />
-            <element signature="e#3978#3979#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/freemarker/freemarker/2.3.28/freemarker-2.3.28.jar!/freemarker/ext/beans/BeansWrapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="853" column="16" lean-forward="true" selection-start-line="853" selection-start-column="16" selection-end-line="853" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d8904ba1-b051-4f55-85e8-45be13b913e6/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/time/data/Time.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/Optional.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="384" column="0" lean-forward="false" selection-start-line="384" selection-start-column="0" selection-end-line="384" selection-end-column="0" />
+        <state relative-caret-position="714">
+          <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
+        <state relative-caret-position="260">
           <caret line="157" column="17" lean-forward="false" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/repositories/EventRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/UserRegistrationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        <state relative-caret-position="231">
+          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1174#1175#0" expanded="false" />
+            <element signature="e#1225#1226#0" expanded="false" />
+            <element signature="e#3029#3030#0" expanded="false" />
+            <element signature="e#3096#3097#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/authorisation/registration/RegistrationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="38" lean-forward="false" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        <state relative-caret-position="735">
+          <caret line="48" column="41" lean-forward="false" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/menu/MenuElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/image.ftlh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/footer.ftlh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/editAim.ftlh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="34" column="59" lean-forward="false" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/aims.ftlh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="46" column="114" lean-forward="false" selection-start-line="46" selection-start-column="114" selection-end-line="46" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/aim_details.ftlh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/aims.ftlh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="37" column="32" lean-forward="false" selection-start-line="37" selection-start-column="32" selection-end-line="39" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/enums/UserRegisterValidationState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/repositories/TimeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2019,259 +1946,328 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/String.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/event/Event.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="122" column="19" lean-forward="false" selection-start-line="122" selection-start-column="19" selection-end-line="122" selection-end-column="19" />
+        <state relative-caret-position="323">
+          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.1.0/junit-jupiter-engine-5.1.0.jar!/org/junit/jupiter/engine/execution/ExecutableInvoker.class">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userEdit.ftlh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftlh">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userList.ftlh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2448">
+          <caret line="144" column="36" lean-forward="false" selection-start-line="144" selection-start-column="36" selection-end-line="144" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/editMessage.ftlh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="29" lean-forward="false" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/events.ftlh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="72" column="15" lean-forward="true" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/application/services/UserServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="45" column="9" lean-forward="false" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/repositories/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/authorisation/login/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/authorisation/registration/RegistrationController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main.ftlh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        <state relative-caret-position="986">
+          <caret line="79" column="123" lean-forward="false" selection-start-line="79" selection-start-column="101" selection-end-line="79" selection-end-column="123" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/EventService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/menu/CreatedMenuElements.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="117" column="48" lean-forward="false" selection-start-line="117" selection-start-column="23" selection-end-line="117" selection-end-column="48" />
+        <state relative-caret-position="68">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/event/EventsMainController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/user/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="44" column="24" lean-forward="false" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="24" />
+        <state relative-caret-position="170">
+          <caret line="39" column="56" lean-forward="false" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/application/integration/repository/UserRepositoryTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/user/UserProfileController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="35" column="51" lean-forward="false" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
+        <state relative-caret-position="493">
+          <caret line="44" column="56" lean-forward="false" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.5.2/junit-platform-commons-1.5.2.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimTimeAnalyzerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6069">
-          <caret line="361" column="0" lean-forward="false" selection-start-line="361" selection-start-column="0" selection-end-line="361" selection-end-column="0" />
+        <state relative-caret-position="261">
+          <caret line="39" column="63" lean-forward="false" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/enums/awd.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/enums/awdawdas.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/enums/State.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimDetailsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="289">
+          <caret line="29" column="56" lean-forward="false" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/enums/SOMECLASS.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/event/Event.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/menu/MenuTabs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="47" column="18" lean-forward="false" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+          <folding>
+            <element signature="e#285#286#0" expanded="false" />
+            <element signature="e#329#330#0" expanded="false" />
+            <element signature="e#386#387#0" expanded="false" />
+            <element signature="e#435#436#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/TenKHoursAimController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="29" column="62" lean-forward="true" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/ten/k/hours/aim/EditTenKAimController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="23" column="56" lean-forward="false" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/TimeAnalyzerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="38" column="57" lean-forward="false" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/EditAimController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="23" column="56" lean-forward="false" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="32" column="57" lean-forward="false" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/smart/aim/AimController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <caret line="31" column="57" lean-forward="false" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/diagrams/db-diagram.uml">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>d8904ba1-b051-4f55-85e8-45be13b913e6</OriginalElement>
-          <nodes>
-            <node x="1060.5" y="533.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user_roles</node>
-            <node x="0.0" y="1174.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.hibernate_sequence</node>
-            <node x="769.5" y="424.5">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.ten_thousand_hours_aim</node>
-            <node x="506.0" y="0.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user</node>
-            <node x="519.5" y="903.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.smart_aim</node>
-            <node x="769.5" y="876.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.ten_thousand_hours_aim_time</node>
-            <node x="0.0" y="876.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.smart_aim_time</node>
-            <node x="0.0" y="330.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.aim</node>
-            <node x="521.0" y="492.0">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.aim_test</node>
-            <node x="291.0" y="478.5">d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.message</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.smart_aim_time" target="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.aim">
-              <point x="0.0" y="-126.5" />
-              <point x="0.0" y="248.0" />
-            </edge>
-            <edge source="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user_roles" target="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user">
-              <point x="0.0" y="-45.0" />
-              <point x="1152.0" y="300.0" />
-              <point x="737.3" y="300.0" />
-              <point x="102.80000000000001" y="140.0" />
-            </edge>
-            <edge source="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.message" target="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user">
-              <point x="0.0" y="-99.5" />
-              <point x="396.0" y="310.0" />
-              <point x="583.1" y="310.0" />
-              <point x="-51.39999999999999" y="140.0" />
-            </edge>
-            <edge source="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.aim_test" target="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user">
-              <point x="0.0" y="-86.0" />
-              <point x="0.0" y="140.0" />
-            </edge>
-            <edge source="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.aim" target="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user">
-              <point x="0.0" y="-248.0" />
-              <point x="135.5" y="300.0" />
-              <point x="531.6999999999999" y="300.0" />
-              <point x="-102.8" y="140.0" />
-            </edge>
-            <edge source="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.smart_aim" target="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.aim_test">
-              <point x="0.0" y="-99.5" />
-              <point x="0.0" y="86.0" />
-            </edge>
-            <edge source="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.ten_thousand_hours_aim_time" target="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.ten_thousand_hours_aim">
-              <point x="0.0" y="-126.5" />
-              <point x="0.0" y="153.5" />
-            </edge>
-            <edge source="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.ten_thousand_hours_aim" target="d8904ba1-b051-4f55-85e8-45be13b913e6.TABLE:web_spring.user">
-              <point x="0.0" y="-153.5" />
-              <point x="905.0" y="310.0" />
-              <point x="685.9" y="310.0" />
-              <point x="51.400000000000006" y="140.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="240.0" y="240.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/diagrams/createDataBaseScript.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/message/MessageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        <state relative-caret-position="238">
+          <caret line="35" column="56" lean-forward="false" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.3.2.RELEASE/spring-security-core-5.3.2.RELEASE.jar!/org/springframework/security/crypto/password/PasswordEncoder.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.2.6.RELEASE/spring-core-5.2.6.RELEASE.jar!/org/springframework/util/CollectionUtils.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <marker date="1599082418088" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1599082418088" expanded="false" signature="348:359" ph=" { " />
-            <marker date="1599082418088" expanded="false" signature="372:378" ph=" }" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/application/services/UserRegistrationServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/UserAnalyzerService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="e#947#948#0" expanded="true" />
-            <element signature="e#997#998#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="459">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/utils/date/DateInstances.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/aims/AllAimsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="170">
+          <caret line="13" column="57" lean-forward="false" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/greeting/GreetingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="56" lean-forward="false" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/message/EditMessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="24" column="57" lean-forward="false" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/entities/user/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        <state relative-caret-position="228">
+          <caret line="54" column="37" lean-forward="false" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/UserService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/managers/UserManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="764">
-          <caret line="66" column="21" lean-forward="false" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+        <state relative-caret-position="119">
+          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controllers/event/EventsMainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="44" column="69" lean-forward="false" selection-start-line="44" selection-start-column="69" selection-end-line="44" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/event/strategy/SportEventService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
           <folding>
-            <element signature="e#2142#2143#0" expanded="true" />
-            <element signature="e#2201#2202#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#886#887#0" expanded="true" />
+            <element signature="e#938#939#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/UserRegistrationService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/event/strategy/EducationEventService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+        <state relative-caret-position="170">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="e#496#497#0" expanded="true" />
+            <element signature="e#539#540#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#966#967#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/event/strategy/ArtEventService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1174#1175#0" expanded="true" />
-            <element signature="e#1225#1226#0" expanded="true" />
-            <element signature="e#3029#3030#0" expanded="true" />
-            <element signature="e#3096#3097#0" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#875#876#0" expanded="true" />
+            <element signature="e#925#926#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/enums/UserRegisterValidationState.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="23" />
+        <state relative-caret-position="363">
+          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registration.ftlh">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/enums/EventType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        <state relative-caret-position="102">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/event/strategy/EventsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d8904ba1-b051-4f55-85e8-45be13b913e6/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/event/strategy/DefaultEventService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/services/event/EventService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="28" column="76" lean-forward="false" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2745#2746#0" expanded="true" />
+            <element signature="e#2795#2796#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

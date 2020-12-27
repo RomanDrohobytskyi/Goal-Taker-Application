@@ -26,8 +26,8 @@ public class TenKHoursAimDetailsController {
     public String aimDetails(@PathVariable TenThousandHoursAim aim, Model model){
         model.addAttribute("aim", aim);
         model.addAttribute("lastWeekLoggedTime",  timeService.getLastSevenLoggedTimesForAim(aim.getId()));
-        model.addAttribute("menuElements", new MenuTabs().defaultMenu());
-        model.addAttribute("slideMenuElements", new MenuTabs().defaultSlideMenu());
+        model.addAttribute("menuElements", MenuTabs.defaultMenu());
+        model.addAttribute("slideMenuElements", MenuTabs.defaultSlideMenu());
         return "tenKHoursAimDetails";
     }
 
@@ -37,10 +37,10 @@ public class TenKHoursAimDetailsController {
             @RequestParam String description,
             @RequestParam String date,
             @RequestParam("aimId") TenThousandHoursAim aim,
-            Map<String, Object> model) {
+            Model model) {
 
         timeService.saveTimeForTenKHoursAim(time, description, date, aim);
-        model.put("aims", aimService.getAllLoggedUserAims());
+        model.addAttribute("aims", aimService.getAllLoggedUserAims());
         return "redirect:/tenKHoursAimDetails/" + aim.getId() + "#details";
     }
 

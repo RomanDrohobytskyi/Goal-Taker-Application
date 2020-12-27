@@ -1,6 +1,7 @@
 package application.entities.event;
 
 import application.entities.user.User;
+import application.enums.EventType;
 import application.models.DayOfWeek;
 import lombok.*;
 
@@ -40,4 +41,7 @@ public class Event {
     private Date modificationDate;
     @ManyToOne
     private User user;
+    @Enumerated(EnumType.STRING)
+    @NotNull
+    private EventType type;
 }
